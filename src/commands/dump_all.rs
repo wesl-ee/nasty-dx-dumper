@@ -289,14 +289,13 @@ fn dump_main_dol(f_path: &PathBuf, out_file: &PathBuf) -> Result<()> {
             };
 
             // We don't have a length for these tables to work with, so we do our best to detect if
-            // we're at the end of the table. This involves
-            //
-            // (1) Checking if the address we read is a valid offset, and
+            // we're at the end of the table. This involves (1) Checking if the address we read is
+            // a valid offset
             let text_entry_offset = match ram_2_dol_offset(&header, entry.ptr) {
                 Some(o) => o,
                 None => break,
             };
-            // (2) Checking if the address we read is in a data section
+            // and (2) checking if the address we read is in a data section
             if text_entry_offset < header.data0_offset {
                 break;
             }
