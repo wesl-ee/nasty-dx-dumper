@@ -15,113 +15,14 @@ use crate::constants::{
 use crate::{
     constants::TEXT_TABLES_H,
     shape::{
-        TextTableEntry as _, TextTableEntryA, TextTableEntryB, TextTableEntryC,
-        TextTableEntryD, TextTableEntryE, TextTableEntryF, TextTableEntryG,
-        TextTableEntryH,
+        DolHeader, TextTableEntry as _, TextTableEntryA, TextTableEntryB,
+        TextTableEntryC, TextTableEntryD, TextTableEntryE, TextTableEntryF,
+        TextTableEntryG, TextTableEntryH,
     },
 };
 
-#[derive(Default)]
-struct DolHeader {
-    text0_offset: u32,
-    text1_offset: u32,
-    text2_offset: u32,
-    text3_offset: u32,
-    text4_offset: u32,
-    text5_offset: u32,
-    text6_offset: u32,
-    data0_offset: u32,
-    data1_offset: u32,
-    data2_offset: u32,
-    data3_offset: u32,
-    data4_offset: u32,
-    data5_offset: u32,
-    data6_offset: u32,
-    data7_offset: u32,
-    data8_offset: u32,
-    data9_offset: u32,
-    data10_offset: u32,
-
-    text0_address: u32,
-    text1_address: u32,
-    text2_address: u32,
-    text3_address: u32,
-    text4_address: u32,
-    text5_address: u32,
-    text6_address: u32,
-    data0_address: u32,
-    data1_address: u32,
-    data2_address: u32,
-    data3_address: u32,
-    data4_address: u32,
-    data5_address: u32,
-    data6_address: u32,
-    data7_address: u32,
-    data8_address: u32,
-    data9_address: u32,
-    data10_address: u32,
-
-    text0_size: u32,
-    text1_size: u32,
-    text2_size: u32,
-    text3_size: u32,
-    text4_size: u32,
-    text5_size: u32,
-    text6_size: u32,
-    data0_size: u32,
-    data1_size: u32,
-    data2_size: u32,
-    data3_size: u32,
-    data4_size: u32,
-    data5_size: u32,
-    data6_size: u32,
-    data7_size: u32,
-    data8_size: u32,
-    data9_size: u32,
-    data10_size: u32,
-    // there's other stuff in a dol header but not relevant for text dumping
-}
-
-struct DolSection {
-    file: u32,
-    ram: u32,
-    size: u32,
-}
-
-impl DolHeader {
-    fn section_iter(&self) -> impl Iterator<Item = DolSection> + '_ {
-        [
-            // text
-            (self.text0_offset, self.text0_address, self.text0_size),
-            (self.text1_offset, self.text1_address, self.text1_size),
-            (self.text2_offset, self.text2_address, self.text2_size),
-            (self.text3_offset, self.text3_address, self.text3_size),
-            (self.text4_offset, self.text4_address, self.text4_size),
-            (self.text5_offset, self.text5_address, self.text5_size),
-            (self.text6_offset, self.text6_address, self.text6_size),
-            // data
-            (self.data0_offset, self.data0_address, self.data0_size),
-            (self.data1_offset, self.data1_address, self.data1_size),
-            (self.data2_offset, self.data2_address, self.data2_size),
-            (self.data3_offset, self.data3_address, self.data3_size),
-            (self.data4_offset, self.data4_address, self.data4_size),
-            (self.data5_offset, self.data5_address, self.data5_size),
-            (self.data6_offset, self.data6_address, self.data6_size),
-            (self.data7_offset, self.data7_address, self.data7_size),
-            (self.data8_offset, self.data8_address, self.data8_size),
-            (self.data9_offset, self.data9_address, self.data9_size),
-            (self.data10_offset, self.data10_address, self.data10_size),
-        ]
-        .into_iter()
-        .filter(|(_, _, size)| *size != 0)
-        .map(|(file, ram, size)| DolSection { file, ram, size })
-    }
-}
-
-pub fn dump_all(dir: PathBuf, dir_out: PathBuf) -> Result<()> {
-    std::fs::create_dir_all(&dir_out)?;
-
-    for f in std::fs::read_dir(dir)? {
+pub fn dump_all(dir: PathBuf) -> Result<()> {
+    for f in std::fs::read_dir(&dir)? {
         let f = f?;
         let f_path = f.path();
         let f_extension = f_path.extension().unwrap_or_default();
@@ -129,7 +30,9 @@ pub fn dump_all(dir: PathBuf, dir_out: PathBuf) -> Result<()> {
             continue;
         }
 
-        let mut out_file = dir_out.clone();
+        // every file we parse is given a sidecard <something>.<ext>.patch file
+        // for TL purposes
+        let mut out_file = dir.clone();
         out_file.push(f_path.file_name().expect("file_name"));
         out_file.set_extension(format!(
             "{}.{}",

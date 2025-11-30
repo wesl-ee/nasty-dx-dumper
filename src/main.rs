@@ -7,7 +7,7 @@ mod constants;
 mod shape;
 mod utils;
 
-use commands::dump_all;
+use commands::{dump_all, patch_all};
 
 #[derive(Parser)]
 #[command(name = "nasty_dx_dumper")]
@@ -19,13 +19,15 @@ struct Args {
 
 #[derive(Subcommand)]
 enum Commands {
-    DumpAll { dir: PathBuf, dir_out: PathBuf },
+    DumpAll { dir: PathBuf },
+    PatchAll { dir: PathBuf, out_dir: PathBuf },
 }
 
 fn main() -> Result<()> {
     let args = Args::parse();
 
     match args.command {
-        Commands::DumpAll { dir, dir_out } => dump_all(dir, dir_out),
+        Commands::DumpAll { dir } => dump_all(dir),
+        Commands::PatchAll { dir, out_dir } => patch_all(dir, out_dir),
     }
 }
