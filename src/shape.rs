@@ -61,6 +61,7 @@ pub struct DolHeader {
     // there's other stuff in a dol header but not relevant for text dumping
 }
 
+#[derive(Clone)]
 pub struct DolSection {
     pub file: u32,
     pub ram: u32,

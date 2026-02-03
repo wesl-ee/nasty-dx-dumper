@@ -247,7 +247,7 @@ pub fn load_patch(patch_file: &Path) -> Result<Vec<TLEntry>> {
                 };
                 seen_jp = false;
             }
-        } else if l.starts_with('#') {
+        } else if l.starts_with("# reference at") {
             let reference_to_eol =
                 &l[l.find(':').expect("malformed reference line") + 3..];
             let reference_offset = u32::from_str_radix(
