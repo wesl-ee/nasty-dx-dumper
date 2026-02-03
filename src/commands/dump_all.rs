@@ -1,17 +1,18 @@
 use std::{
     collections::HashMap,
     fs::File,
-    io::{BufWriter, Read, Write},
+    io::{BufWriter, Write},
     os::unix::fs::FileExt,
     path::PathBuf,
 };
 
-use anyhow::{Context, Result};
+use anyhow::Result;
 
 use crate::constants::{
     TEXT_TABLES_A, TEXT_TABLES_B, TEXT_TABLES_C, TEXT_TABLES_D, TEXT_TABLES_E,
     TEXT_TABLES_F, TEXT_TABLES_G,
 };
+use crate::utils::{load_character_table, pull_dol_header};
 use crate::{
     constants::TEXT_TABLES_H,
     shape::{
@@ -57,123 +58,7 @@ pub fn dump_all(dir: PathBuf) -> Result<()> {
 
 fn dump_main_dol(f_path: &PathBuf, out_file: &PathBuf) -> Result<()> {
     let mut fh = std::fs::File::open(f_path)?;
-
-    let mut buf = [0u8; 4];
-    let mut header = DolHeader::default();
-
-    // offsets
-    fh.read_exact(&mut buf)?;
-    header.text0_offset = u32::from_be_bytes(buf);
-    fh.read_exact(&mut buf)?;
-    header.text1_offset = u32::from_be_bytes(buf);
-    fh.read_exact(&mut buf)?;
-    header.text2_offset = u32::from_be_bytes(buf);
-    fh.read_exact(&mut buf)?;
-    header.text3_offset = u32::from_be_bytes(buf);
-    fh.read_exact(&mut buf)?;
-    header.text4_offset = u32::from_be_bytes(buf);
-    fh.read_exact(&mut buf)?;
-    header.text5_offset = u32::from_be_bytes(buf);
-    fh.read_exact(&mut buf)?;
-    header.text6_offset = u32::from_be_bytes(buf);
-    fh.read_exact(&mut buf)?;
-    header.data0_offset = u32::from_be_bytes(buf);
-    fh.read_exact(&mut buf)?;
-    header.data1_offset = u32::from_be_bytes(buf);
-    fh.read_exact(&mut buf)?;
-    header.data2_offset = u32::from_be_bytes(buf);
-    fh.read_exact(&mut buf)?;
-    header.data3_offset = u32::from_be_bytes(buf);
-    fh.read_exact(&mut buf)?;
-    header.data4_offset = u32::from_be_bytes(buf);
-    fh.read_exact(&mut buf)?;
-    header.data5_offset = u32::from_be_bytes(buf);
-    fh.read_exact(&mut buf)?;
-    header.data6_offset = u32::from_be_bytes(buf);
-    fh.read_exact(&mut buf)?;
-    header.data7_offset = u32::from_be_bytes(buf);
-    fh.read_exact(&mut buf)?;
-    header.data8_offset = u32::from_be_bytes(buf);
-    fh.read_exact(&mut buf)?;
-    header.data9_offset = u32::from_be_bytes(buf);
-    fh.read_exact(&mut buf)?;
-    header.data10_offset = u32::from_be_bytes(buf);
-
-    // addresses
-    fh.read_exact(&mut buf)?;
-    header.text0_address = u32::from_be_bytes(buf);
-    fh.read_exact(&mut buf)?;
-    header.text1_address = u32::from_be_bytes(buf);
-    fh.read_exact(&mut buf)?;
-    header.text2_address = u32::from_be_bytes(buf);
-    fh.read_exact(&mut buf)?;
-    header.text3_address = u32::from_be_bytes(buf);
-    fh.read_exact(&mut buf)?;
-    header.text4_address = u32::from_be_bytes(buf);
-    fh.read_exact(&mut buf)?;
-    header.text5_address = u32::from_be_bytes(buf);
-    fh.read_exact(&mut buf)?;
-    header.text6_address = u32::from_be_bytes(buf);
-    fh.read_exact(&mut buf)?;
-    header.data0_address = u32::from_be_bytes(buf);
-    fh.read_exact(&mut buf)?;
-    header.data1_address = u32::from_be_bytes(buf);
-    fh.read_exact(&mut buf)?;
-    header.data2_address = u32::from_be_bytes(buf);
-    fh.read_exact(&mut buf)?;
-    header.data3_address = u32::from_be_bytes(buf);
-    fh.read_exact(&mut buf)?;
-    header.data4_address = u32::from_be_bytes(buf);
-    fh.read_exact(&mut buf)?;
-    header.data5_address = u32::from_be_bytes(buf);
-    fh.read_exact(&mut buf)?;
-    header.data6_address = u32::from_be_bytes(buf);
-    fh.read_exact(&mut buf)?;
-    header.data7_address = u32::from_be_bytes(buf);
-    fh.read_exact(&mut buf)?;
-    header.data8_address = u32::from_be_bytes(buf);
-    fh.read_exact(&mut buf)?;
-    header.data9_address = u32::from_be_bytes(buf);
-    fh.read_exact(&mut buf)?;
-    header.data10_address = u32::from_be_bytes(buf);
-
-    // sizes
-    fh.read_exact(&mut buf)?;
-    header.text0_size = u32::from_be_bytes(buf);
-    fh.read_exact(&mut buf)?;
-    header.text1_size = u32::from_be_bytes(buf);
-    fh.read_exact(&mut buf)?;
-    header.text2_size = u32::from_be_bytes(buf);
-    fh.read_exact(&mut buf)?;
-    header.text3_size = u32::from_be_bytes(buf);
-    fh.read_exact(&mut buf)?;
-    header.text4_size = u32::from_be_bytes(buf);
-    fh.read_exact(&mut buf)?;
-    header.text5_size = u32::from_be_bytes(buf);
-    fh.read_exact(&mut buf)?;
-    header.text6_size = u32::from_be_bytes(buf);
-    fh.read_exact(&mut buf)?;
-    header.data0_size = u32::from_be_bytes(buf);
-    fh.read_exact(&mut buf)?;
-    header.data1_size = u32::from_be_bytes(buf);
-    fh.read_exact(&mut buf)?;
-    header.data2_size = u32::from_be_bytes(buf);
-    fh.read_exact(&mut buf)?;
-    header.data3_size = u32::from_be_bytes(buf);
-    fh.read_exact(&mut buf)?;
-    header.data4_size = u32::from_be_bytes(buf);
-    fh.read_exact(&mut buf)?;
-    header.data5_size = u32::from_be_bytes(buf);
-    fh.read_exact(&mut buf)?;
-    header.data6_size = u32::from_be_bytes(buf);
-    fh.read_exact(&mut buf)?;
-    header.data7_size = u32::from_be_bytes(buf);
-    fh.read_exact(&mut buf)?;
-    header.data8_size = u32::from_be_bytes(buf);
-    fh.read_exact(&mut buf)?;
-    header.data9_size = u32::from_be_bytes(buf);
-    fh.read_exact(&mut buf)?;
-    header.data10_size = u32::from_be_bytes(buf);
+    let header = pull_dol_header(&mut fh)?;
 
     let character_table = load_character_table().expect("no character table");
     let mut all_indexed_ptrs = HashMap::<u32, u32>::default();
@@ -548,23 +433,6 @@ fn dump_spt(_f_path: &PathBuf, _out_file: &PathBuf) {
     //             continue
     //         }
     // };
-}
-
-fn load_character_table() -> Result<HashMap<u16, String>> {
-    let mut table = HashMap::new();
-    let content = std::fs::read_to_string("Table.txt")
-        .with_context(|| "Failed to read Table.txt")?;
-
-    for line in content.lines() {
-        if let Some((hex_str, char_str)) = line.split_once('=') {
-            if let Ok(code) = u16::from_str_radix(hex_str, 16) {
-                table.insert(code, char_str.to_string());
-            }
-        }
-    }
-
-    table.insert(0xF800, "\n".to_string());
-    Ok(table)
 }
 
 fn ram_2_dol_offset(h: &DolHeader, addr: u32) -> Option<u32> {
