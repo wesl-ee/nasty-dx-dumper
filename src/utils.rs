@@ -151,6 +151,14 @@ pub fn pull_dol_header(fh: &mut File) -> Result<DolHeader> {
     fh.read_exact(&mut buf)?;
     header.data10_size = u32::from_be_bytes(buf);
 
+    // bss + entry
+    fh.read_exact(&mut buf)?;
+    header.bss_address = u32::from_be_bytes(buf);
+    fh.read_exact(&mut buf)?;
+    header.bss_size = u32::from_be_bytes(buf);
+    fh.read_exact(&mut buf)?;
+    header.entry_point = u32::from_be_bytes(buf);
+
     Ok(header)
 }
 

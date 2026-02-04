@@ -3,6 +3,7 @@ use std::{
     collections::HashMap,
     fs::File,
     io::{Read, Seek, SeekFrom, Write},
+    os::unix::fs::FileExt,
     path::{Path, PathBuf},
 };
 
@@ -35,10 +36,40 @@ pub fn patch_all(dir: PathBuf, out_dir: PathBuf) -> Result<()> {
         {
             let dol_f_path = f_path.with_extension("");
 
-            let patcher = DolPatcher::load(&dol_f_path, &f_path);
-            patcher.patch(&dol_f_path, &out_dir)?;
+            let patcher = DolPatcher::load(&f_path);
+            let _dol_added_size = patcher.patch(&dol_f_path, &out_dir)?;
+
+            // let header_f_path = dol_f_path.parent().expect("some parent").join("boot.bin");
+            // patch_disk_header_for_extended_main_dol(&header_f_path, dol_added_size, &out_dir)?;
         }
     }
+
+    Ok(())
+}
+
+fn patch_disk_header_for_extended_main_dol(
+    header_f_path: &PathBuf,
+    dol_added_size: u32,
+    out_dir: &PathBuf,
+) -> Result<()> {
+    const FST_OFFSET_OFFSET: usize = 0x0424;
+    let out_path = out_dir.join("boot.bin");
+
+    let mut buf = vec![];
+    let mut in_fh = File::open(header_f_path)?;
+    in_fh.read_to_end(&mut buf)?;
+
+    let mut fst_offset = buf
+        .get(FST_OFFSET_OFFSET..FST_OFFSET_OFFSET + 4)
+        .and_then(|s| s.try_into().ok())
+        .map(u32::from_be_bytes)
+        .expect("unable to parse fst offset from boot.bin");
+
+    fst_offset += dol_added_size;
+    buf[FST_OFFSET_OFFSET..FST_OFFSET_OFFSET + 4]
+        .copy_from_slice(&fst_offset.to_be_bytes());
+    let mut out_fh = File::create(out_path)?;
+    out_fh.write_all(&buf)?;
 
     Ok(())
 }
@@ -171,15 +202,18 @@ fn write_dol_header<W: Write>(
         writer.write_all(&val.to_be_bytes())?;
     }
 
-    // in reality the updates we want to make are almost all in data5 but we generally
-    // allow modifications of any section
+    // bss + entry + padding to 0x100
+    writer.write_all(&header.bss_address.to_be_bytes())?;
+    writer.write_all(&header.bss_size.to_be_bytes())?;
+    writer.write_all(&header.entry_point.to_be_bytes())?;
+    writer.write_all(&[0u8; 28])?;
 
     Ok(())
 }
 
 trait BinaryPatcher {
-    fn load(in_file: &Path, patch_file: &Path) -> Self;
-    fn patch(&self, in_file: &Path, out_dir: &Path) -> Result<()>;
+    fn load(patch_file: &Path) -> Self;
+    fn patch(&self, in_file: &Path, out_dir: &Path) -> Result<u32>;
 }
 
 struct DolPatcher {
@@ -187,7 +221,7 @@ struct DolPatcher {
 }
 
 impl BinaryPatcher for DolPatcher {
-    fn load(_in_file: &Path, patch_file: &Path) -> Self {
+    fn load(patch_file: &Path) -> Self {
         let rev_table = load_reverse_character_table()
             .expect("failed to load reverse table");
         let entries = load_patch(patch_file).expect("failed to load patch");
@@ -205,7 +239,7 @@ impl BinaryPatcher for DolPatcher {
         DolPatcher { tl }
     }
 
-    fn patch(&self, in_file: &Path, out_dir: &Path) -> Result<()> {
+    fn patch(&self, in_file: &Path, out_dir: &Path) -> Result<u32> {
         let mut in_fh = File::open(in_file)?;
         let mut header = pull_dol_header(&mut in_fh)?;
         let original_len = in_fh.metadata()?.len();
@@ -310,6 +344,6 @@ impl BinaryPatcher for DolPatcher {
             format!("main.dol grew by {} bytes\n", growth),
         )?;
 
-        Ok(())
+        Ok(growth.try_into()?)
     }
 }

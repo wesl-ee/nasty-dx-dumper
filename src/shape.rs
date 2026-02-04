@@ -58,7 +58,10 @@ pub struct DolHeader {
     pub data8_size: u32,
     pub data9_size: u32,
     pub data10_size: u32,
-    // there's other stuff in a dol header but not relevant for text dumping
+
+    pub bss_address: u32,
+    pub bss_size: u32,
+    pub entry_point: u32,
 }
 
 #[derive(Clone)]
