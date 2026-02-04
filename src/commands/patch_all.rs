@@ -122,6 +122,9 @@ fn extend_section_by_size(
             **offset += additional_size;
         }
     }
+
+    // lastly shift bss since it follows those sections also
+    header.bss_address += additional_size;
 }
 
 fn write_dol_header<W: Write>(
