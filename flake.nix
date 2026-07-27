@@ -30,6 +30,7 @@
           nativeBuildInputs = with pkgs; [
             pkg-config
             protobuf
+            pkgsCross.ppc-embedded.buildPackages.binutils-unwrapped
           ];
         };
 
@@ -40,6 +41,10 @@
             })
             git
             just
+            pkgsCross.ppc-embedded.buildPackages.binutils-unwrapped
+
+            # gc tools I like
+            wiimms-iso-tools
           ];
           RUST_SRC_PATH="${pkgs.rust-bin.stable."1.88.0".default}/lib/rustlib/src/rust/library";
         };
@@ -61,11 +66,9 @@
       pip install -r requirements.txt
     fi
 
-    # optional: load OPENAI_API_KEY, etc.
     if [ -f .env ]; then set -a; . ./.env; set +a; fi
   '';
         };
       }
     );
 }
-

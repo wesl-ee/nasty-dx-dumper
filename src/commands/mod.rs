@@ -1,4 +1,4 @@
-mod dump_all;
+pub(crate) mod dump_all;
 mod patch_all;
 
 pub use dump_all::dump_all;

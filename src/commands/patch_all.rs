@@ -1,352 +1,775 @@
-use anyhow::Result;
+use anyhow::{anyhow, Result};
 use std::{
-    collections::HashMap,
+    collections::{BTreeMap, HashMap},
     fs::File,
     io::{Read, Seek, SeekFrom, Write},
-    os::unix::fs::FileExt,
     path::{Path, PathBuf},
 };
 
-use crate::shape::DolHeader;
+use crate::constants::{INLINE_FIELDS, TEXT_TABLES_EXPLICIT};
+use crate::shape::{DolHeader, Section, DATA7, DATA8};
 use crate::utils::{
-    load_patch, load_reverse_character_table, pull_dol_header,
-    string_to_dx_bytes, TLEntry,
+    load_character_table, load_patch, load_reverse_character_table, Encoder,
+    TLEntry,
 };
+use crate::{ppc, spt, utils};
+
+fn word(buf: &[u8], off: u32) -> u32 {
+    u32::from_be_bytes(buf[off as usize..off as usize + 4].try_into().unwrap())
+}
+
+// Retail memory immediately above BSS is not free: the linker reserves a
+// 64 KiB main stack and an 8 KiB debugger stack there.  The runtime arena (and
+// therefore the first genuinely available address) starts after both.
+const TRANSLATION_ARENA_RAM: u32 = 0x802e_26a0;
+
+/// Sanity-check for some strings I confirmed were good
+const REVIEWED_IMMEDIATE_REFS: &[(u32, u32)] = &[
+    (0x01ee6c, 0x1cf810), // alchemist duplication result
+    (0x040440, 0x1d39fc), // roulette prompt
+    (0x04052c, 0x1d397c), // Item Roulette
+    (0x0405c4, 0x1d3990), // Magic Roulette
+    (0x04065c, 0x1d39a4), // Red Chest Roulette
+    (0x0406f4, 0x1d39bc), // White Chest Roulette
+    (0x04078c, 0x1d39d4), // Mystery Chest Roulette
+    (0x040824, 0x1d39ec), // Safe Roulette
+    (0x044a9c, 0x1d4478), // Dig Space: insufficient money
+    (0x0457d0, 0x1d4398), // Dig Space: nothing found
+    (0x045824, 0x1d4380), // Dig Space: item unearthed
+    (0x0458b8, 0x1d4414), // Dig Space: owner/payment prompt
+    (0x069a80, 0x243450), // battle card: Attack
+    (0x069a8c, 0x24345c), // battle card: Defense
+    (0x069b68, 0x243474), // battle card: Counter
+    (0x069bf0, 0x243480), // battle card: Give Up
+    (0x06c4ac, 0x244090), // punishment: steal nothing
+    (0x06c504, 0x243ec4), // punishment: steal money
+    (0x06c52c, 0x243ec4), // punishment: steal money
+    (0x06c550, 0x243f00), // punishment: discard money
+    (0x06c574, 0x243fe4), // punishment: status ailment
+    (0x06c588, 0x243f3c), // punishment: discard five
+    (0x06c59c, 0x243f80), // punishment: discard all
+    (0x06c5b0, 0x243fb8), // punishment: negative Items
+    (0x06c5c4, 0x243edc), // punishment: steal equipment
+    (0x06c5d8, 0x243f1c), // punishment: discard selection
+    (0x06c608, 0x243f1c), // punishment: discard selection
+    (0x06c638, 0x243f1c), // punishment: discard selection
+    (0x06c66c, 0x243f1c), // punishment: discard selection
+    (0x06c6a0, 0x244038), // punishment: steal D-Goods
+    (0x06c6bc, 0x244038), // punishment: steal D-Goods
+    (0x06c6d8, 0x244064), // punishment: steal D-Parts
+    (0x06c6ec, 0x244010), // punishment: put something on
+    (0x06c71c, 0x243e38), // punishment: confirmation
+    (0x06ca14, 0x244120), // punishment result: stole money
+    (0x06ca88, 0x244120), // punishment result: stole money
+    (0x06cac4, 0x244138), // punishment result: discarded money
+    (0x06ccac, 0x2441f8), // punishment result: head item
+    (0x06cf08, 0x2433d8), // punishment: Yes/No
+    (0x06d2cc, 0x24414c), // punishment result: stole selection
+    (0x06d328, 0x244164), // punishment result: discarded selection
+    (0x06d368, 0x244178), // punishment result: discarded all
+    (0x06d3c4, 0x2441ac), // punishment result: forced item
+    (0x06d404, 0x2441c4), // punishment result: forced negative Items
+    (0x06dba4, 0x244024), // punishment: confirmation
+    (0x06dbd0, 0x243e6c), // punishment: remaining selections
+    (0x098754, 0x2440f4), // punishment result: two held items
+    (0x0ac260, 0x2440b0), // punishment result: held item
+    (0x0ac288, 0x2440d0), // punishment result: dropped item
+    (0x0ac2b0, 0x243cd0), // punishment result: D-Parts
+    (0x0ac2f4, 0x243e4c), // punishment: choose what to steal
+    (0x0ac3fc, 0x243bf0), // one dropped item
+    (0x0ac42c, 0x243c14), // two dropped items
+    (0x0ac468, 0x243c40), // three dropped items
+    (0x0ac4b0, 0x243c74), // dropped money
+    (0x0ac4d8, 0x243c98), // dropped all Items/Magic
+    (0x10e7b4, 0x2712d0), // Dropped Items heading
+];
+
+fn align_32(value: u32) -> u32 {
+    value.checked_add(31).expect("RAM address overflow") & !31
+}
+
+fn dol_entry_cap(header: &DolHeader, entry: &TLEntry) -> Option<u32> {
+    entry.references.iter().find_map(|&ref_off| {
+        let ref_ram = header.ram_addr(ref_off)?;
+        TEXT_TABLES_EXPLICIT.iter().find_map(|table| {
+            let cap = table.cap?;
+            (0..table.count).find_map(|i| {
+                table.fields.iter().find_map(|field| {
+                    (ref_ram == table.base + i * table.stride + *field)
+                        .then_some(cap)
+                })
+            })
+        })
+    })
+}
+
+/// Move every retail ArenaLo path past the appended translation bank.
+///
+/// `func_80141ED4` first installs the linker default at 0x802e26a0.  On the
+/// normal non-debug path it then reclaims the debugger stack by installing
+/// aligned(0x802e0698).  Patching only the first pair lets later heap
+/// allocations overwrite data8 even though the game initially boots.
+fn patch_runtime_arena_lo(
+    buf: &[u8],
+    header: &DolHeader,
+    updates: &mut HashMap<u32, u32>,
+    arena_lo: u32,
+) -> Result<()> {
+    const SITES: [(u32, u32, u32, u32); 2] = [
+        // linker default
+        (0x8014_1eec, 0x8014_1ef0, 0x3c60_802e, 0x3863_26a0),
+        // normal retail path, followed by addi +31 / align-down-32
+        (0x8014_1f24, 0x8014_1f28, 0x3c60_802e, 0x3863_0698),
+    ];
+
+    for (hi_ram, lo_ram, expected_hi, expected_lo) in SITES {
+        let hi_off = header.file_offset(hi_ram).ok_or_else(|| {
+            anyhow!("ArenaLo lis at 0x{hi_ram:08x} is outside the DOL")
+        })?;
+        let lo_off = header.file_offset(lo_ram).ok_or_else(|| {
+            anyhow!("ArenaLo addi at 0x{lo_ram:08x} is outside the DOL")
+        })?;
+        let old_hi = word(buf, hi_off);
+        let old_lo = word(buf, lo_off);
+        if (old_hi, old_lo) != (expected_hi, expected_lo) {
+            return Err(anyhow!(
+                "ArenaLo instructions at 0x{hi_ram:08x} are \
+                 0x{old_hi:08x}/0x{old_lo:08x}, expected \
+                 0x{expected_hi:08x}/0x{expected_lo:08x}"
+            ));
+        }
+
+        let (new_hi, new_lo) =
+            ppc::rewrite(old_hi, old_lo, ppc::ImmKind::Addi, arena_lo);
+        updates.insert(hi_off, new_hi);
+        updates.insert(lo_off, new_lo);
+    }
+    Ok(())
+}
+
+static SPT_UNSIGNED_OFFSET_CODE: &[u8; 12] =
+    include_bytes!(concat!(env!("OUT_DIR"), "/spt_unsigned_offsets.bin"));
+
+/// Retail SPT offsets are signed. Install the three independently assembled
+/// instructions that make direct, directory and table offsets unsigned.
+fn patch_spt_resolvers(
+    buf: &[u8],
+    header: &DolHeader,
+    updates: &mut HashMap<u32, u32>,
+) -> Result<()> {
+    const SITES: [(u32, u32); 3] = [
+        (0x800d_2cdc, 0x7c60_0734), // extsh r0,r3
+        (0x800d_2d00, 0x7c04_02ae), // lhax r0,r4,r0
+        (0x800d_2d2c, 0x7c63_02ae), // lhax r3,r3,r0
+    ];
+    const EXPECTED_NEW: [u32; 3] = [
+        0x5460_043e, // clrlwi r0,r3,16
+        0x7c04_022e, // lhzx r0,r4,r0
+        0x7c63_022e, // lhzx r3,r3,r0
+    ];
+
+    for (i, ((ram, expected_old), assembled)) in SITES
+        .into_iter()
+        .zip(SPT_UNSIGNED_OFFSET_CODE.chunks_exact(4))
+        .enumerate()
+    {
+        let off = header.file_offset(ram).ok_or_else(|| {
+            anyhow!("SPT resolver RAM 0x{ram:08x} is outside the DOL")
+        })?;
+        let found = word(buf, off);
+        if found != expected_old {
+            return Err(anyhow!(
+                "SPT resolver at RAM 0x{ram:08x} (file 0x{off:x}) is \
+                 0x{found:08x}, expected retail instruction 0x{expected_old:08x}"
+            ));
+        }
+        let new_word = u32::from_be_bytes(assembled.try_into().unwrap());
+        if new_word != EXPECTED_NEW[i] {
+            return Err(anyhow!(
+                "assembler produced 0x{new_word:08x} for SPT resolver {i}, \
+                 expected 0x{:08x}",
+                EXPECTED_NEW[i]
+            ));
+        }
+        updates.insert(off, new_word);
+    }
+    Ok(())
+}
 
 pub fn patch_all(dir: PathBuf, out_dir: PathBuf) -> Result<()> {
-    for f in std::fs::read_dir(&dir)?.filter(|f| {
-        match f {
-            Ok(f) => f,
-            _ => return false,
-        }
-        .path() // yeah only process .patch files
-        .extension()
-        .unwrap_or_default()
-        .to_ascii_uppercase()
-            == "PATCH"
-    }) {
+    let mut refused = 0usize;
+
+    for f in utils::walk_dir(&dir) {
         let f = f?;
         let f_path = f.path();
-        if !f.metadata()?.is_file() {
+        // only .patch files carry translations; everything else is game data
+        if !f_path
+            .extension()
+            .unwrap_or_default()
+            .eq_ignore_ascii_case("PATCH")
+            || !f.metadata()?.is_file()
+        {
             continue;
         }
 
-        if f_path.file_name().unwrap_or_default().to_ascii_uppercase()
-            == "MAIN.DOL.PATCH"
+        // must stay relative: joining an absolute path onto out_dir discards
+        // out_dir and writes straight back over the input tree
+        let rel_path = f_path.strip_prefix(&dir).unwrap_or(&f_path);
+
+        if f_path
+            .file_name()
+            .unwrap_or_default()
+            .eq_ignore_ascii_case("MAIN.DOL.PATCH")
         {
             let dol_f_path = f_path.with_extension("");
+            let out_path = out_dir
+                .join(rel_path)
+                .parent()
+                .expect("parent")
+                .join("main.dol");
 
-            let patcher = DolPatcher::load(&f_path);
-            let _dol_added_size = patcher.patch(&dol_f_path, &out_dir)?;
+            DolPatcher::load(&f_path)?.patch(&dol_f_path, &out_path)?;
+        }
 
-            // let header_f_path = dol_f_path.parent().expect("some parent").join("boot.bin");
-            // patch_disk_header_for_extended_main_dol(&header_f_path, dol_added_size, &out_dir)?;
+        let spt_f_path = f_path.with_extension("");
+        if spt_f_path
+            .extension()
+            .unwrap_or_default()
+            .eq_ignore_ascii_case("SPT")
+        {
+            let out_path = out_dir.join(rel_path).with_extension("");
+            if !patch_spt(&f_path, &spt_f_path, &out_path)? {
+                refused += 1;
+            }
         }
     }
 
+    if refused > 0 {
+        // a plausible-looking corrupt SPT costs more than a clear error, so the
+        // untouched Japanese was written instead and the run fails
+        return Err(anyhow!(
+            "{refused} SPT file(s) refused; their Japanese was written through unchanged"
+        ));
+    }
     Ok(())
 }
 
-fn patch_disk_header_for_extended_main_dol(
-    header_f_path: &PathBuf,
-    dol_added_size: u32,
-    out_dir: &PathBuf,
-) -> Result<()> {
-    const FST_OFFSET_OFFSET: usize = 0x0424;
-    let out_path = out_dir.join("boot.bin");
+/// Apply one `.SPT.patch`. Returns false when the writer refused, in which case
+/// the original file is written through untouched.
+///
+/// Every check the writer makes is a refusal rather than a truncation: over the
+/// 8-glyph name cap the 0x12-byte copy loses its terminator and the renderer
+/// walks off the field, so silently clipping would corrupt the game.
+fn patch_spt(
+    patch_file: &Path,
+    in_file: &Path,
+    out_path: &Path,
+) -> Result<bool> {
+    let glyphs = load_character_table()?;
+    let encoder = Encoder::new(&load_reverse_character_table()?);
+    let buf = std::fs::read(in_file)?;
+    let plan = spt::plan(&buf, &glyphs);
+    let name = in_file
+        .file_name()
+        .unwrap_or_default()
+        .display()
+        .to_string();
 
-    let mut buf = vec![];
-    let mut in_fh = File::open(header_f_path)?;
-    in_fh.read_to_end(&mut buf)?;
-
-    let mut fst_offset = buf
-        .get(FST_OFFSET_OFFSET..FST_OFFSET_OFFSET + 4)
-        .and_then(|s| s.try_into().ok())
-        .map(u32::from_be_bytes)
-        .expect("unable to parse fst offset from boot.bin");
-
-    fst_offset += dol_added_size;
-    buf[FST_OFFSET_OFFSET..FST_OFFSET_OFFSET + 4]
-        .copy_from_slice(&fst_offset.to_be_bytes());
-    let mut out_fh = File::create(out_path)?;
-    out_fh.write_all(&buf)?;
-
-    Ok(())
-}
-
-fn extend_section_by_size(
-    header: &mut DolHeader,
-    og_ptr: u32,
-    additional_size: u32,
-) {
-    let mut sections = [
-        (&mut header.text0_offset, &mut header.text0_size),
-        (&mut header.text1_offset, &mut header.text1_size),
-        (&mut header.text2_offset, &mut header.text2_size),
-        (&mut header.text3_offset, &mut header.text3_size),
-        (&mut header.text4_offset, &mut header.text4_size),
-        (&mut header.text5_offset, &mut header.text5_size),
-        (&mut header.text6_offset, &mut header.text6_size),
-        (&mut header.data0_offset, &mut header.data0_size),
-        (&mut header.data1_offset, &mut header.data1_size),
-        (&mut header.data2_offset, &mut header.data2_size),
-        (&mut header.data3_offset, &mut header.data3_size),
-        (&mut header.data4_offset, &mut header.data4_size),
-        (&mut header.data5_offset, &mut header.data5_size),
-        (&mut header.data6_offset, &mut header.data6_size),
-        (&mut header.data7_offset, &mut header.data7_size),
-        (&mut header.data8_offset, &mut header.data8_size),
-        (&mut header.data9_offset, &mut header.data9_size),
-        (&mut header.data10_offset, &mut header.data10_size),
-    ];
-
-    // find section to extend
-    let mut found_idx = None;
-    for (i, (offset, size)) in sections.iter().enumerate() {
-        if **size != 0 && og_ptr >= **offset && og_ptr < **offset + **size {
-            found_idx = Some(i);
-            break;
+    let entries = load_patch(patch_file)?;
+    let mut repl = BTreeMap::new();
+    let mut refusals = Vec::new();
+    for entry in &entries {
+        let en = match entry.en_string.as_deref() {
+            Some(s) => s,
+            None => continue,
+        };
+        match encoder.encode(en) {
+            Ok(codes) => {
+                for &at in &entry.references {
+                    repl.insert(
+                        (at as usize, entry.og_ptr as usize),
+                        codes.clone(),
+                    );
+                }
+            }
+            Err(why) => refusals.push(format!("0x{:x}: {}", entry.og_ptr, why)),
         }
     }
 
-    let found_idx =
-        found_idx.expect(&format!("0x{:x} not in any section", og_ptr));
-    let section_end = *sections[found_idx].0 + *sections[found_idx].1;
-
-    // extend this section
-    *sections[found_idx].1 += additional_size;
-
-    // shift subsequent sections by that additional amt
-    for (offset, size) in &mut sections {
-        if **size != 0 && **offset >= section_end {
-            **offset += additional_size;
+    let mut out = &buf;
+    let mut packed;
+    if refusals.is_empty() {
+        match spt::pack(&buf, &plan, &repl) {
+            Ok(p) => {
+                packed = p;
+                refusals.extend(
+                    spt::verify(&buf, &packed.bytes, &repl, &glyphs)
+                        .into_iter()
+                        .map(|b| format!("verify: {b}")),
+                );
+                if refusals.is_empty() {
+                    if name.eq_ignore_ascii_case("TITLE.SPT") {
+                        patch_title_default_names(&mut packed.bytes, &encoder)?;
+                    }
+                    out = &packed.bytes;
+                }
+            }
+            Err(rs) => refusals.extend(rs.into_iter().map(|r| match r.key {
+                Some((at, off)) => {
+                    format!("0x{:x} (ref 0x{:x}): {}", off, at, r.why)
+                }
+                None => format!("file: {}", r.why),
+            })),
         }
     }
 
-    // lastly shift bss since it follows those sections also
-    header.bss_address += additional_size;
+    std::fs::create_dir_all(out_path.parent().expect("parent"))?;
+    if refusals.is_empty() {
+        std::fs::write(out_path, out)?;
+        if !repl.is_empty() {
+            println!(
+                "{}: {} replacements, {} -> {} bytes",
+                name,
+                repl.len(),
+                buf.len(),
+                out.len()
+            );
+        }
+        return Ok(true);
+    }
+
+    std::fs::write(out_path, &buf)?;
+    for r in &refusals {
+        println!("  REFUSED {name} {r}");
+    }
+    println!("{name}: refused, wrote the original through");
+    Ok(false)
 }
 
-fn write_dol_header<W: Write>(
-    writer: &mut W,
-    header: &DolHeader,
-) -> Result<()> {
-    let offsets = [
-        header.text0_offset,
-        header.text1_offset,
-        header.text2_offset,
-        header.text3_offset,
-        header.text4_offset,
-        header.text5_offset,
-        header.text6_offset,
-        header.data0_offset,
-        header.data1_offset,
-        header.data2_offset,
-        header.data3_offset,
-        header.data4_offset,
-        header.data5_offset,
-        header.data6_offset,
-        header.data7_offset,
-        header.data8_offset,
-        header.data9_offset,
-        header.data10_offset,
-    ];
-    let addresses = [
-        header.text0_address,
-        header.text1_address,
-        header.text2_address,
-        header.text3_address,
-        header.text4_address,
-        header.text5_address,
-        header.text6_address,
-        header.data0_address,
-        header.data1_address,
-        header.data2_address,
-        header.data3_address,
-        header.data4_address,
-        header.data5_address,
-        header.data6_address,
-        header.data7_address,
-        header.data8_address,
-        header.data9_address,
-        header.data10_address,
-    ];
-    let sizes = [
-        header.text0_size,
-        header.text1_size,
-        header.text2_size,
-        header.text3_size,
-        header.text4_size,
-        header.text5_size,
-        header.text6_size,
-        header.data0_size,
-        header.data1_size,
-        header.data2_size,
-        header.data3_size,
-        header.data4_size,
-        header.data5_size,
-        header.data6_size,
-        header.data7_size,
-        header.data8_size,
-        header.data9_size,
-        header.data10_size,
+/// TITLE's normal string references follow the relocated directory entries,
+/// but the character-select name prefill ultimately reads the seven retail
+/// slots at 0x7260..0x729f.  Keep full names in the relocated strings and put
+/// short Latin defaults in those legacy slots.  Each replacement is exactly
+/// the original slot width, including the terminator; refusing on any byte
+/// mismatch prevents this post-pass from overwriting a future packer's data.
+fn patch_title_default_names(buf: &mut [u8], encoder: &Encoder) -> Result<()> {
+    const NAMES: [(usize, &str, &str); 7] = [
+        (0x7260, "タップ", "Tap"),
+        (0x7268, "ルチル", "Luc"),
+        (0x7270, "ブリキン", "Brik"),
+        (0x727a, "ガママル", "Gama"),
+        (0x7284, "ラズリ", "Raz"),
+        (0x728c, "ウィウィ", "Wiwi"),
+        (0x7296, "ヴィント", "Vint"),
     ];
 
-    // offsets
-    for &val in &offsets {
-        writer.write_all(&val.to_be_bytes())?;
-    }
-    // addresses
-    for &val in &addresses {
-        writer.write_all(&val.to_be_bytes())?;
-    }
-    // sizes
-    for &val in &sizes {
-        writer.write_all(&val.to_be_bytes())?;
-    }
+    for (offset, japanese, latin) in NAMES {
+        let original = encoder
+            .encode(japanese)
+            .map_err(|why| anyhow!("TITLE default {japanese}: {why}"))?;
+        let replacement = encoder
+            .encode(latin)
+            .map_err(|why| anyhow!("TITLE default {latin}: {why}"))?;
+        if original.len() != replacement.len() {
+            return Err(anyhow!(
+                "TITLE default at 0x{offset:x}: {japanese:?} and {latin:?} have different widths"
+            ));
+        }
 
-    // bss + entry + padding to 0x100
-    writer.write_all(&header.bss_address.to_be_bytes())?;
-    writer.write_all(&header.bss_size.to_be_bytes())?;
-    writer.write_all(&header.entry_point.to_be_bytes())?;
-    writer.write_all(&[0u8; 28])?;
+        let mut expected = Vec::with_capacity((original.len() + 1) * 2);
+        let mut encoded = Vec::with_capacity((replacement.len() + 1) * 2);
+        for code in original {
+            expected.extend(code.to_be_bytes());
+        }
+        for code in replacement {
+            encoded.extend(code.to_be_bytes());
+        }
+        expected.extend(spt::TERMINATOR.to_be_bytes());
+        encoded.extend(spt::TERMINATOR.to_be_bytes());
 
+        let end = offset + expected.len();
+        let found = buf.get(offset..end).ok_or_else(|| {
+            anyhow!("TITLE default slot 0x{offset:x} is outside the file")
+        })?;
+        if found != expected {
+            return Err(anyhow!(
+                "TITLE default slot 0x{offset:x} no longer contains the expected retail name {japanese:?}"
+            ));
+        }
+        buf[offset..end].copy_from_slice(&encoded);
+    }
     Ok(())
-}
-
-trait BinaryPatcher {
-    fn load(patch_file: &Path) -> Self;
-    fn patch(&self, in_file: &Path, out_dir: &Path) -> Result<u32>;
 }
 
 struct DolPatcher {
     tl: HashMap<u32, TLEntry>,
+    /// Strict encoder for every translated DOL string. Silently dropping an
+    /// unsupported glyph can turn reviewed copy into different text and can
+    /// also hide fixed-width overflows.
+    encoder: Encoder,
 }
 
-impl BinaryPatcher for DolPatcher {
-    fn load(patch_file: &Path) -> Self {
-        let rev_table = load_reverse_character_table()
-            .expect("failed to load reverse table");
-        let entries = load_patch(patch_file).expect("failed to load patch");
+impl DolPatcher {
+    fn load(patch_file: &Path) -> Result<DolPatcher> {
+        let rev_table = load_reverse_character_table()?;
+        let tl = load_patch(patch_file)?
+            .into_iter()
+            .map(|e| (e.og_ptr, e))
+            .collect();
 
-        let mut tl = HashMap::new();
-
-        for mut entry in entries {
-            entry.jp_bytes = string_to_dx_bytes(&entry.jp_string, &rev_table);
-            if let Some(ref en) = entry.en_string {
-                entry.en_bytes = Some(string_to_dx_bytes(en, &rev_table));
-            }
-            tl.insert(entry.og_ptr, entry);
-        }
-
-        DolPatcher { tl }
+        Ok(DolPatcher {
+            tl,
+            encoder: Encoder::new(&rev_table),
+        })
     }
 
-    fn patch(&self, in_file: &Path, out_dir: &Path) -> Result<u32> {
+    fn patch(&self, in_file: &Path, out_path: &Path) -> Result<()> {
         let mut in_fh = File::open(in_file)?;
-        let mut header = pull_dol_header(&mut in_fh)?;
-        let original_len = in_fh.metadata()?.len();
+        let mut header = DolHeader::read(&mut in_fh)?;
+        let buf = std::fs::read(in_file)?;
 
-        // group new text patching by section
-        let mut section_patches: HashMap<
-            usize,
-            (Vec<u8>, Vec<(u32, u32)>, u32),
-        > = HashMap::new();
+        // strings the code addresses with an immediate pair have no pointer
+        // word; re-derive the pairs from this same DOL rather than trusting
+        // anything the .patch file says about them
+        let scan = ppc::scan(&buf, &header);
+        let rejected: HashMap<u32, &str> = scan
+            .rejected
+            .iter()
+            .map(|(&a, r)| (a, r.why.as_str()))
+            .collect();
+        // pairs grouped by the string they build, so an entry's code references
+        // come from this DOL rather than from whatever the .patch file happened
+        // to record when it was last dumped
+        let imm_by_target: HashMap<u32, Vec<u32>> = scan
+            .usable()
+            .into_iter()
+            .map(|(target, refs)| {
+                (target, refs.into_iter().map(|r| r.lo_off).collect())
+            })
+            .collect();
+        let imm = scan.refs;
+        for &(ref_off, expected_target) in REVIEWED_IMMEDIATE_REFS {
+            let found = imm.get(&ref_off).ok_or_else(|| {
+                anyhow!(
+                    "reviewed immediate reference 0x{ref_off:x} was not \
+                     recovered from this DOL"
+                )
+            })?;
+            if found.target_off != expected_target {
+                return Err(anyhow!(
+                    "reviewed immediate reference 0x{ref_off:x} targets \
+                     0x{:x}, expected 0x{expected_target:x}",
+                    found.target_off
+                ));
+            }
+        }
 
-        for (_, entry) in &self.tl {
-            let en_bytes = match &entry.en_bytes {
-                Some(b) => b,
+        // data8 is empty on the original ROM, so use it for the translated
+        // text.  It must begin after the two linker-reserved stacks, not at the
+        // end of BSS (which is the bottom of the main stack).
+        let data7 = header.sections[DATA7];
+        if data7.size == 0 {
+            return Err(anyhow!("data7 is empty; this is not the retail DOL"));
+        }
+        let original_bss_end = header.bss_address + header.bss_size;
+        if original_bss_end != 0x802d_0698 {
+            return Err(anyhow!(
+                "unexpected retail BSS end 0x{original_bss_end:08x}; refusing \
+                 to guess where the stacks end"
+            ));
+        }
+        header.sections[DATA8] = Section {
+            file: data7.file + data7.size,
+            ram: TRANSLATION_ARENA_RAM,
+            size: 0,
+        };
+
+        let data8_base_ram = TRANSLATION_ARENA_RAM;
+
+        // collect all new text into single buffer for data8
+        let mut appended = Vec::new();
+        // file offset -> the word to write there: a relocated pointer in data,
+        // a rebuilt `lis` or low half in code
+        let mut word_updates = HashMap::new();
+
+        // sort by og_ptr for deterministic ordering
+        let mut entries: Vec<_> = self.tl.values().collect();
+        entries.sort_by_key(|e| e.og_ptr);
+
+        for entry in entries {
+            let en = match entry.en_string.as_deref() {
+                Some(s) => s,
                 None => continue,
             };
-
-            let sections: Vec<_> = header.section_iter().collect();
-            let section_idx = sections
-                .iter()
-                .position(|s| {
-                    entry.og_ptr >= s.file && entry.og_ptr < s.file + s.size
-                })
-                .expect("ptr not in any section");
-
-            let section = &sections[section_idx];
-            let entry_og_ptr = entry.og_ptr;
-            let (appended, ptr_updates, _) = section_patches
-                .entry(section_idx)
-                .or_insert_with(|| (Vec::new(), Vec::new(), entry_og_ptr));
-
-            let new_ram = section.ram + section.size + appended.len() as u32;
-            appended.extend_from_slice(en_bytes);
-
-            for &ref_off in &entry.references {
-                ptr_updates.push((ref_off, new_ram));
+            let codes = self.encoder.encode(en).map_err(|why| {
+                anyhow!("DOL string 0x{:x}: {why}", entry.og_ptr)
+            })?;
+            let mut en_bytes = Vec::with_capacity((codes.len() + 1) * 2);
+            for &code in &codes {
+                en_bytes.extend(code.to_be_bytes());
             }
-        }
+            en_bytes.extend(spt::TERMINATOR.to_be_bytes());
 
-        let mut all_ptr_updates = HashMap::new();
-        for (_, ptr_updates, _) in section_patches.values() {
-            for &(file_off, new_ram) in ptr_updates {
-                all_ptr_updates.insert(file_off, new_ram);
-            }
-        }
-
-        let original_sections: Vec<_> = header.section_iter().collect();
-
-        // extend header
-        for (_, (appended, _, og_ptr)) in &section_patches {
-            extend_section_by_size(&mut header, *og_ptr, appended.len() as u32);
-        }
-        let new_sections: Vec<_> = header.section_iter().collect();
-
-        let out_path = out_dir.join("main.dol");
-        let mut out_fh = File::create(&out_path)?;
-        write_dol_header(&mut out_fh, &header)?;
-
-        // write sections one by one
-        for (section_idx, (orig_section, new_section)) in original_sections
-            .iter()
-            .zip(new_sections.iter())
-            .enumerate()
-        {
-            if orig_section.size == 0 {
-                continue;
-            }
-
-            // seek
-            out_fh.seek(SeekFrom::Start(new_section.file as u64))?;
-
-            // read at sought offset
-            in_fh.seek(SeekFrom::Start(orig_section.file as u64))?;
-            let mut section_data = vec![0u8; orig_section.size as usize];
-            in_fh.read_exact(&mut section_data)?;
-
-            // update pointers in this section
-            for (&file_offset, &new_ram) in &all_ptr_updates {
-                if file_offset >= orig_section.file
-                    && file_offset + 4 <= orig_section.file + orig_section.size
-                {
-                    let i = (file_offset - orig_section.file) as usize;
-                    section_data[i..i + 4]
-                        .copy_from_slice(&new_ram.to_be_bytes());
+            if let Some(cap) = dol_entry_cap(&header, entry) {
+                let glyphs = codes.len();
+                if glyphs > cap as usize {
+                    eprintln!(
+                        "capped DOL string 0x{:x}: {:?} is {glyphs} glyphs but \
+                         the runtime copy holds {cap}; leaving the original",
+                        entry.og_ptr,
+                        en
+                    );
+                    continue;
                 }
             }
 
-            // write
-            out_fh.write_all(&section_data)?;
+            // fixed-width inline records have no reference of any kind, so
+            // falling through to the relocation path below would append the
+            // translation to the arena and leave nothing pointing at it. they
+            // would have to be overwritten where they lie, within their glyph
+            // budget; nothing has playtested that, so `dump-all` emits them and
+            // we leave them Japanese.
+            if header.ram_addr(entry.og_ptr).is_some_and(|ram| {
+                INLINE_FIELDS.iter().any(|f| f.record(ram).is_some())
+            }) {
+                continue;
+            }
 
-            // add translated strings if this section has them
-            if let Some((appended, _, _)) = section_patches.get(&section_idx) {
-                out_fh.write_all(appended)?;
+            // pointer words come from the .patch file; instruction pairs come
+            // from the scan of this DOL. A reference the .patch file puts inside
+            // code that the scan does not know is a pair is a stale entry, not a
+            // translation, and it is not ours to guess at.
+            let mut all_refs: Vec<u32> = Vec::new();
+            let mut unrewritable = Vec::new();
+            for &ref_off in &entry.references {
+                if ref_off >= header.data_start() {
+                    all_refs.push(ref_off);
+                } else if !imm.contains_key(&ref_off) {
+                    unrewritable.push(format!("0x{ref_off:x}"));
+                }
+            }
+            // Relocating a string moves it, so every reference to it has to
+            // follow. Rewriting only some leaves the rest pointing at the
+            // Japanese, which is worse than not translating it at all: one
+            // route through the game shows English and another does not.
+            if !unrewritable.is_empty() {
+                eprintln!(
+                    "0x{:x}: leaving the original, code references it at {} and \
+                     the scan will not rewrite that",
+                    entry.og_ptr,
+                    unrewritable.join(" ")
+                );
+                continue;
+            }
+            if let Some(pairs) = imm_by_target.get(&entry.og_ptr) {
+                all_refs.extend(pairs);
+            }
+            all_refs.sort_unstable();
+            all_refs.dedup();
+            if all_refs.is_empty() {
+                continue;
+            }
+            if let Some(ram) = header.ram_addr(entry.og_ptr) {
+                if let Some(why) = rejected.get(&ram) {
+                    eprintln!(
+                        "0x{:x}: leaving the original, code addresses it in a way \
+                         we will not rewrite: {why}",
+                        entry.og_ptr
+                    );
+                    continue;
+                }
+            }
+
+            let new_ram = data8_base_ram + appended.len() as u32;
+            appended.extend_from_slice(&en_bytes);
+
+            for ref_off in all_refs {
+                match imm.get(&ref_off) {
+                    Some(r) => {
+                        let (hi, lo) = ppc::rewrite(
+                            word(&buf, r.hi_off),
+                            word(&buf, r.lo_off),
+                            r.kind,
+                            new_ram,
+                        );
+                        word_updates.insert(r.hi_off, hi);
+                        word_updates.insert(r.lo_off, lo);
+                    }
+                    None => {
+                        word_updates.insert(ref_off, new_ram);
+                    }
+                }
             }
         }
 
-        // report because I'll probably have to update fst.bin to reflect overall
-        // new main.dol size
-        let report_path = out_dir.join("report.txt");
-        let growth = out_fh.metadata()?.len() - original_len;
-        std::fs::write(
-            &report_path,
-            format!("main.dol grew by {} bytes\n", growth),
-        )?;
+        patch_spt_resolvers(&buf, &header, &mut word_updates)?;
 
-        Ok(growth.try_into()?)
+        if !appended.is_empty() {
+            let translation_end = data8_base_ram
+                .checked_add(appended.len().try_into()?)
+                .ok_or_else(|| anyhow!("translation arena address overflow"))?;
+            let new_arena_lo = align_32(translation_end);
+            const MEM1_END_RAM: u32 = 0x8180_0000;
+            if new_arena_lo > MEM1_END_RAM {
+                return Err(anyhow!(
+                    "translation arena ends at 0x{new_arena_lo:08x}, beyond MEM1"
+                ));
+            }
+            for section in header.live() {
+                let section_end = section
+                    .ram
+                    .checked_add(section.size)
+                    .ok_or_else(|| anyhow!("DOL section address overflow"))?;
+                if section.ram != data8_base_ram
+                    && data8_base_ram < section_end
+                    && section.ram < translation_end
+                {
+                    return Err(anyhow!(
+                        "translation arena 0x{data8_base_ram:08x}..0x{translation_end:08x} \
+                         overlaps DOL section 0x{:08x}..0x{section_end:08x}",
+                        section.ram
+                    ));
+                }
+            }
+            patch_runtime_arena_lo(
+                &buf,
+                &header,
+                &mut word_updates,
+                new_arena_lo,
+            )?;
+
+            header.sections[DATA8].size = appended.len().try_into()?;
+            // The DOL loader clears BSS before loading initialized sections.
+            // Grow the reservation through the aligned end of data8 so neither
+            // stack nor heap ownership can overlap the translation bank.
+            header.bss_size = new_arena_lo - header.bss_address;
+        }
+
+        let sections: Vec<_> = header.live().collect();
+
+        std::fs::create_dir_all(out_path.parent().expect("parent"))?;
+        let mut out_fh = File::create(out_path)?;
+        header.write(&mut out_fh)?;
+
+        // write sections
+        for section in &sections {
+            if section.size == 0 {
+                continue;
+            }
+
+            out_fh.seek(SeekFrom::Start(section.file as u64))?;
+
+            if section.ram == data8_base_ram {
+                out_fh.write_all(&appended)?;
+                continue;
+            }
+
+            // read original section
+            in_fh.seek(SeekFrom::Start(section.file as u64))?;
+            let mut section_data = vec![0u8; section.size as usize];
+            in_fh.read_exact(&mut section_data)?;
+
+            for (&file_offset, &new_word) in &word_updates {
+                if file_offset >= section.file
+                    && file_offset + 4 <= section.file + section.size
+                {
+                    let i = (file_offset - section.file) as usize;
+                    section_data[i..i + 4]
+                        .copy_from_slice(&new_word.to_be_bytes());
+                }
+            }
+
+            out_fh.write_all(&section_data)?;
+        }
+
+        Ok(())
+    }
+}
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+    use crate::shape::DATA0;
+    use std::collections::HashSet;
+
+    #[test]
+    fn ppc_assembler_emits_the_reviewed_unsigned_resolver_words() {
+        let words: Vec<u32> = SPT_UNSIGNED_OFFSET_CODE
+            .chunks_exact(4)
+            .map(|b| u32::from_be_bytes(b.try_into().unwrap()))
+            .collect();
+        assert_eq!(words, [0x5460_043e, 0x7c04_022e, 0x7c63_022e]);
+    }
+
+    #[test]
+    fn playtested_immediate_references_are_exact_and_unique() {
+        let refs: HashSet<u32> = REVIEWED_IMMEDIATE_REFS
+            .iter()
+            .map(|&(ref_off, _)| ref_off)
+            .collect();
+        assert_eq!(REVIEWED_IMMEDIATE_REFS.len(), 57);
+        assert_eq!(refs.len(), REVIEWED_IMMEDIATE_REFS.len());
+        assert_eq!(REVIEWED_IMMEDIATE_REFS[0], (0x01ee6c, 0x1cf810));
+        assert_eq!(REVIEWED_IMMEDIATE_REFS[56], (0x10e7b4, 0x2712d0));
+    }
+
+    #[test]
+    fn monster_name_references_inherit_the_eight_glyph_runtime_cap() {
+        let mut header = DolHeader::default();
+        header.sections[DATA0] = Section {
+            file: 0x100,
+            ram: 0x8024_0000,
+            size: 0x1_0000,
+        };
+        let entry = TLEntry {
+            og_ptr: 0,
+            references: vec![0x100 + (0x8024_1d8c - 0x8024_0000)],
+            en_string: Some("Pakkun Grass".into()),
+        };
+
+        assert_eq!(dol_entry_cap(&header, &entry), Some(8));
+    }
+
+    #[test]
+    fn title_legacy_name_slots_receive_width_preserving_latin_defaults() {
+        let encoder = Encoder::new(&load_reverse_character_table().unwrap());
+        let cases = [
+            (0x7260, "タップ", "Tap"),
+            (0x7268, "ルチル", "Luc"),
+            (0x7270, "ブリキン", "Brik"),
+            (0x727a, "ガママル", "Gama"),
+            (0x7284, "ラズリ", "Raz"),
+            (0x728c, "ウィウィ", "Wiwi"),
+            (0x7296, "ヴィント", "Vint"),
+        ];
+        let mut buf = vec![0u8; 0x72a0];
+
+        for (offset, japanese, _) in cases {
+            let mut at = offset;
+            for code in encoder.encode(japanese).unwrap() {
+                buf[at..at + 2].copy_from_slice(&code.to_be_bytes());
+                at += 2;
+            }
+            buf[at..at + 2].copy_from_slice(&spt::TERMINATOR.to_be_bytes());
+        }
+
+        patch_title_default_names(&mut buf, &encoder).unwrap();
+
+        for (offset, _, latin) in cases {
+            let mut expected = Vec::new();
+            for code in encoder.encode(latin).unwrap() {
+                expected.extend(code.to_be_bytes());
+            }
+            expected.extend(spt::TERMINATOR.to_be_bytes());
+            assert_eq!(&buf[offset..offset + expected.len()], expected);
+        }
+    }
+
+    #[test]
+    fn dol_encoder_is_strict_and_uses_longest_table_tokens() {
+        let encoder = Encoder::new(&load_reverse_character_table().unwrap());
+
+        assert_eq!(encoder.encode("II").unwrap(), vec![0x01f8]);
+        assert!(encoder.encode("Wallace's").is_err());
     }
 }

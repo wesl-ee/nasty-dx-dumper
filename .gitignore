@@ -1,0 +1,18 @@
+/target
+/result
+
+*.SPT
+*.dol
+*.spt
+*.dat
+*.iso
+*.gcz
+*.thp
+
+# scratchpad
+/.venv/
+__pycache__/
+/dump/
+/tl-output/
+*.DUMP.TXT
+*.TL.TXT

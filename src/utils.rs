@@ -2,241 +2,132 @@ use anyhow::{Context, Result};
 use std::{
     collections::HashMap,
     fs::File,
-    io::{BufRead, BufReader, Read},
+    io::{BufRead, BufReader},
     path::Path,
 };
 
-use crate::shape::DolHeader;
-
+#[derive(Default)]
 pub struct TLEntry {
     pub og_ptr: u32,
     pub references: Vec<u32>,
-    pub jp_string: String,
-    pub jp_bytes: Vec<u8>,
     pub en_string: Option<String>,
-    pub en_bytes: Option<Vec<u8>>,
 }
 
-pub fn print_hex_dump(data: &[u8], max_bytes: usize) {
-    let bytes_to_show = std::cmp::min(data.len(), max_bytes);
-    for (i, byte) in data[..bytes_to_show].iter().enumerate() {
-        if i % 16 == 0 && i > 0 {
-            println!();
-        }
-        if i % 16 == 0 {
-            print!("{:08x}: ", i);
-        }
-        print!("{:02x} ", byte);
-    }
-    if bytes_to_show > 0 {
-        println!();
-    }
-}
-
-pub fn pull_dol_header(fh: &mut File) -> Result<DolHeader> {
-    let mut buf = [0u8; 4];
-    let mut header = DolHeader::default();
-
-    // offsets
-    fh.read_exact(&mut buf)?;
-    header.text0_offset = u32::from_be_bytes(buf);
-    fh.read_exact(&mut buf)?;
-    header.text1_offset = u32::from_be_bytes(buf);
-    fh.read_exact(&mut buf)?;
-    header.text2_offset = u32::from_be_bytes(buf);
-    fh.read_exact(&mut buf)?;
-    header.text3_offset = u32::from_be_bytes(buf);
-    fh.read_exact(&mut buf)?;
-    header.text4_offset = u32::from_be_bytes(buf);
-    fh.read_exact(&mut buf)?;
-    header.text5_offset = u32::from_be_bytes(buf);
-    fh.read_exact(&mut buf)?;
-    header.text6_offset = u32::from_be_bytes(buf);
-    fh.read_exact(&mut buf)?;
-    header.data0_offset = u32::from_be_bytes(buf);
-    fh.read_exact(&mut buf)?;
-    header.data1_offset = u32::from_be_bytes(buf);
-    fh.read_exact(&mut buf)?;
-    header.data2_offset = u32::from_be_bytes(buf);
-    fh.read_exact(&mut buf)?;
-    header.data3_offset = u32::from_be_bytes(buf);
-    fh.read_exact(&mut buf)?;
-    header.data4_offset = u32::from_be_bytes(buf);
-    fh.read_exact(&mut buf)?;
-    header.data5_offset = u32::from_be_bytes(buf);
-    fh.read_exact(&mut buf)?;
-    header.data6_offset = u32::from_be_bytes(buf);
-    fh.read_exact(&mut buf)?;
-    header.data7_offset = u32::from_be_bytes(buf);
-    fh.read_exact(&mut buf)?;
-    header.data8_offset = u32::from_be_bytes(buf);
-    fh.read_exact(&mut buf)?;
-    header.data9_offset = u32::from_be_bytes(buf);
-    fh.read_exact(&mut buf)?;
-    header.data10_offset = u32::from_be_bytes(buf);
-
-    // addresses
-    fh.read_exact(&mut buf)?;
-    header.text0_address = u32::from_be_bytes(buf);
-    fh.read_exact(&mut buf)?;
-    header.text1_address = u32::from_be_bytes(buf);
-    fh.read_exact(&mut buf)?;
-    header.text2_address = u32::from_be_bytes(buf);
-    fh.read_exact(&mut buf)?;
-    header.text3_address = u32::from_be_bytes(buf);
-    fh.read_exact(&mut buf)?;
-    header.text4_address = u32::from_be_bytes(buf);
-    fh.read_exact(&mut buf)?;
-    header.text5_address = u32::from_be_bytes(buf);
-    fh.read_exact(&mut buf)?;
-    header.text6_address = u32::from_be_bytes(buf);
-    fh.read_exact(&mut buf)?;
-    header.data0_address = u32::from_be_bytes(buf);
-    fh.read_exact(&mut buf)?;
-    header.data1_address = u32::from_be_bytes(buf);
-    fh.read_exact(&mut buf)?;
-    header.data2_address = u32::from_be_bytes(buf);
-    fh.read_exact(&mut buf)?;
-    header.data3_address = u32::from_be_bytes(buf);
-    fh.read_exact(&mut buf)?;
-    header.data4_address = u32::from_be_bytes(buf);
-    fh.read_exact(&mut buf)?;
-    header.data5_address = u32::from_be_bytes(buf);
-    fh.read_exact(&mut buf)?;
-    header.data6_address = u32::from_be_bytes(buf);
-    fh.read_exact(&mut buf)?;
-    header.data7_address = u32::from_be_bytes(buf);
-    fh.read_exact(&mut buf)?;
-    header.data8_address = u32::from_be_bytes(buf);
-    fh.read_exact(&mut buf)?;
-    header.data9_address = u32::from_be_bytes(buf);
-    fh.read_exact(&mut buf)?;
-    header.data10_address = u32::from_be_bytes(buf);
-
-    // sizes
-    fh.read_exact(&mut buf)?;
-    header.text0_size = u32::from_be_bytes(buf);
-    fh.read_exact(&mut buf)?;
-    header.text1_size = u32::from_be_bytes(buf);
-    fh.read_exact(&mut buf)?;
-    header.text2_size = u32::from_be_bytes(buf);
-    fh.read_exact(&mut buf)?;
-    header.text3_size = u32::from_be_bytes(buf);
-    fh.read_exact(&mut buf)?;
-    header.text4_size = u32::from_be_bytes(buf);
-    fh.read_exact(&mut buf)?;
-    header.text5_size = u32::from_be_bytes(buf);
-    fh.read_exact(&mut buf)?;
-    header.text6_size = u32::from_be_bytes(buf);
-    fh.read_exact(&mut buf)?;
-    header.data0_size = u32::from_be_bytes(buf);
-    fh.read_exact(&mut buf)?;
-    header.data1_size = u32::from_be_bytes(buf);
-    fh.read_exact(&mut buf)?;
-    header.data2_size = u32::from_be_bytes(buf);
-    fh.read_exact(&mut buf)?;
-    header.data3_size = u32::from_be_bytes(buf);
-    fh.read_exact(&mut buf)?;
-    header.data4_size = u32::from_be_bytes(buf);
-    fh.read_exact(&mut buf)?;
-    header.data5_size = u32::from_be_bytes(buf);
-    fh.read_exact(&mut buf)?;
-    header.data6_size = u32::from_be_bytes(buf);
-    fh.read_exact(&mut buf)?;
-    header.data7_size = u32::from_be_bytes(buf);
-    fh.read_exact(&mut buf)?;
-    header.data8_size = u32::from_be_bytes(buf);
-    fh.read_exact(&mut buf)?;
-    header.data9_size = u32::from_be_bytes(buf);
-    fh.read_exact(&mut buf)?;
-    header.data10_size = u32::from_be_bytes(buf);
-
-    // bss + entry
-    fh.read_exact(&mut buf)?;
-    header.bss_address = u32::from_be_bytes(buf);
-    fh.read_exact(&mut buf)?;
-    header.bss_size = u32::from_be_bytes(buf);
-    fh.read_exact(&mut buf)?;
-    header.entry_point = u32::from_be_bytes(buf);
-
-    Ok(header)
-}
-
-pub fn load_character_table() -> Result<HashMap<u16, String>> {
-    let mut table = HashMap::new();
+/// `Table.txt` as (code, rendering) pairs, in file order.
+fn character_table() -> Result<Vec<(u16, String)>> {
     let content = std::fs::read_to_string("Table.txt")
         .with_context(|| "Failed to read Table.txt")?;
 
-    for line in content.lines() {
-        if let Some((hex_str, char_str)) = line.split_once('=') {
-            if let Ok(code) = u16::from_str_radix(hex_str, 16) {
-                table.insert(code, char_str.to_string());
-            }
-        }
-    }
+    Ok(content
+        .lines()
+        .filter_map(|line| {
+            let (hex, glyph) = line.split_once('=')?;
+            Some((u16::from_str_radix(hex, 16).ok()?, glyph.to_string()))
+        })
+        .collect())
+}
 
+pub fn load_character_table() -> Result<HashMap<u16, String>> {
+    let mut table: HashMap<u16, String> =
+        character_table()?.into_iter().collect();
     table.insert(0xF800, "\n".to_string());
     Ok(table)
 }
 
 pub fn load_reverse_character_table() -> Result<HashMap<String, u16>> {
     let mut table = HashMap::new();
-    let content = std::fs::read_to_string("Table.txt")
-        .with_context(|| "Failed to read Table.txt")?;
-
-    for line in content.lines() {
-        if let Some((hex_str, char_str)) = line.split_once('=') {
-            if let Ok(code) = u16::from_str_radix(hex_str, 16) {
-                table.insert(char_str.to_string(), code);
-            }
-        }
+    for (code, glyph) in character_table()? {
+        // twelve renderings are shared by two codes; take the lower one so
+        // decode -> encode is stable
+        table
+            .entry(glyph)
+            .and_modify(|c: &mut u16| *c = (*c).min(code))
+            .or_insert(code);
     }
 
     table.insert("\n".to_string(), 0xF800);
     Ok(table)
 }
 
-pub fn string_to_dx_bytes(s: &str, table: &HashMap<String, u16>) -> Vec<u8> {
-    let mut result = Vec::new();
-    let mut chars = s.chars().peekable();
-
-    while let Some(c) = chars.next() {
-        if c == '[' {
-            let bracket_content: String =
-                chars.by_ref().take_while(|&ch| ch != ']').collect();
-            let full = format!("[{}]", bracket_content);
-
-            if bracket_content.starts_with("0x") {
-                if let Ok(code) = u16::from_str_radix(&bracket_content[2..], 16)
-                {
-                    result.extend(code.to_be_bytes());
-                }
-            } else if let Some(&code) = table.get(&full) {
-                result.extend(code.to_be_bytes());
-            }
-        } else {
-            if let Some(&code) = table.get(&c.to_string()) {
-                result.extend(code.to_be_bytes());
-            }
-        }
-    }
-
-    result
+/// Longest-match encoder over the reverse character table, which refuses text
+/// it cannot encode rather than dropping the character.
+///
+/// A writer that quietly shortens text can corrupt reviewed copy and hide
+/// exactly the errors the fixed-width caps exist to catch. The font has no
+/// apostrophe, so this fires on real English copy.
+pub struct Encoder {
+    by_first: HashMap<char, Vec<(String, u16)>>,
 }
 
+impl Encoder {
+    pub fn new(table: &HashMap<String, u16>) -> Encoder {
+        let mut by_first: HashMap<char, Vec<(String, u16)>> = HashMap::new();
+        for (token, &code) in table {
+            // the terminator renders as "][" in Table.txt, a decode artefact
+            // that would let a bracket pair end the string early
+            match token.chars().next() {
+                Some(c) if code != 0xF800 => {
+                    by_first.entry(c).or_default().push((token.clone(), code))
+                }
+                _ => continue,
+            }
+        }
+        for tokens in by_first.values_mut() {
+            tokens
+                .sort_by(|a, b| b.0.len().cmp(&a.0.len()).then(a.1.cmp(&b.1)));
+        }
+        Encoder { by_first }
+    }
+
+    pub fn encode(&self, text: &str) -> std::result::Result<Vec<u16>, String> {
+        let mut codes = Vec::new();
+        let mut i = 0;
+        while i < text.len() {
+            let rest = &text[i..];
+            if let Some((code, len)) = raw_escape(rest) {
+                codes.push(code);
+                i += len;
+                continue;
+            }
+            let ch = rest.chars().next().expect("non-empty");
+            let hit = self.by_first.get(&ch).and_then(|t| {
+                t.iter().find(|(tok, _)| rest.starts_with(tok.as_str()))
+            });
+            match hit {
+                Some((tok, code)) => {
+                    codes.push(*code);
+                    i += tok.len();
+                }
+                None => {
+                    return Err(format!(
+                    "cannot encode {ch:?} at position {i} (not in the glyph \
+                         table; use [0xhhhh] for a raw code)"
+                ))
+                }
+            }
+        }
+        Ok(codes)
+    }
+}
+
+/// `[0xhhhh]` -> (code, byte length consumed)
+fn raw_escape(s: &str) -> Option<(u16, usize)> {
+    let body = s.strip_prefix("[0x")?;
+    let end = body.find(']')?;
+    (1..=4)
+        .contains(&end)
+        .then(|| u16::from_str_radix(&body[..end], 16).ok())
+        .flatten()
+        .map(|c| (c, 4 + end))
+}
+
+/// One entry per blank-line-separated block: the Japanese `0xPTR` line, any
+/// `# reference at` lines above it, and the English repeat of the same pointer.
 pub fn load_patch(patch_file: &Path) -> Result<Vec<TLEntry>> {
-    let in_fh = File::open(patch_file)?;
-    let reader = BufReader::new(in_fh);
+    let reader = BufReader::new(File::open(patch_file)?);
 
     let mut entries = Vec::new();
-    let mut current = TLEntry {
-        og_ptr: 0,
-        references: Vec::new(),
-        jp_string: String::new(),
-        jp_bytes: Vec::new(),
-        en_string: None,
-        en_bytes: None,
-    };
+    let mut current = TLEntry::default();
     let mut seen_jp = false;
 
     for l in reader.lines() {
@@ -244,15 +135,7 @@ pub fn load_patch(patch_file: &Path) -> Result<Vec<TLEntry>> {
 
         if l.trim().is_empty() {
             if seen_jp {
-                entries.push(current);
-                current = TLEntry {
-                    og_ptr: 0,
-                    references: Vec::new(),
-                    jp_string: String::new(),
-                    jp_bytes: Vec::new(),
-                    en_string: None,
-                    en_bytes: None,
-                };
+                entries.push(std::mem::take(&mut current));
                 seen_jp = false;
             }
         } else if l.starts_with("# reference at") {
@@ -263,18 +146,15 @@ pub fn load_patch(patch_file: &Path) -> Result<Vec<TLEntry>> {
                 16,
             )?;
             current.references.push(reference_offset);
-        } else if l.starts_with("0x") {
-            let ptr_to_eol = &l[2..];
-            let (ptr_offset, text_content) =
-                ptr_to_eol.split_once(' ').unwrap_or_default();
-            let ptr_offset = u32::from_str_radix(ptr_offset, 16)?;
+        } else if let Some(rest) = l.strip_prefix("0x") {
+            let (ptr, text) = rest.split_once(' ').unwrap_or_default();
+            let ptr = u32::from_str_radix(ptr, 16)?;
 
             if !seen_jp {
-                current.og_ptr = ptr_offset;
-                current.jp_string = text_content.to_string();
+                current.og_ptr = ptr;
                 seen_jp = true;
-            } else if ptr_offset == current.og_ptr {
-                current.en_string = Some(text_content.to_string());
+            } else if ptr == current.og_ptr {
+                current.en_string = Some(text.to_string());
             }
         }
     }
@@ -284,4 +164,45 @@ pub fn load_patch(patch_file: &Path) -> Result<Vec<TLEntry>> {
     }
 
     Ok(entries)
+}
+
+/// Every file under `dir`, depth first. Directories are descended into, never
+/// yielded.
+pub fn walk_dir(
+    dir: &Path,
+) -> impl Iterator<Item = std::io::Result<std::fs::DirEntry>> {
+    let mut stack = vec![];
+    let mut pending_err = None;
+
+    match std::fs::read_dir(dir) {
+        Ok(rd) => stack.push(rd),
+        Err(e) => pending_err = Some(e),
+    }
+
+    std::iter::from_fn(move || {
+        if let Some(e) = pending_err.take() {
+            return Some(Err(e));
+        }
+
+        while let Some(rd) = stack.last_mut() {
+            match rd.next() {
+                Some(Ok(e)) => {
+                    let p = e.path();
+                    if p.is_dir() {
+                        match std::fs::read_dir(&p) {
+                            Ok(sub) => stack.push(sub),
+                            Err(e) => return Some(Err(e)),
+                        }
+                    } else {
+                        return Some(Ok(e));
+                    }
+                }
+                Some(Err(e)) => return Some(Err(e)),
+                None => {
+                    stack.pop();
+                }
+            }
+        }
+        None
+    })
 }
