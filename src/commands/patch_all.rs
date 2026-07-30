@@ -228,7 +228,12 @@ pub fn patch_all(dir: PathBuf, out_dir: PathBuf) -> Result<()> {
                 .expect("parent")
                 .join("main.dol");
 
-            DolPatcher::load(&f_path)?.patch(&dol_f_path, &out_path)?;
+            let refusals =
+                DolPatcher::load(&f_path)?.patch(&dol_f_path, &out_path)?;
+            for r in &refusals {
+                println!("  REFUSED main.dol {r}");
+            }
+            refused += refusals.len();
         }
 
         let spt_f_path = f_path.with_extension("");
@@ -248,7 +253,8 @@ pub fn patch_all(dir: PathBuf, out_dir: PathBuf) -> Result<()> {
         // a plausible-looking corrupt SPT costs more than a clear error, so the
         // untouched Japanese was written instead and the run fails
         return Err(anyhow!(
-            "{refused} SPT file(s) refused; their Japanese was written through unchanged"
+            "{refused} translation(s) refused; their Japanese was written \
+             through unchanged"
         ));
     }
     Ok(())
@@ -423,7 +429,9 @@ impl DolPatcher {
         })
     }
 
-    fn patch(&self, in_file: &Path, out_path: &Path) -> Result<()> {
+    /// Returns one refusal per string that could not be encoded; those keep
+    /// their Japanese, everything else is still translated.
+    fn patch(&self, in_file: &Path, out_path: &Path) -> Result<Vec<String>> {
         let mut in_fh = File::open(in_file)?;
         let mut header = DolHeader::read(&mut in_fh)?;
         let buf = std::fs::read(in_file)?;
@@ -496,14 +504,24 @@ impl DolPatcher {
         let mut entries: Vec<_> = self.tl.values().collect();
         entries.sort_by_key(|e| e.og_ptr);
 
+        // one bad glyph used to abort the whole run, so a translator learned
+        // about them one build at a time. Refuse the string, keep going, and
+        // report every offender at the end of the pass.
+        let mut refusals = Vec::new();
+
         for entry in entries {
             let en = match entry.en_string.as_deref() {
                 Some(s) => s,
                 None => continue,
             };
-            let codes = self.encoder.encode(en).map_err(|why| {
-                anyhow!("DOL string 0x{:x}: {why}", entry.og_ptr)
-            })?;
+            let codes = match self.encoder.encode(en) {
+                Ok(codes) => codes,
+                Err(why) => {
+                    refusals
+                        .push(format!("0x{:x}: {why}: {en:?}", entry.og_ptr));
+                    continue;
+                }
+            };
             let mut en_bytes = Vec::with_capacity((codes.len() + 1) * 2);
             for &code in &codes {
                 en_bytes.extend(code.to_be_bytes());
@@ -682,7 +700,7 @@ impl DolPatcher {
             out_fh.write_all(&section_data)?;
         }
 
-        Ok(())
+        Ok(refusals)
     }
 }
 

@@ -123,7 +123,7 @@
 
 # reference at main.dol:0x1c6f4 (RAM 0x8002c9b4) [addi paired with the lis at RAM 0x8002c9b0]
 0x1b6614 [Normal Color Text]このマスまで
-0x1b6614 To [Normal Color Text]
+0x1b6614 [Normal Color Text]
 
 # reference at main.dol:0x1c724 (RAM 0x8002c9e4) [addi paired with the lis at RAM 0x8002c9e0]
 0x1b6624 [0x7006][Blue Text][0x1000][Normal Color Text][0x7007]
@@ -138,77 +138,77 @@
 # reference at main.dol:0x1c6f5c (RAM 0x801c9f5c) [B]
 # reference at main.dol:0x1c700c (RAM 0x801ca00c) [B]
 0x1c5f9c [Green Text]もりマス[Normal Color Text]
-0x1c5f9c [Green Text]Forest[Normal Color Text]
+0x1c5f9c [Green Text]Forest Space[Normal Color Text]
 
 # reference at main.dol:0x1c6f0c (RAM 0x801c9f0c) [B]
 # reference at main.dol:0x1c6f10 (RAM 0x801c9f10) [D]
 # reference at main.dol:0x1c6ffc (RAM 0x801c9ffc) [B]
 # reference at main.dol:0x1c7000 (RAM 0x801ca000) [D]
 0x1c5fac [Orange Text]やまマス[Normal Color Text]
-0x1c5fac [Orange Text]Mountain[Normal Color Text]
+0x1c5fac [Orange Text]Mountain Space[Normal Color Text]
 
 # reference at main.dol:0x1c6f1c (RAM 0x801c9f1c) [B]
 # reference at main.dol:0x1c6f20 (RAM 0x801c9f20) [D]
 0x1c5fbc [Orange Text]さばくマス[Normal Color Text]
-0x1c5fbc [Orange Text]Desert[Normal Color Text]
+0x1c5fbc [Orange Text]Desert Space[Normal Color Text]
 
 # reference at main.dol:0x1c6f2c (RAM 0x801c9f2c) [B]
 # reference at main.dol:0x1c6f30 (RAM 0x801c9f30) [D]
 0x1c5fcc [Orange Text]すなはまマス[Normal Color Text]
-0x1c5fcc [Orange Text]Beach[Normal Color Text]
+0x1c5fcc [Orange Text]Beach Space[Normal Color Text]
 
 # reference at main.dol:0x1c6fdc (RAM 0x801c9fdc) [B]
 # reference at main.dol:0x1c6fe0 (RAM 0x801c9fe0) [D]
 0x1c5fe0 [Light Grey Text]ちていマス[Normal Color Text]
-0x1c5fe0 [Light Grey Text]Underground[Normal Color Text]
+0x1c5fe0 [Light Grey Text]Underground Space[Normal Color Text]
 
 # reference at main.dol:0x1c6f3c (RAM 0x801c9f3c) [B]
 # reference at main.dol:0x1c6f40 (RAM 0x801c9f40) [D]
 0x1c5ff0 [Sky Blue Text]海のうえマス[Normal Color Text]
-0x1c5ff0 [Sky Blue Text]Sea[Normal Color Text]
+0x1c5ff0 [Sky Blue Text]Sea Space[Normal Color Text]
 
 # reference at main.dol:0x1c6f4c (RAM 0x801c9f4c) [B]
 # reference at main.dol:0x1c6f50 (RAM 0x801c9f50) [D]
 # reference at main.dol:0x1c6fec (RAM 0x801c9fec) [B]
 # reference at main.dol:0x1c6ff0 (RAM 0x801c9ff0) [D]
 0x1c6004 [Sky Blue Text]海のそこマス[Normal Color Text]
-0x1c6004 [Sky Blue Text]Beyond the sea[Normal Color Text]
+0x1c5ff0 [Sky Blue Text]Undersea Space[Normal Color Text]
 
 # reference at main.dol:0x1c6f60 (RAM 0x801c9f60) [D]
 # reference at main.dol:0x1c7010 (RAM 0x801ca010) [D]
 0x1c6018 [Green Text]モジャモジャの森マス[Normal Color Text]
-0x1c6018 [Green Text]Mojamoja Forest[Normal Color Text]
+0x1c6018 [Green Text]Mojamoja Forest Space[Normal Color Text]
 
 # reference at main.dol:0x1c6f70 (RAM 0x801c9f70) [D]
 # reference at main.dol:0x1c7020 (RAM 0x801ca020) [D]
 0x1c6034 [Light Grey Text]コンガリいせきマス[Normal Color Text]
-0x1c6034 [Light Grey Text]Dusty Ruins[Normal Color Text]
+0x1c6034 [Light Grey Text]Dusty Ruins Space[Normal Color Text]
 
 # reference at main.dol:0x1c6f80 (RAM 0x801c9f80) [D]
 # reference at main.dol:0x1c7030 (RAM 0x801ca030) [D]
 0x1c604c [Fuschia Text]ラッキーパークマス[Normal Color Text]
-0x1c604c [Fuschia Text]Lucky Park[Normal Color Text]
+0x1c604c [Fuschia Text]Lucky Park Space[Normal Color Text]
 
 # reference at main.dol:0x1c6f8c (RAM 0x801c9f8c) [B]
 # reference at main.dol:0x1c6f90 (RAM 0x801c9f90) [D]
 0x1c6064 [Sky Blue Text]ゆうれいせんマス[Normal Color Text]
-0x1c6064 [Sky Blue Text]Ghost Ship[Normal Color Text]
+0x1c6064 [Sky Blue Text]Ghost Ship Space[Normal Color Text]
 
 # reference at main.dol:0x1c6fa0 (RAM 0x801c9fa0) [D]
 0x1c607c [Orange Text]ドッカン火山マス[Normal Color Text]
-0x1c607c [Orange Text]Dokan Volcano[Normal Color Text]
+0x1c607c [Orange Text]Dokan Volcano Space[Normal Color Text]
 
 # reference at main.dol:0x1c6fac (RAM 0x801c9fac) [B]
 # reference at main.dol:0x1c6fb0 (RAM 0x801c9fb0) [D]
 # reference at main.dol:0x1c703c (RAM 0x801ca03c) [B]
 # reference at main.dol:0x1c7040 (RAM 0x801ca040) [D]
 0x1c6094 [0x400e]ドカポン城マス[Normal Color Text]
-0x1c6094 [0x400e]Dokapon Castle[Normal Color Text]
+0x1c6094 [0x400e]Dokapon Castle Space[Normal Color Text]
 
 # reference at main.dol:0x1c6fbc (RAM 0x801c9fbc) [B]
 # reference at main.dol:0x1c6fc0 (RAM 0x801c9fc0) [D]
 0x1c60a8 [0x400c]まかいマス[Normal Color Text]
-0x1c60a8 [0x400c]Demon World[Normal Color Text]
+0x1c60a8 [0x400c]Demon World Space[Normal Color Text]
 
 # reference at main.dol:0x1c6fcc (RAM 0x801c9fcc) [B]
 # reference at main.dol:0x1c6fd0 (RAM 0x801c9fd0) [D]
@@ -231,32 +231,32 @@
 # reference at main.dol:0x1c707c (RAM 0x801ca07c) [B]
 # reference at main.dol:0x1c7080 (RAM 0x801ca080) [D]
 0x1c6100 アイテムマス
-0x1c6100 Item
+0x1c6100 Item Space
 
 # reference at main.dol:0x1c708c (RAM 0x801ca08c) [B]
 # reference at main.dol:0x1c7090 (RAM 0x801ca090) [D]
 0x1c6110 まほうマス
-0x1c6110 Magic
+0x1c6110 Magic Space
 
 # reference at main.dol:0x1c709c (RAM 0x801ca09c) [B]
 # reference at main.dol:0x1c70a0 (RAM 0x801ca0a0) [D]
 0x1c611c 赤たからばこマス
-0x1c611c Red Chest
+0x1c611c Red Chest Space
 
 # reference at main.dol:0x1c70ac (RAM 0x801ca0ac) [B]
 # reference at main.dol:0x1c70b0 (RAM 0x801ca0b0) [D]
 0x1c6130 白たからばこマス
-0x1c6130 White Chest
+0x1c6130 White Chest Space
 
 # reference at main.dol:0x1c70bc (RAM 0x801ca0bc) [B]
 # reference at main.dol:0x1c70c0 (RAM 0x801ca0c0) [D]
 0x1c6144 ?たからばこマス
-0x1c6144 ? Chest
+0x1c6144 ? Chest Space
 
 # reference at main.dol:0x1c70cc (RAM 0x801ca0cc) [B]
 # reference at main.dol:0x1c70d0 (RAM 0x801ca0d0) [D]
 0x1c6158 金庫マス
-0x1c6158 Gold Chest
+0x1c6158 Gold Chest Space
 
 # reference at main.dol:0x1c70dc (RAM 0x801ca0dc) [B]
 # reference at main.dol:0x1c70e0 (RAM 0x801ca0e0) [D]
@@ -279,52 +279,52 @@
 # reference at main.dol:0x1c716c (RAM 0x801ca16c) [B]
 # reference at main.dol:0x1c7170 (RAM 0x801ca170) [D]
 0x1c6164 カギたからばこマス
-0x1c6164 Key Chest
+0x1c6164 Key Chest Space
 
 # reference at main.dol:0x1c717c (RAM 0x801ca17c) [B]
 # reference at main.dol:0x1c7180 (RAM 0x801ca180) [D]
 0x1c6178 カジノマス
-0x1c6178 Casino
+0x1c6178 Casino Space
 
 # reference at main.dol:0x1c718c (RAM 0x801ca18c) [B]
 # reference at main.dol:0x1c7190 (RAM 0x801ca190) [D]
 0x1c6184 ドカポン城マス
-0x1c6184 Dokapon Castle
+0x1c6184 Dokapon Castle Space
 
 # reference at main.dol:0x1c71bc (RAM 0x801ca1bc) [B]
 # reference at main.dol:0x1c71c0 (RAM 0x801ca1c0) [D]
 0x1c6194 ドカッチョ村マス
-0x1c6194 Dokacho Village
+0x1c6194 Dokacho Village Space
 
 # reference at main.dol:0x1c71cc (RAM 0x801ca1cc) [B]
 # reference at main.dol:0x1c71d0 (RAM 0x801ca1d0) [D]
 0x1c61a8 カラッコロ村マス
-0x1c61a8 Karakoro Village
+0x1c61a8 Karakoro Village Space
 
 # reference at main.dol:0x1c71dc (RAM 0x801ca1dc) [B]
 # reference at main.dol:0x1c71e0 (RAM 0x801ca1e0) [D]
 0x1c61bc グルリン村マス
-0x1c61bc Gururin Village
+0x1c61bc Gururin Village Space
 
 # reference at main.dol:0x1c71ec (RAM 0x801ca1ec) [B]
 # reference at main.dol:0x1c71f0 (RAM 0x801ca1f0) [D]
 0x1c61cc ゲッパン村マス
-0x1c61cc Geppan Village
+0x1c61cc Geppan Village Space
 
 # reference at main.dol:0x1c71fc (RAM 0x801ca1fc) [B]
 # reference at main.dol:0x1c7200 (RAM 0x801ca200) [D]
 0x1c61dc シャコネツ村マス
-0x1c61dc Shakonetsu Village
+0x1c61dc Shakonetsu Village Space
 
 # reference at main.dol:0x1c719c (RAM 0x801ca19c) [B]
 # reference at main.dol:0x1c71a0 (RAM 0x801ca1a0) [D]
 0x1c61f0 教会マス
-0x1c61f0 Church
+0x1c61f0 Church Space
 
 # reference at main.dol:0x1c71ac (RAM 0x801ca1ac) [B]
 # reference at main.dol:0x1c71b0 (RAM 0x801ca1b0) [D]
 0x1c61fc 銀行マス
-0x1c61fc Bank
+0x1c61fc Bank Space
 
 # reference at main.dol:0x1c720c (RAM 0x801ca20c) [B]
 # reference at main.dol:0x1c7210 (RAM 0x801ca210) [D]
@@ -333,7 +333,7 @@
 # reference at main.dol:0x1c722c (RAM 0x801ca22c) [B]
 # reference at main.dol:0x1c7230 (RAM 0x801ca230) [D]
 0x1c6208 ぶき屋マス
-0x1c6208 Weapon Store
+0x1c6208 Weapon Store Space
 
 # reference at main.dol:0x1c723c (RAM 0x801ca23c) [B]
 # reference at main.dol:0x1c7240 (RAM 0x801ca240) [D]
@@ -342,7 +342,7 @@
 # reference at main.dol:0x1c725c (RAM 0x801ca25c) [B]
 # reference at main.dol:0x1c7260 (RAM 0x801ca260) [D]
 0x1c6214 アイテム屋マス
-0x1c6214 Item Store
+0x1c6214 Item Store Space
 
 # reference at main.dol:0x1c726c (RAM 0x801ca26c) [B]
 # reference at main.dol:0x1c7270 (RAM 0x801ca270) [D]
@@ -351,22 +351,23 @@
 # reference at main.dol:0x1c728c (RAM 0x801ca28c) [B]
 # reference at main.dol:0x1c7290 (RAM 0x801ca290) [D]
 0x1c6224 まほう屋マス
-0x1c6224 Magic Store
+0x1c6224 Magic Store Space
 
 # reference at main.dol:0x1c72a0 (RAM 0x801ca2a0) [D]
 0x1c6234 モジャモジャの森入口マス
-0x1c6234 Mojamoja Forest Entrance
+0x1c6234 Mojamoja Forest Entrance Space
 
 # reference at main.dol:0x1c72b0 (RAM 0x801ca2b0) [D]
 0x1c6250 モジャモジャの森出口マス
-0x1c6250 Mojamoja Forest Exit
+0x1c6250 Mojamoja Forest Exit Space
 
 # reference at main.dol:0x1c72c0 (RAM 0x801ca2c0) [D]
 0x1c626c モジャモジャの森手前マス
+0x1c626c Mojamoja Forest Interior Space
 
 # reference at main.dol:0x1c72d0 (RAM 0x801ca2d0) [D]
 0x1c6288 モジャモジャの森おくマス
-0x1c6288 Deep Mojamoja Forest
+0x1c6288 Mojamoja Forest Depths Space
 
 # reference at main.dol:0x1c72e0 (RAM 0x801ca2e0) [D]
 0x1c62a4 コンガリいせき入口マス
@@ -378,11 +379,11 @@
 
 # reference at main.dol:0x1c7300 (RAM 0x801ca300) [D]
 0x1c62d4 コンガリいせき1かいマス
-0x1c62d4 Dusty Ruins Ground Floor
+0x1c62d4 Dusty Ruins 1F
 
 # reference at main.dol:0x1c7310 (RAM 0x801ca310) [D]
 0x1c62f0 コンガリいせきちか1かいマス
-0x1c62f0 Dusty Ruins Underground
+0x1c62f0 Dusty Ruins B1F
 
 # reference at main.dol:0x1c7320 (RAM 0x801ca320) [D]
 0x1c6310 ラッキーパークへようこそマス
@@ -493,86 +494,111 @@
 # reference at main.dol:0x1c756c (RAM 0x801ca56c) [B]
 # reference at main.dol:0x1c7570 (RAM 0x801ca570) [B]
 0x1c66e4 はっくつマス
+0x1c66e4 Excavation Site
 
 # reference at main.dol:0x1c757c (RAM 0x801ca57c) [B]
 # reference at main.dol:0x1c7580 (RAM 0x801ca580) [B]
 0x1c66f4 [Red Text]つうこうどめ[Normal Color Text]
+0x1c66f4 [Red Text]Roadblock[Normal Color Text]
 
 # reference at main.dol:0x1c758c (RAM 0x801ca58c) [B]
 # reference at main.dol:0x1c7590 (RAM 0x801ca590) [B]
 0x1c6708 [Red Text]デビルマス[Normal Color Text]
+0x1c6708 [Red Text]Devil Space[Normal Color Text]
 
 # reference at main.dol:0x1c7560 (RAM 0x801ca560) [B]
 0x1c6718 コーヒーカップマス
-0x1c6718 Spinning Teacups
+0x1c6718 Spinning Teacups Space
 
 # reference at main.dol:0x1c6f6c (RAM 0x801c9f6c) [B]
 # reference at main.dol:0x1c701c (RAM 0x801ca01c) [B]
 0x1c672c [Light Grey Text]いせきマス[Normal Color Text]
+0x1c672c [Light Grey Text]Ruins Space[Normal Color Text]
 
 # reference at main.dol:0x1c6f7c (RAM 0x801c9f7c) [B]
 # reference at main.dol:0x1c702c (RAM 0x801ca02c) [B]
 0x1c673c [Fuschia Text]ゆうえんちマス[Normal Color Text]
+0x1c673c [Fuschia Text]Amusement Park Space[Normal Color Text]
 
 # reference at main.dol:0x1c6f9c (RAM 0x801c9f9c) [B]
 0x1c6750 [Orange Text]火山マス[Normal Color Text]
+0x1c6750 [Orange Text]Volcano Space[Normal Color Text]
 
 # reference at main.dol:0x1c72bc (RAM 0x801ca2bc) [B]
 0x1c6760 森手前マス
+0x1c6760 Forest Interior Space
 
 # reference at main.dol:0x1c72cc (RAM 0x801ca2cc) [B]
 0x1c676c 森おくマス
+0x1c676c Forest Depths Space
 
 # reference at main.dol:0x1c72dc (RAM 0x801ca2dc) [B]
 0x1c6778 いせき入口
+0x1c6778 Ruins Entrance
 
 # reference at main.dol:0x1c72ec (RAM 0x801ca2ec) [B]
 0x1c6784 いせき出口
+0x1c6784 Ruins Exit
 
 # reference at main.dol:0x1c72fc (RAM 0x801ca2fc) [B]
 0x1c6790 いせき1かい
+0x1c6790 Ruins 1F
 
 # reference at main.dol:0x1c730c (RAM 0x801ca30c) [B]
 0x1c67a0 いせきちか1かい
+0x1c67a0 Ruins B1F
 
 # reference at main.dol:0x1c731c (RAM 0x801ca31c) [B]
 0x1c67b4 ゆうえんち入り口
+0x1c67b4 Amusement Park Entrance
 
 # reference at main.dol:0x1c732c (RAM 0x801ca32c) [B]
 0x1c67c8 ゆうえんち出口
+0x1c67c8 Amusement Park Exit
 
 # reference at main.dol:0x1c733c (RAM 0x801ca33c) [B]
 0x1c67d8 ゆうれいせん入口
+0x1c67d8 Ghost Ship Entrance
 
 # reference at main.dol:0x1c734c (RAM 0x801ca34c) [B]
 0x1c67ec ゆうれいせん出口
+0x1c67ec Ghost Ship Exit
 
 # reference at main.dol:0x1c737c (RAM 0x801ca37c) [B]
 0x1c6800 火山入口マス
+0x1c6800 Volcano Entrance Space
 
 # reference at main.dol:0x1c738c (RAM 0x801ca38c) [B]
 0x1c6810 火山出口マス
+0x1c6810 Volcano Exit Space
 
 # reference at main.dol:0x1c739c (RAM 0x801ca39c) [B]
 0x1c6820 火山內部マス
+0x1c6820 Volcano Interior Space
 
 # reference at main.dol:0x1c73ac (RAM 0x801ca3ac) [B]
 0x1c6830 火山さんぷくマス
+0x1c6830 Volcano Mountainside Space
 
 # reference at main.dol:0x1c73bc (RAM 0x801ca3bc) [B]
 0x1c6844 ドカポン城入口
+0x1c6844 Dokapon Castle Entrance
 
 # reference at main.dol:0x1c73cc (RAM 0x801ca3cc) [B]
 0x1c6854 ドカポン城出口
+0x1c6854 Dokapon Castle Exit
 
 # reference at main.dol:0x1c73dc (RAM 0x801ca3dc) [B]
 0x1c6864 ドカポン城1かい
+0x1c6864 Dokapon Castle 1F
 
 # reference at main.dol:0x1c73ec (RAM 0x801ca3ec) [B]
 0x1c6878 ドカポン城2かい
+0x1c6878 Dokapon Castle 2F
 
 # reference at main.dol:0x1c73fc (RAM 0x801ca3fc) [B]
 0x1c688c 魔界トンネル入口
+0x1c688c Demon Realm Tunnel Entrance
 
 # reference at main.dol:0x1c740c (RAM 0x801ca40c) [B]
 # reference at main.dol:0x1c741c (RAM 0x801ca41c) [B]
@@ -732,6 +758,7 @@
 
 # reference at main.dol:0x1c7574 (RAM 0x801ca574) [B]
 0x1c6e1c もちぬしはタダで、他の人は[\n]お金をはらってはっくつできる
+0x1c6e1c The owner digs free. Others[\n]must pay to excavate.
 
 # reference at main.dol:0x1c7584 (RAM 0x801ca584) [B]
 0x1c6e58 どこかへの入り口らしいが、[\n]今はとおれない
@@ -2488,31 +2515,40 @@
 
 # reference at main.dol:0x1d0bbc (RAM 0x801d3bbc) [A]
 0x1ceab8 ここにいどうします[\n]よろしいですか?
+0x1ceab8 Move here?
 
 # reference at main.dol:0x1d0bc0 (RAM 0x801d3bc0) [A]
 0x1ceae0 [Red Text]そこに行くことは、できません[Normal Color Text]
+0x1ceae0 [Red Text]You cannot move there[Normal Color Text]
 
 # reference at main.dol:0x1ca1b0 (RAM 0x801cd1b0) [A]
 0x1ceb04 [Blue Text][%0][Normal Color Text]の春です
+0x1ceb04 [Blue Text][%0][Normal Color Text]s turn
 
 # reference at main.dol:0x1ca1b4 (RAM 0x801cd1b4) [A]
 # reference at main.dol:0x2b09c (RAM 0x8003b35c) [addi paired with the lis at RAM 0x8003b358]
 0x1ceb14 [Red Text]ワナだ![Normal Color Text]
+0x1ceb14 [Red Text]Its a trap![Normal Color Text]
 
 # reference at main.dol:0x1d0bc4 (RAM 0x801d3bc4) [A]
 0x1ceb24 ここに止まりますか?
+0x1ceb24 Stop here?
 
 # reference at main.dol:0x1d3048 (RAM 0x801d6048) [E]
 0x1ceb3c 空にとび上がり[\n]ますか?
+0x1ceb3c Put on your wings?
 
 # reference at main.dol:0x1d304c (RAM 0x801d604c) [E]
 0x1ceb58 この場序に[\n]おりますか?
+0x1ceb58 Land here?
 
 # reference at main.dol:0x1d3050 (RAM 0x801d6050) [A]
 0x1ceb74 ここでは[\n]空にとびあがることは[\n]できない!
+0x1ceb74 You may not fly here!
 
 # reference at main.dol:0x1d3054 (RAM 0x801d6054) [E]
 0x1ceba0 ここでは[\n]地面に下りることは[\n]できない!
+0x1ceba0 You may not land here!
 
 # reference at main.dol:0x1d3058 (RAM 0x801d6058) [E]
 0x1cebcc [Red Text]休がおもくて、[\n]とびあがれない![Normal Color Text]
@@ -2675,7 +2711,7 @@
 # reference at main.dol:0x1ca160 (RAM 0x801cd160) [A]
 # reference at main.dol:0x2c174 (RAM 0x8003c434) [addi paired with the lis at RAM 0x8003c430]
 0x1cf110 [0x9c2][Blue Text][%0][Normal Color Text]は[\n]よみがえった!
-0x1cf110 [0x9c2][Blue Text][%0][Normal Color Text] revived!
+0x1cf110 [0x9c2][Blue Text][%0][Normal Color Text] came back[\n]to life!
 
 # reference at main.dol:0x1ca1ac (RAM 0x801cd1ac) [A]
 0x1cf12c いどうできる序が[\n]ありません![\n]
@@ -2684,7 +2720,7 @@
 # reference at main.dol:0x1ca15c (RAM 0x801cd15c) [A]
 # reference at main.dol:0x1d0bfc (RAM 0x801d3bfc) [confirm]
 0x1cf150 [Blue Text][%0][Normal Color Text]は[\n]死んでいます[\n]あと[Red Text][0x1000][Normal Color Text]ターン休みです
-0x1cf150 [Blue Text][%0][Normal Color Text] is dead for[\n][Red Text][0x1000][Normal Color Text][\n]more turns
+0x1cf150 [Blue Text][%0][Normal Color Text] is dead[\n]for [Red Text][0x1000][Normal Color Text] more turns
 
 # reference at main.dol:0x1ca164 (RAM 0x801cd164) [A]
 # reference at main.dol:0x1d0be4 (RAM 0x801d3be4) [confirm]
@@ -2692,7 +2728,7 @@
 # reference at main.dol:0x293c0 (RAM 0x80039680) [addi paired with the lis at RAM 0x8003967c]
 # reference at main.dol:0x29400 (RAM 0x800396c0) [addi paired with the lis at RAM 0x800396bc]
 0x1cf184 [Blue Text][%0][Normal Color Text]は[\n]ちからつきた・・・
-0x1cf184 [Blue Text][%0][Normal Color Text] was defeated!
+0x1cf184 [Blue Text][%0][Normal Color Text] died...
 
 # reference at main.dol:0x1d0be8 (RAM 0x801d3be8) [confirm]
 0x1cf1a4 [Blue Text][%0][Normal Color Text]は、[\n][Red Text][%0][Normal Color Text]を[\n]おとした!
@@ -2750,32 +2786,33 @@
 
 # reference at main.dol:0x1c7064 (RAM 0x801ca064) [D]
 0x1cf368 とまると[Red Text]どく[Normal Color Text]をうける[\n]バトルやイボントはおきない
-0x1cf368 Stopping here will [Red Text]Poison[Normal Color Text] you[\n]No battles or events occur
+0x1cf368 Stopping here will [Red Text]Poison[Normal Color Text] you[\n]No battles or events
 
 # reference at main.dol:0x1c6f54 (RAM 0x801c9f54) [D]
 # reference at main.dol:0x1c6f94 (RAM 0x801c9f94) [D]
 # reference at main.dol:0x1c6ff4 (RAM 0x801c9ff4) [D]
 0x1cf3a0 [Blue Text]ベンボ[Normal Color Text]がないと歩けない[\n]バトルやイボントがおきる
-0x1cf3a0 Requires a [Blue Text]Magic Pump[Normal Color Text] to cross[\n]Battles or events may occur
+0x1cf3a0 Requires a [Blue Text]Magic Pump[Normal Color Text] to cross[\n]Battles or events[\n]may occur
 
 # reference at main.dol:0x1c6f44 (RAM 0x801c9f44) [D]
 0x1cf3d8 [Blue Text]ふね[Normal Color Text]がないと進めない[\n]バトルやイボントがおきる
-0x1cf3d8 Requires a [Blue Text]Magic Boat[Normal Color Text] to cross[\n]Battles or events may occur
+0x1cf3d8 Requires a [Blue Text]Magic Boat[Normal Color Text] to cross[\n]Battles or events[\n]may occur
 
 # reference at main.dol:0x1c7074 (RAM 0x801ca074) [D]
 0x1cf40c とまると[Red Text]トゲ[Normal Color Text]がとびでる[\n]バトルやイボントはおきない
-0x1cf444 Stopping here causes [Red Text]lava[Normal Color Text] damage[\n]No battles or events occur
+0x1cf40c Stopping here triggers [Red Text]spikes[Normal Color Text][\n]No battles or events
 
 # reference at main.dol:0x1c7054 (RAM 0x801ca054) [D]
 0x1cf444 とまると[Red Text]ようがん[Normal Color Text]であつい[\n]バトルやイボントはおきない
+0x1cf444 Stopping here causes [Red Text]lava[Normal Color Text] damage[\n]No battles or events
 
 # reference at main.dol:0x1c7084 (RAM 0x801ca084) [D]
 0x1cf480 アイテムが1コ手に入る[\n]バトルやイボントはおきない
-0x1cf480 Receive 1 item[\n]No battles or events occur
+0x1cf480 Receive an item[\n]No battles or events occur
 
 # reference at main.dol:0x1c7094 (RAM 0x801ca094) [D]
 0x1cf4b4 まほうが1コ手に入る[\n]バトルやイボントはおきない
-0x1cf4b4 Receive 1 magic spell[\n]No battles or events occur
+0x1cf4b4 Receive a spell[\n]No battles or events occur
 
 # reference at main.dol:0x1c70a4 (RAM 0x801ca0a4) [D]
 0x1cf4e8 いいモノも悪いモノも入ってる[\n]バトルやイボントはおきない
@@ -2879,23 +2916,24 @@
 0x1cf8ac COM Hard
 
 # reference at main.dol:0x1d2b0 (RAM 0x8002d570) [addi paired with the lis at RAM 0x8002d56c]
-0x1cf8bc [0xb808]マスをみる[\n][0xb80c]マップ[\n][0xb809]もどる
+0x1cf8bc [0xb808]Inspect[\n][0xb80c]Map[\n][0xb809]Back
 
 # reference at main.dol:0x1d2f4 (RAM 0x8002d5b4) [addi paired with the lis at RAM 0x8002d5b0]
-0x1cf8e0 [0xb808]マスをみる[\n][0xb80a]データ[\n][0xb80b]おまかせ[\n][0xb80c]マップ
+0x1cf8e0 [0xb808]Inspect[\n][0xb80a]Data[\n][0xb80b]Auto[\n][0xb80c]Map
 
 # reference at main.dol:0x1d344 (RAM 0x8002d604) [addi paired with the lis at RAM 0x8002d600]
-0x1cf910 [0xb808]決定[\n][0xb80a]マスをみる[\n][0xb80b]リスト[\n][0xb809]もどる
+0x1cf910 [0xb808]Go[\n][0xb80a]Inspect[\n][0xb80b]List[\n][0xb809]Back
 
 # reference at main.dol:0x1d3d8 (RAM 0x8002d698) [addi paired with the lis at RAM 0x8002d694]
 0x1cf93c [0xb808]マスいどう[\n][0xb80a]マスをみる[\n][0xb80b]ならびかえ[\n][0xb809]もどる
 
 # reference at main.dol:0x1d394 (RAM 0x8002d654) [addi paired with the lis at RAM 0x8002d650]
 0x1cf970 [0xb809]もどる[\n]
+0x1cf970 [0xb809]Back[\n]
 
 # reference at main.dol:0x1d0c1c (RAM 0x801d3c1c) [A]
 0x1cf97c システム
-0x1cf97c System
+0x1cf97c Sys
 
 # reference at main.dol:0x31db4 (RAM 0x80042074) [addi paired with the lis at RAM 0x80042070]
 # reference at main.dol:0x31f34 (RAM 0x800421f4) [addi paired with the lis at RAM 0x800421f0]
@@ -2908,7 +2946,7 @@
 
 # reference at main.dol:0x1d30ac (RAM 0x801d60ac) [datamenu]
 0x1cf9a0 おたから
-0x1cf9a0 Treasures
+0x1cf9a0 Treasure
 
 # reference at main.dol:0x1d30b8 (RAM 0x801d60b8) [datamenu]
 0x1cf9ac スポンサー
@@ -3668,6 +3706,7 @@
 
 # reference at main.dol:0x1d3b94 (RAM 0x801d6b94) [H]
 0x1d3638 [Blue Text]かんぜんかいふく[Normal Color Text]
+0x1d3638 [Blue Text]Complete recovery[Normal Color Text]
 
 # reference at main.dol:0x1d3ba0 (RAM 0x801d6ba0) [H]
 0x1d3650 -100G
@@ -3701,33 +3740,43 @@
 
 # reference at main.dol:0x1d3c18 (RAM 0x801d6c18) [H]
 0x1d3708 50ダメージ
+0x1d3708 50 Damage
 
 # reference at main.dol:0x1d3c24 (RAM 0x801d6c24) [H]
 0x1d3718 100ダメージ
+0x1d3718 100 Damage
 
 # reference at main.dol:0x1d3c30 (RAM 0x801d6c30) [H]
 0x1d3728 200ダメージ
+0x1d3728 200 Damage
 
 # reference at main.dol:0x1d3c3c (RAM 0x801d6c3c) [H]
 0x1d3738 300ダメージ
+0x1d3738 300 Damage
 
 # reference at main.dol:0x1d3c48 (RAM 0x801d6c48) [H]
 0x1d3748 400ダメージ
+0x1d3748 400 Damage
 
 # reference at main.dol:0x1d3c54 (RAM 0x801d6c54) [H]
 0x1d3758 500ダメージ
+0x1d3758 500 Damage
 
 # reference at main.dol:0x1d3c60 (RAM 0x801d6c60) [H]
 0x1d3768 1000ダメージ
+0x1d3768 1000 Damage
 
 # reference at main.dol:0x1d3c6c (RAM 0x801d6c6c) [H]
 0x1d377c 2000ダメージ
+0x1d377c 2000 Damage
 
 # reference at main.dol:0x1d3c78 (RAM 0x801d6c78) [H]
 0x1d3790 3000ダメージ
+0x1d3790 3000 Damage
 
 # reference at main.dol:0x1d3c84 (RAM 0x801d6c84) [H]
 0x1d37a4 9999ダメージ
+0x1d37a4 9999 Damage
 
 # reference at main.dol:0x1d3cb4 (RAM 0x801d6cb4) [H]
 0x1d37b8 よわむし
@@ -3746,24 +3795,31 @@
 
 # reference at main.dol:0x1d3d14 (RAM 0x801d6d14) [H]
 0x1d37f4 [Grey Text]デビルパワー+10[Normal Color Text]
+0x1d37f4 [Grey Text]Dark Aura +10[Normal Color Text]
 
 # reference at main.dol:0x1d3d20 (RAM 0x801d6d20) [H]
 0x1d380c [Grey Text]デビルパワー+20[Normal Color Text]
+0x1d380c [Grey Text]Dark Aura +20[Normal Color Text]
 
 # reference at main.dol:0x1d3d2c (RAM 0x801d6d2c) [H]
 0x1d3824 [Grey Text]デビルパワー+30[Normal Color Text]
+0x1d3824 [Grey Text]Dark Aura +30[Normal Color Text]
 
 # reference at main.dol:0x1d3d38 (RAM 0x801d6d38) [H]
 0x1d383c [Grey Text]デビルパワー+50[Normal Color Text]
+0x1d383c [Grey Text]Dark Aura +50[Normal Color Text]
 
 # reference at main.dol:0x1d3d44 (RAM 0x801d6d44) [H]
 0x1d3854 [Grey Text]デビルパワー+100[Normal Color Text]
+0x1d3854 [Grey Text]Dark Aura +100[Normal Color Text]
 
 # reference at main.dol:0x1d3d50 (RAM 0x801d6d50) [H]
 0x1d3870 [Grey Text]けいけんちアップ![Normal Color Text]
+0x1d3870 [Grey Text]XP Up![Normal Color Text]
 
 # reference at main.dol:0x1d3d5c (RAM 0x801d6d5c) [H]
 0x1d3888 [Blue Text]かんぜんかいふく[Normal Color Text]
+0x1d3888 [Blue Text]Complete recovery[Normal Color Text]
 
 # reference at main.dol:0x1d3d68 (RAM 0x801d6d68) [H]
 # reference at main.dol:0x1d3d6c (RAM 0x801d6d6c) [A]
@@ -3792,24 +3848,31 @@
 
 # reference at main.dol:0x4052c (RAM 0x800507ec) [addi paired with the lis at RAM 0x800507e8]
 0x1d397c アイテムルーレット
+0x1d397c Item Roulette
 
 # reference at main.dol:0x405c4 (RAM 0x80050884) [addi paired with the lis at RAM 0x80050880]
 0x1d3990 まほうルーレット
+0x1d3990 Magic Roulette
 
 # reference at main.dol:0x4065c (RAM 0x8005091c) [addi paired with the lis at RAM 0x80050918]
 0x1d39a4 赤たからばこルーレット
+0x1d39a4 Red Chest Roulette
 
 # reference at main.dol:0x406f4 (RAM 0x800509b4) [addi paired with the lis at RAM 0x800509b0]
 0x1d39bc 白たからばこルーレット
+0x1d39bc White Chest Roulette
 
 # reference at main.dol:0x4078c (RAM 0x80050a4c) [addi paired with the lis at RAM 0x80050a48]
 0x1d39d4 ?たからばこルーレット
+0x1d39d4 ?Chest Roulette
 
 # reference at main.dol:0x40824 (RAM 0x80050ae4) [addi paired with the lis at RAM 0x80050ae0]
 0x1d39ec 金庫ルーレット
+0x1d39ec Gold Chest Roulette
 
 # reference at main.dol:0x40440 (RAM 0x80050700) [addi paired with the lis at RAM 0x800506fc]
 0x1d39fc [0xe800]でルーレットかいし!
+0x1d39fc Press [0xe800] to spin!
 
 # reference at main.dol:0x40498 (RAM 0x80050758) [addi paired with the lis at RAM 0x80050754]
 0x1d3a14 [0xe800]で[Blue Text]キセキのハリガネ[Black Text]をつかう
@@ -3849,9 +3912,11 @@
 
 # reference at main.dol:0x458b8 (RAM 0x80055b78) [addi paired with the lis at RAM 0x80055b74]
 0x1d4414 この、はっくつマスの[\n]持ち主は[\n][Blue Text][%0][Normal Color Text]です[Press A][Red Text][0x1000][Normal Color Text]Gはらえば[\n]はっくつできます。[\n]はらいますか?
+0x1d4414 This space is owned by[\n][Blue Text][%0][Normal Color Text][Press A]Pay [Red Text][0x1000][Normal Color Text]G[\n]to dig here?
 
 # reference at main.dol:0x44a9c (RAM 0x80054d5c) [addi paired with the lis at RAM 0x80054d58]
 0x1d4478 [Red Text]お金がたりません![Normal Color Text]
+0x1d4478 [Red Text]You have no money![Normal Color Text]
 
 # reference at main.dol:0x76118 (RAM 0x800863d8) [addi paired with the lis at RAM 0x800863d4]
 0x1da888 [Blue Text][%0][Normal Color Text]の[\n][Blue Text]アイテム[Normal Color Text]が[\n]いっぽいです[Press A]
@@ -8131,48 +8196,58 @@
 0x271104 エラーが発生しました。[\n]本休のパワーベタンをおして[\n]でんげんをオフにし、本休の[\n]とりあつかい說明書のしじに[\n]したがってください。
 
 # reference at main.dol:0x10e4b4 (RAM 0x8011e774) [addi paired with the lis at RAM 0x8011e770]
-0x2711d0 げんざいのお金
+0x2711d0 Money
 
 # reference at main.dol:0x2712e0 (RAM 0x802742e0) [A]
-0x2711e0 勝った!
+0x2711e0 Won!
 
 # reference at main.dol:0x2712e4 (RAM 0x802742e4) [A]
-0x2711ec レボルアップ!!
+0x2711ec Level up!
 
 # reference at main.dol:0x2712e8 (RAM 0x802742e8) [A]
-0x271200 こうさんした・・・
+0x271200 Gave up...
 
 # reference at main.dol:0x2712ec (RAM 0x802742ec) [A]
 0x271214 たおされた・・・
+0x271214 Died...
 
 # reference at main.dol:0x2712f0 (RAM 0x802742f0) [A]
 0x271228 にげた!
+0x271228 Escaped!
 
 # reference at main.dol:0x2712f4 (RAM 0x802742f4) [A]
 0x271234 にげられた!
+0x271234 Escaped!
 
 # reference at main.dol:0x2712f8 (RAM 0x802742f8) [A]
 # reference at main.dol:0x271314 (RAM 0x80274314) [A]
 0x271244 バトルはつづく!
+0x271244 Continuing!
 
 # reference at main.dol:0x2712fc (RAM 0x802742fc) [A]
 # reference at main.dol:0x271300 (RAM 0x80274300) [A]
 0x271258 [Blue Text][%0][Normal Color Text]は[\n]勝った!
+0x271258 [Blue Text][%0][Normal Color Text]は[\n]won!
 
 # reference at main.dol:0x271304 (RAM 0x80274304) [A]
 0x27126c [Blue Text][%0][Normal Color Text]は[\n]こうさんした・・・
+0x27126c [Blue Text][%0][Normal Color Text]は[\n]gave up...
 
 # reference at main.dol:0x271308 (RAM 0x80274308) [A]
 0x27128c [Blue Text][%0][Normal Color Text]は[\n]しんだ・・・
+0x27128c [Blue Text][%0][Normal Color Text]は[\n]died...
 
 # reference at main.dol:0x27130c (RAM 0x8027430c) [A]
 0x2712a4 [Blue Text][%0][Normal Color Text]は[\n]にげた!
+0x2712a4 [Blue Text][%0][Normal Color Text]は[\n]escaped!
 
 # reference at main.dol:0x271310 (RAM 0x80274310) [A]
 0x2712b8 [Blue Text][%0][Normal Color Text]は[\n]にげられた!
+0x2712b8 [Blue Text][%0][Normal Color Text]は[\n]escaped!
 
 # reference at main.dol:0x10e7b4 (RAM 0x8011ea74) [addi paired with the lis at RAM 0x8011ea70]
 0x2712d0 おとしたもの
+0x2712d0 Discarded
 
 # reference at main.dol:0x379c4 (RAM 0x80047c84) [addi paired with the lis at RAM 0x80047c80]
 # reference at main.dol:0x37a00 (RAM 0x80047cc0) [addi paired with the lis at RAM 0x80047cbc]
@@ -8387,17 +8462,20 @@
 # reference at main.dol:0x1d3270 (RAM 0x801d6270) [A]
 # reference at main.dol:0x2f2cc (RAM 0x8003f58c) [addi paired with the lis at RAM 0x8003f588]
 0x27a0f0 週
+0x27a0f0 weeks
 
 # reference at main.dol:0x1d3278 (RAM 0x801d6278) [A]
 # reference at main.dol:0x1d3284 (RAM 0x801d6284) [A]
 # reference at main.dol:0x60d6c (RAM 0x8007102c) [addi paired with the lis at RAM 0x80071028]
 # reference at main.dol:0x60e6c (RAM 0x8007112c) [addi paired with the lis at RAM 0x80071128]
 0x27a0f4 コ
+0x27a0f4 monsters
 
 # reference at main.dol:0x1d3274 (RAM 0x801d6274) [A]
 # reference at main.dol:0x1d3280 (RAM 0x801d6280) [A]
 # reference at main.dol:0x610bc (RAM 0x8007137c) [addi paired with the lis at RAM 0x80071378]
 0x27a0f8 人
+0x27a0f8 players
 
 # reference at main.dol:0x60f30 (RAM 0x800711f0) [addi paired with the lis at RAM 0x800711ec]
 0x27a0fc x
@@ -8476,6 +8554,7 @@
 # reference at main.dol:0x399cc (RAM 0x80049c8c) [addi paired with the lis at RAM 0x80049c88]
 # reference at main.dol:0x39e44 (RAM 0x8004a104) [addi paired with the lis at RAM 0x8004a100]
 0x27a10c 合計
+0x27a10c Total
 
 # reference at main.dol:0x1e2b0 (RAM 0x8002e570) [addi paired with the lis at RAM 0x8002e56c]
 # reference at main.dol:0x32660 (RAM 0x80042920) [addi paired with the lis at RAM 0x8004291c]
@@ -8498,23 +8577,28 @@
 
 # reference at main.dol:0x388d8 (RAM 0x80048b98) [addi paired with the lis at RAM 0x80048b94]
 0x27a11c ぶき
+0x27a11c Weapon
 
 # reference at main.dol:0x38908 (RAM 0x80048bc8) [addi paired with the lis at RAM 0x80048bc4]
 0x27a124 たて
+0x27a124 Shield
 
 # reference at main.dol:0x339d0 (RAM 0x80043c90) [addi paired with the lis at RAM 0x80043c8c]
 # reference at main.dol:0x361a0 (RAM 0x80046460) [addi paired with the lis at RAM 0x8004645c]
 # reference at main.dol:0x38a08 (RAM 0x80048cc8) [addi paired with the lis at RAM 0x80048cc4]
-0x27a12c とくぎ
+0x27a12c Special Skill
 
 # reference at main.dol:0x33c80 (RAM 0x80043f40) [addi paired with the lis at RAM 0x80043f3c]
 0x27a134 まほう
+0x27a134 Magic
 
 # reference at main.dol:0x2fd14 (RAM 0x8003ffd4) [addi paired with the lis at RAM 0x8003ffd0]
 0x27a13c はい
+0x27a13c Yes
 
 # reference at main.dol:0x2fd4c (RAM 0x8004000c) [addi paired with the lis at RAM 0x80040008]
 0x27a144 いいえ
+0x27a144 No
 
 # reference at main.dol:0x47d5c (RAM 0x8005801c) [addi paired with the lis at RAM 0x80058018]
 # reference at main.dol:0x51edc (RAM 0x8006219c) [addi paired with the lis at RAM 0x80062198]
@@ -8532,12 +8616,15 @@
 
 # reference at main.dol:0x1c758 (RAM 0x8002ca18) [addi paired with the lis at RAM 0x8002ca14]
 0x27a168 歩
+0x27a168 spaces away
 
 # reference at main.dol:0x1c729c (RAM 0x801ca29c) [B]
 0x27a178 森入口
+0x27a178 Forest Entrance
 
 # reference at main.dol:0x1c72ac (RAM 0x801ca2ac) [B]
 0x27a180 森出口
+0x27a180 Forest Exit
 
 # reference at main.dol:0x1ca1dc (RAM 0x801cd1dc) [A]
 # reference at main.dol:0x10e5b4 (RAM 0x8011e874) [addi paired with the lis at RAM 0x8011e870]
@@ -8575,6 +8662,7 @@
 
 # reference at main.dol:0x1cd6f0 (RAM 0x801d06f0) [C]
 0x27a1f8 バイン
+0x27a1f8 Spinner
 
 # reference at main.dol:0x1cda38 (RAM 0x801d0a38) [C]
 0x27a200 ふ
