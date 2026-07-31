@@ -9,6 +9,9 @@ pub const DATA0: usize = 7;
 pub const DATA7: usize = 14;
 /// the translation bank, empty on the original ROM
 pub const DATA8: usize = 15;
+/// the redirect caves. Empty on retail, and a text section rather than a
+/// corner of data8 because the DOL loader invalidates icache per text section.
+pub const TEXT2: usize = 2;
 
 #[derive(Clone, Copy, Default)]
 pub struct Section {

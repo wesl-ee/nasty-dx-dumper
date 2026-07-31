@@ -6,8 +6,11 @@ use std::{
     path::{Path, PathBuf},
 };
 
-use crate::constants::{INLINE_FIELDS, TEXT_TABLES_EXPLICIT};
-use crate::shape::{DolHeader, Section, DATA7, DATA8};
+use crate::constants::{
+    NameCap, INLINE_FIELDS, TEXT_TABLES_EXPLICIT, WALKER_HOOKS,
+};
+use crate::longname::LongNameBank;
+use crate::shape::{DolHeader, Section, DATA7, DATA8, TEXT2};
 use crate::utils::{
     load_character_table, load_patch, load_reverse_character_table, Encoder,
     TLEntry,
@@ -88,19 +91,22 @@ fn align_32(value: u32) -> u32 {
     value.checked_add(31).expect("RAM address overflow") & !31
 }
 
-fn dol_entry_cap(header: &DolHeader, entry: &TLEntry) -> Option<u32> {
-    entry.references.iter().find_map(|&ref_off| {
-        let ref_ram = header.ram_addr(ref_off)?;
-        TEXT_TABLES_EXPLICIT.iter().find_map(|table| {
-            let cap = table.cap?;
-            (0..table.count).find_map(|i| {
-                table.fields.iter().find_map(|field| {
-                    (ref_ram == table.base + i * table.stride + *field)
-                        .then_some(cap)
+fn dol_entry_cap(header: &DolHeader, entry: &TLEntry) -> NameCap {
+    entry
+        .references
+        .iter()
+        .find_map(|&ref_off| {
+            let ref_ram = header.ram_addr(ref_off)?;
+            TEXT_TABLES_EXPLICIT.iter().find_map(|table| {
+                (0..table.count).find_map(|i| {
+                    table.fields.iter().find_map(|field| {
+                        (ref_ram == table.base + i * table.stride + *field)
+                            .then_some(table.cap)
+                    })
                 })
             })
         })
-    })
+        .unwrap_or(NameCap::Free)
 }
 
 /// Move every retail ArenaLo path past the appended translation bank.
@@ -194,6 +200,122 @@ fn patch_spt_resolvers(
         updates.insert(off, new_word);
     }
     Ok(())
+}
+
+/// Make every reference to one string resolve to `ram`: a pointer word gets
+/// the address, an immediate pair gets both its halves rebuilt.
+fn point_at(
+    buf: &[u8],
+    imm: &HashMap<u32, ppc::ImmRef>,
+    updates: &mut HashMap<u32, u32>,
+    refs: &[u32],
+    ram: u32,
+) {
+    for &ref_off in refs {
+        match imm.get(&ref_off) {
+            Some(r) => {
+                let (hi, lo) = ppc::rewrite(
+                    word(buf, r.hi_off),
+                    word(buf, r.lo_off),
+                    r.kind,
+                    ram,
+                );
+                updates.insert(r.hi_off, hi);
+                updates.insert(r.lo_off, lo);
+            }
+            None => {
+                updates.insert(ref_off, ram);
+            }
+        }
+    }
+}
+
+static LONG_NAME_CODE: &[u8; 240] =
+    include_bytes!(concat!(env!("OUT_DIR"), "/long_names.bin"));
+
+/// Words in one redirect cave, and the three of them Rust fills in: the
+/// `lis`/`addi` pair that builds `longNamePtrs` and the branch back into the
+/// walker. See `asm/long_names.s`.
+const CAVE_WORDS: usize = 10;
+const CAVE_PTRS_HI: usize = 5;
+const CAVE_PTRS_LO: usize = 6;
+const CAVE_RESUME: usize = 9;
+
+/// Install one redirect cave per text walker and return the text2 payload.
+///
+/// Each cave is entered by the branch this writes over the walker's loop-head
+/// `lhz`, and leaves either through the resume branch -- one instruction past
+/// the hook, with the code already loaded into the register the walker expects
+/// -- or, having followed a redirect, through its own loop head with the cursor
+/// moved. Nothing else in the walker observes the difference.
+fn install_redirect_caves(
+    buf: &[u8],
+    header: &DolHeader,
+    updates: &mut HashMap<u32, u32>,
+    text2_ram: u32,
+    ptrs_ram: u32,
+) -> Result<Vec<u8>> {
+    let mut code: Vec<u32> = LONG_NAME_CODE
+        .chunks_exact(4)
+        .map(|b| u32::from_be_bytes(b.try_into().unwrap()))
+        .collect();
+    if code.len() != WALKER_HOOKS.len() * CAVE_WORDS {
+        return Err(anyhow!(
+            "long_names.s assembled to {} words, expected {} caves of \
+             {CAVE_WORDS}",
+            code.len(),
+            WALKER_HOOKS.len()
+        ));
+    }
+
+    for (i, hook) in WALKER_HOOKS.iter().enumerate() {
+        let off = header.file_offset(hook.ram).ok_or_else(|| {
+            anyhow!(
+                "{} loop head at 0x{:08x} is outside the DOL",
+                hook.what,
+                hook.ram
+            )
+        })?;
+        let found = word(buf, off);
+        if found != hook.expect {
+            return Err(anyhow!(
+                "{} loop head at RAM 0x{:08x} is 0x{found:08x}, expected \
+                 retail instruction 0x{:08x}",
+                hook.what,
+                hook.ram,
+                hook.expect
+            ));
+        }
+
+        let at = i * CAVE_WORDS;
+        // the cave repeats the instruction it displaced, so a cave assembled
+        // for the wrong registers cannot be installed over this walker
+        if code[at] != hook.expect {
+            return Err(anyhow!(
+                "cave {i} opens with 0x{:08x} but {} loop head is \
+                 0x{:08x}; the cave's registers do not match the walker",
+                code[at],
+                hook.what,
+                hook.expect
+            ));
+        }
+
+        let cave_ram = text2_ram + (at * 4) as u32;
+        let (hi, lo) = ppc::rewrite(
+            code[at + CAVE_PTRS_HI],
+            code[at + CAVE_PTRS_LO],
+            ppc::ImmKind::Addi,
+            ptrs_ram,
+        );
+        code[at + CAVE_PTRS_HI] = hi;
+        code[at + CAVE_PTRS_LO] = lo;
+        code[at + CAVE_RESUME] =
+            ppc::branch(cave_ram + (CAVE_RESUME * 4) as u32, hook.ram + 4)?;
+
+        updates.insert(off, ppc::branch(hook.ram, cave_ram)?);
+    }
+
+    Ok(code.iter().flat_map(|w| w.to_be_bytes()).collect())
 }
 
 pub fn patch_all(dir: PathBuf, out_dir: PathBuf) -> Result<()> {
@@ -499,6 +621,12 @@ impl DolPatcher {
         // file offset -> the word to write there: a relocated pointer in data,
         // a rebuilt `lis` or low half in code
         let mut word_updates = HashMap::new();
+        // names too long for the 0x12-byte field their reference feeds. The
+        // bank is laid out after every ordinary string, so their references
+        // cannot be rewritten until the loop below has finished: hold
+        // (references, bank index) and resolve once the base is known.
+        let mut bank = LongNameBank::new();
+        let mut stub_refs: Vec<(Vec<u32>, u32)> = Vec::new();
 
         // sort by og_ptr for deterministic ordering
         let mut entries: Vec<_> = self.tl.values().collect();
@@ -528,28 +656,46 @@ impl DolPatcher {
             }
             en_bytes.extend(spt::TERMINATOR.to_be_bytes());
 
-            if let Some(cap) = dol_entry_cap(&header, entry) {
-                let glyphs = codes.len();
-                if glyphs > cap as usize {
-                    eprintln!(
-                        "capped DOL string 0x{:x}: {:?} is {glyphs} glyphs but \
-                         the runtime copy holds {cap}; leaving the original",
-                        entry.og_ptr,
-                        en
-                    );
-                    continue;
-                }
-            }
-
+            let cap = dol_entry_cap(&header, entry);
             // fixed-width inline records have no reference of any kind, so
             // falling through to the relocation path below would append the
-            // translation to the arena and leave nothing pointing at it. they
-            // would have to be overwritten where they lie, within their glyph
-            // budget; nothing has playtested that, so `dump-all` emits them and
-            // we leave them Japanese.
-            if header.ram_addr(entry.og_ptr).is_some_and(|ram| {
-                INLINE_FIELDS.iter().any(|f| f.record(ram).is_some())
-            }) {
+            // translation to the arena and leave nothing pointing at it. A
+            // stubbed field is overwritten where it lies with a redirect and
+            // the glyphs go to the bank; the rest stay Japanese, because
+            // overwriting one in place means fitting the record's own width and
+            // nothing has playtested that.
+            let inline = header.ram_addr(entry.og_ptr).and_then(|ram| {
+                INLINE_FIELDS.iter().find(|f| f.record(ram).is_some())
+            });
+            if let Some(field) = inline {
+                if !field.stub {
+                    continue;
+                }
+                if field.stride % 4 != 0 {
+                    return Err(anyhow!(
+                        "inline field {} has stride 0x{:x}; a stub is written \
+                         a word at a time and needs a multiple of four",
+                        field.tag,
+                        field.stride
+                    ));
+                }
+                let idx = match bank.intern(&codes) {
+                    Ok(idx) => idx,
+                    Err(why) => {
+                        refusals.push(format!(
+                            "0x{:x}: {why}: {en:?}",
+                            entry.og_ptr
+                        ));
+                        continue;
+                    }
+                };
+                let record = LongNameBank::record(idx, field.stride as usize);
+                for (i, w) in record.chunks_exact(4).enumerate() {
+                    word_updates.insert(
+                        entry.og_ptr + (i * 4) as u32,
+                        u32::from_be_bytes(w.try_into().unwrap()),
+                    );
+                }
                 continue;
             }
 
@@ -598,70 +744,101 @@ impl DolPatcher {
                 }
             }
 
+            // a stubbed reference is pointed at two words in the bank rather
+            // than at the glyphs, so the 0x12-byte copy downstream transports a
+            // redirect instead of truncating a name. The address is not known
+            // until the bank is laid out.
+            if cap == NameCap::Stub {
+                match bank.intern(&codes) {
+                    Ok(idx) => stub_refs.push((all_refs, idx)),
+                    Err(why) => refusals
+                        .push(format!("0x{:x}: {why}: {en:?}", entry.og_ptr)),
+                }
+                continue;
+            }
+
             let new_ram = data8_base_ram + appended.len() as u32;
             appended.extend_from_slice(&en_bytes);
+            point_at(&buf, &imm, &mut word_updates, &all_refs, new_ram);
+        }
 
-            for ref_off in all_refs {
-                match imm.get(&ref_off) {
-                    Some(r) => {
-                        let (hi, lo) = ppc::rewrite(
-                            word(&buf, r.hi_off),
-                            word(&buf, r.lo_off),
-                            r.kind,
-                            new_ram,
-                        );
-                        word_updates.insert(r.hi_off, hi);
-                        word_updates.insert(r.lo_off, lo);
-                    }
-                    None => {
-                        word_updates.insert(ref_off, new_ram);
-                    }
-                }
-            }
+        // the bank follows every relocated string, so its base is only known
+        // now. Stubs first, because that is what the deferred references point
+        // at; `emit` reports where the pointer table the caves index landed.
+        let bank_ram = data8_base_ram + appended.len() as u32;
+        let (bank_bytes, bank_layout) = bank.emit(bank_ram);
+        appended.extend_from_slice(&bank_bytes);
+        for (refs, idx) in &stub_refs {
+            point_at(
+                &buf,
+                &imm,
+                &mut word_updates,
+                refs,
+                LongNameBank::stub_ram(bank_ram, *idx),
+            );
         }
 
         patch_spt_resolvers(&buf, &header, &mut word_updates)?;
 
-        if !appended.is_empty() {
-            let translation_end = data8_base_ram
-                .checked_add(appended.len().try_into()?)
-                .ok_or_else(|| anyhow!("translation arena address overflow"))?;
-            let new_arena_lo = align_32(translation_end);
-            const MEM1_END_RAM: u32 = 0x8180_0000;
-            if new_arena_lo > MEM1_END_RAM {
+        // text2 is empty on retail and holds the redirect caves. Code rather
+        // than a corner of data8 because the DOL loader invalidates icache per
+        // text section, and putting instructions in a data section relies on
+        // that not mattering.
+        header.sections[DATA8].size = appended.len().try_into()?;
+        let data8 = header.sections[DATA8];
+        if header.sections[TEXT2].size != 0 {
+            return Err(anyhow!(
+                "text2 is not empty; this is not the retail DOL"
+            ));
+        }
+        // both halves 32-aligned, as every retail section is: the apploader
+        // DMAs a section straight from disc to RAM
+        header.sections[TEXT2] = Section {
+            file: align_32(data8.file + data8.size),
+            ram: align_32(data8.ram + data8.size),
+            size: 0,
+        };
+        let caves = install_redirect_caves(
+            &buf,
+            &header,
+            &mut word_updates,
+            header.sections[TEXT2].ram,
+            bank_layout.ptrs,
+        )?;
+        header.sections[TEXT2].size = caves.len().try_into()?;
+
+        let text2 = header.sections[TEXT2];
+        let appended_end = text2.ram + text2.size;
+        let new_arena_lo = align_32(appended_end);
+        const MEM1_END_RAM: u32 = 0x8180_0000;
+        if new_arena_lo > MEM1_END_RAM {
+            return Err(anyhow!(
+                "translation arena ends at 0x{new_arena_lo:08x}, beyond MEM1"
+            ));
+        }
+        for section in header.live() {
+            let section_end = section
+                .ram
+                .checked_add(section.size)
+                .ok_or_else(|| anyhow!("DOL section address overflow"))?;
+            if section.ram != data8_base_ram
+                && section.ram != text2.ram
+                && data8_base_ram < section_end
+                && section.ram < appended_end
+            {
                 return Err(anyhow!(
-                    "translation arena ends at 0x{new_arena_lo:08x}, beyond MEM1"
+                    "translation arena 0x{data8_base_ram:08x}..0x{appended_end:08x} \
+                     overlaps DOL section 0x{:08x}..0x{section_end:08x}",
+                    section.ram
                 ));
             }
-            for section in header.live() {
-                let section_end = section
-                    .ram
-                    .checked_add(section.size)
-                    .ok_or_else(|| anyhow!("DOL section address overflow"))?;
-                if section.ram != data8_base_ram
-                    && data8_base_ram < section_end
-                    && section.ram < translation_end
-                {
-                    return Err(anyhow!(
-                        "translation arena 0x{data8_base_ram:08x}..0x{translation_end:08x} \
-                         overlaps DOL section 0x{:08x}..0x{section_end:08x}",
-                        section.ram
-                    ));
-                }
-            }
-            patch_runtime_arena_lo(
-                &buf,
-                &header,
-                &mut word_updates,
-                new_arena_lo,
-            )?;
-
-            header.sections[DATA8].size = appended.len().try_into()?;
-            // The DOL loader clears BSS before loading initialized sections.
-            // Grow the reservation through the aligned end of data8 so neither
-            // stack nor heap ownership can overlap the translation bank.
-            header.bss_size = new_arena_lo - header.bss_address;
         }
+        patch_runtime_arena_lo(&buf, &header, &mut word_updates, new_arena_lo)?;
+
+        // The DOL loader clears BSS before loading initialized sections. Grow
+        // the reservation through the aligned end of text2 so neither stack nor
+        // heap ownership can overlap the bank or the caves.
+        header.bss_size = new_arena_lo - header.bss_address;
 
         let sections: Vec<_> = header.live().collect();
 
@@ -679,6 +856,10 @@ impl DolPatcher {
 
             if section.ram == data8_base_ram {
                 out_fh.write_all(&appended)?;
+                continue;
+            }
+            if section.ram == text2.ram {
+                out_fh.write_all(&caves)?;
                 continue;
             }
 
@@ -719,6 +900,144 @@ mod tests {
         assert_eq!(words, [0x5460_043e, 0x7c04_022e, 0x7c63_022e]);
     }
 
+    fn cave_words() -> Vec<u32> {
+        LONG_NAME_CODE
+            .chunks_exact(4)
+            .map(|b| u32::from_be_bytes(b.try_into().unwrap()))
+            .collect()
+    }
+
+    #[test]
+    fn ppc_assembler_emits_the_reviewed_redirect_cave() {
+        assert_eq!(
+            &cave_words()[..CAVE_WORDS],
+            [
+                0xa3dd_0000, // lhz    r30,0x0(r29)      the displaced retail word
+                0x57c0_0428, // rlwinm r0,r30,0,16,20    family
+                0x2800_c000, // cmplwi r0,0xc000
+                0x4082_0018, // bne    +0x18             -> the resume branch
+                0x57c0_14fa, // rlwinm r0,r30,2,19,29    (code & 0x7ff) * 4
+                0x3fc0_0000, // lis    r30,0             -> longNamePtrs@ha
+                0x3bde_0000, // addi   r30,r30,0         -> longNamePtrs@l
+                0x7fbe_002e, // lwzx   r29,r30,r0        cursor = longNamePtrs[i]
+                0x4bff_ffe0, // b      -0x20             re-read at the new cursor
+                0x4800_0000, // b      .                 -> the hooked loop head + 4
+            ]
+        );
+    }
+
+    /// The cave repeats the instruction it displaces, so this is the check that
+    /// a cave's registers really are the ones its walker uses. Getting it wrong
+    /// would have the trampoline load the code into a register the walker does
+    /// not read.
+    #[test]
+    fn every_cave_opens_with_the_instruction_it_displaces() {
+        let code = cave_words();
+        assert_eq!(code.len(), WALKER_HOOKS.len() * CAVE_WORDS);
+        for (i, hook) in WALKER_HOOKS.iter().enumerate() {
+            assert_eq!(
+                code[i * CAVE_WORDS],
+                hook.expect,
+                "cave {i} does not open with {}'s loop head",
+                hook.what
+            );
+        }
+    }
+
+    /// Every hook lands on the retail instruction it claims to. Skipped when
+    /// the ROM is not extracted, since it is not in the repository.
+    #[test]
+    fn walker_hooks_match_retail() {
+        let Ok(buf) = std::fs::read("dx-iso-base/sys/main.dol") else {
+            eprintln!("no extracted ROM; skipping");
+            return;
+        };
+        let header = DolHeader::read(&mut buf.as_slice()).unwrap();
+        for hook in WALKER_HOOKS {
+            let off = header.file_offset(hook.ram).unwrap();
+            assert_eq!(
+                word(&buf, off),
+                hook.expect,
+                "{} at RAM 0x{:08x}",
+                hook.what,
+                hook.ram
+            );
+        }
+    }
+
+    /// The two branches that make a cave reachable and survivable: into it from
+    /// the walker, and back out one instruction past the hook.
+    #[test]
+    fn a_cave_branches_into_the_walker_and_back() {
+        const TEXT: u32 = 0x8001_4000;
+        const SIZE: u32 = 0x000d_0000;
+        const TEXT2_RAM: u32 = 0x802f_0000;
+        const PTRS: u32 = 0x802e_4004;
+
+        let mut header = DolHeader::default();
+        header.sections[0] = Section {
+            file: 0x100,
+            ram: TEXT,
+            size: SIZE,
+        };
+        let mut buf = vec![0u8; (0x100 + SIZE) as usize];
+        for hook in WALKER_HOOKS {
+            let at = (0x100 + hook.ram - TEXT) as usize;
+            buf[at..at + 4].copy_from_slice(&hook.expect.to_be_bytes());
+        }
+
+        let mut updates = HashMap::new();
+        let caves = install_redirect_caves(
+            &buf,
+            &header,
+            &mut updates,
+            TEXT2_RAM,
+            PTRS,
+        )
+        .unwrap();
+        let code: Vec<u32> = caves
+            .chunks_exact(4)
+            .map(|b| u32::from_be_bytes(b.try_into().unwrap()))
+            .collect();
+
+        for (i, hook) in WALKER_HOOKS.iter().enumerate() {
+            let cave = TEXT2_RAM + (i * CAVE_WORDS * 4) as u32;
+            let at = i * CAVE_WORDS;
+
+            let hooked = updates[&header.file_offset(hook.ram).unwrap()];
+            assert_eq!(hooked, ppc::branch(hook.ram, cave).unwrap());
+            assert_eq!(
+                code[at + CAVE_RESUME],
+                ppc::branch(cave + (CAVE_RESUME * 4) as u32, hook.ram + 4)
+                    .unwrap()
+            );
+            // PTRS has bit 15 clear, so the addi takes no carry
+            assert_eq!(code[at + CAVE_PTRS_HI] & 0xffff, PTRS >> 16);
+            assert_eq!(code[at + CAVE_PTRS_LO] & 0xffff, PTRS & 0xffff);
+        }
+    }
+
+    /// A cave assembled for one walker refuses to install over another.
+    #[test]
+    fn a_hook_refuses_a_dol_whose_loop_head_moved() {
+        let mut header = DolHeader::default();
+        header.sections[0] = Section {
+            file: 0x100,
+            ram: 0x8001_4000,
+            size: 0x000d_0000,
+        };
+        let buf = vec![0u8; 0x100 + 0x000d_0000];
+        let err = install_redirect_caves(
+            &buf,
+            &header,
+            &mut HashMap::new(),
+            0x802f_0000,
+            0x802e_8004,
+        )
+        .unwrap_err();
+        assert!(err.to_string().contains("expected retail instruction"));
+    }
+
     #[test]
     fn playtested_immediate_references_are_exact_and_unique() {
         let refs: HashSet<u32> = REVIEWED_IMMEDIATE_REFS
@@ -732,7 +1051,7 @@ mod tests {
     }
 
     #[test]
-    fn monster_name_references_inherit_the_eight_glyph_runtime_cap() {
+    fn monster_name_references_are_stubbed_rather_than_capped() {
         let mut header = DolHeader::default();
         header.sections[DATA0] = Section {
             file: 0x100,
@@ -745,7 +1064,7 @@ mod tests {
             en_string: Some("Pakkun Grass".into()),
         };
 
-        assert_eq!(dol_entry_cap(&header, &entry), Some(8));
+        assert_eq!(dol_entry_cap(&header, &entry), NameCap::Stub);
     }
 
     #[test]

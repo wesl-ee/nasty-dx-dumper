@@ -628,6 +628,28 @@ fn x_form(w: u32, d: u32, a: u32, b: u32) -> Eff {
     }
 }
 
+/// An `AA=0, LK=0` unconditional branch from `from_ram` to `to_ram`.
+///
+/// The displacement is 26 bits signed, so this reaches +-32 MB. The bank sits
+/// around `0x802E….` and every hook is in `0x8001….`-`0x800E….`, which is well
+/// inside that, but a layout change could quietly break it -- hence the error
+/// rather than a mask.
+pub fn branch(from_ram: u32, to_ram: u32) -> anyhow::Result<u32> {
+    let disp = to_ram.wrapping_sub(from_ram) as i32;
+    if disp % 4 != 0 {
+        return Err(anyhow::anyhow!(
+            "branch 0x{from_ram:08x} -> 0x{to_ram:08x} is not word-aligned"
+        ));
+    }
+    if !(-(1 << 25)..(1 << 25)).contains(&disp) {
+        return Err(anyhow::anyhow!(
+            "branch 0x{from_ram:08x} -> 0x{to_ram:08x} is {disp} bytes, \
+             outside the 26-bit displacement field"
+        ));
+    }
+    Ok(0x4800_0000 | (disp as u32 & 0x03ff_fffc))
+}
+
 /// The two instruction words that make `pair` build `addr` instead.
 ///
 /// `addi` sign-extends its low half, so a low half with bit 15 set borrows one
@@ -693,6 +715,18 @@ mod tests {
         let (ok, blocked) = relocatable_constants();
         assert!(!ok.contains(&0x8025_7808));
         assert!(blocked[&0x8025_7808].contains("PTRADD"));
+    }
+
+    #[test]
+    fn a_branch_reaches_the_cave_and_back() {
+        // b +8 and b -8, against the encoding of the loop-back word the
+        // assembler emits inside every redirect cave
+        assert_eq!(branch(0x8001_58cc, 0x8001_58d4).unwrap(), 0x4800_0008);
+        assert_eq!(branch(0x802e_0020, 0x802e_0000).unwrap(), 0x4bff_ffe0);
+        // the real shape: a hook in text1 jumping to the cave in text2
+        assert_eq!(branch(0x8001_58cc, 0x802e_5000).unwrap(), 0x482c_f734);
+        assert!(branch(0x8001_58cc, 0x8001_58ce).is_err());
+        assert!(branch(0x8000_0000, 0x8400_0000).is_err());
     }
 
     #[test]

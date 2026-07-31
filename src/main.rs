@@ -4,6 +4,7 @@ use std::path::PathBuf;
 
 mod commands;
 mod constants;
+mod longname;
 mod ppc;
 mod shape;
 mod spt;

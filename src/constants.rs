@@ -1,3 +1,95 @@
+/// Glyphs a redirected name may hold. Nothing downstream of the redirect
+/// clips below 22 (docs/text-limits.md), so this is a chosen budget rather
+/// than a discovered limit.
+pub(crate) const LONG_NAME_GLYPHS: usize = 16;
+
+/// The redirect opcode family: `0xC000 | idx` means "continue this string at
+/// `longNamePtrs[idx]`". Dead in all six walkers and absent from all 1112
+/// extracted strings, which is what makes it free to claim.
+pub(crate) const REDIRECT_FAMILY: u16 = 0xc000;
+
+/// The opcode's argument field is 11 bits, so that is how many names the
+/// pointer table can name.
+pub(crate) const LONG_NAME_INDICES: u32 = 0x800;
+
+/// Bytes every name-field copy in the game moves: 8 glyphs plus terminator.
+/// A stub has to stay readable across the whole of it, because
+/// `spawnActorFromDef` and friends copy it blind.
+pub(crate) const NAME_FIELD_BYTES: usize = 0x12;
+
+/// Bank stride of one stub: `NAME_FIELD_BYTES` rounded up to a word so the
+/// stubs stay aligned. The padding is never read, being past the terminator;
+/// it exists so a blind copy has something defined to move.
+pub(crate) const STUB_STRIDE: usize = NAME_FIELD_BYTES.next_multiple_of(4);
+
+/// A text walker's loop head, and the registers live there.
+///
+/// Every walker is `lhz CODE,0(CURSOR)` / `cmplwi CODE,0xf800` /
+/// `rlwinm FAMILY,CODE,0,16,20`; only the register assignment differs. The
+/// redirect cave is the same ten words each time, so a hook is fully described
+/// by its address and the retail word it replaces.
+pub(crate) struct WalkerHook {
+    /// RAM of the `lhz`, which the hook branches away from.
+    pub ram: u32,
+    /// that instruction, asserted before it is replaced.
+    pub expect: u32,
+    /// what the walker is, for the failure message.
+    pub what: &'static str,
+}
+
+/// The walkers a long name has to survive, in cave order — `long_names.s`
+/// assembles one trampoline per row, in this order.
+///
+/// `padTextToField` (`FUN_800177BC`, loop heads `0x800177F8` and `0x80017814`)
+/// is deliberately absent. It only sees a name routed through a nonzero-N
+/// insertion code, and across the whole corpus no such code carries an N below
+/// 22; it is also the one walker whose loop head puts the code in r0, so it
+/// needs a scratch register the others do not.
+pub(crate) const WALKER_HOOKS: &[WalkerHook] = &[
+    WalkerHook {
+        ram: 0x8001_58cc,
+        expect: 0xa3dd_0000, // lhz r30,0x0(r29)
+        what: "showTextAsBoxWorker",
+    },
+    WalkerHook {
+        ram: 0x8001_70b0,
+        expect: 0xa0fd_0000, // lhz r7,0x0(r29)
+        what: "measureTextWidth",
+    },
+    WalkerHook {
+        ram: 0x8001_775c,
+        expect: 0xa0fb_0000, // lhz r7,0x0(r27)
+        what: "measureTextExtent",
+    },
+    WalkerHook {
+        ram: 0x8001_8b3c,
+        expect: 0xa35f_0000, // lhz r26,0x0(r31)
+        what: "showTextMeasurePass",
+    },
+    WalkerHook {
+        ram: 0x800d_db4c,
+        expect: 0xa0bf_0000, // lhz r5,0x0(r31)
+        what: "expandTextInline",
+    },
+    WalkerHook {
+        ram: 0x800d_db0c,
+        expect: 0xa064_0000, // lhz r3,0x0(r4)
+        what: "expandTextInline (inserted-string copy)",
+    },
+];
+
+/// What the machine code does to a string once it has been read, and so how
+/// long it is allowed to be.
+#[derive(Clone, Copy, PartialEq, Eq, Debug)]
+pub(crate) enum NameCap {
+    /// nothing copies it into a fixed-width slot; length is unconstrained.
+    Free,
+    /// the reference is repointed at a redirect stub instead of at the glyphs,
+    /// so the fixed-width copy transports two words and the real name lives in
+    /// the bank. `LONG_NAME_GLYPHS` fit.
+    Stub,
+}
+
 /// A pointer table whose extent we do not know. The walk reads entries until
 /// one stops looking like a table of text pointers.
 pub(crate) struct WalkTable {
@@ -121,7 +213,7 @@ pub(crate) struct TextTable {
     /// byte offsets within an entry that hold a text pointer.
     pub fields: &'static [u32],
     /// hard glyph limit on this string, where the machine code enforces one.
-    pub cap: Option<u32>,
+    pub cap: NameCap,
     /// tag written into the .patch reference comments.
     pub tag: &'static str,
 }
@@ -141,7 +233,7 @@ pub(crate) const TEXT_TABLES_EXPLICIT: &[TextTable] = &[
         stride: 4,
         count: 189,
         fields: &[0],
-        cap: None,
+        cap: NameCap::Free,
         tag: "event",
     },
     // weekday names. FUN_8003F524: 8003f5c4 `lbz r0,0x9(r7)` (day counter) /
@@ -152,7 +244,7 @@ pub(crate) const TEXT_TABLES_EXPLICIT: &[TextTable] = &[
         stride: 4,
         count: 7,
         fields: &[0],
-        cap: None,
+        cap: NameCap::Free,
         tag: "weekday",
     },
     // move / attack confirmations, and the death messages after them. same
@@ -165,7 +257,7 @@ pub(crate) const TEXT_TABLES_EXPLICIT: &[TextTable] = &[
         stride: 4,
         count: 21,
         fields: &[0],
-        cap: None,
+        cap: NameCap::Free,
         tag: "confirm",
     },
     // "the effect wore off" messages. FUN_8004CDA4: 8004cf5c
@@ -176,7 +268,7 @@ pub(crate) const TEXT_TABLES_EXPLICIT: &[TextTable] = &[
         stride: 4,
         count: 3,
         fields: &[0],
-        cap: None,
+        cap: NameCap::Free,
         tag: "expired",
     },
     // data-menu page titles. FUN_800449A8 (80044a44/80044a48) and FUN_80045150
@@ -188,7 +280,7 @@ pub(crate) const TEXT_TABLES_EXPLICIT: &[TextTable] = &[
         stride: 4,
         count: 18,
         fields: &[0],
-        cap: None,
+        cap: NameCap::Free,
         tag: "datamenu",
     },
     // sponsor slogans. FUN_80078520: 800785d0 `subi r6,r5,0x2cb4` = 0x801dd34c,
@@ -199,7 +291,7 @@ pub(crate) const TEXT_TABLES_EXPLICIT: &[TextTable] = &[
         stride: 4,
         count: 6,
         fields: &[0],
-        cap: None,
+        cap: NameCap::Free,
         tag: "sponsor",
     },
     // monster / character definition names. FUN_800A70F8 renders it as
@@ -213,7 +305,7 @@ pub(crate) const TEXT_TABLES_EXPLICIT: &[TextTable] = &[
         stride: 0x3c,
         count: 142,
         fields: &[0],
-        cap: Some(8),
+        cap: NameCap::Stub,
         tag: "monster",
     },
     // weapon / shield special-effect descriptions. FUN_8012432C indexes it with
@@ -226,7 +318,7 @@ pub(crate) const TEXT_TABLES_EXPLICIT: &[TextTable] = &[
         stride: 4,
         count: 31,
         fields: &[0],
-        cap: None,
+        cap: NameCap::Free,
         tag: "effect",
     },
     // scenario goals. FUN_80091CD8 loads exactly 0x0, 0x4, 0x8, 0xc and 0x10 off
@@ -236,7 +328,7 @@ pub(crate) const TEXT_TABLES_EXPLICIT: &[TextTable] = &[
         stride: 4,
         count: 5,
         fields: &[0],
-        cap: None,
+        cap: NameCap::Free,
         tag: "goal",
     },
     // per-character "in trouble" lines. FUN_80094000: `lhz r0,0x1e(r3)` masked
@@ -247,7 +339,7 @@ pub(crate) const TEXT_TABLES_EXPLICIT: &[TextTable] = &[
         stride: 4,
         count: 7,
         fields: &[0],
-        cap: None,
+        cap: NameCap::Free,
         tag: "panic",
     },
     // status-effect apply / cure message pairs. FUN_800BEC34 walks it with
@@ -259,7 +351,7 @@ pub(crate) const TEXT_TABLES_EXPLICIT: &[TextTable] = &[
         stride: 0xc,
         count: 53,
         fields: &[0, 4],
-        cap: None,
+        cap: NameCap::Free,
         tag: "status",
     },
     // boss / NPC names, indexed by character id. FUN_800F64A8:
@@ -271,7 +363,7 @@ pub(crate) const TEXT_TABLES_EXPLICIT: &[TextTable] = &[
         stride: 4,
         count: 11,
         fields: &[0],
-        cap: None,
+        cap: NameCap::Free,
         tag: "charname",
     },
     // per-character battle / status dialogue. FUN_80110EA0 returns
@@ -283,7 +375,7 @@ pub(crate) const TEXT_TABLES_EXPLICIT: &[TextTable] = &[
         stride: 4,
         count: 357,
         fields: &[0],
-        cap: None,
+        cap: NameCap::Free,
         tag: "dialogue",
     },
     // disc / drive error messages. FUN_8011E1C0: 8011e2e0 `addi r5,r5,0x4188` /
@@ -293,7 +385,7 @@ pub(crate) const TEXT_TABLES_EXPLICIT: &[TextTable] = &[
         stride: 4,
         count: 5,
         fields: &[0],
-        cap: None,
+        cap: NameCap::Free,
         tag: "discerr",
     },
     // the label pool the data-menu sub-lists point into. reached through the
@@ -303,7 +395,7 @@ pub(crate) const TEXT_TABLES_EXPLICIT: &[TextTable] = &[
         stride: 4,
         count: 8,
         fields: &[0],
-        cap: None,
+        cap: NameCap::Free,
         tag: "datamenu",
     },
 ];
@@ -325,9 +417,8 @@ pub(crate) const EXCLUDED_NOTES: &[(u32, &[&str])] = &[(
 )];
 
 /// A run of fixed-width text records stored inline: no pointer word anywhere,
-/// and no terminator. `dump-all` emits them, but `patch-all` leaves them alone:
-/// translating one means overwriting the record where it lies and padding back
-/// out to `glyphs`, and no build has playtested that.
+/// and no terminator. There is nothing to repoint, so a translation either
+/// overwrites the record where it lies or does not happen.
 pub(crate) struct InlineField {
     /// RAM address of record 0.
     pub base: u32,
@@ -338,6 +429,10 @@ pub(crate) struct InlineField {
     /// glyphs per record. also the hard cap on a translation, because the
     /// record's width is what this reader assumes
     pub glyphs: u32,
+    /// overwrite the record with a redirect stub rather than with glyphs.
+    /// Needs `stride >= 4` and a reader that walks the record as a string;
+    /// buys the record `LONG_NAME_GLYPHS` instead of `glyphs`.
+    pub stub: bool,
     /// tag written into the .patch comments.
     pub tag: &'static str,
 }
@@ -368,11 +463,18 @@ pub(crate) const INLINE_FIELDS: &[InlineField] = &[
     // all eight words are compared against the player's name and a full match
     // re-rolls, so the record width is 8 glyphs whatever the padding says. the
     // 0xF800 at 0x80248214 follows record 99 rather than belonging to it.
+    //
+    // stubbed: FUN_8007DFD4 keeps the chosen record as a *pointer*
+    // (`DAT_802957B8.field_2C = base + index * 0x10`), so the record is read as
+    // a string and a redirect in its first word is followed. The 8-word compare
+    // still terminates -- against a stub it mismatches on word 0 -- and the
+    // stride is untouched, so `8007e128 slwi r0,r3,4` stays retail.
     InlineField {
         base: 0x80247bd4,
         stride: 0x10,
         count: 100,
         glyphs: 8,
+        stub: true,
         tag: "cpuname",
     },
 ];

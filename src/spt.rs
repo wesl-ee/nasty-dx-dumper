@@ -20,7 +20,16 @@ const PAD_OP: u16 = 0xFFFE;
 const GLYPH_MAX: u16 = 0x03FF;
 /// every u16@0 in the corpus is 32-aligned
 const ALIGN: usize = 32;
-/// the 0x12-byte name field: 8 glyphs plus the 0xF800
+/// the 0x12-byte name field: 8 glyphs plus the 0xF800.
+///
+/// Stays at 8 while DOL names go to 16. A DOL name reaches 16 by having its
+/// reference repointed at a redirect stub in the translation bank, so the
+/// 0x12-byte copy transports two words instead of glyphs. An SPT name has no
+/// such reference to repoint -- it is reached through a 16-bit directory offset
+/// within its own file, and the bank is in the DOL -- so its glyphs really are
+/// what the copy moves, and 8 is still where the terminator is lost. Raising
+/// this without a stub path for SPT would ship the corruption below rather than
+/// avoid it. Keep in step with `dx-ghidra/tools/sptpack.py`.
 const NAME_CAP: usize = 8;
 /// 0x0B18 writes words 1..32 in place and never writes a terminator
 const B18_WORDS: usize = 34;

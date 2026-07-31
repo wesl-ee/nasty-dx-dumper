@@ -9,7 +9,8 @@ use std::{
 use anyhow::Result;
 
 use crate::constants::{
-    EXCLUDED_NOTES, INLINE_FIELDS, TEXT_TABLES_EXPLICIT, WALKING_TABLES,
+    NameCap, EXCLUDED_NOTES, INLINE_FIELDS, LONG_NAME_GLYPHS,
+    TEXT_TABLES_EXPLICIT, WALKING_TABLES,
 };
 use crate::shape::DolHeader;
 use crate::utils::load_character_table;
@@ -117,7 +118,7 @@ fn dump_main_dol(f_path: &PathBuf, out_file: &PathBuf) -> Result<()> {
 
     // Tables we know the exact extent of. These run last and only fill slots the
     // walking tables above did not already claim, so their output is unchanged.
-    let mut caps = HashMap::<u32, u32>::default();
+    let mut caps = HashMap::<u32, NameCap>::default();
     for table in TEXT_TABLES_EXPLICIT {
         for i in 0..table.count {
             for field in table.fields {
@@ -165,9 +166,7 @@ fn dump_main_dol(f_path: &PathBuf, out_file: &PathBuf) -> Result<()> {
                 all_indexed_ptrs
                     .entry(ref_offset)
                     .or_insert((text_offset, table.tag));
-                if let Some(cap) = table.cap {
-                    caps.insert(text_offset, cap);
-                }
+                caps.insert(text_offset, table.cap);
             }
         }
     }
@@ -190,12 +189,11 @@ fn dump_main_dol(f_path: &PathBuf, out_file: &PathBuf) -> Result<()> {
     let out_fh = std::fs::File::create(out_file)?;
     let mut out_writer = BufWriter::new(out_fh);
 
-    let refs = all_indexed_ptrs.len()
-        + imm_refs.values().map(Vec::len).sum::<usize>();
+    let refs =
+        all_indexed_ptrs.len() + imm_refs.values().map(Vec::len).sum::<usize>();
     // the inline records are emitted after the loop below, so they are not in
     // sorted_text_ptrs
-    let inline: usize =
-        INLINE_FIELDS.iter().map(|f| f.count as usize).sum();
+    let inline: usize = INLINE_FIELDS.iter().map(|f| f.count as usize).sum();
     writeln!(
         out_writer,
         "# main.dol: {} strings, {refs} references. Translate by repeating the \
@@ -237,11 +235,13 @@ fn dump_main_dol(f_path: &PathBuf, out_file: &PathBuf) -> Result<()> {
                 r.hi_ram
             )?;
         }
-        if let Some(cap) = caps.get(&text_off) {
-            writeln!(
+        match caps.get(&text_off) {
+            Some(NameCap::Stub) => writeln!(
                 out_writer,
-                "# LIMIT {cap} glyphs - copied with a fixed-size memcpy"
-            )?;
+                "# LIMIT {LONG_NAME_GLYPHS} glyphs - a fixed-size memcpy \
+                 copies a redirect stub, not these glyphs"
+            )?,
+            Some(NameCap::Free) | None => {}
         }
         writeln!(out_writer, "0x{text_off:x} {str}")?;
     }
@@ -275,11 +275,19 @@ fn dump_main_dol(f_path: &PathBuf, out_file: &PathBuf) -> Result<()> {
                 "# inline {} record {i} at main.dol:0x{off:x} (RAM 0x{ram:x})",
                 field.tag
             )?;
-            writeln!(
-                out_writer,
-                "# LIMIT {} glyphs - fixed-width record with no terminator",
-                field.glyphs
-            )?;
+            if field.stub {
+                writeln!(
+                    out_writer,
+                    "# LIMIT {LONG_NAME_GLYPHS} glyphs - the record is \
+                     overwritten with a redirect stub, not with these glyphs"
+                )?;
+            } else {
+                writeln!(
+                    out_writer,
+                    "# LIMIT {} glyphs - fixed-width record with no terminator",
+                    field.glyphs
+                )?;
+            }
             // the terminator supplies the blank line that separates entries
             // everywhere else in this file; these records have none.
             writeln!(out_writer, "0x{off:x} {text}\n")?;
