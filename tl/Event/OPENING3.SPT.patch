@@ -1,0 +1,9 @@
+# OPENING3.SPT: 2 strings, 2 references. Translate by repeating the 0xOFFSET line with English.
+# record cursor 0x3780, script ends 0x15be, 51328 bytes of arena shared by every replacement
+
+# reference at OPENING3.SPT:0xa0 (cmd 0202 direct, slot 0xac)
+0x1506 [0xd147]こいつをたおせば[\n]いっぽいほうびをあげるダバ![0xa8c8][Press A][0xa000][0xd148]はやくやっつけるダバ![0xa8c8][Press A]
+
+# reference at OPENING3.SPT:0x112 (cmd 0202 direct, slot 0x11e)
+0x155a [0xd00d]なんだぁ?[0xa8c8][Press A][0xa000][0xd00e]オレ様のジャマをしようってのか?[0xa8c8][Press A][0xa000][0xd00f]おまえから先にぶっつぶしてやるぜ![0xa8c8][Press A]
+

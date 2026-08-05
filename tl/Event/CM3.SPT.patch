@@ -1,0 +1,9 @@
+# CM3.SPT: 2 strings, 2 references. Translate by repeating the 0xOFFSET line with English.
+# record cursor 0x13a0, script ends 0x12b8, 60512 bytes of arena shared by every replacement
+
+# reference at CM3.SPT:0xcc (cmd 0202 direct, slot 0xd8)
+0x37c [0xd125][0x0c00]イヤー、よかった[0x0d00][Press A]
+
+# reference at CM3.SPT:0xea (cmd 0303 direct, slot 0xee)
+0x1254 [0x0c00]それではわが社の[Blue Text]コマーシャル[Normal Color Text]に[\n]しゅつえんしていただきます[\n]さっそくさつえいをしましょう[0x0d00][Press A]
+

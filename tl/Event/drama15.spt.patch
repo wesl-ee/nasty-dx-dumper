@@ -1,0 +1,6 @@
+# drama15.spt: 1 strings, 1 references. Translate by repeating the 0xOFFSET line with English.
+# record cursor 0x3020, script ends 0x1422, 53216 bytes of arena shared by every replacement
+
+# reference at drama15.spt:0x8 (cmd 0202 direct, slot 0x14)
+0x138c [0xd006]ムキーッ![Press A][0xa000]こんな弱っちいヤツと[\n]手を組むんじゃなかったぜ![Press A][0xa000]またいつかふっかつして[\n]ドカポン王國をのっとりに来るからな![\n]おぼえてやがれ![Press A]
+

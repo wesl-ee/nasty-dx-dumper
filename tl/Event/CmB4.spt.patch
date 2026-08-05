@@ -1,0 +1,9 @@
+# CmB4.spt: 2 strings, 2 references. Translate by repeating the 0xOFFSET line with English.
+# record cursor 0x13c0, script ends 0x13b4, 60480 bytes of arena shared by every replacement
+
+# reference at CmB4.spt:0xd2 (cmd 0202 direct, slot 0xde)
+0x12d8 [0x0c00]ありがとうございます![\n]とてもすばらしいコマーシャルが[\n]できあがりました![0x0d00][Press A][0xa000][0x0c00]コマーシャルが流れると、[\n][Green Text][0x1000][Normal Color Text]Gおしはらいします。[\n]TV春組を寨しみにしていてください[0x0d00][Press A]
+
+# reference at CmB4.spt:0xfe (cmd 0303 direct, slot 0x102)
+0x138a 今後ともわが社をよろしくおねがいします[Press A]
+

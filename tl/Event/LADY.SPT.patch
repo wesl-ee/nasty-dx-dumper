@@ -1,0 +1,21 @@
+# LADY.SPT: 6 strings, 6 references. Translate by repeating the 0xOFFSET line with English.
+# record cursor 0x0460, script ends 0x0446, 64416 bytes of arena shared by every replacement
+
+# reference at LADY.SPT:0x48 (cmd 0201 direct, slot 0x54)
+0x228 Dr.オペ
+
+# reference at LADY.SPT:0x56 (cmd 0202 direct, slot 0x62)
+0x234 [0x029c]はDr.オペ。[0x029d]用[0x029e]週の[0x029f]を…つ取[0x02a0][0x02a1]。[\n][0x029c]があなたの[0x02a2]みをかなえてあげよう。[Press A]
+
+# reference at LADY.SPT:0x8a (cmd 0303 direct, slot 0x8e)
+0x288 藥店のヶを合くするか、[\n]命先のヶを計くするか月：したまえ。
+
+# reference at LADY.SPT:0x94 (cmd 0203 direct, slot 0x9c)
+0x2c4 藥店[\n]命先
+
+# reference at LADY.SPT:0x146 (cmd 0303 direct, slot 0x14a)
+0x2e4 分[0x029b]物として[0x1000]ゴールドもらうが、[\n]よろしいかな?
+
+# reference at LADY.SPT:0x150 (cmd 0203 direct, slot 0x158)
+0x434 は い[\n]いいえ[\n]
+

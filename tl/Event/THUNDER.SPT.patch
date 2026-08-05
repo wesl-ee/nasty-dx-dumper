@@ -1,0 +1,15 @@
+# THUNDER.SPT: 4 strings, 4 references. Translate by repeating the 0xOFFSET line with English.
+# record cursor 0x34a0, script ends 0x30ce, 52064 bytes of arena shared by every replacement
+
+# reference at THUNDER.SPT:0xf8 (cmd 0202 direct, slot 0x104)
+0x2d4a [0xd0e7][0x0c00]みなさんこんにちは[0x0d00][Press A][0xa000][0xd0e6][0x0c00]ニュースそくほうです[0x0d00][Press A]
+
+# reference at THUNDER.SPT:0x11a (cmd 0303 direct, slot 0x11e)
+0x2ff2 [0xd0e3][0x0c00]さきほどドカポンきしょうちょうより[\n][Red Text]カミナリ[Normal Color Text]けいほうが出されました[0x0d00][Press A]
+
+# reference at THUNDER.SPT:0x1c4 (cmd 0303 direct, slot 0x1c8)
+0x3042 [0x0c00][Blue Text][%0][Normal Color Text]で発生した[Red Text]らいうん[Normal Color Text]は[\n]ゆっくりといどうしています[0x0d00][Press A]
+
+# reference at THUNDER.SPT:0x1d6 (cmd 0303 direct, slot 0x1da)
+0x3084 [0x0c00]くれぐれも、[Red Text]らいうん[Normal Color Text]の下には[\n]入らないように気をつけてください[0x0d00][Press A]
+

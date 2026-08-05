@@ -1,0 +1,23 @@
+# CASTLE.SPT: 5 strings, 5 references. Translate by repeating the 0xOFFSET line with English.
+# record cursor 0x3420, script ends 0x2926, 52192 bytes of arena shared by every replacement
+
+# reference at CASTLE.SPT:0x1a6 (cmd 0303 direct, slot 0x1aa)
+0x3ce [0x09a1][Blue Text][%0][Normal Color Text]の[\n][Green Text]HP[Normal Color Text]と[Green Text]ステータスいじょう[Normal Color Text]がかいふくした[Press A]
+0x3ce [0x09a1][Blue Text][%0][Normal Color Text]s[\n][Green Text]HP[Normal Color Text] and [Green Text]status ailments[Normal Color Text]were healed![Press A]
+
+# reference at CASTLE.SPT:0xec (cmd 0201 direct, slot 0xf8)
+0x282c  しつじ 
+0x282c Butler
+
+# reference at CASTLE.SPT:0x108 (cmd 0202 direct, slot 0x114)
+0x2838 [0xd183]これはこれは、ようこそいらっしゃいました[0xa8c8][Press A]
+0x2838 [0xd183]My warmest welcomes[0xa8c8][Press A]
+
+# reference at CASTLE.SPT:0x152 (cmd 0303 direct, slot 0x156)
+0x28b2 [0xd184][0x0c00]わたしがつかれを、いやしてあげましょう[0x0d00][Press A]
+0x28b2 [0xd184][0x0c00]Let me heal what ails you[0x0d00][Press A]
+
+# reference at CASTLE.SPT:0x1b0 (cmd 0303 direct, slot 0x1b4)
+0x28e2 [0x0c00]珠のごぶじをいのっております・・・[\n]より道はほどほどに・・・[0x0d00][Press A]
+0x28e2 [0x0c00]I pray for your safe journey...[\n]Do not stray far from the path...[0x0d00][Press A]
+

@@ -1,0 +1,18 @@
+# drama11.spt: 5 strings, 5 references. Translate by repeating the 0xOFFSET line with English.
+# record cursor 0x32e0, script ends 0x139e, 52512 bytes of arena shared by every replacement
+
+# reference at drama11.spt:0x284 (cmd 0202 direct, slot 0x290)
+0xaa0  
+
+# reference at drama11.spt:0x52 (cmd 0202 direct, slot 0x5e)
+0x12a2 [0xd03e]これで魔界トンネルから[\n]魔界のエネルギーが広がっていくぜ![Press A]
+
+# reference at drama11.spt:0x9a (cmd 0303 direct, slot 0x9e)
+0x12e2 [0xd03f]よーし、これからオレ様たちは[\n]合休してパワーアップだ![Press A][0xa000][0xd040]そのあとは、そいつらを[Blue Text]全員たおして[Normal Color Text][\n]ドカポン王國をしはいするんだぜ![Press A]
+
+# reference at drama11.spt:0xfc (cmd 0303 direct, slot 0x100)
+0x136c [0xd041]それじゃいくぜ![Press A]
+
+# reference at drama11.spt:0x172 (cmd 0303 direct, slot 0x176)
+0x1382 [0xd042]ワルサードッキーング![Press A]
+

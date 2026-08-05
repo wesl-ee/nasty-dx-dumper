@@ -1,0 +1,34 @@
+# DEVIL.SPT: 8 strings, 8 references. Translate by repeating the 0xOFFSET line with English.
+# record cursor 0x33e0, script ends 0x0896, 52256 bytes of arena shared by every replacement
+
+# reference at DEVIL.SPT:0x19e (cmd 0303 direct, slot 0x1a2)
+0x240  
+
+# reference at DEVIL.SPT:0xdc (cmd 0201 direct, slot 0xe8)
+0x788 ウェーバー
+0x788 Weber
+
+# reference at DEVIL.SPT:0xea (cmd 0202 direct, slot 0xf6)
+0x794 [0xd0b6]力がほしいか?[0xa8c8][Press A]
+0x794 [0xd0b6]Do you wish for power?[0xa8c8][Press A]
+
+# reference at DEVIL.SPT:0x10c (cmd 0303 direct, slot 0x110)
+0x7aa [0xd0b7]力がほしいのならくれてやる[0xa8c8][Press A]
+0x7aa [0xd0b7]If you wish for power[\n]I can grant it[0xa8c8][Press A]
+
+# reference at DEVIL.SPT:0x146 (cmd 0203 direct, slot 0x14e)
+0x7cc ほしい[\n]いらない
+0x7cc Yes[\n]No
+
+# reference at DEVIL.SPT:0x1bc (cmd 0303 direct, slot 0x1c0)
+0x7de [0xd0b8]すばらしき暗黑の力を、ぞんぶんに寨しむがよい[0xa8c8]
+0x7de [0xd0b8]Go forth and exercise[\n]this awesome dark power[0xa8c8]
+
+# reference at DEVIL.SPT:0x116 (cmd 0303 direct, slot 0x11a)
+0x82c おまえの[Red Text]金[Normal Color Text]と[Red Text]持ち物[Normal Color Text]すべてとひきかえに、[\n]暗黑の力を[Blue Text][0x1000][Normal Color Text]日間あたえてやろう[Press A]
+0x82c In exchange for your [Red Text]Money[Normal Color Text] and [Red Text]Items[Normal Color Text][\n]I will grant you [Blue Text][0x1000][Normal Color Text] days of dark power[Press A]
+
+# reference at DEVIL.SPT:0x138 (cmd 0303 direct, slot 0x13c)
+0x882 [0xd0b6]力がほしいか?[0xa8c8]
+0x882 [0xd0b6]Do you wish for power?[0xa8c8]
+

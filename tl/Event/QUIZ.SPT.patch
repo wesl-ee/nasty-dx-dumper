@@ -1,0 +1,68 @@
+# QUIZ.SPT: 21 strings, 23 references. Translate by repeating the 0xOFFSET line with English.
+# record cursor 0x4c40, script ends 0x3112, 46016 bytes of arena shared by every replacement
+
+# reference at QUIZ.SPT:0x1aa (cmd 0303 direct, slot 0x1ae)
+# reference at QUIZ.SPT:0x796 (cmd 0202 direct, slot 0x7a2)
+0x1aa0  
+
+# reference at QUIZ.SPT:0x376 (cmd 0303 direct, slot 0x37a)
+0x1aa4 [Blue Text][%0][Normal Color Text]さん[\n]コントローラを持ってください[Press A]
+
+# reference at QUIZ.SPT:0x108 (cmd 0303 direct, slot 0x10c)
+0x1ad0 [Red Text][%0][Normal Color Text]さん[\n]コントローラを持ってください[Press A]
+
+# reference at QUIZ.SPT:0x144 (cmd 0203 direct, slot 0x14c)
+# reference at QUIZ.SPT:0x1de (cmd 0203 direct, slot 0x1e6)
+0x1afc は い[\n]いいえ
+
+# reference at QUIZ.SPT:0x74a (cmd 0303 direct, slot 0x74e)
+0x1b1e [Blue Text][%0][Normal Color Text]は[\n][Green Text][%0][Normal Color Text]を手に入れた![Press A]
+
+# reference at QUIZ.SPT:0x73c (cmd 0303 direct, slot 0x740)
+0x1c54 [Blue Text][%0][Normal Color Text]は[\n][Green Text][0x1000][Normal Color Text]G手に入れた![Press A]
+
+# reference at QUIZ.SPT:0x8bc (cmd 0303 direct, slot 0x8c0)
+0x1c76 [Red Text][%0][Normal Color Text]は[\n][Green Text][0x1000][Normal Color Text]G手に入れた![Press A]
+
+# reference at QUIZ.SPT:0xbe (cmd 0202 direct, slot 0xca)
+0x2a8a [0xd0f6][0x0c00]こんにちはー[0x0d00][Press A]
+
+# reference at QUIZ.SPT:0xe0 (cmd 0303 direct, slot 0xe4)
+0x2aa0 [0xd0f7][0x0c00][Blue Text]クイズ1人に聞きました[Normal Color Text]の時間です[0x0d00][Press A]
+
+# reference at QUIZ.SPT:0xa32 (cmd 0303 direct, slot 0xa36)
+0x2ace [0x0c00]クイズにせいかいして、[\n]みごとおたからをゲットできる[\n]のでしょうか?[0x0d00][Press A][0xa000][0x0c00]それでは、[Blue Text][%0][Normal Color Text]さん![\n]どうぞこちらに![0x0d00][Press A]
+
+# reference at QUIZ.SPT:0xafe (cmd 0303 direct, slot 0xb02)
+0x2b4a [0x0c00]そして本日、[Blue Text][%0][Normal Color Text]さんに[\n]おたからをとられるかもしれない[\n]不幸な方は・・・[0x0d00][Press A][0xa000][0x0c00][Red Text][%0][Normal Color Text]さんでーす![\n]どうぞこちらに![0x0d00][Press A]
+
+# reference at QUIZ.SPT:0xbb4 (cmd 0303 direct, slot 0xbb8)
+0x2bc8 [0x0c00]あれっ?! カミ、切った?[0x0978][0x0d00][Press A]
+
+# reference at QUIZ.SPT:0x12a (cmd 0303 direct, slot 0x12e)
+0x2bec [0x0c00]ところで、[\n][Red Text][%0][Normal Color Text]さんは、この春組の[\n]ルールをごぞんじですか?[0x0d00]
+
+# reference at QUIZ.SPT:0x274 (cmd 0303 direct, slot 0x278)
+0x2c30 [0x0c00]それでは[Red Text][%0][Normal Color Text]さん![\n]じまんのおたからの中から[\n]1つをえらんでください![0x0d00][Press A][0xa000][0x0c00]えらんだおたからを、[\n][Blue Text][%0][Normal Color Text]さんに当てられると、[\n]そのおたからをとられますからね![0x0d00]
+
+# reference at QUIZ.SPT:0x524 (cmd 0303 direct, slot 0x528)
+0x2cd8 [0x0c00]本日は[Red Text][%0][Normal Color Text]さんに、[\n]じまんのおたからを4つ[\n]持ってきてもらいました[0x0d00][Press A][0xa000][0x0c00]まず[Red Text][%0][Normal Color Text]さんに、[\n]パネルに書かれている自分のおたからの[\n]中から、1つをえらんでもらいます[0x0d00][Press A][0xa000][0x0c00]その後、左にいる[Blue Text][%0][Normal Color Text]さんが、[\n][Red Text][%0][Normal Color Text]さんがどのおたからを[\n]えらんだかを当てます[0x0d00][Press A][0xa000][0x0c00][Red Text][%0][Normal Color Text]さんのえらんだおたからを、[\n][Blue Text][%0][Normal Color Text]さんが[\n]ピッタリ当てると・・・[0x0d00][Press A]
+
+# reference at QUIZ.SPT:0x55c (cmd 0303 direct, slot 0x560)
+0x2e2c [0x0c00]そのおたからは[Blue Text][%0][Normal Color Text]さんに[\n]とられてしまいます![0x0d00][Press A][0xa000][0x0c00][Blue Text][%0][Normal Color Text]さんがはずすと、[\n][Red Text][%0][Normal Color Text]さんのおたからは[\n]何もとられません![0x0d00][Press A][0xa000][0x0c00][Red Text][%0][Normal Color Text]さんはぎゃくに、[\n][Blue Text][%0][Normal Color Text]さんがえらばなそうな[\n]おたからをえらべばいいんです[0x0d00][Press A][0xa000][0x0c00]ルールはわかりましたか?[0x0d00]
+
+# reference at QUIZ.SPT:0x398 (cmd 0303 direct, slot 0x39c)
+0x2f24 [0x0c00]さぁ、では[Blue Text][%0][Normal Color Text]さん![\n][Red Text][%0][Normal Color Text]さんがえらんだ[\n]おたからは4つのうち、どれでしょう?[Press A][0xa000][0x0c00]みごと当てられれば[\n]そのおたからは[\n][Blue Text][%0][Normal Color Text]さんのものです![0x0d00]
+
+# reference at QUIZ.SPT:0x834 (cmd 0303 direct, slot 0x838)
+0x2fbc [0x0c00]ざんねん![\n][Red Text][%0][Normal Color Text]さんがえらんだのは[\n][Blue Text][%0][Normal Color Text]![0x0d00][Press A]
+
+# reference at QUIZ.SPT:0x874 (cmd 0303 direct, slot 0x878)
+0x2ff2 [0x0c00][Blue Text][%0][Normal Color Text]さんがえらんだのは[\n][Blue Text][%0][Normal Color Text]でした![0x0d00][Press A][0xa000][0x0c00]運よくおたからをうばわれなかった[\n][Red Text][%0][Normal Color Text]さんには[\n]春組から[Green Text][0x1000][Normal Color Text]Gがおくられます![Press A]
+
+# reference at QUIZ.SPT:0x6ba (cmd 0303 direct, slot 0x6be)
+0x307a [0x0c00][Blue Text][%0][Normal Color Text]さんおめでとう![\n][Green Text][%0][Normal Color Text]はあなたの物です![0x0d00][Press A][0xa000][0x0c00]さらに春組から[\n][Green Text][0x1000][Normal Color Text]Gがおくられます![0x0d00][Press A]
+
+# reference at QUIZ.SPT:0x4ae (cmd 0303 direct, slot 0x4b2)
+0x30e2 [0xd109][0x0c00]また次回お会いしましょう[\n][0x0926]さようなら~[0x0d00]
+

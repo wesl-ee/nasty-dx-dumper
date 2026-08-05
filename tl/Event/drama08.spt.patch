@@ -1,0 +1,15 @@
+# drama08.spt: 4 strings, 4 references. Translate by repeating the 0xOFFSET line with English.
+# record cursor 0x3220, script ends 0x0eb2, 52704 bytes of arena shared by every replacement
+
+# reference at drama08.spt:0x106 (cmd 0202 direct, slot 0x112)
+0xd22 [0xd005]ウキキのキー![Press A][0xa000][0xd013]おまえらがちんたらやってるうちに[\n][Red Text]魔界[Normal Color Text]へのトンネルを開いてやったぜ![Press A]
+
+# reference at drama08.spt:0x140 (cmd 0303 direct, slot 0x144)
+0xd84 [0xd017][Blue Text]Dパーツ[Normal Color Text]を全部集めたようだがムダだったな![Press A][0xa000][0xd018]そもそも[Blue Text]Dパーツ[Normal Color Text]は何の役に立つんだ?[Press A][0xa000][0xd019]本当はガラクタなんじゃないのか-?[Press A][0xa000][0xd01a]ドカポン王國はオレ様のものだぜ![Press A]
+
+# reference at drama08.spt:0x188 (cmd 0202 direct, slot 0x194)
+0xe34 [Red Text]ドカポン城から魔界が広がっていく![Normal Color Text][Press A]
+
+# reference at drama08.spt:0x204 (cmd 0202 direct, slot 0x210)
+0xe5e [0xd01b]今日がドカポン王國のさいごだぜ![Press A][0xa000][0xd01c]そしてワルサーていこくのたんじょうだー![Press A]
+

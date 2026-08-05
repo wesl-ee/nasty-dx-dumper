@@ -1,0 +1,97 @@
+# ENDING_B.SPT: 30 strings, 34 references. Translate by repeating the 0xOFFSET line with English.
+# record cursor 0x4200, script ends 0x3af6, 48640 bytes of arena shared by every replacement
+
+# reference at ENDING_B.SPT:0x306 (cmd 0202 direct, slot 0x312)
+# reference at ENDING_B.SPT:0xa02 (cmd 0202 direct, slot 0xa0e)
+0x1a00  
+
+# reference at ENDING_B.SPT:0x84 (cmd 0202 direct, slot 0x90)
+0x2eea [0xd08c][0x0c00]みんなおつかれさま![0x0d00][Press A][0xa000][0xd098][0x0c00]これからじゅんい発表をはじめるよ![0x0d00][Press A]
+
+# reference at ENDING_B.SPT:0x540 (cmd 0303 direct, slot 0x544)
+0x2f34 [0x0c00]その前に、がんばったみんなに[\n]ベーナスをあげるよ![0x0d00][Press A]
+
+# reference at ENDING_B.SPT:0xc6 (cmd 0202 direct, slot 0xd2)
+0x2f6e [0xd099]みんなかくごはいい?[0xa8c8][Press A][0xa000][0xd09a]それじゃあビリから発表だよ![0xa8c8][Press A]
+
+# reference at ENDING_B.SPT:0xfe (cmd 0303 direct, slot 0x102)
+0x2fae [0xd099][0x0c00]みんなかくごはいい?[0x0d00][Press A][0xa000][0xd09a][0x0c00]それじゃあビリから発表だよ![0x0d00][Press A]
+
+# reference at ENDING_B.SPT:0x13e (cmd 0202 direct, slot 0x14a)
+0x2ff2 [0x0c00]ビリ![Press A]
+
+# reference at ENDING_B.SPT:0x9d2 (cmd 0303 direct, slot 0x9d6)
+0x2ffe [0x0c00][Blue Text][%0]ーッ[Normal Color Text]![0x0d00][Press A]
+
+# reference at ENDING_B.SPT:0x18c (cmd 0202 direct, slot 0x198)
+0x3012 [0xd09c][0x0c00]第3位![0x0d00][Press A]
+
+# reference at ENDING_B.SPT:0x1c8 (cmd 0202 direct, slot 0x1d4)
+0x3024 [0xd09d][0x0c00]第2位![0x0d00][Press A]
+
+# reference at ENDING_B.SPT:0x204 (cmd 0202 direct, slot 0x210)
+0x3036 [0xd09e][0x0c00]そして第1位は・・・[0x0d00][Press A]
+
+# reference at ENDING_B.SPT:0x268 (cmd 0303 direct, slot 0x26c)
+0x3054 [0x0c00][Blue Text][%0]ーーッ[Normal Color Text]!![\n][0xd09f][0x0c00]やったね![0x0d00][Press A]
+
+# reference at ENDING_B.SPT:0x3bc (cmd 0202 direct, slot 0x3c8)
+0x307c [0xd0a8][0x0c00]1位の[Blue Text][%0][Normal Color Text]おめでとう![0x0d00][Press A][0xa000][0xd08e][0x0c00]きっとキミが1春になると思ってたよ![0x0d00][Press A]
+
+# reference at ENDING_B.SPT:0x3f6 (cmd 0303 direct, slot 0x3fa)
+0x30cc [0x0c00]次も1春ねらってがんばってね![0x0d00][Press A]
+
+# reference at ENDING_B.SPT:0x406 (cmd 0303 direct, slot 0x40a)
+0x30f2 [0xd093][0x0c00]2春の[Blue Text][%0][Normal Color Text]は[\n]おしかったね[0x0d00][Press A][0xa000][0xd094][0x0c00]次こそ1位だよ![0x0d00][Press A]
+
+# reference at ENDING_B.SPT:0x430 (cmd 0303 direct, slot 0x434)
+0x3132 [0xd091][0x0c00]3春の[Blue Text][%0][Normal Color Text]は[\n]びみょ~だったね[0x0d00][Press A][0xa000][0xd092][0x0c00]次はもっと努力しようね![0x0d00][Press A]
+
+# reference at ENDING_B.SPT:0x448 (cmd 0303 direct, slot 0x44c)
+0x317e [0xd08f][0x0c00]ビリの[Blue Text][%0][Normal Color Text]は[\n]ぜんぜんダメダメだったね[0x0d00][Press A][0xa000][0xd090][0x0c00]かける言葉もみつからないよ![0x0d00][Press A]
+
+# reference at ENDING_B.SPT:0x998 (cmd 0303 direct, slot 0x99c)
+0x31d6 [0x0c00]そういえば[Blue Text]スペシャルルール[Normal Color Text]にしてるね[\n][Blue Text]とられる人[Normal Color Text]で決めた[\n]じょうけんに当てはまる人は[Press A]
+
+# reference at ENDING_B.SPT:0x9a2 (cmd 0303 direct, slot 0x9a6)
+0x3238 [0x0c00]1位の人に[Blue Text]うばうもの[Normal Color Text]で決めた[\n]物をとられちゃうからね![\n]いじけないで次で取り返そう![0x0d00][Press A]
+
+# reference at ENDING_B.SPT:0x47c (cmd 0303 direct, slot 0x480)
+0x3298 [0xd095][0x0c00]みんな長い間あそんでくれてありがとう![0x0d00][Press A][0xa000][0xd096][0x0c00]またドカポンで会おうね![0x0d00][Press A][0xa000][0xd097][0x0c00]バイバイ![0x0d00][Press A]
+
+# reference at ENDING_B.SPT:0x93e (cmd 0303 direct, slot 0x942)
+0x3404 とられる物
+
+# reference at ENDING_B.SPT:0x976 (cmd 0303 direct, slot 0x97a)
+0x3410 とられる人
+
+# reference at ENDING_B.SPT:0x53c (cmd table table[2], slot 0x53c)
+0x341c そうび品
+
+# reference at ENDING_B.SPT:0x53e (cmd table table[2], slot 0x53e)
+0x3426 Dグッズ
+
+# reference at ENDING_B.SPT:0x594 (cmd 0202 direct, slot 0x5a0)
+0x3960 [0x0c00]一春冬くモンスターをたおした[\n]バトルマスターの[Blue Text][%0][Normal Color Text]には[0x0d00][Press A]
+
+# reference at ENDING_B.SPT:0x5c8 (cmd 0303 direct, slot 0x5cc)
+# reference at ENDING_B.SPT:0x63e (cmd 0303 direct, slot 0x642)
+# reference at ENDING_B.SPT:0x6b4 (cmd 0303 direct, slot 0x6b8)
+# reference at ENDING_B.SPT:0x72a (cmd 0303 direct, slot 0x72e)
+0x39a0 [0x0c00][Green Text][0x1000][Normal Color Text]Gあげるよ![0x0d00][Press A]
+
+# reference at ENDING_B.SPT:0x60a (cmd 0202 direct, slot 0x616)
+0x39ba [0x0c00]いっしょにたたかった友だちを[\n]一春ベコベコにしたきらわれ者の[\n][Blue Text][%0][Normal Color Text]には[0x0d00][Press A]
+
+# reference at ENDING_B.SPT:0x680 (cmd 0202 direct, slot 0x68c)
+0x3a0a [0x0c00]一春冬くはっくつマスを入手した[\n]はっくつ王の[Blue Text][%0][Normal Color Text]には[0x0d00][Press A]
+
+# reference at ENDING_B.SPT:0x6f6 (cmd 0202 direct, slot 0x702)
+0x3a48 [0x0c00]一春冬くぬすみをはたらいた[\n]ごくあく人の[Blue Text][%0][Normal Color Text]には[0x0d00][Press A]
+
+# reference at ENDING_B.SPT:0x76c (cmd 0202 direct, slot 0x778)
+0x3a82 [0x0c00]一春冬く死んでしまった[\n]かわいそうな[Blue Text][%0][Normal Color Text]には[0x0d00][Press A]
+
+# reference at ENDING_B.SPT:0x7a0 (cmd 0303 direct, slot 0x7a4)
+0x3ab8 [0x0c00][Green Text][0x1000][Normal Color Text]Gあげるよ![\n]今までよくあきらめずかんばったね![0x0d00][Press A]
+

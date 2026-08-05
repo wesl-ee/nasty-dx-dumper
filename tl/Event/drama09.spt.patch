@@ -1,0 +1,18 @@
+# drama09.spt: 5 strings, 5 references. Translate by repeating the 0xOFFSET line with English.
+# record cursor 0x3520, script ends 0x14a4, 51936 bytes of arena shared by every replacement
+
+# reference at drama09.spt:0x414 (cmd 0202 direct, slot 0x420)
+0x11b2 [Blue Text]Dパーツがキラキラ光りだした![Normal Color Text][Press A]
+
+# reference at drama09.spt:0x188 (cmd 0202 direct, slot 0x194)
+0x12fe [0x09a1][Blue Text]Dパーツ[Normal Color Text]が[Red Text]魔界[Normal Color Text]のエネルギーを[\n]ドカポン城の中にふうじこめた![Normal Color Text][Press A]
+
+# reference at drama09.spt:0x29a (cmd 0202 direct, slot 0x2a6)
+0x134a [0xd01d]な、なんだとー![Press A][0xa000][0xd01e]なんで[Red Text]魔界[Normal Color Text]のエネルギーが広がらないんだ!?[Press A][0xa000][0xd006]ムキーッ![Press A][0xa000][0xd01f][Blue Text]Dパーツ[Normal Color Text]にこんな力があったなんて![Press A][0xa000][0xd020]先に[Blue Text]Dパーツ[Normal Color Text]を集めておくんだったぜ![Press A]
+
+# reference at drama09.spt:0x2f6 (cmd 0303 direct, slot 0x2fa)
+0x13fe [0xd021]こうなったらオレ様がじきじきにおまえらを[\n]ブッころして[Blue Text]Dパーツ[Normal Color Text]をぶっこわしてやるぜ![Press A][0xa000][0xd022]城まできやがれ![Press A]
+
+# reference at drama09.spt:0x210 (cmd 0202 direct, slot 0x21c)
+0x1472 [Blue Text]Dパーツ[Normal Color Text]が持ち主の[\n]手元にもどっていった![Press A]
+

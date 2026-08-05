@@ -1,0 +1,21 @@
+# drama07.spt: 6 strings, 6 references. Translate by repeating the 0xOFFSET line with English.
+# record cursor 0x3260, script ends 0x0d62, 52640 bytes of arena shared by every replacement
+
+# reference at drama07.spt:0x32 (cmd 0202 direct, slot 0x3e)
+0xa7e [0xd005]ウキキのキー!
+
+# reference at drama07.spt:0x156 (cmd 0303 direct, slot 0x15a)
+0xa90 ひさしぶりだな![Press A][0xa000]さいしょにやられたうらみ、[\n]まだおぼえてるぜ![Press A][0xa000]本当ならケチョンケチョンにしてやるところだが、[\n]今はやめといてやるぜ![Press A]
+
+# reference at drama07.spt:0x18a (cmd 0303 direct, slot 0x18e)
+0xb20 なんてったって、もうすぐドカポン王國は[\n]オレ様のものになるんだからな![Press A][0xa000]おまえらが[Blue Text]Dパーツ[Normal Color Text]を集めてる間に[\n]ドカポン城の中に、[Red Text]魔界[Normal Color Text]につながるトンネルを[\n]少しずつあけていたんだぜ![Press A]
+
+# reference at drama07.spt:0x1be (cmd 0303 direct, slot 0x1c2)
+0xbde [0xd015][Red Text]魔界トンネル[Normal Color Text]が開くとどうなるか分かるか?[Press A]
+
+# reference at drama07.spt:0x1f2 (cmd 0303 direct, slot 0x1f6)
+0xc10 [0xd016][Red Text]魔界[Normal Color Text]のエネルギーがながれこんで[\n]ドカポン王國は[Red Text]魔界[Normal Color Text]に変わるんだぜ![Press A]
+
+# reference at drama07.spt:0x226 (cmd 0303 direct, slot 0x22a)
+0xc60 もう少しで[Red Text]魔界トンネル[Normal Color Text]はかんせいだ![\n]それまでおまえらには[Red Text]ワルサーズ[Normal Color Text][\n]とあそんでてもらうぜ![Press A][0xa000][Blue Text]ワルサーズを全員たおす[Normal Color Text]まで、[\n]城へは入れないように[\n]ふういんしておいたからな![Press A][0xa000]ドカポン王國が[Red Text]魔界[Normal Color Text]になるまで、[\n]ゆびをくわえて待ってやがれ![Press A]
+

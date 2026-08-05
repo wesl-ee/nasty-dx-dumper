@@ -1,0 +1,53 @@
+# SHOP_M.SPT: 15 strings, 20 references. Translate by repeating the 0xOFFSET line with English.
+# record cursor 0x33e0, script ends 0x2bfe, 52256 bytes of arena shared by every replacement
+
+# reference at SHOP_M.SPT:0x5fc (cmd 0203 direct, slot 0x604)
+# reference at SHOP_M.SPT:0x1156 (cmd 0203 direct, slot 0x115e)
+0x1c40 は い[\n]いいえ
+
+# reference at SHOP_M.SPT:0x1048 (cmd 0303 direct, slot 0x104c)
+0x1c64 [0x50c8][0x6018][0x1800]G
+
+# reference at SHOP_M.SPT:0x13f6 (cmd 0303 direct, slot 0x13fa)
+# reference at SHOP_M.SPT:0x146c (cmd 0303 direct, slot 0x1470)
+0x1c6e [0x50c8][0x1800]G
+
+# reference at SHOP_M.SPT:0xfc0 (cmd 0202 direct, slot 0xfcc)
+0x1d6c [Blue Text][%0][Normal Color Text]は[Red Text]おたずね者[Normal Color Text]になった![\n][Blue Text][%0][Normal Color Text]をたおすと[\n][Blue Text][0x1000][Normal Color Text]Gもらえます[Press A]
+
+# reference at SHOP_M.SPT:0x120c (cmd 0303 direct, slot 0x1210)
+0x2444 [0x0c00]カードを便うと、ねだんが[\n][Red Text]10%[Normal Color Text]ましになります[\n]おしはらいはどうなさいますか?[0x0d00]
+
+# reference at SHOP_M.SPT:0xc0 (cmd 0201 direct, slot 0xcc)
+0x2836 まほう屋ピスタ
+
+# reference at SHOP_M.SPT:0x54 (cmd 0202 direct, slot 0x60)
+0x2846 [0xd117][0x0c00]いらっしゃいニャリ[\n]今日は何のようかニャー?[0x0d00][Press A]
+
+# reference at SHOP_M.SPT:0x388 (cmd 0204 direct, slot 0x398)
+# reference at SHOP_M.SPT:0x440 (cmd 0303 direct, slot 0x444)
+0x2896 [0xd118][0x0c00]どれがほしいニャリ?[0x0d00]
+
+# reference at SHOP_M.SPT:0x5d0 (cmd 0303 direct, slot 0x5d4)
+0x2902 [0x0c00]お金が足りないニャー[0x0d00]
+
+# reference at SHOP_M.SPT:0x560 (cmd 0303 direct, slot 0x564)
+0x291c [0x0c00]それいじょうは持てないニャリ[\n]よくばりだニャー[Press A][0x0d00]
+
+# reference at SHOP_M.SPT:0x5f2 (cmd 0303 direct, slot 0x5f6)
+# reference at SHOP_M.SPT:0x91a (cmd table table[7], slot 0x91a)
+0x2952 [0x0c00][Blue Text][%0][Normal Color Text]は[\n][Blue Text][0x1000][Normal Color Text]Gになるけど[\n]いいニャリ?[0x0d00]
+
+# reference at SHOP_M.SPT:0x1148 (cmd 0303 direct, slot 0x114c)
+0x2982 [0x0c00][Blue Text]バーゲンチケット[Normal Color Text]を[\n]便うニャリ?[0x0d00]
+
+# reference at SHOP_M.SPT:0x54a (cmd 0303 direct, slot 0x54e)
+0x2a12 [0x0c00][Red Text][%0][Normal Color Text]は[\n]もう持ってるニャリ![0x0d00][Press A]
+
+# reference at SHOP_M.SPT:0x6a4 (cmd 0303 direct, slot 0x6a8)
+# reference at SHOP_M.SPT:0x91c (cmd table table[7], slot 0x91c)
+0x2a38 [0x0c00][Blue Text][%0][Normal Color Text]を[\n][Blue Text][0x1000][Normal Color Text]Gで引き取るニャリ[0x0d00][Press A]
+
+# reference at SHOP_M.SPT:0x3a4 (cmd 0303 direct, slot 0x3a8)
+0x2bac ・・・[0x0c00]あやしいニャリ[0x0d00][Press A][0xa000][0x0c00]あやしい目つきの人に[\n]何も売る気はないニャリ![0x0d00][Press A]
+

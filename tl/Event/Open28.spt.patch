@@ -1,0 +1,243 @@
+# Open28.spt: 80 strings, 80 references. Translate by repeating the 0xOFFSET line with English.
+# record cursor 0x45e0, script ends 0x45d0, 47648 bytes of arena shared by every replacement
+
+# reference at Open28.spt:0xe (cmd 0202 direct, slot 0x1a)
+0x241e [0xd006]ムキーッ![Press A][0xa000][0xd010]これで勝ったと思うなよ![Press A]
+
+# reference at Open28.spt:0x3a (cmd 0303 direct, slot 0x3e)
+0x244c [0xd011]これからドカポン王國を[Red Text]魔界[Normal Color Text]にかえて[\n]オレ様の國にしてやるからな![Press A]
+
+# reference at Open28.spt:0x52 (cmd 0303 direct, slot 0x56)
+0x2496 [0xd012]寨しみにしてやがれ![Press A]
+
+# reference at Open28.spt:0x69a (cmd 0202 direct, slot 0x6a6)
+0x24b0 [0xd149]よくやったダバ![Press A]
+
+# reference at Open28.spt:0x6c6 (cmd 0202 direct, slot 0x6d2)
+0x24c6 [0xd14a]ほうびはたっぷりだすダバ![Press A][0xa000][0xd14b]おどろいてひっくり返るんじゃないダバ[Press A]
+
+# reference at Open28.spt:0x744 (cmd 0303 direct, slot 0x748)
+0x2510 [0xd14c]しつじ、お金を持ってくるダバ![Press A]
+
+# reference at Open28.spt:0x782 (cmd 0202 direct, slot 0x78e)
+0x2534 [0xd192][0x0c00]ただいま持ってまいります[0x0d00][Press A]
+
+# reference at Open28.spt:0x82a (cmd 0202 direct, slot 0x836)
+0x2556 [0xd193]た、たいへんでございます![Press A]
+
+# reference at Open28.spt:0x8c6 (cmd 0303 direct, slot 0x8ca)
+0x2576 [0xd14d]どうしたダバ?[Press A]
+
+# reference at Open28.spt:0x8fe (cmd 0202 direct, slot 0x90a)
+0x258a [0xd194]き、金庫がカラッポでございます![Press A]
+
+# reference at Open28.spt:0x95c (cmd 0202 direct, slot 0x968)
+0x25b0 [0xd14e]ほ、ほんとかダバ!?[Press A][0xa000][0xd14f]いったいどういうことダバ?[Press A]
+
+# reference at Open28.spt:0x9c8 (cmd 0202 direct, slot 0x9d4)
+0x25ea [0xd195][0x0c00]手紙がおいてあったのですが・・・[0x0d00][Press A]
+
+# reference at Open28.spt:0xa18 (cmd 0202 direct, slot 0xa24)
+0x2614 [0xd150]誌んでみるダバ![Press A]
+
+# reference at Open28.spt:0xace (cmd 0202 direct, slot 0xada)
+0x262a [0xd196][0x0c00]王様のバ~カ[0x0d00][Press A][0xa000][0xd197][0x0c00]金は[Red Text]ワルサー[Normal Color Text]様が、ぜーんぶいただいたぜ[0x0d00][Press A][0xa000][0xd198][0x0c00]くやしかったら・・・[0x0d00][Press A]
+
+# reference at Open28.spt:0xb58 (cmd 0202 direct, slot 0xb64)
+0x2692 [0xd151]くやしかったら何ダバ![Press A]
+
+# reference at Open28.spt:0xb20 (cmd 0303 direct, slot 0xb24)
+0x26ae ・・・・・・・・・[Press A]
+
+# reference at Open28.spt:0xba8 (cmd 0202 direct, slot 0xbb4)
+0x26c4 [0xd199][0x0c00]・・・いじょうでございます[0x0d00][Press A]
+
+# reference at Open28.spt:0xbf8 (cmd 0202 direct, slot 0xc04)
+0x26e8 [0xd152][Red Text]ワルサー[Normal Color Text]のヤツ[\n]ちゃんと鍛後まで書くダバ![Press A][0xa000][0xd153]ハラがたつダバ![Press A]
+
+# reference at Open28.spt:0xc8 (cmd 0303 direct, slot 0xcc)
+0x2732 [0xd155]それで、金庫にはいくら入ってたダバ?[Press A]
+
+# reference at Open28.spt:0x104 (cmd 0202 direct, slot 0x110)
+0x275c [0xd19a][0x0c00]それがまったくわからないのです・・・[0x0d00][Press A][0xa000][0xd19b][0x0c00]あまりにもたくさんあったもので・・・[0x0d00][Press A]
+
+# reference at Open28.spt:0x162 (cmd 0202 direct, slot 0x16e)
+0x27b8 [0xd156]こまったダバ・・・[Press A][0xa000][0xd157]それに[Red Text]ワルサー[Normal Color Text]はドカポン王國を[Red Text]魔界[Normal Color Text]に[\n]すると言ってるダバ・・・[Press A]
+
+# reference at Open28.spt:0x1a8 (cmd 0202 direct, slot 0x1b4)
+0x281c [0xd158]そうダバ![Press A][0xa000][0xd159]おまえたち[Red Text]ワルサー[Normal Color Text]をたおして[\n]ワシのお金をとりもどしてほしいダバ![Press A]
+
+# reference at Open28.spt:0x1e2 (cmd 0303 direct, slot 0x1e6)
+0x2878 [0xd15a]ほうびにすごい大金をだすダバ![Press A][0xa000][0xd15b]やってくれるダバ?[Press A]
+
+# reference at Open28.spt:0x22a (cmd 0202 direct, slot 0x236)
+0x2aa2 [0xd15c]金だけじゃたりないダバ~?[Press A][0xa000][0xd15d]ぜいたくなヤツらダバ[Press A]
+
+# reference at Open28.spt:0x27c (cmd 0303 direct, slot 0x280)
+0x2adc [0xd15e]よ~し、わかったダバ![Press A][0xa000][0xd15f][Red Text]ワルサー[Normal Color Text]にとられたお金は[\n]いくらなのか分からないダバ[Press A]
+
+# reference at Open28.spt:0x2b4 (cmd 0303 direct, slot 0x2b8)
+0x2b36 [0xd160]そこで、[Blue Text]一春冬くお金を集めてきた者[Normal Color Text]を[\n][0x09ab][Blue Text]次の王様[Normal Color Text]にしてやるダバ![Press A]
+
+# reference at Open28.spt:0x2e6 (cmd 0303 direct, slot 0x2ea)
+0x2b84 [0xd161]それならもんくないダバ?[Press A]
+
+# reference at Open28.spt:0x33c (cmd 0202 direct, slot 0x348)
+0x2d9c [0xd162]よしよし、みんなやるダバ[Press A]
+
+# reference at Open28.spt:0x376 (cmd 0303 direct, slot 0x37a)
+0x2dba [0xd163]ドカポン王國が[Red Text]魔界[Normal Color Text]になると[\n]ワシもおまえたちもみんなこまるダバ[Press A]
+
+# reference at Open28.spt:0x38e (cmd 0303 direct, slot 0x392)
+0x2e02 [0xd164]まずは[Red Text]魔界[Normal Color Text]になるのをふせぐほうほうを[\n]じゅんびするのが先ダバ[Press A]
+
+# reference at Open28.spt:0x398 (cmd 0303 direct, slot 0x39c)
+0x2e48 [0xd165]おまえたちは[Blue Text]Dパーツ[Normal Color Text]を知ってるダバ?[Press A]
+
+# reference at Open28.spt:0x3d0 (cmd 0202 direct, slot 0x3dc)
+0x2e76 ・・・・・・・・・[Press A]
+
+# reference at Open28.spt:0x41c (cmd 0202 direct, slot 0x428)
+0x2e8c [0xd166]ドカポン王國につたわる[\n]でんせつのおたからのことダバ[Press A]
+
+# reference at Open28.spt:0x466 (cmd 0303 direct, slot 0x46a)
+0x2ec6 [0xd167][Blue Text]Dパーツ[Normal Color Text]にはかつてドカポン王國のききを[\n]すくったというでんせつがのこってるダバ[Press A]
+
+# reference at Open28.spt:0x4a6 (cmd 0303 direct, slot 0x4aa)
+0x2f1e [0xd168][Red Text]魔界[Normal Color Text]になるのをふせぐのに[\n]きっと役に立つダバ[Press A][0xa000][0xd169]世界に[Blue Text]5つ[Normal Color Text]あるとつたえられている[\n][Blue Text]Dパーツ[Normal Color Text]をぜんぶ集めるダバ![Press A]
+
+# reference at Open28.spt:0x4c8 (cmd 0303 direct, slot 0x4cc)
+0x2fa0 [0xd16a][Blue Text]Dパーツ[Normal Color Text]のくわしい話は[\n]あとでしつじに聞くダバ![Press A]
+
+# reference at Open28.spt:0x4d8 (cmd 0303 direct, slot 0x4dc)
+0x2fda [0xd16b]そうそう[\n]そんななさけないそうびでは[\n]かわいそうダバ[Press A]
+
+# reference at Open28.spt:0x4f0 (cmd 0303 direct, slot 0x4f4)
+0x3014 [0xd16c]さいこう級のそうびをプレゼントするダバ![Press A]
+
+# reference at Open28.spt:0x504 (cmd 0303 direct, slot 0x508)
+0x3042 [0xd16d]それと[Blue Text][%0][Normal Color Text]には、[\n]ワシのポケットマネーから[\n][Red Text]ワルサー[Normal Color Text]をたおしたほうびをあげるダバ![Press A]
+
+# reference at Open28.spt:0x534 (cmd 0202 direct, slot 0x540)
+0x30a0 [Blue Text][%0][Normal Color Text]は[Green Text][0x1000][Normal Color Text]Gを手に入れた![Press A]
+
+# reference at Open28.spt:0x5a2 (cmd 0202 direct, slot 0x5ae)
+0x30c2 [0xd16e][Red Text]ワルサー[Normal Color Text]をたおすのはとうぜんダバ[Press A]
+
+# reference at Open28.spt:0x5d8 (cmd 0303 direct, slot 0x5dc)
+0x30ec [0xd16f]しかし[Blue Text]次の王様になれる[Normal Color Text]じょうけんは[\n][Blue Text]1春冬くお金を集める[Normal Color Text]ことダバ[Press A][0xa000][0xd170]わすれないようにするダバ![Press A]
+
+# reference at Open28.spt:0x604 (cmd 0303 direct, slot 0x608)
+0x315a [0xd171]というわけで、みんながんばるダバ![Press A]
+
+# reference at Open28.spt:0xe04 (cmd 0202 direct, slot 0xe10)
+0x3182 [0x0c00]それでは、わたくしが[\n]いろいろとせつめいをさせていただきます[0x0d00][Press A]
+
+# reference at Open28.spt:0xe48 (cmd 0303 direct, slot 0xe4c)
+0x31c6 [0x0c00]何をお聞きになりますか?[\n]聞きたいことをえらんでくださいませ[0x0d00]
+
+# reference at Open28.spt:0xe4e (cmd 0202 direct, slot 0xe5a)
+0x3208 Dパーツってなんなの?[\n]Dパーツはどこにある?[\n]ドカポンエッグはどこにある?[\n]みつけたらどうすればいい?[\n]もくてきをまとめると?[\n]何も聞かない
+
+# reference at Open28.spt:0xf48 (cmd 0808-table native-table[0xf3e], slot 0xf48)
+0x33f0 [0x0c00][Blue Text]Dパーツ[Normal Color Text]のせつめいをする前に、[\n]まずは、ドカポン王國につたわる[\n]でんせつをお話しいたしましょう[0x0d00][Press A]
+
+# reference at Open28.spt:0xf4a (cmd 0808-table native-table[0xf3e], slot 0xf4a)
+0x345a [0x0c00]これはかつて、ドカポン王國が[\n]今回のようにピンチになったとき[\n]のお話でございます[0x0d00][Press A]
+
+# reference at Open28.spt:0xf4c (cmd 0808-table native-table[0xf3e], slot 0xf4c)
+0x34b2 [0x0c00][Blue Text]その身に閣をまといし、魔界の王。[\n]ドカポン王國を閣の世界に変えんがため、[\n]まものを引きつれあらわれる・・・[Normal Color Text][0x0d00][Press A][0xa000][0x0c00][Blue Text]ひとびとのていこうもむなしく、[\n]ドカポン王國は強力なまものにふみにじられ、[\n]世界は魔界と化していった・・・[Normal Color Text][0x0d00][Press A]
+
+# reference at Open28.spt:0xf4e (cmd 0808-table native-table[0xf3e], slot 0xf4e)
+0x359e [0x0c00][Blue Text]しかし、天よりあたえられし、[\n]光かがやく5つのせいなる道具、[\n]Dパーツにより、閣の力はふうじられる・・・[Normal Color Text][0x0d00][Press A][0xa000][0x0c00][Blue Text]閣の力をうしなった魔王は[\n]一人のゆうしゃにほろぼされ、[\n]ドカポン王國はすくわれた・・・[Normal Color Text][0x0d00][Press A]
+
+# reference at Open28.spt:0xf50 (cmd 0808-table native-table[0xf3e], slot 0xf50)
+0x3674 [0x0c00]という、でんせつがのこっています。[\n][Blue Text]Dパーツ[Normal Color Text]こそ、ドカポン王國をすくえる[\n]まぼろしのアイテムなのでございます[0x0d00][Press A][0xa000][0x0c00]そこで王様は、[Blue Text]Dパーツ[Normal Color Text]を集めて、[\n]ドカポン王國が[Red Text]魔界[Normal Color Text]になるのをふせぐ、[\n]切りふだにしようとしているのです[0x0d00][Press A]
+
+# reference at Open28.spt:0xf52 (cmd 0808-table native-table[0xf3e], slot 0xf52)
+0x3764 [0x0c00][Red Text]ワルサー[Normal Color Text]は弱っちいですが、[\n]今はどこにいるのかわかりません。[\n]やっつける前に、何かされたら大変です[0x0d00][Press A][0xa000][0x0c00]ならば、万が一のことを考えて、[\n]先に[Red Text]魔界[Normal Color Text]になるのをふせぐほうほうを、[\n]用意しておこう、というわけなのでございます[0x0d00][Press A]
+
+# reference at Open28.spt:0xf56 (cmd 0808-table native-table[0xf3e], slot 0xf56)
+0x384e [0x0c00][Blue Text]Dパーツ[Normal Color Text]がどこにあるのか、[\n]ですが、でんせつにはこう、[\n]かかれています[0x0d00][Press A]
+
+# reference at Open28.spt:0xf58 (cmd 0808-table native-table[0xf3e], slot 0xf58)
+0x38a0 [0x0c00][Blue Text]Dパーツの強大な力は、[\n]手に入れし者の思いにより、[\n]ぜんの力にも悪の力にもなる・・・[Normal Color Text][0x0d00][Press A][0xa000][0x0c00][Blue Text]平和な世界にDパーツの力は[\n]ひつようあらず・・・[Normal Color Text][0x0d00][Press A]
+
+# reference at Open28.spt:0xf5a (cmd 0808-table native-table[0xf3e], slot 0xf5a)
+0x393c [0x0c00][Blue Text]今はDの玉子にふういんし、[\n]世界のどこかにねむらせておく・・・[Normal Color Text][0x0d00][Press A][0xa000][0x0c00][Blue Text]ドカポン王國が、ほろぼされんとする[\n]そのとき、Dの玉子のいずれかに[\n]Dパーツは生まれるだろう・・・[Normal Color Text][0x0d00][Press A]
+
+# reference at Open28.spt:0xf5c (cmd 0808-table native-table[0xf3e], slot 0xf5c)
+0x39f4 [0x0c00]でんせつに書かれている、Dの玉子。[\n]わたしたちは、よびやすく[\n][Blue Text]ドカポンエッグ[Normal Color Text]と名づけました[0x0d00][Press A][0xa000][0x0c00]どうやら[Blue Text]ドカポンエッグ[Normal Color Text]の中に[\n][Blue Text]Dパーツ[Normal Color Text]はかくされている[\n]ようなのでございます[0x0d00][Press A]
+
+# reference at Open28.spt:0xf5e (cmd 0808-table native-table[0xf3e], slot 0xf5e)
+0x3ab6 [0x0c00][Blue Text]ドカポンエッグ[Normal Color Text]は王國のいろいろな場序で[\n]いくつか、はっくつされています。しかし、[\n][Blue Text]Dパーツ[Normal Color Text]はまだみつかっておりません[0x0d00][Press A][0xa000][0x0c00]まずは、みなさんに[\n][Blue Text]ドカポンエッグ[Normal Color Text]を集めてもらいます[0x0d00][Press A][0xa000][0x0c00]でんせつには、さらに、こう書かれています[\n]統きを誌んでみましょう[0x0d00][Press A]
+
+# reference at Open28.spt:0xf60 (cmd 0808-table native-table[0xf3e], slot 0xf60)
+0x3bc2 [0x0c00][Blue Text]ドカポン王國がほろびのききに[\n]おちいったとき、Dの玉子を開き、[\n]Dパーツを5つ集めよ・・・[Normal Color Text][0x0d00][Press A][0xa000][0x0c00][Blue Text]そして、いのるがいい・・・[\n]さすれば、いかなる閣をもふうじこめる[\n]大いなるちからになるだろう・・・[Normal Color Text][0x0d00][Press A]
+
+# reference at Open28.spt:0xf62 (cmd 0808-table native-table[0xf3e], slot 0xf62)
+0x3c96 [0x0c00][Blue Text]Dパーツ[Normal Color Text]はどう便えばいいか、[\n]については、はっきりと書かれていません[0x0d00][Press A][0xa000][0x0c00]くわしい便い方については、[\n]今もいそいで調べている[\n]さいちゅうでございます[0x0d00][Press A]
+
+# reference at Open28.spt:0xf66 (cmd 0808-table native-table[0xf3e], slot 0xf66)
+0x3d38 [0x0c00][Blue Text]ドカポンエッグ[Normal Color Text]がどこにあるのか、[\n]ですが、くわしくはわかっていないのです[0x0d00][Press A]
+
+# reference at Open28.spt:0xf68 (cmd 0808-table native-table[0xf3e], slot 0xf68)
+0x3d8c [0x0c00]でんせつを誌んでみます[\n]このぶんの中に、てがかりがあると[\n]思うのですが・・・[0x0d00][Press A]
+
+# reference at Open28.spt:0xf6a (cmd 0808-table native-table[0xf3e], slot 0xf6a)
+0x3de0 [0x0c00][Blue Text]Dパーツを手に入れし、しかくのあるもの、[\n]そのちからをしめせ。[\n]強き者に、Dの玉子をあたえん・・・[Normal Color Text][0x0d00][Press A]
+
+# reference at Open28.spt:0xf6c (cmd 0808-table native-table[0xf3e], slot 0xf6c)
+0x3e4e [0x0c00]・・・と書かれています。[\n]てがかりは強き者、[\n]という部分だけでございます[0x0d00][Press A]
+
+# reference at Open28.spt:0xf6e (cmd 0808-table native-table[0xf3e], slot 0xf6e)
+0x3e9e [0x0c00]これだけでは、よくわかりません。[\n]わたくしも、どうすればいいか、なやみました[0x0d00][Press A]
+
+# reference at Open28.spt:0xf70 (cmd 0808-table native-table[0xf3e], slot 0xf70)
+0x3ef2 [0x0c00]しかし! 王國中から、モンスターが[\n]きょうぼうになったり、てんぺんちいが[\n]おこったりしてるという、ほうこくを聞きました[0x0d00][Press A]
+
+# reference at Open28.spt:0xf72 (cmd 0808-table native-table[0xf3e], slot 0xf72)
+0x3f70 [0x0c00]わたくしはピンときました![\n]モンスターのきょうぼうかは、強き者を[\n]調べるためのしれんなのでございます![0x0d00][Press A]
+
+# reference at Open28.spt:0xf74 (cmd 0808-table native-table[0xf3e], slot 0xf74)
+0x3fde [0x0c00]モンスターをたおせば、きっと、その場序に[\n][Blue Text]ドカポンエッグ[Normal Color Text]があるはずです![0x0d00][Press A][0xa000][0x0c00]モンスターをたおしてくださいませ![\n]その場序から、[Blue Text]ドカポンエッグ[Normal Color Text]が[\n]みつかるはずです![0x0d00][Press A]
+
+# reference at Open28.spt:0xf76 (cmd 0808-table native-table[0xf3e], slot 0xf76)
+0x4094 [0x0c00]それと、王様から伝言です。[\n]モンスターをたおした場序は[\n]たおした方にさしあげるそうです[0x0d00][Press A]
+
+# reference at Open28.spt:0xf78 (cmd 0808-table native-table[0xf3e], slot 0xf78)
+0x40f2 [0x0c00]その場序を、ほってみれば[\n]また、何かはっくつされるかも[\n]しれませんよ[0x0d00][Press A]
+
+# reference at Open28.spt:0xf7c (cmd 0808-table native-table[0xf3e], slot 0xf7c)
+0x413e [0x0c00][Blue Text]ドカポンエッグ[Normal Color Text]はふしぎな力に守られていて、[\n]どんなにかたいハンマーでたたいても[\n]わることができないのです[0x0d00][Press A]
+
+# reference at Open28.spt:0xf7e (cmd 0808-table native-table[0xf3e], slot 0xf7e)
+0x41b2 [0x0c00][Blue Text]ドカポンエッグ[Normal Color Text]をわることができるのは、[\n]この世でたった1人だけでございます。[\n]その人物とは、このでんせつのとおりです[0x0d00][Press A]
+
+# reference at Open28.spt:0xf80 (cmd 0808-table native-table[0xf3e], slot 0xf80)
+0x4232 [0x0c00][Blue Text]Dの玉子のふういんをとけし者、[\n]えらばれた王のみ。[\n]他の者に、あけることかなわず・・・[Normal Color Text][0x0d00][Press A]
+
+# reference at Open28.spt:0xf82 (cmd 0808-table native-table[0xf3e], slot 0xf82)
+0x4294 [0x0c00]王様にしか、[Blue Text]ドカポンエッグ[Normal Color Text]を[\n]わることはできないのです[0x0d00][Press A]
+
+# reference at Open28.spt:0xf84 (cmd 0808-table native-table[0xf3e], slot 0xf84)
+0x42d6 [0x0c00]ですから、島ですべての[\n][Blue Text]ドカポンエッグ[Normal Color Text]を集めたら、[\n]1度お城にもどってきてください[0x0d00][Press A][0xa000][0x0c00]王様が[Blue Text]ドカポンエッグ[Normal Color Text]をわって[\n]くださいます[0x0d00][Press A]
+
+# reference at Open28.spt:0xf88 (cmd 0808-table native-table[0xf3e], slot 0xf88)
+0x436a [0x0c00]みなさんの[Blue Text]もくてき[Normal Color Text]を[\n]まとめてみましょう。[\n]よくおぼえて下さいませ[0x0d00][Press A]
+
+# reference at Open28.spt:0xf8a (cmd 0808-table native-table[0xf3e], slot 0xf8a)
+0x43b8 [0x0c00]島にあるすべての[Blue Text]ドカポンエッグ[Normal Color Text]を集めて、[\n][Blue Text]ドカポンエッグ[Normal Color Text]の中にかくされている[\n][Blue Text]Dパーツ[Normal Color Text]を[Blue Text]5つ[Normal Color Text]みつけてもらいます[0x0d00][Press A]
+
+# reference at Open28.spt:0xf8c (cmd 0808-table native-table[0xf3e], slot 0xf8c)
+0x443e [0x0c00][Blue Text]Dパーツ[Normal Color Text]が[Blue Text]5つ[Normal Color Text]すべてそろっていれば、[\n][Red Text]魔界[Normal Color Text]になる心配はないはずです[0x0d00][Press A][0xa000][0x0c00]そのあとで、ゆっくり[Red Text]ワルサー[Normal Color Text]を[\n]たおしに行ってもらいます[0x0d00][Press A]
+
+# reference at Open28.spt:0xf8e (cmd 0808-table native-table[0xf3e], slot 0xf8e)
+0x44d8 [0x0c00]そして[Red Text]ワルサー[Normal Color Text]をたおしたときに、[\n][Blue Text]1春冬くのざいさんを持っていた人[Normal Color Text]が、[\n][Blue Text]次の王様[Normal Color Text]になれるということなのです[0x0d00][Press A]
+
+# reference at Open28.spt:0xf90 (cmd 0808-table native-table[0xf3e], slot 0xf90)
+0x4556 [0x0c00]お分かりいただけましたか?[0x0d00][Press A]
+
+# reference at Open28.spt:0xf32 (cmd 0303 direct, slot 0xf36)
+0x4578 [0x0c00]それではみなさんがんばってください![\n]どうかドカポン王國をすくってくださいませ![0x0d00][Press A]
+

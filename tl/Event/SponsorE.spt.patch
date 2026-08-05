@@ -1,0 +1,9 @@
+# SponsorE.spt: 2 strings, 2 references. Translate by repeating the 0xOFFSET line with English.
+# record cursor 0x13c0, script ends 0x0c0c, 60480 bytes of arena shared by every replacement
+
+# reference at SponsorE.spt:0x106 (cmd 0303 direct, slot 0x10a)
+0xb88 [0x0c00]今までありがとうございました[0x0d00][Press A]
+
+# reference at SponsorE.spt:0xcc (cmd 0202 direct, slot 0xd8)
+0xbac [0x0c00]ざんねんですが[\n]わが社との[Blue Text]ぶき[Normal Color Text]と[Blue Text]たて[Normal Color Text]の[\n][Red Text]スポンサーけいやく[Normal Color Text]期間が終わりました[0x0d00][Press A]
+

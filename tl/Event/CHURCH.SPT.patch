@@ -1,0 +1,45 @@
+# CHURCH.SPT: 10 strings, 14 references. Translate by repeating the 0xOFFSET line with English.
+# record cursor 0x3580, script ends 0x298c, 51840 bytes of arena shared by every replacement
+
+# reference at CHURCH.SPT:0x96 (cmd 0202 direct, slot 0xa2)
+# reference at CHURCH.SPT:0x332 (cmd 0202 direct, slot 0x33e)
+0x3e0  
+
+# reference at CHURCH.SPT:0x392 (cmd 0303 direct, slot 0x396)
+0x4fa [0x09a1][Blue Text][%0][Normal Color Text]の[\n][Green Text]ステータスいじょう[Normal Color Text]がかいふくした[Press A]
+0x4fa [0x09a1][Blue Text][%0][Normal Color Text]の[\n]recovered from [Green Text]status ailments[Normal Color Text][Press A]
+
+# reference at CHURCH.SPT:0x5c (cmd 0201 direct, slot 0x68)
+0x2804  神父 
+0x2804 Father
+
+# reference at CHURCH.SPT:0x236 (cmd 0303 direct, slot 0x23a)
+0x280e [0xd10f]まよえる子羊よ・・・[\n]いのりなさい・・・[0xa8c8][Press A]
+0x280e [0xd10f]O lost lamb...[\n]Let us pray...[0xa8c8][Press A]
+
+# reference at CHURCH.SPT:0x39c (cmd 0303 direct, slot 0x3a0)
+0x283e [0xd112]また、いつでもたちよりなさい・・・[0xa8c8][Press A]
+0x283e [0xd112]Please come back any time[0xa8c8][Press A]
+
+# reference at CHURCH.SPT:0xe0 (cmd 0303 direct, slot 0xe4)
+# reference at CHURCH.SPT:0x19c (cmd 0303 direct, slot 0x1a0)
+0x2868 [0xd110]そ、その本は・・・!?[0xa8c8][Press A]
+0x2868 [0xd110]That... that book!?[0xa8c8][Press A]
+
+# reference at CHURCH.SPT:0xf2 (cmd 0303 direct, slot 0xf6)
+# reference at CHURCH.SPT:0x1ae (cmd 0303 direct, slot 0x1b2)
+0x2886 [0xd111]その[Blue Text][%0][Normal Color Text]を[\n]いただけるのなら、[\n]あなたの不幸をおはらいしましょう[0xa8c8]
+0x2886 [0xd111]If you give me that[\n][Blue Text][%0][Normal Color Text] I shall[\n]cleanse you of misfortune[0xa8c8]
+
+# reference at CHURCH.SPT:0x104 (cmd 0203 direct, slot 0x10c)
+# reference at CHURCH.SPT:0x1c0 (cmd 0203 direct, slot 0x1c8)
+0x28ce あげる[\n]あげない
+0x28ce Give[\n]Keep
+
+# reference at CHURCH.SPT:0x366 (cmd 0303 direct, slot 0x36a)
+0x2940 [0x09a1][Blue Text][%0][Normal Color Text]の[\n]名前がもとにもどった![Press A]
+0x2940 [0x09a1][Blue Text][%0][Normal Color Text]s name[\n]returned to normal![Press A]
+
+# reference at CHURCH.SPT:0x37c (cmd 0303 direct, slot 0x380)
+0x2966 [0x09a1][Blue Text][%0][Normal Color Text]の[\n]頭がくさくなくなった![Press A]
+

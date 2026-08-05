@@ -1,0 +1,366 @@
+# SAVEBOX.SPT: 106 strings, 151 references. Translate by repeating the 0xOFFSET line with English.
+# record cursor 0x59c0, script ends 0x59b4, 42560 bytes of arena shared by every replacement
+
+# reference at SAVEBOX.SPT:0x13a0 (cmd 0203 direct, slot 0x13a8)
+# reference at SAVEBOX.SPT:0xab0 (cmd 0203 direct, slot 0xab8)
+0x1e60 は い[\n]いいえ
+
+# reference at SAVEBOX.SPT:0x6c (cmd 0202 direct, slot 0x78)
+# reference at SAVEBOX.SPT:0x39e (cmd 0303 direct, slot 0x3a2)
+# reference at SAVEBOX.SPT:0xda2 (cmd 0202 direct, slot 0xdae)
+# reference at SAVEBOX.SPT:0x1420 (cmd 0303 direct, slot 0x1424)
+# reference at SAVEBOX.SPT:0x95e (cmd 0202 direct, slot 0x96a)
+# reference at SAVEBOX.SPT:0x498 (cmd 0202 direct, slot 0x4a4)
+# reference at SAVEBOX.SPT:0xd4e (cmd 0202 direct, slot 0xd5a)
+# reference at SAVEBOX.SPT:0xb36 (cmd 0202 direct, slot 0xb42)
+# reference at SAVEBOX.SPT:0x11e2 (cmd 0303 direct, slot 0x11e6)
+0x1e70  
+
+# reference at SAVEBOX.SPT:0x7e0 (cmd 0303 direct, slot 0x7e4)
+0x2182 スロットA
+
+# reference at SAVEBOX.SPT:0x818 (cmd 0303 direct, slot 0x81c)
+0x218e スロットB
+
+# reference at SAVEBOX.SPT:0xb7a (cmd 0303 direct, slot 0xb7e)
+# reference at SAVEBOX.SPT:0xc4e (cmd 0303 direct, slot 0xc52)
+# reference at SAVEBOX.SPT:0xc8e (cmd 0303 direct, slot 0xc92)
+0x219a [0x0c00][Blue Text][%0][Normal Color Text]さんの[\n]データをセーブするね![\n]どっちにセーブする?[0x0d00]
+
+# reference at SAVEBOX.SPT:0x174e (cmd table table[2], slot 0x174e)
+0x21f0 [Normal Color Text]月[Normal Color Text]火[Normal Color Text]水[Normal Color Text]木[Normal Color Text]金[Blue Text]土[Red Text]日
+
+# reference at SAVEBOX.SPT:0x1750 (cmd table table[2], slot 0x1750)
+0x222c [0xe800][0xe008][%0]
+
+# reference at SAVEBOX.SPT:0x1752 (cmd table table[2], slot 0x1752)
+0x2268 はじまりの章
+
+# reference at SAVEBOX.SPT:0x1754 (cmd table table[2], slot 0x1754)
+0x2276 第1章
+
+# reference at SAVEBOX.SPT:0x1756 (cmd table table[2], slot 0x1756)
+0x227e 第2章
+
+# reference at SAVEBOX.SPT:0x1758 (cmd table table[2], slot 0x1758)
+0x2286 第3章
+
+# reference at SAVEBOX.SPT:0x175a (cmd table table[2], slot 0x175a)
+0x228e 第4章
+
+# reference at SAVEBOX.SPT:0x175c (cmd table table[2], slot 0x175c)
+0x2296 第5章
+
+# reference at SAVEBOX.SPT:0x175e (cmd table table[2], slot 0x175e)
+0x229e 鍛終章
+
+# reference at SAVEBOX.SPT:0x1760 (cmd table table[2], slot 0x1760)
+0x22a6 字宙の章
+
+# reference at SAVEBOX.SPT:0x1762 (cmd table table[2], slot 0x1762)
+0x22b0 魔界の章
+
+# reference at SAVEBOX.SPT:0x1764 (cmd table table[2], slot 0x1764)
+0x22ba  
+
+# reference at SAVEBOX.SPT:0xca8 (cmd 0202 direct, slot 0xcb4)
+0x22be [0xb808]セーブする [0xb809]セーブしない
+
+# reference at SAVEBOX.SPT:0xaaa (cmd 0303 direct, slot 0xaae)
+0x22dc [0x0c00][Red Text]セーブしなくていいの?[Normal Color Text][0x0d00]
+
+# reference at SAVEBOX.SPT:0xc44 (cmd 0303 direct, slot 0xc48)
+0x2334 [0x0c00]このメモリーカードには[\n]ロードした[Red Text]こじんデータ[Normal Color Text]がないよ![0x0d00][Press A]
+
+# reference at SAVEBOX.SPT:0x9d4 (cmd 0303 direct, slot 0x9d8)
+0x2378 [0x0c00]このファイルに[\n]セーブするけどいい?[0x0d00]
+
+# reference at SAVEBOX.SPT:0xe42 (cmd 0303 direct, slot 0xe46)
+# reference at SAVEBOX.SPT:0xe12 (cmd 0303 direct, slot 0xe16)
+# reference at SAVEBOX.SPT:0xbf2 (cmd 0303 direct, slot 0xbf6)
+0x243e [0x0c00]アクセス中だよ![\n]メモリーカードや本休スイッチを[\n][Red Text]さわらない[Normal Color Text]でね![0x0d00]
+
+# reference at SAVEBOX.SPT:0xe2e (cmd 0303 direct, slot 0xe32)
+0x248a [0x0c00]メモリーカードをしょきかすると[\n]メモリーカード內の[\n][Red Text]全てのファイル[Normal Color Text]が消えるよ![Press A][0xa000][0x0c00]メモリーカードをしょきかする?[0x0d00]
+
+# reference at SAVEBOX.SPT:0xdfe (cmd 0303 direct, slot 0xe02)
+0x2506 [0x0c00]こわれたセーブデータを[\n]さくじょする?[0x0d00]
+
+# reference at SAVEBOX.SPT:0xa8a (cmd 0303 direct, slot 0xa8e)
+0x2532 [0x0c00]セーブがおわったよ![0x0d00][Press A]
+
+# reference at SAVEBOX.SPT:0xe50 (cmd 0303 direct, slot 0xe54)
+0x25b8 [0x0c00]メモリーカードをしょきかしたよ![0x0d00][Press A]
+
+# reference at SAVEBOX.SPT:0x174a (cmd table table[2], slot 0x174a)
+0x25e0 [Red Text]データがこわれてる![Normal Color Text][\n]
+
+# reference at SAVEBOX.SPT:0x174c (cmd table table[2], slot 0x174c)
+0x25fc [Green Text]弓しいファイル[Normal Color Text][\n]
+
+# reference at SAVEBOX.SPT:0x212 (cmd 0303 direct, slot 0x216)
+0x2612 [0x0c00]それでは[Blue Text]スペシャルルール[Normal Color Text]で[\n][Blue Text][%0][Normal Color Text]さんが[\n]手に入れたものをしょうかいするね[0x0d00][Press A]
+
+# reference at SAVEBOX.SPT:0x1f6 (cmd 0303 direct, slot 0x1fa)
+0x2668 [0x0c00]コンピュータがそうさしている[\n]クリアキャラを人間にもどすね![0x0d00][Press A]
+
+# reference at SAVEBOX.SPT:0x1786 (cmd table table[2], slot 0x1786)
+# reference at SAVEBOX.SPT:0x1786 (cmd table table[9], slot 0x1786)
+0x26ac  
+
+# reference at SAVEBOX.SPT:0x1788 (cmd table table[2], slot 0x1788)
+# reference at SAVEBOX.SPT:0x1788 (cmd table table[9], slot 0x1788)
+0x26b0 CARD_RESULT_UNLOCKD[Press A]
+
+# reference at SAVEBOX.SPT:0x178a (cmd table table[2], slot 0x178a)
+# reference at SAVEBOX.SPT:0x178a (cmd table table[9], slot 0x178a)
+0x26da CARD_RESULT_BUSY[Press A]
+
+# reference at SAVEBOX.SPT:0x178c (cmd table table[2], slot 0x178c)
+# reference at SAVEBOX.SPT:0x178c (cmd table table[9], slot 0x178c)
+0x26fe [0x0c00]データが見つからないよ![0x0d00][Press A]
+
+# reference at SAVEBOX.SPT:0x178e (cmd table table[2], slot 0x178e)
+# reference at SAVEBOX.SPT:0x17a6 (cmd table table[2], slot 0x17a6)
+# reference at SAVEBOX.SPT:0x178e (cmd table table[9], slot 0x178e)
+# reference at SAVEBOX.SPT:0x17a6 (cmd table table[9], slot 0x17a6)
+0x271e [0x0c00]スロット[%0]にささっているものは[\n]こわれているから[\n]便用できないよ![0x0d00][Press A]
+
+# reference at SAVEBOX.SPT:0x1790 (cmd table table[2], slot 0x1790)
+# reference at SAVEBOX.SPT:0x17a2 (cmd table table[2], slot 0x17a2)
+# reference at SAVEBOX.SPT:0x1790 (cmd table table[9], slot 0x1790)
+# reference at SAVEBOX.SPT:0x17a2 (cmd table table[9], slot 0x17a2)
+0x2768 [0x0c00]スロット[%0]のメモリーカードは[\n]データがこわれているから、[\n]しょきかがひつようだよ![0x0d00][Press A]
+
+# reference at SAVEBOX.SPT:0x1792 (cmd table table[2], slot 0x1792)
+# reference at SAVEBOX.SPT:0x1792 (cmd table table[9], slot 0x1792)
+0x27c2 [0x0c00]スロット[%0]には[\n]何もささっていないよ![0x0d00][Press A]
+
+# reference at SAVEBOX.SPT:0x1794 (cmd table table[2], slot 0x1794)
+# reference at SAVEBOX.SPT:0x179a (cmd table table[2], slot 0x179a)
+# reference at SAVEBOX.SPT:0x1794 (cmd table table[9], slot 0x1794)
+# reference at SAVEBOX.SPT:0x179a (cmd table table[9], slot 0x179a)
+0x27f0 [0x0c00]スロット[%0]のメモリーカードは[\n]空きブロックがないか[\n]ファイル数が冬すぎるよ![0x0d00][Press A][0xa000][0x0c00]このゲームをセーブするには[\n]少なくともファイル[Red Text]1[Normal Color Text]つと[\n][Red Text][0x1000][Normal Color Text]ブロックの空きがひつようだよ[0x0d00][Press A]
+
+# reference at SAVEBOX.SPT:0x1796 (cmd table table[2], slot 0x1796)
+# reference at SAVEBOX.SPT:0x1796 (cmd table table[9], slot 0x1796)
+0x28a8 [0x0c00]すでに同じファイル名が[\n]便われているよ![0x0d00][Press A]
+
+# reference at SAVEBOX.SPT:0x1798 (cmd table table[2], slot 0x1798)
+# reference at SAVEBOX.SPT:0x1798 (cmd table table[9], slot 0x1798)
+0x28d8 [0x0c00]スロット[%0]にささっているものは[\n]メモリーカードじゃないよ![0x0d00][Press A]
+
+# reference at SAVEBOX.SPT:0x179c (cmd table table[2], slot 0x179c)
+# reference at SAVEBOX.SPT:0x179c (cmd table table[9], slot 0x179c)
+0x291a [0x0c00]ファイルにアクセスできないよ![0x0d00][Press A]
+
+# reference at SAVEBOX.SPT:0x179e (cmd table table[2], slot 0x179e)
+# reference at SAVEBOX.SPT:0x179e (cmd table table[9], slot 0x179e)
+0x2940 [0x0c00]ファイルサイズをこえて、[\n][0x0c00]リード/ライトしようとしたよ![0x0d00][Press A]
+
+# reference at SAVEBOX.SPT:0x17a0 (cmd table table[2], slot 0x17a0)
+# reference at SAVEBOX.SPT:0x17a0 (cmd table table[9], slot 0x17a0)
+0x2982 [0x0c00]ファイル名が長すぎるよ![0x0d00][Press A]
+
+# reference at SAVEBOX.SPT:0x17a4 (cmd table table[2], slot 0x17a4)
+# reference at SAVEBOX.SPT:0x17a4 (cmd table table[9], slot 0x17a4)
+0x29a2 [0x0c00]リード/ライトしょりが[\n]キャンセルされたよ![0x0d00][Press A]
+
+# reference at SAVEBOX.SPT:0x17a8 (cmd table table[2], slot 0x17a8)
+# reference at SAVEBOX.SPT:0x17a8 (cmd table table[9], slot 0x17a8)
+0x29d6 [0x0c00]スロット[%0]のメモリーカードは[\n]このゲームでは便えないよ![0x0d00][Press A]
+
+# reference at SAVEBOX.SPT:0x17aa (cmd table table[2], slot 0x17aa)
+# reference at SAVEBOX.SPT:0x17aa (cmd table table[9], slot 0x17aa)
+0x2a16 [0x0c00]セーブされているデータが[\n]こわれてるよ![0x0d00][Press A]
+
+# reference at SAVEBOX.SPT:0x17ac (cmd table table[2], slot 0x17ac)
+# reference at SAVEBOX.SPT:0x17ac (cmd table table[9], slot 0x17ac)
+0x2a46 [0x0c00]セーブデータが見つからないよ![0x0d00][Press A]
+
+# reference at SAVEBOX.SPT:0x17ae (cmd table table[2], slot 0x17ae)
+# reference at SAVEBOX.SPT:0x17ae (cmd table table[9], slot 0x17ae)
+0x2a6c [0x0c00]エラーが発生したよ![0x0d00][Press A]
+
+# reference at SAVEBOX.SPT:0x5de (cmd 0202 direct, slot 0x5ea)
+0x2b7c すでに同じ名前があるよ!
+
+# reference at SAVEBOX.SPT:0x36a (cmd 0303 direct, slot 0x36e)
+0x2b96 アクセス中だよ![\n]メモリーカードや本休スイッチを[\n][Red Text]さわらない[Normal Color Text]でね!
+
+# reference at SAVEBOX.SPT:0x1780 (cmd table table[2], slot 0x1780)
+# reference at SAVEBOX.SPT:0x1780 (cmd table table[9], slot 0x1780)
+0x2bde クリアデータ、ゲームデータを[\n]セーブしなくてもいいの?
+
+# reference at SAVEBOX.SPT:0x1782 (cmd table table[2], slot 0x1782)
+# reference at SAVEBOX.SPT:0x1782 (cmd table table[9], slot 0x1782)
+0x2c16 メモリーカードがいっぽいだよ![\n]クリアデータ、ゲームデータを[\n]セーブしなくてもいいの?
+
+# reference at SAVEBOX.SPT:0x1784 (cmd table table[2], slot 0x1784)
+# reference at SAVEBOX.SPT:0x1784 (cmd table table[9], slot 0x1784)
+0x2c6e メモリーカードがいっぽいだよ![\n]クリアデータをセーブしなくても[\n]いいの?
+
+# reference at SAVEBOX.SPT:0x4cc (cmd 0202 direct, slot 0x4d8)
+0x2cf0 [0x6028][0x5010]ひらがな[0xf020][0x5010]カタカナ[0xf020][0x5020]ABC[0xf080][0x501c]もどる[0xf020][0x5024]決定[%0]
+
+# reference at SAVEBOX.SPT:0x4da (cmd 0306 direct, slot 0x4e0)
+# reference at SAVEBOX.SPT:0x177a (cmd table table[2], slot 0x177a)
+# reference at SAVEBOX.SPT:0x177a (cmd table table[9], slot 0x177a)
+0x2d28 [0x6008][0x5088]あ[0x50a8]い[0x50c8]う[0x50e8]え[0x5108]お[0x5140]ら[0x5160]り[0x5180]る[0x51a0]れ[0x51c0]ろ[0xf020][0x5088]か[0x50a8]き[0x50c8]く[0x50e8]け[0x5108]こ[0x5140]わ[0x5160] [0x5180]を[0x51a0] [0x51c0]ん[0xf020][0x5088]さ[0x50a8]し[0x50c8]す[0x50e8]せ[0x5108]そ[0x5140]が[0x5160]ぎ[0x5180]ぐ[0x51a0]げ[0x51c0]ご[0xf020][0x5088]た[0x50a8]ち[0x50c8]つ[0x50e8]て[0x5108]と[0x5140]ざ[0x5160]じ[0x5180]ず[0x51a0]ぜ[0x51c0]ぞ[0xf020][0x5088]な[0x50a8]に[0x50c8]ぬ[0x50e8]ね[0x5108]の[0x5140]だ[0x5160]ぢ[0x5180]づ[0x51a0]で[0x51c0]ど[0xf020][0x5088]は[0x50a8]ひ[0x50c8]ふ[0x50e8]へ[0x5108]ほ[0x5140]ば[0x5160]び[0x5180]ぶ[0x51a0]べ[0x51c0]ぼ[0xf020][0x5088]ま[0x50a8]み[0x50c8]む[0x50e8]め[0x5108]も[0x5140]ぽ[0x5160]ぴ[0x5180]ぷ[0x51a0]ぺ[0x51c0]ぽ[0xf020][0x5088]や[0x50a8] [0x50c8]ゆ[0x50e8] [0x5108]よ[0x5142]っ[0x5162]ゃ[0x5182]ゅ[0x51a2]ょ[0x51c0]ー[0xf020][0x508a]ぁ[0x50aa]ぃ[0x50ca]ぅ[0x50ea]ぇ[0x510a]ぉ[0x5140]。[0x5160]、[0x5180]・[0x51a0] [0x51c0] 
+
+# reference at SAVEBOX.SPT:0x177c (cmd table table[2], slot 0x177c)
+# reference at SAVEBOX.SPT:0x177c (cmd table table[9], slot 0x177c)
+0x2ea4 [0x6008][0x5088]ア[0x50a8]イ[0x50c8]ウ[0x50e8]エ[0x5108]オ[0x5140]ラ[0x5160]リ[0x5180]ル[0x51a0]レ[0x51c0]ロ[0xf020][0x5088]カ[0x50a8]キ[0x50c8]ク[0x50e8]ケ[0x5108]コ[0x5140]ワ[0x5160] [0x5180]ヲ[0x51a0] [0x51c0]ン[0xf020][0x5088]サ[0x50a8]シ[0x50c8]ス[0x50e8]セ[0x5108]ソ[0x5140]ガ[0x5160]ギ[0x5180]グ[0x51a0]ゲ[0x51c0]ゴ[0xf020][0x5088]タ[0x50a8]チ[0x50c8]ツ[0x50e8]テ[0x5108]ト[0x5140]ゲ[0x5160]ジ[0x5180]ズ[0x51a0]ゼ[0x51c0]ゾ[0xf020][0x5088]ナ[0x50a8]ニ[0x50c8]ヌ[0x50e8]ネ[0x5108]ノ[0x5140]ダ[0x5160]ヂ[0x5180]ヅ[0x51a0]デ[0x51c0]ド[0xf020][0x508a]ハ[0x50a8]ヒ[0x50c8]フ[0x50e8]ヘ[0x5108]ホ[0x5140]バ[0x5160]ビ[0x5180]ブ[0x51a0]ボ[0x51c0]ベ[0xf020][0x5088]マ[0x50a8]ミ[0x50c8]ム[0x50e8]メ[0x5108]モ[0x5140]パ[0x5160]ピ[0x5180]プ[0x51a0]ペ[0x51c0]ポ[0xf020][0x5088]ヤ[0x50a8] [0x50c8]ユ[0x50e8] [0x5108]ヨ[0x5142]ッ[0x5162]ャ[0x5182]ュ[0x51a2]ョ[0x51c0]-[0xf020][0x5088]ァ[0x50aa]ィ[0x50ca]ゥ[0x50ea]ェ[0x510a]ォ[0x5142]ヴ[0x5160]。[0x5180]、[0x51a0]・[0x51c0] 
+
+# reference at SAVEBOX.SPT:0x177e (cmd table table[2], slot 0x177e)
+# reference at SAVEBOX.SPT:0x177e (cmd table table[9], slot 0x177e)
+0x3020 [0x6008][0x5088]A[0x50a8]B[0x50c8]C[0x50e8]D[0x5108]E[0x5140]a[0x5160]b[0x5180]c[0x51a0]d[0x51c0]e[0xf020][0x5088]F[0x50a8]G[0x50c8]H[0x50e8]I[0x5108]J[0x5140]f[0x5160]g[0x5180]h[0x51a0]i[0x51c0]j[0xf020][0x5088]K[0x50a8]L[0x50c8]M[0x50e8]N[0x5108]O[0x5140]k[0x5160]l[0x5180]m[0x51a0]n[0x51c0]o[0xf020][0x5088]P[0x50a8]Q[0x50c8]R[0x50e8]S[0x5108]T[0x5140]p[0x5160]q[0x5180]r[0x51a0]s[0x51c0]t[0xf020][0x5088]U[0x50a8]V[0x50c8]W[0x50e8]X[0x5108]Y[0x5140]u[0x5160]v[0x5180]w[0x51a0]x[0x51c0]y[0xf020][0x508a]Z[0x50aa] [0x50ca]![0x50ea]?[0x510a]%[0x5142]z[0x5162] [0x5182] [0x51a2][0x004f][0x51c0]♪[0xf020][0x5088]+[0x50a8]-[0x50c8]✖[0x50e8]/[0x5108]\[0x5140]([0x5160])[0x5180]<[0x51a0]>[0x51c0]~[0xf020][0x5088].[0x50a8]^[0x50c8]_[0x50e8]*[0x5108]&[0x5140]◯[0x5160]⬤[0x5180]△[0x51a0]ー[0x51c0]@[0xf020][0x5088]0[0x50a8]1[0x50c8]2[0x50e8]3[0x5108]4[0x5140]5[0x5160]6[0x5180]7[0x51a0]8[0x51c0]9
+
+# reference at SAVEBOX.SPT:0xebe (cmd 0202 direct, slot 0xeca)
+# reference at SAVEBOX.SPT:0x110c (cmd 0303 direct, slot 0x1110)
+0x337a [0x0c00]どのリストを見るの?[0x0d00]
+
+# reference at SAVEBOX.SPT:0x1154 (cmd 0303 direct, slot 0x1158)
+0x33aa [0x1002][0xe800][0xe004][%0][0x5100][0x1002]コ[\n]
+
+# reference at SAVEBOX.SPT:0x1102 (cmd 0303 direct, slot 0x1106)
+0x33bc [0x0c00]見る物がないよ![0x0d00][Press A]
+
+# reference at SAVEBOX.SPT:0xf6a (cmd 0303 direct, slot 0xf6e)
+0x34b8 [0xb83a][0xe008]ぶき[0x5088][0x1002]/[0x1002]
+
+# reference at SAVEBOX.SPT:0xfb2 (cmd 0303 direct, slot 0xfb6)
+0x34ca [0xb83b][0xe008]たて[0x5088][0x1002]/[0x1002]
+
+# reference at SAVEBOX.SPT:0xffa (cmd 0303 direct, slot 0xffe)
+0x34dc [0xb83c][0xe008]Dグッズ[0x5088][0x1002]/[0x1002]
+
+# reference at SAVEBOX.SPT:0x1766 (cmd table table[2], slot 0x1766)
+0x3d80 ドカポン城
+
+# reference at SAVEBOX.SPT:0x1768 (cmd table table[2], slot 0x1768)
+0x3d8c キングリン島
+
+# reference at SAVEBOX.SPT:0x176a (cmd table table[2], slot 0x176a)
+0x3d9a ズナズナ島
+
+# reference at SAVEBOX.SPT:0x176c (cmd table table[2], slot 0x176c)
+0x3da6 ワクワク島
+
+# reference at SAVEBOX.SPT:0x176e (cmd table table[2], slot 0x176e)
+0x3db2 ポチャポチャ島
+
+# reference at SAVEBOX.SPT:0x1770 (cmd table table[2], slot 0x1770)
+0x3dc2 ベーベー島
+
+# reference at SAVEBOX.SPT:0x1772 (cmd table table[2], slot 0x1772)
+0x3dce キングリン島2
+
+# reference at SAVEBOX.SPT:0x1774 (cmd table table[2], slot 0x1774)
+0x3dde 字宙空間
+
+# reference at SAVEBOX.SPT:0x1776 (cmd table table[2], slot 0x1776)
+0x3de8 魔界キングリン島
+
+# reference at SAVEBOX.SPT:0x1778 (cmd table table[2], slot 0x1778)
+0x3dfa [Blue Text]クリアデータ[Normal Color Text]
+
+# reference at SAVEBOX.SPT:0x176 (cmd 0203 direct, slot 0x17e)
+0x4500 聞きたい[\n]もういい
+
+# reference at SAVEBOX.SPT:0xaa (cmd 0303 direct, slot 0xae)
+0x4832 [0xd0a8][0x0c00]クリアおめでとう![\n]これから[Blue Text]こじんデータ[Normal Color Text]を[\n]セーブするよ![0x0d00][Press A][0xa000][0x0c00]でもその前に、[\n][Blue Text]こじんデータ[Normal Color Text]について[\n]せつめいしてあげるね![0x0d00][Press A]
+
+# reference at SAVEBOX.SPT:0x16c (cmd 0303 direct, slot 0x170)
+0x48c2 [0x0c00]もっと聞きたい?[0x0d00]
+
+# reference at SAVEBOX.SPT:0xb4 (cmd 0202 direct, slot 0xc0)
+0x48d8 こじんデータについて[\n]クリアキャラクターについて[\n]ものおきについて[\n]スペシャルルールについて[\n]何も聞かない
+
+# reference at SAVEBOX.SPT:0x306 (cmd 0808-table native-table[0x2fe], slot 0x306)
+0x4944 [0x0c00]これから[Blue Text]こじんデータ[Normal Color Text]の[\n]せつめいをするね![0x0d00][Press A][0xa000][0x0c00][Blue Text]こじんデータ[Normal Color Text]はストーリーモードを[\n]クリアしたときに作れるデータで、[0x0d00][Press A]
+
+# reference at SAVEBOX.SPT:0x308 (cmd 0808-table native-table[0x2fe], slot 0x308)
+0x49c8 [0x0c00]みんながクリアしたときに[\n]便っていた[Blue Text]キャラクター[Normal Color Text]と[\n]そのレボルとパラメータ、[0x0d00][Press A][0xa000][0x0c00]それに、そうびしている[Blue Text]ぶき[Normal Color Text]と[\n][Blue Text]たて[Normal Color Text]と[Blue Text]Dグッズ[Normal Color Text]が[\n]セーブされるよ![0x0d00][Press A]
+
+# reference at SAVEBOX.SPT:0x30a (cmd 0808-table native-table[0x2fe], slot 0x30a)
+0x4a74 [0x0c00]便っていたキャラクターは、[\n][Blue Text]クリアキャラクター[Normal Color Text]になって、[\n]バトルモードで便えるよ![0x0d00][Press A][0xa000][0x0c00]持っていた[Blue Text]ぶき[Normal Color Text]と[Blue Text]たて[Normal Color Text]と[\n][Blue Text]Dグッズ[Normal Color Text]は[Blue Text]ものおき[Normal Color Text]の[\n]中にしまわれるからね![0x0d00][Press A]
+
+# reference at SAVEBOX.SPT:0x30c (cmd 0808-table native-table[0x2fe], slot 0x30c)
+0x4b2e [0x0c00][Blue Text]こじんデータ[Normal Color Text]の中身は[\n]タイトルの[Blue Text]データ[Normal Color Text]をえらぶと[\n]見ることができるよ![0x0d00][Press A][0xa000][0x0c00]今、自分のメモリーカードがなくて[\n]ともだちのメモリーカードに[\n][Blue Text]こじんデータ[Normal Color Text]を[0x0d00][Press A]
+
+# reference at SAVEBOX.SPT:0x30e (cmd 0808-table native-table[0x2fe], slot 0x30e)
+0x4bdc [0x0c00]セーブした場合は、[\n]ゲームキューブ本休の[\n]メモリーカード面面で、[0x0d00][Press A][0xa000][0x0c00][Blue Text]こじんデータ[Normal Color Text]を[\n]自分のメモリーカードに[\n]いどうしてね![0x0d00][Press A]
+
+# reference at SAVEBOX.SPT:0x310 (cmd 0808-table native-table[0x2fe], slot 0x310)
+0x4c66 [0x0c00]今回[Blue Text]こじんデータ[Normal Color Text]を[\n]セーブしない人は、[\n][Blue Text]こじんデータ[Normal Color Text]のセーブの後、[0x0d00][Press A][0xa000][0x0c00][Blue Text]クリアデータ[Normal Color Text]の[\n]セーブができるから[\n]かならずセーブしてね![0x0d00][Press A][0xa000][0x0c00][Blue Text]クリアデータ[Normal Color Text]をロードすれば、[\n]いつでも[Blue Text]こじんデータ[Normal Color Text]の[\n]セーブができるからね![0x0d00][Press A]
+
+# reference at SAVEBOX.SPT:0x314 (cmd 0808-table native-table[0x2fe], slot 0x314)
+0x4d5a [0x0c00]これから[\n][Blue Text]クリアキャラクター[Normal Color Text]の[\n]せつめいをするね![0x0d00][Press A][0xa000][0x0c00][Blue Text]クリアキャラクター[Normal Color Text]は[\n]ストーリーモードを[\n]クリアしたときに作れる[0x0d00][Press A]
+
+# reference at SAVEBOX.SPT:0x316 (cmd 0808-table native-table[0x2fe], slot 0x316)
+0x4de4 [0x0c00][Blue Text]こじんデータ[Normal Color Text]の中にある[\n]データの1つで、バトルモードで[\n]便うことができるんだ![0x0d00][Press A][0xa000][0x0c00][Blue Text]クリアキャラクター[Normal Color Text]の[\n]レボルやパラメータは[\n]ゲームの中では上がるけど、[0x0d00][Press A]
+
+# reference at SAVEBOX.SPT:0x318 (cmd 0808-table native-table[0x2fe], slot 0x318)
+0x4e90 [0x0c00][Blue Text]こじんデータ[Normal Color Text]の中にある[\n][Blue Text]クリアキャラクター[Normal Color Text]の[\n]レボルはかわらないよ![0x0d00][Press A][0xa000][0x0c00]だから、ゲームが終わると[\n]元のレボルにもどっちゃうんだ[0x0d00][Press A]
+
+# reference at SAVEBOX.SPT:0x31a (cmd 0808-table native-table[0x2fe], slot 0x31a)
+0x4f22 [0x0c00]強い[Blue Text]クリアキャラクター[Normal Color Text][\n]を作りたいときは、[0x0d00][Press A][0xa000][0x0c00]ストーリーモードをクリア[\n]するまでに、できるだけ[\n]レボルをあげることだね![0x0d00][Press A][0xa000][0x0c00]1つの[Blue Text]こじんデータ[Normal Color Text]に[\n][Blue Text]8人[Normal Color Text]までとうろく[\n]できるからね![0x0d00][Press A]
+
+# reference at SAVEBOX.SPT:0x31c (cmd 0808-table native-table[0x2fe], slot 0x31c)
+0x4ff0 [0x0c00][Blue Text]8人[Normal Color Text]いじょう[\n]とうろくしようとすると、[\n]だれかけさないといけないよ![0x0d00][Press A][0xa000][0x0c00]それと、同じ[Blue Text]こじんデータ[Normal Color Text]內の[\n][Blue Text]クリアキャラクター[Normal Color Text]は[\n][Blue Text]同時に2人いじょう便えない[Normal Color Text]よ[0x0d00][Press A][0xa000][0x0c00]だから[Blue Text]クリアキャラクター[Normal Color Text]を[\n]セーブするときは気をつけてね![0x0d00][Press A]
+
+# reference at SAVEBOX.SPT:0x320 (cmd 0808-table native-table[0x2fe], slot 0x320)
+0x50ea [0x0c00]これから[Blue Text]ものおき[Normal Color Text]の[\n]せつめいをするね![0x0d00][Press A][0xa000][0x0c00][Blue Text]ものおき[Normal Color Text]は[\n]ストーリーモードを[\n]クリアしたときに作れる[0x0d00][Press A]
+
+# reference at SAVEBOX.SPT:0x322 (cmd 0808-table native-table[0x2fe], slot 0x322)
+0x515e [0x0c00][Blue Text]こじんデータ[Normal Color Text]の中にあって、[\n]バトルモードで集めた物を[\n]ほかんできるよ![0x0d00][Press A][0xa000][0x0c00]集めることができるものは[\n][Blue Text]ぶき[Normal Color Text]、[Blue Text]たて[Normal Color Text]、[Blue Text]Dグッズ[Normal Color Text]の[\n]3しゅるいだよ![0x0d00][Press A]
+
+# reference at SAVEBOX.SPT:0x324 (cmd 0808-table native-table[0x2fe], slot 0x324)
+0x5206 [0x0c00][Blue Text]クリアキャラクター[Normal Color Text]を便って、[\n]バトルモードであそぶと、[0x0d00][Press A][0xa000][0x0c00][Blue Text]ぶき[Normal Color Text]や[Blue Text]たて[Normal Color Text]を売ったり、[\n]すてたりするときに[\n][Blue Text]せんり品リスト[Normal Color Text]と言うところに[0x0d00][Press A]
+
+# reference at SAVEBOX.SPT:0x326 (cmd 0808-table native-table[0x2fe], slot 0x326)
+0x52a4 [0x0c00]一時ほかんしておいて[\n]ゲームをクリアしたときに[\n][Blue Text]ものおき[Normal Color Text]にセーブできるよ![0x0d00][Press A][0xa000][0x0c00][Blue Text]Dグッズ[Normal Color Text]はゲームをクリア[\n]したときに持っていたものが、[\n][Blue Text]ものおき[Normal Color Text]にセーブされるよ![0x0d00][Press A]
+
+# reference at SAVEBOX.SPT:0x328 (cmd 0808-table native-table[0x2fe], slot 0x328)
+0x535c [0x0c00]バトルモードで[\n]いっぽい集めて、[\n]コンプリートをめざそう![0x0d00][Press A]
+
+# reference at SAVEBOX.SPT:0x32c (cmd 0808-table native-table[0x2fe], slot 0x32c)
+0x539e [0x0c00]これから[\n][Blue Text]スペシャルルール[Normal Color Text]の[\n]せつめいをするね![0x0d00][Press A][0xa000][0x0c00][Blue Text]スペシャルルール[Normal Color Text]は[\n]バトルモードで[\n][Blue Text]クリアキャラクター[Normal Color Text]を[0x0d00][Press A]
+
+# reference at SAVEBOX.SPT:0x32e (cmd 0808-table native-table[0x2fe], slot 0x32e)
+0x5422 [0x0c00]便っている人が、2人いじょう[\n]さんかしているときに[\n]せっていできるルールで、[0x0d00][Press A][0xa000][0x0c00]ゲーム中に集めたものを[\n]うばったりすることが[\n]できるルールだよ![0x0d00][Press A]
+
+# reference at SAVEBOX.SPT:0x330 (cmd 0808-table native-table[0x2fe], slot 0x330)
+0x54be [0x0c00]ゲームが終わったときに、[\n]せっていした[Blue Text]とられる人[Normal Color Text][\n]に当てはまる人が、[0x0d00][Press A][0xa000][0x0c00]1位の人に、せっていした[\n][Blue Text]うばうもの[Normal Color Text]を[\n]とられるよ![0x0d00][Press A]
+
+# reference at SAVEBOX.SPT:0x332 (cmd 0808-table native-table[0x2fe], slot 0x332)
+0x554e [0x0c00]ただし、[Blue Text]クリアキャラクター[Normal Color Text]を[\n]便ってない人やコンピュータが[\n]1位になったときは、[0x0d00][Press A][0xa000][0x0c00][Blue Text]スペシャルルール[Normal Color Text]は[\n]意味がないからね[0x0d00][Press A]
+
+# reference at SAVEBOX.SPT:0x334 (cmd 0808-table native-table[0x2fe], slot 0x334)
+0x55da [0x0c00]ともだちと、自分の集めた物を[\n]かけて、[Blue Text]スペシャルルール[Normal Color Text]で[\n]たたかってみよう![0x0d00][Press A]
+
+# reference at SAVEBOX.SPT:0x29c (cmd 0303 direct, slot 0x2a0)
+0x566e [0x0c00]あれあれ?[\n]名前をかえられてる[\n]人がいるね[0x0d00][Press A][0xa000][0x0c00][Blue Text]こじんデータ[Normal Color Text]をセーブする前に[\n]名前を元にもどしてあげるね![0x0d00][0x09c2][Press A]
+
+# reference at SAVEBOX.SPT:0x2f2 (cmd 0303 direct, slot 0x2f6)
+0x56e8 [0x0c00]あれあれ?[\n]ウンチがのっている[\n]人がいるね[0x0d00][Press A][0xa000][0x0c00][Blue Text]こじんデータ[Normal Color Text]をセーブする前に[\n]ウンチをとってあげるね![0x0d00][0x09c2][Press A]
+
+# reference at SAVEBOX.SPT:0xa42 (cmd 0303 direct, slot 0xa46)
+0x575e [0x0994][0xd0a8][0x0c00]おめでとう![0x0d00][Press A][0xa000][0xd09f][0x0c00]やったね![\n][Blue Text]ぶき[Normal Color Text]を全部集めたよ![0x0d00][Press A]
+
+# reference at SAVEBOX.SPT:0xa4c (cmd 0303 direct, slot 0xa50)
+0x57a4 [0x0c00]ごほうびに、さいきょうのぶき、[\n][0x096a][Blue Text]ドカポンの釗DX[Normal Color Text]を[\n]プレゼントするね![0x0d00][Press A][0xa000][0x0c00]これからも[\n]ドカポンを寨しんでね![0x0d00][Press A]
+
+# reference at SAVEBOX.SPT:0xa5c (cmd 0303 direct, slot 0xa60)
+0x5822 [0x0994][0xd0a8][0x0c00]おめでとう![0x0d00][Press A][0xa000][0xd09f][0x0c00]やったね![\n][Blue Text]たて[Normal Color Text]を全部集めたよ![0x0d00][Press A]
+
+# reference at SAVEBOX.SPT:0xa66 (cmd 0303 direct, slot 0xa6a)
+0x5868 [0x0c00]ごほうびに、さいきょうのたて、[\n][0x096a][Blue Text]ドカポンの店DX[Normal Color Text]を[\n]プレゼントするね![0x0d00][Press A][0xa000][0x0c00]これからも[\n]ドカポンを寨しんでね![0x0d00][Press A]
+
+# reference at SAVEBOX.SPT:0xa76 (cmd 0303 direct, slot 0xa7a)
+0x58e6 [0x0994][0xd0a8][0x0c00]おめでとう![0x0d00][Press A][0xa000][0xd09f][0x0c00]やったね![\n][Blue Text]Dグッズ[Normal Color Text]を全部集めたよ![0x0d00][Press A]
+
+# reference at SAVEBOX.SPT:0xa80 (cmd 0303 direct, slot 0xa84)
+0x5930 [0x0c00]ごほうびに、1春きちょうなDグッズ、[\n][0x096a][Blue Text]ドカポンジュエル[Normal Color Text]を[\n][0x0c00]プレゼントするね![0x0d00][Press A][0xa000]これからも[\n]ドカポンを寨しんでね![0x0d00][Press A]
+

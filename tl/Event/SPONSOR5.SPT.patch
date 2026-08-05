@@ -1,0 +1,36 @@
+# SPONSOR5.SPT: 11 strings, 11 references. Translate by repeating the 0xOFFSET line with English.
+# record cursor 0x14e0, script ends 0x09da, 60192 bytes of arena shared by every replacement
+
+# reference at SPONSOR5.SPT:0x1c2 (cmd 0303 direct, slot 0x1c6)
+0x260  
+
+# reference at SPONSOR5.SPT:0x158 (cmd 0303 direct, slot 0x15c)
+0x46e [0x0c00]どうです、[Blue Text]スポンサーけいやく[Normal Color Text]を[\n]していただけますか?[0x0d00]
+
+# reference at SPONSOR5.SPT:0x16a (cmd 0203 direct, slot 0x172)
+0x4ac す る[\n]しない
+
+# reference at SPONSOR5.SPT:0x1e4 (cmd 0303 direct, slot 0x1e8)
+0x4bc [0xd125][0x0c00]イヤー、よかった[0x0d00][Press A]
+
+# reference at SPONSOR5.SPT:0x1ee (cmd 0303 direct, slot 0x1f2)
+0x4d6 [0xd128][0x0c00]これで、わが社のイメージも[\n]今いじょうによくなります[0x0d00][Press A]
+
+# reference at SPONSOR5.SPT:0x202 (cmd 0303 direct, slot 0x206)
+0x554 [0x0c00][Blue Text]スポンサーけいやく[Normal Color Text]期間が終わるまで、[\n]どうぞよろしくおねがいします[0x0d00][Press A]
+
+# reference at SPONSOR5.SPT:0x1f8 (cmd 0303 direct, slot 0x1fc)
+0x716 [0x0c00]これからは、わが社の[Blue Text]ぶき[Normal Color Text]と[Blue Text]たて[Normal Color Text]を[\n]かならず便ってくださいね[0x0d00][Press A]
+
+# reference at SPONSOR5.SPT:0xea (cmd 0202 direct, slot 0xf6)
+0x880 [0xd129][0x0c00]イヤー、あいかわらず[\n]すばらしいかつやくですねー[0x0d00][Press A]
+
+# reference at SPONSOR5.SPT:0x116 (cmd 0303 direct, slot 0x11a)
+0x8ba [0x0c00]いつもわが社の[Blue Text]ぶき[Normal Color Text]をお便いいただき[\n]ありがとうございます[0x0d00][Press A]
+
+# reference at SPONSOR5.SPT:0x120 (cmd 0303 direct, slot 0x124)
+0x8fe [0x0c00]実は今回、さらに[Blue Text][%0][Normal Color Text]さんの[\n][Blue Text]たて[Normal Color Text]のスポンサーにもなり、わが社のイメージを[\n]もっとアップさせていこうと思っているのです[0x0d00][Press A]
+
+# reference at SPONSOR5.SPT:0x136 (cmd 0303 direct, slot 0x13a)
+0x980 [0x0c00]わが社が[Blue Text]ぶき[Normal Color Text]と[Blue Text]たて[Normal Color Text]の[\n]スポンサーになれば、每週[Green Text][0x1000][Normal Color Text]Gを[\n]おしはらいします[0x0d00][Press A]
+

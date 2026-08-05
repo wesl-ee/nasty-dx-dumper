@@ -1,0 +1,36 @@
+# VILLAGE.SPT: 11 strings, 11 references. Translate by repeating the 0xOFFSET line with English.
+# record cursor 0x3da0, script ends 0x2f64, 49760 bytes of arena shared by every replacement
+
+# reference at VILLAGE.SPT:0x202 (cmd 0202 direct, slot 0x20e)
+0xc00  
+
+# reference at VILLAGE.SPT:0x15e (cmd 0303 direct, slot 0x162)
+0xc7e [Blue Text][%0][Normal Color Text]は[\n][Green Text][%0][Normal Color Text]を手に入れた![Press A]
+
+# reference at VILLAGE.SPT:0xe6 (cmd 0303 direct, slot 0xea)
+0xd8c [0x09a1][Blue Text][%0][Normal Color Text]の[\n][Green Text]HP[Normal Color Text]が全かいふくした[Press A]
+
+# reference at VILLAGE.SPT:0x26 (cmd 0201 direct, slot 0x32)
+0x2a28  村長 
+
+# reference at VILLAGE.SPT:0x52 (cmd 0202 direct, slot 0x5e)
+0x2a32 [0xd12a][0x0c00]ようこそいらっしゃいました[0x0d00][Press A]
+
+# reference at VILLAGE.SPT:0x122 (cmd 0303 direct, slot 0x126)
+0x2a56 [0xd12b][0x0c00]ワシがこの村の村長ですじゃ[0x0d00][Press A]
+
+# reference at VILLAGE.SPT:0x14c (cmd 0303 direct, slot 0x150)
+0x2a7a [0xd12d][0x0c00]これはプレゼントですじゃ[0x0d00][Press A][0xa000][0xd12e][0x0c00]どうぞ持っていってくだされ[0x0d00][Press A]
+
+# reference at VILLAGE.SPT:0x8e (cmd 0303 direct, slot 0x92)
+0x2ac0 [0xd12c][0x0c00]ゆっくり休んでいってくだされ[0x0d00][Press A]
+
+# reference at VILLAGE.SPT:0xf0 (cmd 0303 direct, slot 0xf4)
+0x2ae6 [0xd12f][0x0c00]またよってくだされ[0x0d00][Press A]
+
+# reference at VILLAGE.SPT:0x3aa (cmd 0303 direct, slot 0x3ae)
+0x2b46 [Green Text][0x1000][Normal Color Text]Gを受け取った[Press A]
+
+# reference at VILLAGE.SPT:0x37c (cmd 0303 direct, slot 0x380)
+0x2f28 [0x0c00]これがおすしの代金ですじゃ[\n]どうぞうけとってくだされ[0x0d00][Press A]
+

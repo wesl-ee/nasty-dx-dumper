@@ -9,6 +9,7 @@
 # reference at TITLE.SPT:0x242c (cmd 0203 direct, slot 0x2434)
 # reference at TITLE.SPT:0x1ed6 (cmd 0303 direct, slot 0x1eda)
 0x4ee0 は い[\n]いいえ
+0x4ee0 Yes[\n]No
 
 # reference at TITLE.SPT:0x306a (cmd 0303 direct, slot 0x306e)
 # reference at TITLE.SPT:0x2ff4 (cmd 0303 direct, slot 0x2ff8)
@@ -45,9 +46,11 @@
 
 # reference at TITLE.SPT:0x3860 (cmd 0303 direct, slot 0x3864)
 0x5202 スロットA
+0x5202 Slot A
 
 # reference at TITLE.SPT:0x3898 (cmd 0303 direct, slot 0x389c)
 0x520e スロットB
+0x520e Slot B
 
 # reference at TITLE.SPT:0x3bfa (cmd 0303 direct, slot 0x3bfe)
 # reference at TITLE.SPT:0x3cce (cmd 0303 direct, slot 0x3cd2)
@@ -685,25 +688,31 @@
 # reference at TITLE.SPT:0x47c0 (cmd table table[3], slot 0x47c0)
 # reference at TITLE.SPT:0x47c2 (cmd table table[3], slot 0x47c2)
 0x7452 ストーリーモード
+0x7452 Story Mode
 
 # reference at TITLE.SPT:0x94 (cmd 0202 direct, slot 0xa0)
 # reference at TITLE.SPT:0x152 (cmd 0202 direct, slot 0x15e)
 0x7464 バトルモード
+0x7464 Battle Mode
 
 # reference at TITLE.SPT:0x18e (cmd 0202 direct, slot 0x19a)
 0x7472 データ
+0x7472 Data
 
 # reference at TITLE.SPT:0x18ca (cmd 0202 direct, slot 0x18d6)
 0x747a [0x0c00]やぁ! ぼくナビィ![0x0d00][Press A]
 
 # reference at TITLE.SPT:0x1922 (cmd 0303 direct, slot 0x1926)
 0x7496 はじめから
+0x7496 New Game
 
 # reference at TITLE.SPT:0x196a (cmd 0303 direct, slot 0x196e)
 0x74a2 つづきから
+0x74a2 Continue
 
 # reference at TITLE.SPT:0x1b06 (cmd 0303 direct, slot 0x1b0a)
 0x74ae [0x0c00]何人であそぶの?[0x0d00]
+0x74ae How many players?
 
 # reference at TITLE.SPT:0x1b8a (cmd 0303 direct, slot 0x1b8e)
 0x74c4 [0x0c00]やぁ! ぼくナビィ![0x0d00]
@@ -732,6 +741,7 @@
 
 # reference at TITLE.SPT:0x26e8 (cmd 0303 direct, slot 0x26ec)
 0x7608 ヘルプ[0x5118]ON[0x5170]OFF
+0x7608 Help[0x5118]ON[0x5170]OFF
 
 # reference at TITLE.SPT:0x274e (cmd 0303 direct, slot 0x2752)
 0x761e しんどう[0x5118]ON[0x5170]OFF

@@ -1,0 +1,126 @@
+# Open00.spt: 40 strings, 43 references. Translate by repeating the 0xOFFSET line with English.
+# record cursor 0x4880, script ends 0x20fa, 46976 bytes of arena shared by every replacement
+
+# reference at Open00.spt:0x8 (cmd 0202 direct, slot 0x14)
+0x1944 ここは、みんなお金が大好きな國[\n]その名は[Blue Text]ドカポン王國[Normal Color Text][Press A][0xa000]小さなけんかはよくあるけど[\n]大きなあらそいごともなく[\n]みんな平和にくらしていました[Press A][0xa000]しかし、今そんな[Blue Text]ドカポン王國[Normal Color Text]に[\n]とんでもないじけんが[0x300a]・・・・・[0x3001][Press A]
+
+# reference at Open00.spt:0x34 (cmd 0303 direct, slot 0x38)
+# reference at Open00.spt:0x102 (cmd 0202 direct, slot 0x10e)
+# reference at Open00.spt:0x1e2 (cmd 0202 direct, slot 0x1ee)
+0x1ab0 [0xd130]ダバッダバッダバ![0xa8c8][Press A]
+
+# reference at Open00.spt:0x12e (cmd 0303 direct, slot 0x132)
+0x1aca [0xd131]平和でいい感じダバ[0xa8c8][Press A]
+
+# reference at Open00.spt:0x138 (cmd 0303 direct, slot 0x13c)
+0x1ae4 [0xd132]今日もドカポン王國は[\n]もうかってるダバ?[0xa8c8][Press A]
+
+# reference at Open00.spt:0x188 (cmd 0202 direct, slot 0x194)
+0x1b14 [0xd185]もちろんでございます[0xa8c8][Press A][0xa000][0xd186][0x0c00]ガッポガッポでございます[0x0d00][Press A]
+
+# reference at Open00.spt:0x21c (cmd 0303 direct, slot 0x220)
+0x1b52 [0xd133]お金はさいこうダバ![Press A][0xa000][0xd134]もっともっとお金を集めるダバ![0xa8c8][Press A]
+
+# reference at Open00.spt:0x2b4 (cmd 0202 direct, slot 0x2c0)
+0x1b92 [0xd135]ど、どうしたダバ!?[0xa8c8][Press A]
+
+# reference at Open00.spt:0x42c (cmd 0202 direct, slot 0x438)
+0x1bae [0xd136]な、なんダバ?[Press A][0xa000][0xd137]おまえは何者ダバ!?[0xa8c8][Press A]
+
+# reference at Open00.spt:0x3ba (cmd 0202 direct, slot 0x3c6)
+0x1bde [0xd005]ウキキのキー![0xa8c8][Press A]
+
+# reference at Open00.spt:0x490 (cmd 0202 direct, slot 0x49c)
+0x1bf4 [0xd007]オレ様の名は[Red Text]ワルサー[Normal Color Text]![0xa8c8][Press A]
+
+# reference at Open00.spt:0x4bc (cmd 0303 direct, slot 0x4c0)
+0x1c16 [0xd008]今日からこの國はオレ様のものだ![0xa8c8][Press A]
+
+# reference at Open00.spt:0x502 (cmd 0202 direct, slot 0x50e)
+0x1c3e [0xd138]い、いきなりふざけるなダバ![Press A][0xa000][0xd139]ドカポン王國はワシのものダバ![0xa8c8][Press A]
+
+# reference at Open00.spt:0x52e (cmd 0303 direct, slot 0x532)
+0x1c86 [0xd13a]だれかこいつをやっつけるダバー![0xa8c8][Press A]
+
+# reference at Open00.spt:0x590 (cmd 0202 direct, slot 0x59c)
+0x1cae [0xd085]くせ者ですちゃー![0xa8c8][Press A]
+
+# reference at Open00.spt:0xc04 (cmd 0303 direct, slot 0xc08)
+0x1cc8 [0xd086]おとなしくするですちゃー![0xa8c8][Press A]
+
+# reference at Open00.spt:0xc4c (cmd 0202 direct, slot 0xc58)
+0x1cea [0xd13b]はやくやっつけるダバ![0xa8c8][Press A]
+
+# reference at Open00.spt:0xc78 (cmd 0303 direct, slot 0xc7c)
+0x1d08 [0xd13c]ベーナスたんまりやるダバ![0xa8c8][Press A]
+
+# reference at Open00.spt:0xcc4 (cmd 0202 direct, slot 0xcd0)
+0x1d2a [0xd00d]なんだぁ?[0xa8c8][Press A]
+
+# reference at Open00.spt:0xcf0 (cmd 0303 direct, slot 0xcf4)
+0x1d3c [0xd009]へっぽこへいしどもが[\n]勝てると思ってるのか?[0xa8c8][Press A]
+
+# reference at Open00.spt:0xd42 (cmd 0303 direct, slot 0xd46)
+0x1d70 [0xd00a]まるこげにしてやるぞ[Press A]
+
+# reference at Open00.spt:0xd74 (cmd 0202 direct, slot 0xd80)
+0x1d8a [0xd087]ち、ちょっとトイレに[\n]行ってくるですちゃー・・・[0xa8c8]
+
+# reference at Open00.spt:0xe6c (cmd 0303 direct, slot 0xe70)
+0x1dc0 [0xd088]お、お母さんに買い物[\n]たのまれてるんですちゃー・・・[0xa8c8]
+
+# reference at Open00.spt:0x6f0 (cmd 0202 direct, slot 0x6fc)
+0x1dfa [0xd13d]ま、まつダバ![0xa8c8][Press A]
+
+# reference at Open00.spt:0x71c (cmd 0303 direct, slot 0x720)
+0x1e10 [0xd13e]にげるんじゃないダバ![0xa8c8][Press A]
+
+# reference at Open00.spt:0x76e (cmd 0303 direct, slot 0x772)
+0x1e2e [0xd13f]クビにするダバ![0xa8c8][Press A]
+
+# reference at Open00.spt:0x7a6 (cmd 0202 direct, slot 0x7b2)
+0x1e46 [0xd140]ど、どうするダバ~!?[0xa8c8][Press A]
+
+# reference at Open00.spt:0x7d2 (cmd 0303 direct, slot 0x7d6)
+# reference at Open00.spt:0x7ea (cmd 0303 direct, slot 0x7ee)
+0x1e64 [0xd141]しつじ![0xa8c8][Press A]
+
+# reference at Open00.spt:0x810 (cmd 0303 direct, slot 0x814)
+0x1e74 [0xd142]ん? しつじはどこ行ったダバ!?[0xa8c8][Press A]
+
+# reference at Open00.spt:0x87c (cmd 0202 direct, slot 0x888)
+0x1e9c [0xd00b]ガタガタうるせぇー![0xa8c8][Press A]
+
+# reference at Open00.spt:0x8a8 (cmd 0303 direct, slot 0x8ac)
+0x1eb8 [0xd00c]おとなしくドカポン王國を[\n]わたしやがれ![Press A]
+
+# reference at Open00.spt:0x8ea (cmd 0202 direct, slot 0x8f6)
+0x1ee6 [0xd143]だ、だれか助けにくるダバ~![0xa8c8][Press A]
+
+# reference at Open00.spt:0xa56 (cmd 0202 direct, slot 0xa62)
+0x1f0a [0xd0e7][0x0c00]みなさんこんにちは[0x0d00][Press A]
+
+# reference at Open00.spt:0xa82 (cmd 0303 direct, slot 0xa86)
+0x1f26 [0xd0e6][0x0c00]ニュースそくほうです[0x0d00][Press A]
+
+# reference at Open00.spt:0xade (cmd 0303 direct, slot 0xae2)
+0x1f44 [0xd0e8][0x0c00]さきほどドカポン城に[Red Text]ワルサー[Normal Color Text]と名のる[\n][Red Text]魔界[Normal Color Text]のモンスターがあらわれました[0x0d00][Press A]
+
+# reference at Open00.spt:0xae8 (cmd 0303 direct, slot 0xaec)
+0x1f9c [0xd0e9][0x0c00][Red Text]ワルサー[Normal Color Text]はドカポン王國を[\n]のっとるつもりのようです[0x0d00][Press A]
+
+# reference at Open00.spt:0xaf2 (cmd 0303 direct, slot 0xaf6)
+0x1fdc [0xd0ea][0x0c00]ドカポン王國はいったいどうなって[\n]しまうのでしょうか?[0x0d00][Press A]
+
+# reference at Open00.spt:0xafc (cmd 0303 direct, slot 0xb00)
+0x201c [0xd0eb][0x0c00][Red Text]ワルサー[Normal Color Text]をたおすゆうしゃは[\n]あらわれるのでしょうか?[0x0d00][Press A]
+
+# reference at Open00.spt:0xb06 (cmd 0303 direct, slot 0xb0a)
+0x205e [0xd0ec][0x0c00]今後のてんかいが[\n]ひじょうに気になります[0x0d00][Press A]
+
+# reference at Open00.spt:0xb1c (cmd 0303 direct, slot 0xb20)
+0x2090 [0xd0ed][0x0c00]さて、それでは次のニュースです[0x0d00][Press A]
+
+# reference at Open00.spt:0xb26 (cmd 0303 direct, slot 0xb2a)
+0x20b8 [0xd0ee][0x0c00]ドカポン川のカルガモに[\n]かわいい赤ちゃんたちが生まれました[0x0d00]
+

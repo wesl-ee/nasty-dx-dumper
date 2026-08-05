@@ -1,0 +1,6 @@
+# OPENING2.SPT: 1 strings, 1 references. Translate by repeating the 0xOFFSET line with English.
+# record cursor 0x3780, script ends 0x1506, 51328 bytes of arena shared by every replacement
+
+# reference at OPENING2.SPT:0x10c (cmd 0202 direct, slot 0x118)
+0x14aa [0xd144]おお! ぼうけんしゃダバ!?[0xa8c8][Press A][0xa000][0xd145]いいところにきたダバ![0xa8c8][Press A][0xa000][0xd146]はやく助けるダバ![0xa8c8][Press A]
+

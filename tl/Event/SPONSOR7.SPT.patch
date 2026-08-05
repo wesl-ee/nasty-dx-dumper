@@ -1,0 +1,12 @@
+# SPONSOR7.SPT: 3 strings, 3 references. Translate by repeating the 0xOFFSET line with English.
+# record cursor 0x13c0, script ends 0x0a18, 60480 bytes of arena shared by every replacement
+
+# reference at SPONSOR7.SPT:0x10a (cmd 0303 direct, slot 0x10e)
+0x93c [0x0c00]本日かぎりで、わが社との[Red Text]スポンサーけいやく[Normal Color Text]を[\n]すべて取り止めにさせていただきます[0x0952][0x0d00][Press A]
+
+# reference at SPONSOR7.SPT:0xcc (cmd 0202 direct, slot 0xd8)
+0x99a [0x0c00]おや? [Red Text]ぶき[Normal Color Text]を[\n]何もそうびしていないようですね[0x0d00][Press A]
+
+# reference at SPONSOR7.SPT:0x100 (cmd 0303 direct, slot 0x104)
+0x9d4 [0x0c00]ざんねんですが、[\n]わが社の[Blue Text]ぶき[Normal Color Text]を便っていただけない方は、[0x0d00][Press A]
+

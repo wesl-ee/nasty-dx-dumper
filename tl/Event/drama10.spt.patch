@@ -1,0 +1,6 @@
+# drama10.spt: 1 strings, 1 references. Translate by repeating the 0xOFFSET line with English.
+# record cursor 0x3060, script ends 0x1022, 53152 bytes of arena shared by every replacement
+
+# reference at drama10.spt:0x8c (cmd 0202 direct, slot 0x98)
+0xfe4 [0xd149]よくやったダバ![Press A][0xa000]これでドカポン王國はすくわれたダバ![Press A]
+

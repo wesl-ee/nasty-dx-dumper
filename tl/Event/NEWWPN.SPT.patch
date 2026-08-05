@@ -1,0 +1,45 @@
+# NEWWPN.SPT: 14 strings, 14 references. Translate by repeating the 0xOFFSET line with English.
+# record cursor 0x1560, script ends 0x106e, 60064 bytes of arena shared by every replacement
+
+# reference at NEWWPN.SPT:0x1ea (cmd 0202 direct, slot 0x1f6)
+0x2e0  
+
+# reference at NEWWPN.SPT:0x146 (cmd 0303 direct, slot 0x14a)
+0x2e4 [Blue Text][%0][Normal Color Text]は[\n][Green Text][%0][Normal Color Text]を手に入れた![Press A]
+
+# reference at NEWWPN.SPT:0x262 (cmd 0303 direct, slot 0x266)
+0x53c [0xd125][0x0c00]イヤー、よかった[0x0d00][Press A]
+
+# reference at NEWWPN.SPT:0x2a8 (cmd 0303 direct, slot 0x2ac)
+0x622 [0xd126][0x0c00]そうですか・・・ざんねんですが[\n]あきらめるしかないようですね[0x0d00][Press A]
+
+# reference at NEWWPN.SPT:0xd4 (cmd 0202 direct, slot 0xe0)
+0x900 [0xd129][0x0c00]イヤー、あいかわらず[\n]すばらしいかつやくですねー[0x0d00][Press A]
+
+# reference at NEWWPN.SPT:0x100 (cmd 0303 direct, slot 0x104)
+0xeac [0x0c00]実はわが社の弓せい品である[\n][Blue Text][%0][Normal Color Text]を[0x0d00][Press A]
+
+# reference at NEWWPN.SPT:0x116 (cmd 0303 direct, slot 0x11a)
+0xed8 [0x0c00]ぜひ[Blue Text][%0][Normal Color Text]さんに、[\n]便っていただきたいと思いまして、[\n]プロトタイプを持ってまいりました[0x0d00][Press A]
+
+# reference at NEWWPN.SPT:0x128 (cmd 0303 direct, slot 0x12c)
+0xf36 [0x0c00]便っていただけるのなら[\n][Blue Text][%0][Normal Color Text]はさしあげます[0x0d00][Press A]
+
+# reference at NEWWPN.SPT:0x13a (cmd 0303 direct, slot 0x13e)
+0xf6a [0x0c00]今の[Blue Text]ぶき[Normal Color Text]がお好きなら[\n]もちろんことわっていただいてもけっこうです[\n]どちらかお好きな[Blue Text]ぶき[Normal Color Text]をえらんでください[0x0d00][Press A]
+
+# reference at NEWWPN.SPT:0x26c (cmd 0303 direct, slot 0x270)
+0xfe2 [0x0c00]その[Blue Text]ぶき[Normal Color Text]を便って[\n]どんどんかつやくしてください[0x0d00][Press A]
+
+# reference at NEWWPN.SPT:0x284 (cmd 0303 direct, slot 0x288)
+0x101c それではしつれいします[Press A]
+
+# reference at NEWWPN.SPT:0x2ce (cmd table table[5], slot 0x2ce)
+0x1036 [0x1003][0xe008]<[0xe008][0x1003][0xe010][Blue Text]+[0x1000]
+
+# reference at NEWWPN.SPT:0x2d0 (cmd table table[5], slot 0x2d0)
+0x104a [0x1003][0xe008]>[0xe008][0x1003][0xe010][Red Text]-[0x1000]
+
+# reference at NEWWPN.SPT:0x2cc (cmd table table[5], slot 0x2cc)
+0x105e [0x1003][0xe008]=[0xe008][0x1003][0xe010][0x1000]
+

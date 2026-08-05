@@ -1,0 +1,33 @@
+# QUAKE.SPT: 10 strings, 10 references. Translate by repeating the 0xOFFSET line with English.
+# record cursor 0x34c0, script ends 0x3012, 52032 bytes of arena shared by every replacement
+
+# reference at QUAKE.SPT:0xfa (cmd 0202 direct, slot 0x106)
+0x2d6a [0xd0e7][0x0c00]みなさんこんにちは[0x0d00][Press A][0xa000][0xd0e6][0x0c00]ニュースそくほうです[0x0d00][Press A]
+
+# reference at QUAKE.SPT:0x11c (cmd 0303 direct, slot 0x120)
+0x2da4 [0xd0e2][0x0c00]さきほどドカポンきしょうちょうより[\n][Red Text]じしん[Normal Color Text]けいほうが出されました[0x0d00][Press A]
+
+# reference at QUAKE.SPT:0x1de (cmd 0303 direct, slot 0x1e2)
+0x2df2 [0x0c00]今週[Blue Text][%0]曜日[Normal Color Text]前後に、[Blue Text][%0][Normal Color Text]で[\n][Red Text]じしん[Normal Color Text]が発生するかのうせいが高まっています[\n]みなさん、気をつけてください[0x0d00][Press A]
+
+# reference at QUAKE.SPT:0x1b8 (cmd table table[2], slot 0x1b8)
+0x2ff6 日
+
+# reference at QUAKE.SPT:0x1ba (cmd table table[2], slot 0x1ba)
+0x2ffa 月
+
+# reference at QUAKE.SPT:0x1bc (cmd table table[2], slot 0x1bc)
+0x2ffe 火
+
+# reference at QUAKE.SPT:0x1be (cmd table table[2], slot 0x1be)
+0x3002 水
+
+# reference at QUAKE.SPT:0x1c0 (cmd table table[2], slot 0x1c0)
+0x3006 木
+
+# reference at QUAKE.SPT:0x1c2 (cmd table table[2], slot 0x1c2)
+0x300a 金
+
+# reference at QUAKE.SPT:0x1c4 (cmd table table[2], slot 0x1c4)
+0x300e 土
+

@@ -1,0 +1,21 @@
+# POISON.SPT: 6 strings, 6 references. Translate by repeating the 0xOFFSET line with English.
+# record cursor 0x3ac0, script ends 0x2322, 50496 bytes of arena shared by every replacement
+
+# reference at POISON.SPT:0x7a (cmd 0201 direct, slot 0x86)
+0x21b8 すし屋のマチコ
+
+# reference at POISON.SPT:0xa0 (cmd 0202 direct, slot 0xac)
+0x21c8 [0xd0d1]チョット、あんた! 何やってたの![0xa8c8][Press A]
+
+# reference at POISON.SPT:0xe4 (cmd 0303 direct, slot 0xe8)
+0x21f2 [Blue Text][%0][Normal Color Text]村から、おすしがくさってたって[\n]くじょうがきたわよ! 生ものだから[\n]早くとどけてって言ったじゃない![Press A]
+
+# reference at POISON.SPT:0x108 (cmd 0303 direct, slot 0x10c)
+0x2260 あんたのせいで、[Red Text][0x1000][Normal Color Text]Gも[\n]いしゃりょう取られたわよ! このお金、[\n]あんたにべんしょうしてもらうからね![Press A]
+
+# reference at POISON.SPT:0x12c (cmd 0303 direct, slot 0x130)
+0x22cc [Blue Text][%0][Normal Color Text]は、いしゃりょうの[\n][Red Text][0x1000][Normal Color Text]Gをとられた[Press A]
+
+# reference at POISON.SPT:0x136 (cmd 0303 direct, slot 0x13a)
+0x22fc [0xd0d2]ったく、今度から気をつけてよ![0xa8c8][Press A]
+

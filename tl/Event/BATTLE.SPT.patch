@@ -1,0 +1,33 @@
+# BATTLE.SPT: 10 strings, 10 references. Translate by repeating the 0xOFFSET line with English.
+# record cursor 0x4020, script ends 0x267c, 49120 bytes of arena shared by every replacement
+
+# reference at BATTLE.SPT:0x10a (cmd 0303 direct, slot 0x10e)
+0x21f4 [0xd0f8][0x0c00][Blue Text]天下一品鍛強武闘会[Normal Color Text]の時間です[0x0d00][Press A]
+
+# reference at BATTLE.SPT:0x114 (cmd 0303 direct, slot 0x118)
+0x221e [0xd0f9][0x0c00]本日も、王國中から集まったせんしたちが[\n]さいきょうの名をかけて、すばらしいたたかいを[\n]見せてくれるでしょう[0x0d00][Press A][0xa000][0x0c00]それではさっそく、本日さんかの[\n]ファイターたちに登場してもらいましょう[0x0d00][Press A]
+
+# reference at BATTLE.SPT:0x1ac (cmd 0303 direct, slot 0x1b0)
+0x22e0 [0x0c00][Blue Text]天下一品鍛強武闘会[Normal Color Text]で、[\n]たおされたり、お金をとられても、[\n]春組の中だけのことですので[0x0d00][Press A][0xa000][0x0c00]じっさいには何もなくなったりしません。[\n]安心してたたかってください![0x0d00][Press A][0xa000][0x0c00]それでは、たたかうじゅんばんを[\n]決めていただきましょう[0x0d00][Press A]
+
+# reference at BATTLE.SPT:0x336 (cmd 0303 direct, slot 0x33a)
+0x23ca [0xd0fa][0x0c00]さー、せんしたちの用意ができたようです![0x0d00][Press A]
+
+# reference at BATTLE.SPT:0x38a (cmd 0303 direct, slot 0x38e)
+0x23fc [0xd0fb][0x0c00]それでは、さいきょうめざしてー、ファイト![0x0d00]
+
+# reference at BATTLE.SPT:0x5e6 (cmd 0303 direct, slot 0x5ea)
+0x25be [Blue Text][%0]ーーーーーーーーッ!![Normal Color Text][Press A]
+
+# reference at BATTLE.SPT:0x3a2 (cmd 0303 direct, slot 0x3a6)
+0x25de そして、さいごに登場するのは[\n][0x09ae]昨年の武闘会チャンピオンッ!![0x0d00][Press A]
+
+# reference at BATTLE.SPT:0x3e6 (cmd 0303 direct, slot 0x3ea)
+0x2622 [Blue Text]グ[0x300a]ーラーディ[0x3001]エータァァァーーーッ!!![Normal Color Text][Press A]
+
+# reference at BATTLE.SPT:0xec (cmd 0202 direct, slot 0xf8)
+0x2654 [0xd0f6][0x0c00]こんにちはー[0x0d00][Press A]
+
+# reference at BATTLE.SPT:0x1f2 (cmd 0303 direct, slot 0x1f6)
+0x266a [0xb808]ベタンでていし
+

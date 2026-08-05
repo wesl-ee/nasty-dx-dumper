@@ -1,0 +1,12 @@
+# TORNADO.SPT: 3 strings, 3 references. Translate by repeating the 0xOFFSET line with English.
+# record cursor 0x34a0, script ends 0x3184, 52064 bytes of arena shared by every replacement
+
+# reference at TORNADO.SPT:0xf8 (cmd 0202 direct, slot 0x104)
+0x2d4a [0xd0e7][0x0c00]みなさんこんにちは[0x0d00][Press A][0xa000][0xd0e6][0x0c00]ニュースそくほうです[0x0d00][Press A]
+
+# reference at TORNADO.SPT:0x11a (cmd 0303 direct, slot 0x11e)
+0x30ce [0xd0e4][0x0c00]さきほどドカポンきしょうちょうより[\n][Red Text]たつまき[Normal Color Text]けいほうが出されました[0x0d00][Press A]
+
+# reference at TORNADO.SPT:0x1c4 (cmd 0303 direct, slot 0x1c8)
+0x311e [0x0c00][Blue Text][%0][Normal Color Text]で[Red Text]たつまき[Normal Color Text]が発生しました。[\n]みなさん、[Red Text]たつまき[Normal Color Text]には[\n]近づかないようにしてください[0x0d00][Press A]
+

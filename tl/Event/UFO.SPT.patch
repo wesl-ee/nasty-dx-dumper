@@ -1,0 +1,6 @@
+# UFO.SPT: 1 strings, 1 references. Translate by repeating the 0xOFFSET line with English.
+# record cursor 0x39e0, script ends 0x2c64, 50720 bytes of arena shared by every replacement
+
+# reference at UFO.SPT:0x152 (cmd 0202 direct, slot 0x15e)
+0x2c40 [Blue Text][%0][Normal Color Text]は[\n]UFOにつれさられた![Press A]
+

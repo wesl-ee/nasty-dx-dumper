@@ -1,0 +1,9 @@
+# drama13.spt: 2 strings, 2 references. Translate by repeating the 0xOFFSET line with English.
+# record cursor 0x3040, script ends 0x13ac, 53184 bytes of arena shared by every replacement
+
+# reference at drama13.spt:0xc (cmd 0202 direct, slot 0x18)
+0x134a [0xd04f]グォォォォォォ…[Press A]
+
+# reference at drama13.spt:0x8a (cmd 0303 direct, slot 0x8e)
+0x1360 [0xd039]ま、また負けるなんて…[Press A][0xa000][0xd03a]オレ様ってもしかして…[Press A][0xa000][0xd03b]弱かったの!?[Press A]
+

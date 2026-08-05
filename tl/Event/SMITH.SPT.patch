@@ -1,0 +1,60 @@
+# SMITH.SPT: 19 strings, 19 references. Translate by repeating the 0xOFFSET line with English.
+# record cursor 0x3f40, script ends 0x163c, 49344 bytes of arena shared by every replacement
+
+# reference at SMITH.SPT:0x362 (cmd 0203 direct, slot 0x36a)
+0xdfc は い[\n]いいえ
+
+# reference at SMITH.SPT:0x568 (cmd 0303 direct, slot 0x56c)
+0xe62 [Blue Text][%0][Normal Color Text]の[\n]こうげき力が[Green Text][0x1000][Normal Color Text]アップした![Press A]
+
+# reference at SMITH.SPT:0x580 (cmd 0303 direct, slot 0x584)
+0xe8e [Blue Text][%0][Normal Color Text]の[\n]ぼうぎょ力が[Green Text][0x1000][Normal Color Text]アップした![Press A]
+
+# reference at SMITH.SPT:0x72 (cmd 0201 direct, slot 0x7e)
+0x13f6 かじ屋のガッツ
+
+# reference at SMITH.SPT:0x90 (cmd 0202 direct, slot 0x9c)
+0x1406 [0xd0c0][0x0c00]ヨゥ![0x0d00][Press A]
+
+# reference at SMITH.SPT:0x220 (cmd 0303 direct, slot 0x224)
+0x1416 [0x0c00]ぶきとたて、どっちをかいぞうするんだい?[0x0d00]
+
+# reference at SMITH.SPT:0x350 (cmd 0303 direct, slot 0x354)
+0x1458 [0x0c00]そいつのかいぞうは[\n][Blue Text][0x1000][Normal Color Text]Gかかるけどいいかい?[0x0d00]
+
+# reference at SMITH.SPT:0x4be (cmd 0303 direct, slot 0x4c2)
+0x148e [0x0c00]そうこなくっちゃ![\n]それじゃ、かいぞうするから[\n]ちょっとまっててくれ[0x0d00][Press A]
+
+# reference at SMITH.SPT:0x5b8 (cmd 0303 direct, slot 0x5bc)
+0x14da [0x0c00]またせたな[\n]できあがったぜ![0x0d00][Press A]
+
+# reference at SMITH.SPT:0x5c2 (cmd 0303 direct, slot 0x5c6)
+0x14fe [0xd0c5][0x0c00]じゃーな、がんばれよ[0x0d00][Press A]
+
+# reference at SMITH.SPT:0x16c (cmd 0303 direct, slot 0x170)
+0x151c [%0][\n][0xe800][0x5028]こうげき力[0xe038][0x1800]
+
+# reference at SMITH.SPT:0x1b4 (cmd 0303 direct, slot 0x1b8)
+0x1534 [%0][\n][0xe800][0x5028]ぼうぎょ力[0xe038][0x1800]
+
+# reference at SMITH.SPT:0x106 (cmd 0303 direct, slot 0x10a)
+0x154c [0xd0c4][0x0c00]どうだい!?[\n]あんたもかいぞうしてみないか?[0x0d00][Press A]
+
+# reference at SMITH.SPT:0x3fe (cmd 0303 direct, slot 0x402)
+0x1582 [0x0c00]オイオイ、金が足りないぜ[0x0d00][Press A]
+
+# reference at SMITH.SPT:0xe8 (cmd 0303 direct, slot 0xec)
+0x15a2 [0xd0c1][0x0c00]オレはかじ屋のガッツ[Press A]
+
+# reference at SMITH.SPT:0xf2 (cmd 0303 direct, slot 0xf6)
+0x15be [0xd0c2][0x0c00]そうびかいぞうならオレにまかせな[0x0d00][Press A]
+
+# reference at SMITH.SPT:0xfc (cmd 0303 direct, slot 0x100)
+0x15e8 [0xd0c3][0x0c00]今より、強いそうびにしてやるぜ[0x0d00][Press A]
+
+# reference at SMITH.SPT:0x542 (cmd 0303 direct, slot 0x546)
+0x1610 [0x0c00]ワリー、しっぽいしちまったぜ[0x0d00][Press A]
+
+# reference at SMITH.SPT:0x1e6 (cmd 0202 direct, slot 0x1f2)
+0x1634 やめる
+

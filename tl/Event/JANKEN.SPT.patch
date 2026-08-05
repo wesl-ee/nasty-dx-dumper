@@ -1,0 +1,42 @@
+# JANKEN.SPT: 13 strings, 13 references. Translate by repeating the 0xOFFSET line with English.
+# record cursor 0x4120, script ends 0x1c48, 48864 bytes of arena shared by every replacement
+
+# reference at JANKEN.SPT:0xb2 (cmd 0201 direct, slot 0xbe)
+0x1a0e ジャンキー
+
+# reference at JANKEN.SPT:0xc0 (cmd 0202 direct, slot 0xcc)
+0x1a1a [0xd0b2][0x0c00]ヤッホー![0x0d00][Press A]
+
+# reference at JANKEN.SPT:0x102 (cmd 0303 direct, slot 0x106)
+0x1a2e [0xd0b3][0x0c00]ベク、ジャンケン大好きジャンキー[0x0d00][Press A]
+
+# reference at JANKEN.SPT:0x10c (cmd 0303 direct, slot 0x110)
+0x1a58 [0xd0b4][0x0c00]ベクとジャンケンしょうぶ![0x0d00][Press A][0xa000][0x0c00]ベクがジャンケンで勝ったら、[\n]お金をもらうからね![0x0d00][Press A]
+
+# reference at JANKEN.SPT:0x210 (cmd 0303 direct, slot 0x214)
+0x1ab6 [0x0c00]それじゃいくよ![0x0d00][Press A]
+
+# reference at JANKEN.SPT:0x22c (cmd 0303 direct, slot 0x230)
+0x1ace [0x0d00]ジャンケン、ジャンケン、ジャンケン・・・[0x0d00]
+
+# reference at JANKEN.SPT:0x290 (cmd 0303 direct, slot 0x294)
+0x1afc [0x0c00]ポン![0x0d00][Press A]
+
+# reference at JANKEN.SPT:0x750 (cmd 0303 direct, slot 0x754)
+0x1b0a [0x0c00]ベクが勝ったから、[\n][Red Text][0x1000][Normal Color Text]Gもらうね[0x0d00][Press A]
+
+# reference at JANKEN.SPT:0x7ae (cmd 0303 direct, slot 0x7b2)
+0x1b36 [0xd0b5][0x0c00]じゃあね、バイバーイ[0x0d00][Press A]
+
+# reference at JANKEN.SPT:0x794 (cmd 0303 direct, slot 0x798)
+0x1b54 [0x0c00]あれー? 君[Blue Text]しゃっきん[Normal Color Text]してるの?[\n]かわいそうだからベクが、[\n]たてかえてあげるね[0x0d00][Press A]
+
+# reference at JANKEN.SPT:0x4d8 (cmd 0303 direct, slot 0x4dc)
+0x1bc2 あいこだね[\n]もう1回やろう![Press A]
+
+# reference at JANKEN.SPT:0x694 (cmd 0303 direct, slot 0x698)
+0x1be2 君、ジャンケン強いね[Press A]
+
+# reference at JANKEN.SPT:0x786 (cmd 0303 direct, slot 0x78a)
+0x1bfa [0x0c00]このお金は、かわいそうな[\n]ビリっけつの[Blue Text][%0][Normal Color Text]さんに[\n]プレゼントするね![0x0d00][Press A]
+

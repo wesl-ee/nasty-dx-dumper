@@ -1,0 +1,21 @@
+# CM.SPT: 6 strings, 6 references. Translate by repeating the 0xOFFSET line with English.
+# record cursor 0x13e0, script ends 0x11ec, 60448 bytes of arena shared by every replacement
+
+# reference at CM.SPT:0xcc (cmd 0202 direct, slot 0xd8)
+0xfa0 [0x0c00]おめでとうございます![0x0d00][Press A]
+
+# reference at CM.SPT:0xfc (cmd 0303 direct, slot 0x100)
+0xfbe [0x0c00]このたび、あなたがわが社が作る[\n][Blue Text]ぶきコマーシャル[Normal Color Text]の、イメージキャラクター[\n]こうほにえらばれました![0x0d00][Press A]
+
+# reference at CM.SPT:0x106 (cmd 0303 direct, slot 0x10a)
+0x109a [0x0c00]次回のバトルで勝つことができれば、[\n]わが社の[Blue Text]コマーシャル[Normal Color Text]に、[\n]しゅつえんしていただきます[0x0d00][Press A]
+
+# reference at CM.SPT:0x116 (cmd 0303 direct, slot 0x11a)
+0x10fe [0x0c00]TV春組で[Blue Text]コマーシャル[Normal Color Text]が流れると、[\n][Blue Text]コマーシャル[Normal Color Text]のしゅつえん代金[\n]をおしはらいします[0x0d00][Press A]
+
+# reference at CM.SPT:0x120 (cmd 0303 direct, slot 0x124)
+0x1162 [0x0c00]それでは、次回のバトルでは[\n]かならず勝ってくださいね[0x0d00][Press A]
+
+# reference at CM.SPT:0x12a (cmd 0303 direct, slot 0x12e)
+0x119e [0x0c00]負けたら、[Blue Text]コマーシャル[Normal Color Text]の話は[\n]なかったことにさせていただきますので[0x0d00][Press A]
+

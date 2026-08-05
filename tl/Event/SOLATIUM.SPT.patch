@@ -1,0 +1,18 @@
+# SOLATIUM.SPT: 5 strings, 5 references. Translate by repeating the 0xOFFSET line with English.
+# record cursor 0x3aa0, script ends 0x2728, 50528 bytes of arena shared by every replacement
+
+# reference at SOLATIUM.SPT:0xa2 (cmd 0201 direct, slot 0xae)
+0x262c エッちゃん
+
+# reference at SOLATIUM.SPT:0xc8 (cmd 0202 direct, slot 0xd4)
+0x2638 [0xd0df][0x0c00]チョット![0x0d00][Press A]
+
+# reference at SOLATIUM.SPT:0xea (cmd 0303 direct, slot 0xee)
+0x264c [0xd0e0][0x0c00]あなたね、家の子をなぐったのは![0x0d00][Press A][0xa000][0xd0e1][0x0c00]ぜんち3ヶ月のケガさせて[\n]ただですむと思ってるの![0x0d00][Press A]
+
+# reference at SOLATIUM.SPT:0xfa (cmd 0303 direct, slot 0xfe)
+0x26b2 [0x0c00]いしゃりょうとして[\n][Red Text][0x1000][Normal Color Text]Gしはらってもらいますからね![0x0d00][Press A]
+
+# reference at SOLATIUM.SPT:0x132 (cmd 0303 direct, slot 0x136)
+0x26f2 [Blue Text][%0][Normal Color Text]は、いしゃりょうとして[\n][Red Text][0x1000][Normal Color Text]Gしはらった![Press A]
+

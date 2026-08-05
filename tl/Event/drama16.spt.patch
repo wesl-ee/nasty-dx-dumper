@@ -1,0 +1,32 @@
+# drama16.spt: 9 strings, 11 references. Translate by repeating the 0xOFFSET line with English.
+# record cursor 0x3ae0, script ends 0x241a, 50464 bytes of arena shared by every replacement
+
+# reference at drama16.spt:0x62 (cmd 0303 direct, slot 0x66)
+# reference at drama16.spt:0x94 (cmd 0303 direct, slot 0x98)
+# reference at drama16.spt:0xc6 (cmd 0303 direct, slot 0xca)
+0x12a4 [Blue Text][%0][Normal Color Text]は[\n][Green Text][%0][Normal Color Text]を手に入れた![Press A]
+
+# reference at drama16.spt:0x8 (cmd 0202 direct, slot 0x14)
+0x2044 [0x09b0]ありゃあ~、勝っちゃったポヨ[\n]でも、おもしろかったから[\n]チミにはこれをやるポヨ![0x09ff][Press A]
+
+# reference at drama16.spt:0x108 (cmd 0303 direct, slot 0x10c)
+0x209c [0x09b0]しょうがないけど、やくそくポヨ[\n]ポクは字宙一の正直者でとおってるポヨ[\n]Dパーツはあずけておくポヨ[0x09ff][Press A][0xa000][0x09b0]でも悪いことに便ったらすぐ取りに来るポヨ[\n]光速で来るポヨ![\n]わすれるんじゃないポヨ![0x09ff][Press A][0xa000][0x09b0]ではポクはワイフと[\n]字宙珠行に出かけるポヨ[\n]バイバイポヨ~[0x09ff][Press A]
+
+# reference at drama16.spt:0x1ac (cmd 0202 direct, slot 0x1b8)
+0x21a2 どうだったダバ?[\n]なにがあったダバ?[Press A][0xa000]
+
+# reference at drama16.spt:0x1d8 (cmd 0303 direct, slot 0x1dc)
+0x21cc [0x300a]・・・[0x3001]フムフム[0x300a]・・・[0x3001]フムフム[Press A][0xa000]でんせつのドカポニヨン人があらわれて[\n]ドカポン王國に[\n]いんせきをおとそうとしたダバ?[Press A][0xa000]ほ~・・・[Press A]
+
+# reference at drama16.spt:0x1f0 (cmd 0303 direct, slot 0x1f4)
+0x225a そんなウソだれがしんじるダバ![\n]みんなでワシをだまそうとしてもダメダバ![Press A]
+
+# reference at drama16.spt:0x242 (cmd 0303 direct, slot 0x246)
+0x22a6 とんでもないヤツらダバ[\n]ほうびなんかあげないダバ![\n]さっさと掃るダバ~![Press A]
+
+# reference at drama16.spt:0x348 (cmd 0202 direct, slot 0x354)
+0x22f2 [0x0c00]あららら、たいへんなめにあったね~[0x0d00][Press A][0xa000][0x0c00]もしかして、字宙に行ったら[\n]じゅんいがいれかわっちゃったかな?[0x0d00][Press A][0xa000][0x0c00]これから本当にさいごの[\n]じゅんいを教えてあげるね![0x0d00][Press A][0xa000][0x0c00]今の1位は・・・[0x0d00][Press A][0xa000]
+
+# reference at drama16.spt:0x3da (cmd 0303 direct, slot 0x3de)
+0x23b6 [0xd095][0x0c00]みんな長い間遊んでくれてありがとう![0x0d00][Press A][0xa000][0xd096][0x0c00]またドカポンで会おうね![0x0d00][Press A][0xa000][0xd097][0x0c00]バイバイ![0x0d00][Press A]
+

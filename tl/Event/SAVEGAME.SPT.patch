@@ -1,0 +1,346 @@
+# SAVEGAME.SPT: 66 strings, 211 references. Translate by repeating the 0xOFFSET line with English.
+# record cursor 0x51a0, script ends 0x3bc4, 44640 bytes of arena shared by every replacement
+
+# reference at SAVEGAME.SPT:0x1200 (cmd 0203 direct, slot 0x1208)
+0x1640 は い[\n]いいえ
+
+# reference at SAVEGAME.SPT:0x8e (cmd 0202 direct, slot 0x9a)
+# reference at SAVEGAME.SPT:0x144a (cmd 0303 direct, slot 0x144e)
+# reference at SAVEGAME.SPT:0xc02 (cmd 0202 direct, slot 0xc0e)
+# reference at SAVEGAME.SPT:0x1280 (cmd 0303 direct, slot 0x1284)
+# reference at SAVEGAME.SPT:0x1fe (cmd 0303 direct, slot 0x202)
+# reference at SAVEGAME.SPT:0x25a (cmd 0303 direct, slot 0x25e)
+0x1650  
+
+# reference at SAVEGAME.SPT:0xcc (cmd 0303 direct, slot 0xd0)
+0x17f4 [0x0c00]これから[Blue Text]クリアデータ[Normal Color Text]を[\n]セーブするね![0x0d00][Press A][0xa000][0x0c00][Blue Text]クリアデータ[Normal Color Text]をロードすれば[\n]いつでも[Blue Text]こじんデータ[Normal Color Text]の[\n]セーブがやりなおせるよ![0x0d00][Press A][0xa000][0x0c00][Blue Text]こじんデータ[Normal Color Text]を[\n]セーブしなかった人がいたときは、[\n][Red Text]かならずセーブ[Normal Color Text]してね![0x0d00][Press A]
+
+# reference at SAVEGAME.SPT:0x640 (cmd 0303 direct, slot 0x644)
+0x1962 スロットA
+
+# reference at SAVEGAME.SPT:0x678 (cmd 0303 direct, slot 0x67c)
+0x196e スロットB
+
+# reference at SAVEGAME.SPT:0x13b6 (cmd 0303 direct, slot 0x13ba)
+0x19ba [0xe800][0xe008][0x1002]/[0x1002][0xe008][0x1002]：[0x1002][\n]
+
+# reference at SAVEGAME.SPT:0x15ae (cmd table table[2], slot 0x15ae)
+# reference at SAVEGAME.SPT:0x15ae (cmd table table[3], slot 0x15ae)
+0x19d0 [Normal Color Text]月[Normal Color Text]火[Normal Color Text]水[Normal Color Text]木[Normal Color Text]金[Blue Text]土[Red Text]日
+
+# reference at SAVEGAME.SPT:0x13f6 (cmd 0303 direct, slot 0x13fa)
+0x19ee 週([%0][Normal Color Text])[0xe008]次は[0xe800][0xe008]の春です
+
+# reference at SAVEGAME.SPT:0x15b0 (cmd table table[2], slot 0x15b0)
+# reference at SAVEGAME.SPT:0x15b0 (cmd table table[3], slot 0x15b0)
+0x1a0c [0xe800][0xe008][%0]
+
+# reference at SAVEGAME.SPT:0x15b2 (cmd table table[2], slot 0x15b2)
+# reference at SAVEGAME.SPT:0x15b2 (cmd table table[3], slot 0x15b2)
+# reference at SAVEGAME.SPT:0x15b2 (cmd table table[8], slot 0x15b2)
+0x1a48 はじまりの章
+
+# reference at SAVEGAME.SPT:0x15b4 (cmd table table[2], slot 0x15b4)
+# reference at SAVEGAME.SPT:0x15b4 (cmd table table[3], slot 0x15b4)
+# reference at SAVEGAME.SPT:0x15b4 (cmd table table[8], slot 0x15b4)
+0x1a56 第1章
+
+# reference at SAVEGAME.SPT:0x15b6 (cmd table table[2], slot 0x15b6)
+# reference at SAVEGAME.SPT:0x15b6 (cmd table table[3], slot 0x15b6)
+# reference at SAVEGAME.SPT:0x15b6 (cmd table table[8], slot 0x15b6)
+0x1a5e 第2章
+
+# reference at SAVEGAME.SPT:0x15b8 (cmd table table[2], slot 0x15b8)
+# reference at SAVEGAME.SPT:0x15b8 (cmd table table[3], slot 0x15b8)
+# reference at SAVEGAME.SPT:0x15b8 (cmd table table[8], slot 0x15b8)
+0x1a66 第3章
+
+# reference at SAVEGAME.SPT:0x15ba (cmd table table[2], slot 0x15ba)
+# reference at SAVEGAME.SPT:0x15ba (cmd table table[3], slot 0x15ba)
+# reference at SAVEGAME.SPT:0x15ba (cmd table table[8], slot 0x15ba)
+0x1a6e 第4章
+
+# reference at SAVEGAME.SPT:0x15bc (cmd table table[2], slot 0x15bc)
+# reference at SAVEGAME.SPT:0x15bc (cmd table table[3], slot 0x15bc)
+# reference at SAVEGAME.SPT:0x15bc (cmd table table[8], slot 0x15bc)
+0x1a76 第5章
+
+# reference at SAVEGAME.SPT:0x15be (cmd table table[2], slot 0x15be)
+# reference at SAVEGAME.SPT:0x15be (cmd table table[3], slot 0x15be)
+# reference at SAVEGAME.SPT:0x15be (cmd table table[8], slot 0x15be)
+0x1a7e 鍛終章
+
+# reference at SAVEGAME.SPT:0x15c0 (cmd table table[2], slot 0x15c0)
+# reference at SAVEGAME.SPT:0x15c0 (cmd table table[3], slot 0x15c0)
+# reference at SAVEGAME.SPT:0x15c0 (cmd table table[8], slot 0x15c0)
+0x1a86 字宙の章
+
+# reference at SAVEGAME.SPT:0x15c2 (cmd table table[2], slot 0x15c2)
+# reference at SAVEGAME.SPT:0x15c2 (cmd table table[3], slot 0x15c2)
+# reference at SAVEGAME.SPT:0x15c2 (cmd table table[8], slot 0x15c2)
+0x1a90 魔界の章
+
+# reference at SAVEGAME.SPT:0x15c4 (cmd table table[2], slot 0x15c4)
+# reference at SAVEGAME.SPT:0x15c4 (cmd table table[3], slot 0x15c4)
+# reference at SAVEGAME.SPT:0x15c4 (cmd table table[8], slot 0x15c4)
+0x1a9a  
+
+# reference at SAVEGAME.SPT:0xca2 (cmd 0303 direct, slot 0xca6)
+# reference at SAVEGAME.SPT:0xc72 (cmd 0303 direct, slot 0xc76)
+0x1c1e [0x0c00]アクセス中だよ![\n]メモリーカードや本休スイッチを[\n][Red Text]さわらない[Normal Color Text]でね![0x0d00]
+
+# reference at SAVEGAME.SPT:0xc8e (cmd 0303 direct, slot 0xc92)
+0x1c6a [0x0c00]メモリーカードをしょきかすると[\n]メモリーカード內の[\n][Red Text]全てのファイル[Normal Color Text]が消えるよ![Press A][0xa000][0x0c00]メモリーカードをしょきかする?[0x0d00]
+
+# reference at SAVEGAME.SPT:0xc5e (cmd 0303 direct, slot 0xc62)
+0x1ce6 [0x0c00]こわれたセーブデータを[\n]さくじょする?[0x0d00]
+
+# reference at SAVEGAME.SPT:0x14d8 (cmd 0303 direct, slot 0x14dc)
+0x1d2e [0x0c00][0x1000]春のファイルにセーブしたよ![0x0d00][Press A]
+
+# reference at SAVEGAME.SPT:0x14b2 (cmd 0303 direct, slot 0x14b6)
+0x1d6c [0x0c00][0x1000]春のファイルに[\n]セーブするけどいい?[0x0d00]
+
+# reference at SAVEGAME.SPT:0xcb0 (cmd 0303 direct, slot 0xcb4)
+0x1d98 [0x0c00]メモリーカードをしょきかしたよ![0x0d00][Press A]
+
+# reference at SAVEGAME.SPT:0x15aa (cmd table table[2], slot 0x15aa)
+# reference at SAVEGAME.SPT:0x15aa (cmd table table[3], slot 0x15aa)
+0x1dc0 [Red Text]データがこわれてる![Normal Color Text][\n]
+
+# reference at SAVEGAME.SPT:0x15ac (cmd table table[2], slot 0x15ac)
+# reference at SAVEGAME.SPT:0x15ac (cmd table table[3], slot 0x15ac)
+0x1ddc [Green Text]弓しいファイル[Normal Color Text][\n]
+
+# reference at SAVEGAME.SPT:0x15e6 (cmd table table[2], slot 0x15e6)
+# reference at SAVEGAME.SPT:0x15e6 (cmd table table[3], slot 0x15e6)
+# reference at SAVEGAME.SPT:0x15e6 (cmd table table[7], slot 0x15e6)
+# reference at SAVEGAME.SPT:0x15e6 (cmd table table[8], slot 0x15e6)
+0x1e8c  
+
+# reference at SAVEGAME.SPT:0x15e8 (cmd table table[2], slot 0x15e8)
+# reference at SAVEGAME.SPT:0x15e8 (cmd table table[3], slot 0x15e8)
+# reference at SAVEGAME.SPT:0x15e8 (cmd table table[7], slot 0x15e8)
+# reference at SAVEGAME.SPT:0x15e8 (cmd table table[8], slot 0x15e8)
+0x1e90 CARD_RESULT_UNLOCKD[Press A]
+
+# reference at SAVEGAME.SPT:0x15ea (cmd table table[2], slot 0x15ea)
+# reference at SAVEGAME.SPT:0x15ea (cmd table table[3], slot 0x15ea)
+# reference at SAVEGAME.SPT:0x15ea (cmd table table[7], slot 0x15ea)
+# reference at SAVEGAME.SPT:0x15ea (cmd table table[8], slot 0x15ea)
+0x1eba CARD_RESULT_BUSY[Press A]
+
+# reference at SAVEGAME.SPT:0x15ec (cmd table table[2], slot 0x15ec)
+# reference at SAVEGAME.SPT:0x15ec (cmd table table[3], slot 0x15ec)
+# reference at SAVEGAME.SPT:0x15ec (cmd table table[7], slot 0x15ec)
+# reference at SAVEGAME.SPT:0x15ec (cmd table table[8], slot 0x15ec)
+0x1ede [0x0c00]データが見つからないよ![0x0d00][Press A]
+
+# reference at SAVEGAME.SPT:0x15ee (cmd table table[2], slot 0x15ee)
+# reference at SAVEGAME.SPT:0x1606 (cmd table table[2], slot 0x1606)
+# reference at SAVEGAME.SPT:0x15ee (cmd table table[3], slot 0x15ee)
+# reference at SAVEGAME.SPT:0x1606 (cmd table table[3], slot 0x1606)
+# reference at SAVEGAME.SPT:0x15ee (cmd table table[7], slot 0x15ee)
+# reference at SAVEGAME.SPT:0x1606 (cmd table table[7], slot 0x1606)
+# reference at SAVEGAME.SPT:0x15ee (cmd table table[8], slot 0x15ee)
+# reference at SAVEGAME.SPT:0x1606 (cmd table table[8], slot 0x1606)
+0x1efe [0x0c00]スロット[%0]にささっているものは[\n]こわれているから[\n]便用できないよ![0x0d00][Press A]
+
+# reference at SAVEGAME.SPT:0x15f0 (cmd table table[2], slot 0x15f0)
+# reference at SAVEGAME.SPT:0x1602 (cmd table table[2], slot 0x1602)
+# reference at SAVEGAME.SPT:0x15f0 (cmd table table[3], slot 0x15f0)
+# reference at SAVEGAME.SPT:0x1602 (cmd table table[3], slot 0x1602)
+# reference at SAVEGAME.SPT:0x15f0 (cmd table table[7], slot 0x15f0)
+# reference at SAVEGAME.SPT:0x1602 (cmd table table[7], slot 0x1602)
+# reference at SAVEGAME.SPT:0x15f0 (cmd table table[8], slot 0x15f0)
+# reference at SAVEGAME.SPT:0x1602 (cmd table table[8], slot 0x1602)
+0x1f48 [0x0c00]スロット[%0]のメモリーカードは[\n]データがこわれているから、[\n]しょきかがひつようだよ![0x0d00][Press A]
+
+# reference at SAVEGAME.SPT:0x15f2 (cmd table table[2], slot 0x15f2)
+# reference at SAVEGAME.SPT:0x15f2 (cmd table table[3], slot 0x15f2)
+# reference at SAVEGAME.SPT:0x15f2 (cmd table table[7], slot 0x15f2)
+# reference at SAVEGAME.SPT:0x15f2 (cmd table table[8], slot 0x15f2)
+0x1fa2 [0x0c00]スロット[%0]には[\n]何もささっていないよ![0x0d00][Press A]
+
+# reference at SAVEGAME.SPT:0x15f4 (cmd table table[2], slot 0x15f4)
+# reference at SAVEGAME.SPT:0x15fa (cmd table table[2], slot 0x15fa)
+# reference at SAVEGAME.SPT:0x15f4 (cmd table table[3], slot 0x15f4)
+# reference at SAVEGAME.SPT:0x15fa (cmd table table[3], slot 0x15fa)
+# reference at SAVEGAME.SPT:0x15f4 (cmd table table[7], slot 0x15f4)
+# reference at SAVEGAME.SPT:0x15fa (cmd table table[7], slot 0x15fa)
+# reference at SAVEGAME.SPT:0x15f4 (cmd table table[8], slot 0x15f4)
+# reference at SAVEGAME.SPT:0x15fa (cmd table table[8], slot 0x15fa)
+0x1fd0 [0x0c00]スロット[%0]のメモリーカードは[\n]空きブロックがないか[\n]ファイル数が冬すぎるよ![0x0d00][Press A][0xa000][0x0c00]このゲームをセーブするには[\n]少なくともファイル[Red Text]1[Normal Color Text]つと[\n][Red Text][0x1000][Normal Color Text]ブロックの空きがひつようだよ[0x0d00][Press A]
+
+# reference at SAVEGAME.SPT:0x15f6 (cmd table table[2], slot 0x15f6)
+# reference at SAVEGAME.SPT:0x15f6 (cmd table table[3], slot 0x15f6)
+# reference at SAVEGAME.SPT:0x15f6 (cmd table table[7], slot 0x15f6)
+# reference at SAVEGAME.SPT:0x15f6 (cmd table table[8], slot 0x15f6)
+0x2088 [0x0c00]すでに同じファイル名が[\n]便われているよ![0x0d00][Press A]
+
+# reference at SAVEGAME.SPT:0x15f8 (cmd table table[2], slot 0x15f8)
+# reference at SAVEGAME.SPT:0x15f8 (cmd table table[3], slot 0x15f8)
+# reference at SAVEGAME.SPT:0x15f8 (cmd table table[7], slot 0x15f8)
+# reference at SAVEGAME.SPT:0x15f8 (cmd table table[8], slot 0x15f8)
+0x20b8 [0x0c00]スロット[%0]にささっているものは[\n]メモリーカードじゃないよ![0x0d00][Press A]
+
+# reference at SAVEGAME.SPT:0x15fc (cmd table table[2], slot 0x15fc)
+# reference at SAVEGAME.SPT:0x15fc (cmd table table[3], slot 0x15fc)
+# reference at SAVEGAME.SPT:0x15fc (cmd table table[7], slot 0x15fc)
+# reference at SAVEGAME.SPT:0x15fc (cmd table table[8], slot 0x15fc)
+0x20fa [0x0c00]ファイルにアクセスできないよ![0x0d00][Press A]
+
+# reference at SAVEGAME.SPT:0x15fe (cmd table table[2], slot 0x15fe)
+# reference at SAVEGAME.SPT:0x15fe (cmd table table[3], slot 0x15fe)
+# reference at SAVEGAME.SPT:0x15fe (cmd table table[7], slot 0x15fe)
+# reference at SAVEGAME.SPT:0x15fe (cmd table table[8], slot 0x15fe)
+0x2120 [0x0c00]ファイルサイズをこえて、[\n][0x0c00]リード/ライトしようとしたよ![0x0d00][Press A]
+
+# reference at SAVEGAME.SPT:0x1600 (cmd table table[2], slot 0x1600)
+# reference at SAVEGAME.SPT:0x1600 (cmd table table[3], slot 0x1600)
+# reference at SAVEGAME.SPT:0x1600 (cmd table table[7], slot 0x1600)
+# reference at SAVEGAME.SPT:0x1600 (cmd table table[8], slot 0x1600)
+0x2162 [0x0c00]ファイル名が長すぎるよ![0x0d00][Press A]
+
+# reference at SAVEGAME.SPT:0x1604 (cmd table table[2], slot 0x1604)
+# reference at SAVEGAME.SPT:0x1604 (cmd table table[3], slot 0x1604)
+# reference at SAVEGAME.SPT:0x1604 (cmd table table[7], slot 0x1604)
+# reference at SAVEGAME.SPT:0x1604 (cmd table table[8], slot 0x1604)
+0x2182 [0x0c00]リード/ライトしょりが[\n]キャンセルされたよ![0x0d00][Press A]
+
+# reference at SAVEGAME.SPT:0x1608 (cmd table table[2], slot 0x1608)
+# reference at SAVEGAME.SPT:0x1608 (cmd table table[3], slot 0x1608)
+# reference at SAVEGAME.SPT:0x1608 (cmd table table[7], slot 0x1608)
+# reference at SAVEGAME.SPT:0x1608 (cmd table table[8], slot 0x1608)
+0x21b6 [0x0c00]スロット[%0]のメモリーカードは[\n]このゲームでは便えないよ![0x0d00][Press A]
+
+# reference at SAVEGAME.SPT:0x160a (cmd table table[2], slot 0x160a)
+# reference at SAVEGAME.SPT:0x160a (cmd table table[3], slot 0x160a)
+# reference at SAVEGAME.SPT:0x160a (cmd table table[7], slot 0x160a)
+# reference at SAVEGAME.SPT:0x160a (cmd table table[8], slot 0x160a)
+0x21f6 [0x0c00]セーブされているデータが[\n]こわれてるよ![0x0d00][Press A]
+
+# reference at SAVEGAME.SPT:0x160c (cmd table table[2], slot 0x160c)
+# reference at SAVEGAME.SPT:0x160c (cmd table table[3], slot 0x160c)
+# reference at SAVEGAME.SPT:0x160c (cmd table table[7], slot 0x160c)
+# reference at SAVEGAME.SPT:0x160c (cmd table table[8], slot 0x160c)
+0x2226 [0x0c00]セーブデータが見つからないよ![0x0d00][Press A]
+
+# reference at SAVEGAME.SPT:0x160e (cmd table table[2], slot 0x160e)
+# reference at SAVEGAME.SPT:0x160e (cmd table table[3], slot 0x160e)
+# reference at SAVEGAME.SPT:0x160e (cmd table table[7], slot 0x160e)
+# reference at SAVEGAME.SPT:0x160e (cmd table table[8], slot 0x160e)
+0x224c [0x0c00]エラーが発生したよ![0x0d00][Press A]
+
+# reference at SAVEGAME.SPT:0x1ca (cmd 0303 direct, slot 0x1ce)
+0x2376 アクセス中だよ![\n]メモリーカードや本休スイッチを[\n][Red Text]さわらない[Normal Color Text]でね!
+
+# reference at SAVEGAME.SPT:0x15e0 (cmd table table[2], slot 0x15e0)
+# reference at SAVEGAME.SPT:0x15e0 (cmd table table[3], slot 0x15e0)
+# reference at SAVEGAME.SPT:0x15e0 (cmd table table[7], slot 0x15e0)
+# reference at SAVEGAME.SPT:0x15e0 (cmd table table[8], slot 0x15e0)
+0x23be クリアデータ、ゲームデータを[\n]セーブしなくてもいいの?
+
+# reference at SAVEGAME.SPT:0x15e2 (cmd table table[2], slot 0x15e2)
+# reference at SAVEGAME.SPT:0x15e2 (cmd table table[3], slot 0x15e2)
+# reference at SAVEGAME.SPT:0x15e2 (cmd table table[7], slot 0x15e2)
+# reference at SAVEGAME.SPT:0x15e2 (cmd table table[8], slot 0x15e2)
+0x23f6 メモリーカードがいっぽいだよ![\n]クリアデータ、ゲームデータを[\n]セーブしなくてもいいの?
+
+# reference at SAVEGAME.SPT:0x15e4 (cmd table table[2], slot 0x15e4)
+# reference at SAVEGAME.SPT:0x15e4 (cmd table table[3], slot 0x15e4)
+# reference at SAVEGAME.SPT:0x15e4 (cmd table table[7], slot 0x15e4)
+# reference at SAVEGAME.SPT:0x15e4 (cmd table table[8], slot 0x15e4)
+0x244e メモリーカードがいっぽいだよ![\n]クリアデータをセーブしなくても[\n]いいの?
+
+# reference at SAVEGAME.SPT:0x15da (cmd table table[2], slot 0x15da)
+# reference at SAVEGAME.SPT:0x15da (cmd table table[3], slot 0x15da)
+# reference at SAVEGAME.SPT:0x15da (cmd table table[7], slot 0x15da)
+# reference at SAVEGAME.SPT:0x15da (cmd table table[8], slot 0x15da)
+0x2508 [0x6008][0x5088]あ[0x50a8]い[0x50c8]う[0x50e8]え[0x5108]お[0x5140]ら[0x5160]り[0x5180]る[0x51a0]れ[0x51c0]ろ[0xf020][0x5088]か[0x50a8]き[0x50c8]く[0x50e8]け[0x5108]こ[0x5140]わ[0x5160] [0x5180]を[0x51a0] [0x51c0]ん[0xf020][0x5088]さ[0x50a8]し[0x50c8]す[0x50e8]せ[0x5108]そ[0x5140]が[0x5160]ぎ[0x5180]ぐ[0x51a0]げ[0x51c0]ご[0xf020][0x5088]た[0x50a8]ち[0x50c8]つ[0x50e8]て[0x5108]と[0x5140]ざ[0x5160]じ[0x5180]ず[0x51a0]ぜ[0x51c0]ぞ[0xf020][0x5088]な[0x50a8]に[0x50c8]ぬ[0x50e8]ね[0x5108]の[0x5140]だ[0x5160]ぢ[0x5180]づ[0x51a0]で[0x51c0]ど[0xf020][0x5088]は[0x50a8]ひ[0x50c8]ふ[0x50e8]へ[0x5108]ほ[0x5140]ば[0x5160]び[0x5180]ぶ[0x51a0]べ[0x51c0]ぼ[0xf020][0x5088]ま[0x50a8]み[0x50c8]む[0x50e8]め[0x5108]も[0x5140]ぽ[0x5160]ぴ[0x5180]ぷ[0x51a0]ぺ[0x51c0]ぽ[0xf020][0x5088]や[0x50a8] [0x50c8]ゆ[0x50e8] [0x5108]よ[0x5142]っ[0x5162]ゃ[0x5182]ゅ[0x51a2]ょ[0x51c0]ー[0xf020][0x508a]ぁ[0x50aa]ぃ[0x50ca]ぅ[0x50ea]ぇ[0x510a]ぉ[0x5140]。[0x5160]、[0x5180]・[0x51a0] [0x51c0] 
+
+# reference at SAVEGAME.SPT:0x15dc (cmd table table[2], slot 0x15dc)
+# reference at SAVEGAME.SPT:0x15dc (cmd table table[3], slot 0x15dc)
+# reference at SAVEGAME.SPT:0x15dc (cmd table table[7], slot 0x15dc)
+# reference at SAVEGAME.SPT:0x15dc (cmd table table[8], slot 0x15dc)
+0x2684 [0x6008][0x5088]ア[0x50a8]イ[0x50c8]ウ[0x50e8]エ[0x5108]オ[0x5140]ラ[0x5160]リ[0x5180]ル[0x51a0]レ[0x51c0]ロ[0xf020][0x5088]カ[0x50a8]キ[0x50c8]ク[0x50e8]ケ[0x5108]コ[0x5140]ワ[0x5160] [0x5180]ヲ[0x51a0] [0x51c0]ン[0xf020][0x5088]サ[0x50a8]シ[0x50c8]ス[0x50e8]セ[0x5108]ソ[0x5140]ガ[0x5160]ギ[0x5180]グ[0x51a0]ゲ[0x51c0]ゴ[0xf020][0x5088]タ[0x50a8]チ[0x50c8]ツ[0x50e8]テ[0x5108]ト[0x5140]ゲ[0x5160]ジ[0x5180]ズ[0x51a0]ゼ[0x51c0]ゾ[0xf020][0x5088]ナ[0x50a8]ニ[0x50c8]ヌ[0x50e8]ネ[0x5108]ノ[0x5140]ダ[0x5160]ヂ[0x5180]ヅ[0x51a0]デ[0x51c0]ド[0xf020][0x508a]ハ[0x50a8]ヒ[0x50c8]フ[0x50e8]ヘ[0x5108]ホ[0x5140]バ[0x5160]ビ[0x5180]ブ[0x51a0]ボ[0x51c0]ベ[0xf020][0x5088]マ[0x50a8]ミ[0x50c8]ム[0x50e8]メ[0x5108]モ[0x5140]パ[0x5160]ピ[0x5180]プ[0x51a0]ペ[0x51c0]ポ[0xf020][0x5088]ヤ[0x50a8] [0x50c8]ユ[0x50e8] [0x5108]ヨ[0x5142]ッ[0x5162]ャ[0x5182]ュ[0x51a2]ョ[0x51c0]-[0xf020][0x5088]ァ[0x50aa]ィ[0x50ca]ゥ[0x50ea]ェ[0x510a]ォ[0x5142]ヴ[0x5160]。[0x5180]、[0x51a0]・[0x51c0] 
+
+# reference at SAVEGAME.SPT:0x15de (cmd table table[2], slot 0x15de)
+# reference at SAVEGAME.SPT:0x15de (cmd table table[3], slot 0x15de)
+# reference at SAVEGAME.SPT:0x15de (cmd table table[7], slot 0x15de)
+# reference at SAVEGAME.SPT:0x15de (cmd table table[8], slot 0x15de)
+0x2800 [0x6008][0x5088]A[0x50a8]B[0x50c8]C[0x50e8]D[0x5108]E[0x5140]a[0x5160]b[0x5180]c[0x51a0]d[0x51c0]e[0xf020][0x5088]F[0x50a8]G[0x50c8]H[0x50e8]I[0x5108]J[0x5140]f[0x5160]g[0x5180]h[0x51a0]i[0x51c0]j[0xf020][0x5088]K[0x50a8]L[0x50c8]M[0x50e8]N[0x5108]O[0x5140]k[0x5160]l[0x5180]m[0x51a0]n[0x51c0]o[0xf020][0x5088]P[0x50a8]Q[0x50c8]R[0x50e8]S[0x5108]T[0x5140]p[0x5160]q[0x5180]r[0x51a0]s[0x51c0]t[0xf020][0x5088]U[0x50a8]V[0x50c8]W[0x50e8]X[0x5108]Y[0x5140]u[0x5160]v[0x5180]w[0x51a0]x[0x51c0]y[0xf020][0x508a]Z[0x50aa] [0x50ca]![0x50ea]?[0x510a]%[0x5142]z[0x5162] [0x5182] [0x51a2][0x004f][0x51c0]♪[0xf020][0x5088]+[0x50a8]-[0x50c8]✖[0x50e8]/[0x5108]\[0x5140]([0x5160])[0x5180]<[0x51a0]>[0x51c0]~[0xf020][0x5088].[0x50a8]^[0x50c8]_[0x50e8]*[0x5108]&[0x5140]◯[0x5160]⬤[0x5180]△[0x51a0]ー[0x51c0]@[0xf020][0x5088]0[0x50a8]1[0x50c8]2[0x50e8]3[0x5108]4[0x5140]5[0x5160]6[0x5180]7[0x51a0]8[0x51c0]9
+
+# reference at SAVEGAME.SPT:0x15a4 (cmd table table[3], slot 0x15a4)
+0x2d06 ゼニゼニバトル
+
+# reference at SAVEGAME.SPT:0x15a6 (cmd table table[3], slot 0x15a6)
+0x2d16 キルキルバトル
+
+# reference at SAVEGAME.SPT:0x15a8 (cmd table table[3], slot 0x15a8)
+0x2d26 ホリホリバトル
+
+# reference at SAVEGAME.SPT:0x15c6 (cmd table table[2], slot 0x15c6)
+# reference at SAVEGAME.SPT:0x15c6 (cmd table table[3], slot 0x15c6)
+# reference at SAVEGAME.SPT:0x15c6 (cmd table table[7], slot 0x15c6)
+# reference at SAVEGAME.SPT:0x15c6 (cmd table table[8], slot 0x15c6)
+0x3560 ドカポン城
+
+# reference at SAVEGAME.SPT:0x15c8 (cmd table table[2], slot 0x15c8)
+# reference at SAVEGAME.SPT:0x15c8 (cmd table table[3], slot 0x15c8)
+# reference at SAVEGAME.SPT:0x15c8 (cmd table table[7], slot 0x15c8)
+# reference at SAVEGAME.SPT:0x15c8 (cmd table table[8], slot 0x15c8)
+0x356c キングリン島
+
+# reference at SAVEGAME.SPT:0x15ca (cmd table table[2], slot 0x15ca)
+# reference at SAVEGAME.SPT:0x15ca (cmd table table[3], slot 0x15ca)
+# reference at SAVEGAME.SPT:0x15ca (cmd table table[7], slot 0x15ca)
+# reference at SAVEGAME.SPT:0x15ca (cmd table table[8], slot 0x15ca)
+0x357a ズナズナ島
+
+# reference at SAVEGAME.SPT:0x15cc (cmd table table[2], slot 0x15cc)
+# reference at SAVEGAME.SPT:0x15cc (cmd table table[3], slot 0x15cc)
+# reference at SAVEGAME.SPT:0x15cc (cmd table table[7], slot 0x15cc)
+# reference at SAVEGAME.SPT:0x15cc (cmd table table[8], slot 0x15cc)
+0x3586 ワクワク島
+
+# reference at SAVEGAME.SPT:0x15ce (cmd table table[2], slot 0x15ce)
+# reference at SAVEGAME.SPT:0x15ce (cmd table table[3], slot 0x15ce)
+# reference at SAVEGAME.SPT:0x15ce (cmd table table[7], slot 0x15ce)
+# reference at SAVEGAME.SPT:0x15ce (cmd table table[8], slot 0x15ce)
+0x3592 ポチャポチャ島
+
+# reference at SAVEGAME.SPT:0x15d0 (cmd table table[2], slot 0x15d0)
+# reference at SAVEGAME.SPT:0x15d0 (cmd table table[3], slot 0x15d0)
+# reference at SAVEGAME.SPT:0x15d0 (cmd table table[7], slot 0x15d0)
+# reference at SAVEGAME.SPT:0x15d0 (cmd table table[8], slot 0x15d0)
+0x35a2 ベーベー島
+
+# reference at SAVEGAME.SPT:0x15d2 (cmd table table[2], slot 0x15d2)
+# reference at SAVEGAME.SPT:0x15d2 (cmd table table[3], slot 0x15d2)
+# reference at SAVEGAME.SPT:0x15d2 (cmd table table[7], slot 0x15d2)
+# reference at SAVEGAME.SPT:0x15d2 (cmd table table[8], slot 0x15d2)
+0x35ae キングリン島2
+
+# reference at SAVEGAME.SPT:0x15d4 (cmd table table[2], slot 0x15d4)
+# reference at SAVEGAME.SPT:0x15d4 (cmd table table[3], slot 0x15d4)
+# reference at SAVEGAME.SPT:0x15d4 (cmd table table[7], slot 0x15d4)
+# reference at SAVEGAME.SPT:0x15d4 (cmd table table[8], slot 0x15d4)
+0x35be 字宙空間
+
+# reference at SAVEGAME.SPT:0x15d6 (cmd table table[2], slot 0x15d6)
+# reference at SAVEGAME.SPT:0x15d6 (cmd table table[3], slot 0x15d6)
+# reference at SAVEGAME.SPT:0x15d6 (cmd table table[7], slot 0x15d6)
+# reference at SAVEGAME.SPT:0x15d6 (cmd table table[8], slot 0x15d6)
+0x35c8 魔界キングリン島
+
+# reference at SAVEGAME.SPT:0x15d8 (cmd table table[2], slot 0x15d8)
+# reference at SAVEGAME.SPT:0x15d8 (cmd table table[3], slot 0x15d8)
+# reference at SAVEGAME.SPT:0x15d8 (cmd table table[7], slot 0x15d8)
+# reference at SAVEGAME.SPT:0x15d8 (cmd table table[8], slot 0x15d8)
+0x35da [Blue Text]クリアデータ[Normal Color Text]
+
+# reference at SAVEGAME.SPT:0x15a0 (cmd table table[3], slot 0x15a0)
+# reference at SAVEGAME.SPT:0x15a2 (cmd table table[3], slot 0x15a2)
+0x3bb2 ストーリーモード
+

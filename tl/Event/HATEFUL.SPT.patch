@@ -1,0 +1,57 @@
+# HATEFUL.SPT: 18 strings, 18 references. Translate by repeating the 0xOFFSET line with English.
+# record cursor 0x4020, script ends 0x2bac, 49120 bytes of arena shared by every replacement
+
+# reference at HATEFUL.SPT:0x160 (cmd 0303 direct, slot 0x164)
+0xe80  
+
+# reference at HATEFUL.SPT:0xa6 (cmd 0201 direct, slot 0xb2)
+0x2882  ヒネオ 
+
+# reference at HATEFUL.SPT:0xb4 (cmd 0202 direct, slot 0xc0)
+0x288e [0xd0d3][0x0c00]あッ! せんしだ![0x0d00][Press A]
+
+# reference at HATEFUL.SPT:0xd6 (cmd 0303 direct, slot 0xda)
+0x28aa [0xd0d4][0x0c00]おまえ本当に強いのかー?[\n]自分が勝てそうな弱いヤツとしか[\n]たたかわないんだろ[0x0d00][Press A]
+
+# reference at HATEFUL.SPT:0xe0 (cmd 0303 direct, slot 0xe4)
+0x2900 [0xd0d6][0x0c00]見た目もたいしたことないし、[\n]ベクでも勝てそうじゃん[0x0d00][Press A]
+
+# reference at HATEFUL.SPT:0xfa (cmd 0303 direct, slot 0xfe)
+0x293e [0xd0d7][0x0c00]ほら、くやしかったらなぐってみろよ[0x0d00]
+
+# reference at HATEFUL.SPT:0x2ba (cmd 0202 direct, slot 0x2c6)
+0x2968 ううう・・・ごめんなさい[\n]すごく強いんですね[\n]ぜひお名前を教えてください[Press A][0xa000](なんか、あやしい・・・[\n]他の人の名前を教えちゃおう!)[Press A]
+
+# reference at HATEFUL.SPT:0x39e (cmd 0303 direct, slot 0x3a2)
+0x29f0 [0xd0d8]おぼえてろー![\n]ママに言いつけてやるからな![Press A]
+
+# reference at HATEFUL.SPT:0x3ac (cmd 0202 direct, slot 0x3b8)
+0x2a84 プププ、[\n]バ~カ、ヘッタクソ~[Press A]
+
+# reference at HATEFUL.SPT:0x108 (cmd 0203 direct, slot 0x110)
+0x2aa6 なぐる[\n]何もしない
+
+# reference at HATEFUL.SPT:0x190 (cmd 0202 direct, slot 0x19c)
+0x2aba 始[0x5000]・[0x5000]・[0x5000]・[0x5000]・[0x5000]・[0x5000]・[0x5000]・[0x5000]・[0x5000]・[0x5000]・[0x5000]・[0x5000]・[0x5000]・[0x5000]・[0x5000]・[0x5000]・[0x5218]終
+
+# reference at HATEFUL.SPT:0x6ce (cmd table table[2], slot 0x6ce)
+0x2b02 [0xa833]
+
+# reference at HATEFUL.SPT:0x6d2 (cmd table table[2], slot 0x6d2)
+0x2b06 [0xa834]
+
+# reference at HATEFUL.SPT:0x6d0 (cmd table table[2], slot 0x6d0)
+0x2b0a [0xa835]
+
+# reference at HATEFUL.SPT:0x6d4 (cmd table table[2], slot 0x6d4)
+0x2b0e [0xa836]
+
+# reference at HATEFUL.SPT:0x6d6 (cmd table table[2], slot 0x6d6)
+0x2b12 ・
+
+# reference at HATEFUL.SPT:0x17e (cmd 0303 direct, slot 0x182)
+0x2b16 [Blue Text]いどうするゆびカーソルの[\n]下にあるベタンを、タイミングよくおすんだ![Normal Color Text][Press A]
+
+# reference at HATEFUL.SPT:0x42a (cmd 0303 direct, slot 0x42e)
+0x2b8c ヒネオに[Red Text][%0][Normal Color Text]をぬすまれた![Press A]
+

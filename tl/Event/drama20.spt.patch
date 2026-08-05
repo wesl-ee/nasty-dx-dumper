@@ -1,0 +1,15 @@
+# drama20.spt: 4 strings, 4 references. Translate by repeating the 0xOFFSET line with English.
+# record cursor 0x39a0, script ends 0x16ca, 50784 bytes of arena shared by every replacement
+
+# reference at drama20.spt:0x82 (cmd 0202 direct, slot 0x8e)
+0x121a [0xd187][0x0c00]アワワワ・・・[0x0d00][Press A][0xa000][0xd188][0x0c00]いったいどうしましょう~[0x0d00][Press A]
+
+# reference at drama20.spt:0xe0 (cmd 0202 direct, slot 0xec)
+0x1254 [0xd189][0x0c00]ぼうけんしゃのみなさんですか!?[0x0d00][Press A]
+
+# reference at drama20.spt:0x15a (cmd 0202 direct, slot 0x166)
+0x127e [0xd18a][0x0c00]王様がおそわれているのです![0x0d00][Press A][0xa000][0xd18b][0x0c00]どうかお助け下さい![0x0d00][Press A]
+
+# reference at drama20.spt:0x1c6 (cmd 0202 direct, slot 0x1d2)
+0x167c [0xd18c][0x0c00]みなさんやって下さいますか![0x0d00][Press A][0xa000][0xd18d][0x0c00]それでは私についてきて下さい![0x0d00][Press A]
+

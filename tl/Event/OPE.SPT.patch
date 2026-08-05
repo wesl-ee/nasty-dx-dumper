@@ -1,0 +1,39 @@
+# OPE.SPT: 12 strings, 12 references. Translate by repeating the 0xOFFSET line with English.
+# record cursor 0x3e20, script ends 0x1176, 49632 bytes of arena shared by every replacement
+
+# reference at OPE.SPT:0x23a (cmd 0203 direct, slot 0x242)
+0xcdc は い[\n]いいえ
+
+# reference at OPE.SPT:0x56 (cmd 0201 direct, slot 0x62)
+0xed8 Dr.オペ
+
+# reference at OPE.SPT:0x64 (cmd 0202 direct, slot 0x70)
+0xee4 [0xd0bc]わたしはDr.オペ![0xa8c8][Press A]
+
+# reference at OPE.SPT:0x90 (cmd 0303 direct, slot 0x94)
+0xf00 [0xd0bd]世界さいこうのげかい[0xa8c8][Press A]
+
+# reference at OPE.SPT:0x9a (cmd 0303 direct, slot 0x9e)
+0xf1c [0xd0be]わたしがあなたの、[\n]のぞみをかなえてあげよう![0xa8c8][Press A]
+
+# reference at OPE.SPT:0xbe (cmd 0303 direct, slot 0xc2)
+0xf52 自分の休を強くするか、[\n]他人の休を弱くするか、えらびたまえ
+
+# reference at OPE.SPT:0xc8 (cmd 0203 direct, slot 0xd0)
+0xf8e 自分[\n]他の人[\n]ことわる
+
+# reference at OPE.SPT:0x228 (cmd 0303 direct, slot 0x22c)
+0xfc0 しゅじゅつ代として[Blue Text][0x1000][Normal Color Text]G[\n]いただくが、よろしいかな?
+
+# reference at OPE.SPT:0x35a (cmd 0303 direct, slot 0x35e)
+0xff8 [0xd0bf]それでは、しゅじゅつをはじめる[\n]メス![0xa8c8][Press A]
+
+# reference at OPE.SPT:0x2d0 (cmd 0303 direct, slot 0x2d4)
+0x1026 びんぼう人に用はない[Press A]
+
+# reference at OPE.SPT:0x3f8 (cmd 0202 direct, slot 0x404)
+0x103e [Blue Text][%0][Normal Color Text]のこうげき力が[Green Text][0x1000][Normal Color Text]上がった![Press A][0xa000][Blue Text][%0][Normal Color Text]のぼうぎょ力が[Green Text][0x1000][Normal Color Text]上がった![Press A][0xa000][Blue Text][%0][Normal Color Text]のまりょくが[Green Text][0x1000][Normal Color Text]上がった![Press A][0xa000][Blue Text][%0][Normal Color Text]のすばやさが[Green Text][0x1000][Normal Color Text]上がった![Press A]
+
+# reference at OPE.SPT:0x470 (cmd 0303 direct, slot 0x474)
+0x10da [Blue Text][%0][Normal Color Text]のこうげき力が[Red Text][0x1000][Normal Color Text]下がった![Press A][0xa000][Blue Text][%0][Normal Color Text]のぼうぎょ力が[Red Text][0x1000][Normal Color Text]下がった![Press A][0xa000][Blue Text][%0][Normal Color Text]のまりょくが[Red Text][0x1000][Normal Color Text]下がった![Press A][0xa000][Blue Text][%0][Normal Color Text]のすばやさが[Red Text][0x1000][Normal Color Text]下がった![Press A]
+

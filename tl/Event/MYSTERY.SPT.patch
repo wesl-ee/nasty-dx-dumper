@@ -1,0 +1,34 @@
+# MYSTERY.SPT: 10 strings, 11 references. Translate by repeating the 0xOFFSET line with English.
+# record cursor 0x3de0, script ends 0x16ac, 49696 bytes of arena shared by every replacement
+
+# reference at MYSTERY.SPT:0x17a (cmd 0303 direct, slot 0x17e)
+# reference at MYSTERY.SPT:0x2a0 (cmd 0202 direct, slot 0x2ac)
+0xc40  
+
+# reference at MYSTERY.SPT:0x122 (cmd 0203 direct, slot 0x12a)
+0xc9c は い[\n]いいえ
+
+# reference at MYSTERY.SPT:0x1fc (cmd 0303 direct, slot 0x200)
+0xcbe [Blue Text][%0][Normal Color Text]は[\n][Green Text][%0][Normal Color Text]を手に入れた![Press A]
+
+# reference at MYSTERY.SPT:0xae (cmd 0201 direct, slot 0xba)
+0x1518 ナゾのろうじん
+
+# reference at MYSTERY.SPT:0xbc (cmd 0202 direct, slot 0xc8)
+0x1528 [0xd0c6][0x0c00]そこの人[0x0d00][Press A]
+
+# reference at MYSTERY.SPT:0x114 (cmd 0303 direct, slot 0x118)
+0x153a [0x0c00]このおいぼれに[Blue Text][0x1000][Normal Color Text]G[\n]めぐんではくださらぬか?[0x0d00]
+
+# reference at MYSTERY.SPT:0x1be (cmd 0303 direct, slot 0x1c2)
+0x1570 [0x0c00]フォッフォッフォ[\n]さいきんめずらしい、やさしいわか者だの[0x0d00][Press A]
+
+# reference at MYSTERY.SPT:0x1c8 (cmd 0303 direct, slot 0x1cc)
+0x15b0 [0x0c00]ほうびにこれをあげよう[0x0d00][Press A]
+
+# reference at MYSTERY.SPT:0x2ba (cmd 0303 direct, slot 0x2be)
+0x15ce [0x0c00][0xd0c7]それでは・・・[0x0d00][Press A]
+
+# reference at MYSTERY.SPT:0x1da (cmd 0303 direct, slot 0x1de)
+0x164c [0x0c00]かわいそうに、お金にこまっているようですな[\n]たいした物ではないが、これを持っていきなさい[0x0d00][Press A]
+

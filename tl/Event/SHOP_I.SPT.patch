@@ -1,0 +1,45 @@
+# SHOP_I.SPT: 13 strings, 16 references. Translate by repeating the 0xOFFSET line with English.
+# record cursor 0x3940, script ends 0x2f0c, 50880 bytes of arena shared by every replacement
+
+# reference at SHOP_I.SPT:0x3f6 (cmd 0203 direct, slot 0x3fe)
+# reference at SHOP_I.SPT:0xf16 (cmd 0203 direct, slot 0xf1e)
+0x21a0 は い[\n]いいえ
+
+# reference at SHOP_I.SPT:0xe08 (cmd 0303 direct, slot 0xe0c)
+0x21c4 [0x50c8][0x6018][0x1800]G
+
+# reference at SHOP_I.SPT:0x11b6 (cmd 0303 direct, slot 0x11ba)
+# reference at SHOP_I.SPT:0x122c (cmd 0303 direct, slot 0x1230)
+0x21ce [0x50c8][0x1800]G
+
+# reference at SHOP_I.SPT:0xd80 (cmd 0202 direct, slot 0xd8c)
+0x22cc [Blue Text][%0][Normal Color Text]は[Red Text]おたずね者[Normal Color Text]になった![\n][Blue Text][%0][Normal Color Text]をたおすと[\n][Blue Text][0x1000][Normal Color Text]Gもらえます[Press A]
+
+# reference at SHOP_I.SPT:0xbc (cmd 0201 direct, slot 0xc8)
+0x2938 アイテム屋クルミ
+
+# reference at SHOP_I.SPT:0x50 (cmd 0202 direct, slot 0x5c)
+0x294a [0xd11b][0x0c00]いらっしゃいませ[\n]本日はどういったごようですか?[0x0d00][Press A]
+
+# reference at SHOP_I.SPT:0x1d0 (cmd 0204 direct, slot 0x1e0)
+# reference at SHOP_I.SPT:0x270 (cmd 0303 direct, slot 0x274)
+0x2984 [0xd11c][0x0c00]どちらをおもとめですか?[0x0d00]
+
+# reference at SHOP_I.SPT:0xfcc (cmd 0303 direct, slot 0xfd0)
+0x29a4 [0x0c00]カードを便うと、ねだんが[\n][Red Text]10%[Normal Color Text]ましになります[\n]おしはらいはどうなさいますか?[0x0d00]
+
+# reference at SHOP_I.SPT:0x3ca (cmd 0303 direct, slot 0x3ce)
+0x29fc [0x0c00]お金が足りないようですが[0x0d00]
+
+# reference at SHOP_I.SPT:0x34c (cmd 0303 direct, slot 0x350)
+0x2a1a [0x0c00]それいじょうは[\n]持てないようですが[Press A][0x0d00]
+
+# reference at SHOP_I.SPT:0x3ec (cmd 0303 direct, slot 0x3f0)
+0x2a44 [0x0c00][Blue Text][%0][Normal Color Text]は[\n][Blue Text][0x1000][Normal Color Text]Gになりますが[\n]よろしいですか?[0x0d00]
+
+# reference at SHOP_I.SPT:0x1ec (cmd 0303 direct, slot 0x1f0)
+0x2b2e [0x0c00]・・・おきゃく様[0x0d00][Press A][0xa000][0x0c00]もうしわけございませんが[\n]あやしい目つきのかたに[\n]お売りすることはできません[0x0d00][Press A]
+
+# reference at SHOP_I.SPT:0xf08 (cmd 0303 direct, slot 0xf0c)
+0x2ee2 [0x0c00][Blue Text]バーゲンチケット[Normal Color Text]を[\n]便うニャリ?[0x0d00]
+

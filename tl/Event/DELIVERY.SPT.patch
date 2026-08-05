@@ -1,0 +1,37 @@
+# DELIVERY.SPT: 11 strings, 12 references. Translate by repeating the 0xOFFSET line with English.
+# record cursor 0x3cc0, script ends 0x2380, 49984 bytes of arena shared by every replacement
+
+# reference at DELIVERY.SPT:0x192 (cmd 0303 direct, slot 0x196)
+0xb20  
+
+# reference at DELIVERY.SPT:0xba (cmd 0201 direct, slot 0xc6)
+0x21a2 すし屋のマチコ
+
+# reference at DELIVERY.SPT:0xd8 (cmd 0202 direct, slot 0xe4)
+0x21b2 [0xd0ca][0x0c00]ネエ、ネエ! あなた今ひま?[0x0d00][Press A]
+
+# reference at DELIVERY.SPT:0x118 (cmd 0303 direct, slot 0x11c)
+0x21d8 [0x0c00]悪いんだけど、このおすしを[\n][Blue Text][%0][Normal Color Text]村までとどけてくれない?[0x0d00][Press A]
+
+# reference at DELIVERY.SPT:0x132 (cmd 0303 direct, slot 0x136)
+0x221a [0x0c00]もちろんお札に、おすし代は[\n]あなたにあげるから[\n]マチコいっしょうのおねがい![0x0d00]
+
+# reference at DELIVERY.SPT:0x140 (cmd 0203 direct, slot 0x148)
+0x226c とどける[\n]ことわる
+
+# reference at DELIVERY.SPT:0x1dc (cmd 0303 direct, slot 0x1e0)
+0x2280 [0xd0cc]キャー、サイコー![0xa8c8][Press A]
+
+# reference at DELIVERY.SPT:0x1e6 (cmd 0303 direct, slot 0x1ea)
+0x229a [0xd0cd]これで、コミケにまにあうわ![0xa8c8][Press A]
+
+# reference at DELIVERY.SPT:0x2a4 (cmd 0202 direct, slot 0x2b0)
+# reference at DELIVERY.SPT:0x2be (cmd 0303 direct, slot 0x2c2)
+0x22be [0xd0ce][0x0c00]あっ! そうだ、[\n]おすしは生ものだから早めにとどけてね[0x0d00][Press A]
+
+# reference at DELIVERY.SPT:0x2c8 (cmd 0303 direct, slot 0x2cc)
+0x22fe [0xd0cf][0x0c00]じゃあ、後はよろしくねー[0x0d00][Press A]
+
+# reference at DELIVERY.SPT:0x200 (cmd 0303 direct, slot 0x204)
+0x2360 [Blue Text][%0][Normal Color Text]は[\n][Green Text][%0][Normal Color Text]をうけとった[Press A]
+

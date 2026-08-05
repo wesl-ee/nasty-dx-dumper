@@ -1,0 +1,15 @@
+# drama12.spt: 4 strings, 4 references. Translate by repeating the 0xOFFSET line with English.
+# record cursor 0x3100, script ends 0x140a, 52992 bytes of arena shared by every replacement
+
+# reference at drama12.spt:0x8 (cmd 0202 direct, slot 0x14)
+0x1306 [0xd034]今さらあやまってもおそいからな![Press A][0xa000][0xd035]オレ様の切りふだを見せてやるぜ![Press A][0xa000][0xd036]いくぜ![Press A]
+
+# reference at drama12.spt:0x42 (cmd 0303 direct, slot 0x46)
+0x1360 [0xd037]ワルサーさいしゅうおうぎ![Press A][0xa000][0xd038]ワルサーチェーンジ!![Press A]
+
+# reference at drama12.spt:0x13e (cmd 0202 direct, slot 0x14a)
+0x139c [0xd04b]クックック…[Press A][0xa000][0xd04c]ワレの名はグレートワルサー![Press A]
+
+# reference at drama12.spt:0x16a (cmd 0303 direct, slot 0x16e)
+0x13d0 [0xd04d]ワレはムテキ![Press A][0xa000][0xd04e]ゲコどもめがけちらしてくれるわ![Press A]
+

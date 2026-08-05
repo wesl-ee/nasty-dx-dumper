@@ -1,0 +1,218 @@
+# RACE.SPT: 57 strings, 101 references. Translate by repeating the 0xOFFSET line with English.
+# record cursor 0x3f60, script ends 0x18f8, 49312 bytes of arena shared by every replacement
+
+# reference at RACE.SPT:0xb60 (cmd table table[2], slot 0xb60)
+# reference at RACE.SPT:0xb60 (cmd table table[4], slot 0xb60)
+# reference at RACE.SPT:0xb60 (cmd table table[5], slot 0xb60)
+0xb70 [0x18f8]注[0x190a]意[0x191a]起[0x192a]才[0x193c]味[0x194e]引[0x195e]忘[0x1970]平[0x1982]注[0x1994]役[0x19a4]的[0x19b4]家[0x19c6]弓[0x19d8]広[0x19ea]期[0x19fc]位[0x1a0e]繪[0x1a20]統[0x1a32]掃[0x1a42]弓[0x1a54]広[0x1a66]遊[0x1a78]位[0x1a88]外[0x1a9a]意[0x1aac]統[0x1abe]才[0x1ad0]味[0x1ae2]引[0x1af4]忘[0x1b04]和[0x1b16]子[0x1b28]社[0x1b3a]章[0x1b48]近[0x1b5a]弓[0x1b6c]珠[0x1b7e]和[0x1b90]外[0x1ba2]直[0x1bae]繪[0x1bc0]起[0x1bd0]家[0x1be0]用[0x1bf2]秒[0x1c04]珠[0x1c16]葉[0x1c26]第[0x1c36]社[0x1c48]章[0x1c5a]掃[0x1c6c]用[0x1c7e]秒[0x1c90]期[0x1ca2]葉[0x1cb2]第[0x1cc4]役[0x1cd4]的[0x1ce6]近[0x1cf8]弓[0x1d0a]遊[0x1d1c]平[0x1d2e]子[0x1d40]直[0x0c80][0x0c8c][0x0c98][0x0ca4][0x0cb0][0x0cbc][0x0cc8][0x0cd4][0x1d4e][0x1d64][0x1d78][0x1d8e][0x1da4][0x1dbc][0x1dd6][0x1de8][0x1dfc][0x1e0e][0x1e22][0x1e36][0x1e4c][0x1e62][0x1e78][0x1e8c][0x1e9e][0x1eb6][0x1ecc][0x1ede][0x1ef0][0x1f02][0x1f12][0x1f24][0x1f3a][0x1f4e][0x1f60][0x1f70][0x1f88][0x1f98][0x1fac][0x1fbe][0x1fd4][0x1fec][%0][0x2016][0x202a][0x2042][0x2058][0x2070][0x2082][0x209c][0x20ae][0x20c4][0x20da][0x20e8][0x20fa][0x2110][0x0502]  むTむ[0x0800]0[0x0503][0x0805]T[0x0cec]怪 ヴあ怪ムF役   方 3[0x03e7][0x110e]D[0x0814][0x0d24]E[0x0307]  D[0x1011]イ[0x0808]0オ[0x0800]0[0x0808] [0xffff][0x080c]0 [0x0804]T[0x0d4e][0x0403][0x0300][0x0d32]穴 [0x0502]む  Tむ[0x0800]0[0x0503][0x0805]T[0x0d5e][0x1012][0x0807]          
+
+# reference at RACE.SPT:0x374 (cmd 0203 direct, slot 0x37c)
+0xd84 は い[\n]いいえ
+
+# reference at RACE.SPT:0x52 (cmd 0202 direct, slot 0x5e)
+# reference at RACE.SPT:0x2f8 (cmd 0303 direct, slot 0x2fc)
+# reference at RACE.SPT:0x416 (cmd 0303 direct, slot 0x41a)
+0xe66  
+
+# reference at RACE.SPT:0xfe (cmd 0303 direct, slot 0x102)
+0xf1e [Blue Text][%0][Normal Color Text]さんの春です[\n]かけるモンスターをえらんでください
+
+# reference at RACE.SPT:0x182 (cmd 0303 direct, slot 0x186)
+# reference at RACE.SPT:0x404 (cmd 0303 direct, slot 0x408)
+0xf56 かけるお金を決めてください
+
+# reference at RACE.SPT:0x1bc (cmd 0303 direct, slot 0x1c0)
+0xf72 [0x50c8][0x6018][0x1800]G
+
+# reference at RACE.SPT:0x202 (cmd 0303 direct, slot 0x206)
+0xf7c かけ金
+
+# reference at RACE.SPT:0x362 (cmd 0303 direct, slot 0x366)
+0xf84 [Blue Text][0x1000][Normal Color Text]Gでよろしいですね?
+
+# reference at RACE.SPT:0x484 (cmd 0303 direct, slot 0x488)
+0xfa0 かけ金はいじょうのように決定しました[\n]それではいよいよ出走です![Press A]
+
+# reference at RACE.SPT:0x724 (cmd 0303 direct, slot 0x728)
+0xfe4 1著は[Blue Text][0x1000][Normal Color Text]ワクの[Blue Text][%0][Normal Color Text]でした[\n]当たった方、おめでとうございます![Press A]
+
+# reference at RACE.SPT:0xb08 (cmd table table[5], slot 0xb08)
+0x102a [0x6008][0x7007]わく
+
+# reference at RACE.SPT:0xb0a (cmd table table[5], slot 0xb0a)
+0x1034 [0x6004][0x7006]名前
+
+# reference at RACE.SPT:0xb0c (cmd table table[5], slot 0xb0c)
+0x103e [0x7006]休
+
+# reference at RACE.SPT:0xb0e (cmd table table[5], slot 0xb0e)
+0x1044 [0x6008][0x7007]人気
+
+# reference at RACE.SPT:0xb10 (cmd table table[5], slot 0xb10)
+0x104e [0x6004][0x7006]オッズ
+
+# reference at RACE.SPT:0xb12 (cmd table table[5], slot 0xb12)
+0x105a ひとこと
+
+# reference at RACE.SPT:0x5f4 (cmd 0202 direct, slot 0x600)
+# reference at RACE.SPT:0xb14 (cmd table table[4], slot 0xb14)
+# reference at RACE.SPT:0xb14 (cmd table table[5], slot 0xb14)
+0x1064 ドカポンチャンピオンシップが[\n]今スタートしました!
+
+# reference at RACE.SPT:0xb16 (cmd table table[4], slot 0xb16)
+# reference at RACE.SPT:0xb16 (cmd table table[5], slot 0xb16)
+0x1098 まずは[Blue Text][%0][Normal Color Text]が[\n]トップにおどりでました!
+
+# reference at RACE.SPT:0xb18 (cmd table table[4], slot 0xb18)
+# reference at RACE.SPT:0xb18 (cmd table table[5], slot 0xb18)
+0x10c2 全モンスターそろった[\n]きれいなスタートです!
+
+# reference at RACE.SPT:0xb1a (cmd table table[4], slot 0xb1a)
+# reference at RACE.SPT:0xb1a (cmd table table[5], slot 0xb1a)
+0x10f0 [Blue Text][%0][Normal Color Text]がスタートを[\n]しっぽいし、でおくれました!
+
+# reference at RACE.SPT:0xb1c (cmd table table[4], slot 0xb1c)
+# reference at RACE.SPT:0xb1c (cmd table table[5], slot 0xb1c)
+0x1122 ただいま[Blue Text][0x1000]00m[Normal Color Text]地魚をつうかしました![\n]ただいまの1位は[Blue Text][%0][Normal Color Text]です!
+
+# reference at RACE.SPT:0xb1e (cmd table table[4], slot 0xb1e)
+# reference at RACE.SPT:0xb1e (cmd table table[5], slot 0xb1e)
+0x116c 1春人気の[Blue Text][%0][Normal Color Text]はただいま[Blue Text][0x1000][Normal Color Text]位![\n]先頭しゅうだんを走っています!
+
+# reference at RACE.SPT:0xb20 (cmd table table[4], slot 0xb20)
+# reference at RACE.SPT:0xb20 (cmd table table[5], slot 0xb20)
+0x11b2 1春人気の[Blue Text][%0][Normal Color Text]はただいま[Blue Text][0x1000][Normal Color Text]位![\n]しゅうだんのまん中あたりを走っています!
+
+# reference at RACE.SPT:0xb22 (cmd table table[4], slot 0xb22)
+# reference at RACE.SPT:0xb22 (cmd table table[5], slot 0xb22)
+0x1202 1春人気の[Blue Text][%0][Normal Color Text]はただいま[Blue Text][0x1000][Normal Color Text]位![\n]後方からチャンスをうかがっています!
+
+# reference at RACE.SPT:0xb24 (cmd table table[4], slot 0xb24)
+# reference at RACE.SPT:0xb24 (cmd table table[5], slot 0xb24)
+0x124e 休調は万全![\n]1著をとるのに何の不安もありません!
+
+# reference at RACE.SPT:0xb26 (cmd table table[4], slot 0xb26)
+# reference at RACE.SPT:0xb26 (cmd table table[5], slot 0xb26)
+0x1282 休調もよく、[\n]これはおおいにきたいできそうです!
+
+# reference at RACE.SPT:0xb28 (cmd table table[4], slot 0xb28)
+# reference at RACE.SPT:0xb28 (cmd table table[5], slot 0xb28)
+0x12b4 休調は悪くありません![\n]レースしだいでしょう!
+
+# reference at RACE.SPT:0xb2a (cmd table table[4], slot 0xb2a)
+# reference at RACE.SPT:0xb2a (cmd table table[5], slot 0xb2a)
+0x12e4 休調に不安をのこしますが[\n]どのようなレースをみせてくれるのでしょうか?
+
+# reference at RACE.SPT:0xb2c (cmd table table[4], slot 0xb2c)
+# reference at RACE.SPT:0xb2c (cmd table table[5], slot 0xb2c)
+0x132c 休調はさいあくです![\n]1春人気ながらとても不安です!
+
+# reference at RACE.SPT:0xb2e (cmd table table[4], slot 0xb2e)
+# reference at RACE.SPT:0xb2e (cmd table table[5], slot 0xb2e)
+0x1362 たいこうする2春人気の[\n][Blue Text][%0][Normal Color Text]は、げんざい[Blue Text][0x1000][Normal Color Text]位!
+
+# reference at RACE.SPT:0xb30 (cmd table table[4], slot 0xb30)
+# reference at RACE.SPT:0xb30 (cmd table table[5], slot 0xb30)
+0x1398 [Blue Text]600m[Normal Color Text]地魚をつうかしました![\n]ただいまの1位は[Blue Text][%0][Normal Color Text]です!
+
+# reference at RACE.SPT:0xb32 (cmd table table[4], slot 0xb32)
+# reference at RACE.SPT:0xb32 (cmd table table[5], slot 0xb32)
+0x13da [Blue Text][%0][Normal Color Text]が[Blue Text][%0][Normal Color Text]をぬいて[\n]トップがいれかわりました!
+
+# reference at RACE.SPT:0xb34 (cmd table table[4], slot 0xb34)
+# reference at RACE.SPT:0xb34 (cmd table table[5], slot 0xb34)
+0x140e はやい! はやい![\n][Blue Text][%0][Normal Color Text]あっとうてきなはやさです!!
+
+# reference at RACE.SPT:0xb36 (cmd table table[4], slot 0xb36)
+# reference at RACE.SPT:0xb36 (cmd table table[5], slot 0xb36)
+0x1446 1春人気の[Blue Text][%0][Normal Color Text]おくれています![\n]ここからおいつくのはむずかしいか?
+
+# reference at RACE.SPT:0xb38 (cmd table table[4], slot 0xb38)
+# reference at RACE.SPT:0xb38 (cmd table table[5], slot 0xb38)
+0x148c トップは[Blue Text][%0][Normal Color Text]![\n]そして[Blue Text][%0][Normal Color Text]とつづいています!
+
+# reference at RACE.SPT:0xb3a (cmd table table[4], slot 0xb3a)
+# reference at RACE.SPT:0xb3a (cmd table table[5], slot 0xb3a)
+0x14be [Blue Text][%0][Normal Color Text]が[Blue Text][%0][Normal Color Text]をぬいて[\n]ついにトップにおどりでたーッ!!
+
+# reference at RACE.SPT:0xb3c (cmd table table[4], slot 0xb3c)
+# reference at RACE.SPT:0xb3c (cmd table table[5], slot 0xb3c)
+0x14f8 このまま[Blue Text][%0][Normal Color Text]が[\n]にげきるのかーッ!?
+
+# reference at RACE.SPT:0xb3e (cmd table table[4], slot 0xb3e)
+# reference at RACE.SPT:0xb3e (cmd table table[5], slot 0xb3e)
+0x1520 ただいま[Blue Text]800m[Normal Color Text]地魚をつうかしました![\n]のこり[Blue Text]200m[Normal Color Text]です!
+
+# reference at RACE.SPT:0xb40 (cmd table table[4], slot 0xb40)
+# reference at RACE.SPT:0xb40 (cmd table table[5], slot 0xb40)
+0x1566 トップが入れかわったーッ![\n]にげきれるかーッ!?
+
+# reference at RACE.SPT:0xb42 (cmd table table[4], slot 0xb42)
+# reference at RACE.SPT:0xb42 (cmd table table[5], slot 0xb42)
+0x1598 どうやら勝負は[Blue Text][%0][Normal Color Text]と[\n][Blue Text][%0][Normal Color Text]にしぼられたようです!
+
+# reference at RACE.SPT:0xb44 (cmd table table[4], slot 0xb44)
+# reference at RACE.SPT:0xb44 (cmd table table[5], slot 0xb44)
+0x15ce トップの[Blue Text][%0][Normal Color Text]、[\n]2位とのきょりをひろげていきます!!
+
+# reference at RACE.SPT:0xb46 (cmd table table[4], slot 0xb46)
+# reference at RACE.SPT:0xb46 (cmd table table[5], slot 0xb46)
+0x1606 まだ勝負はわからない![\n]何わくのモンスターがとびだしてくるのか!?
+
+# reference at RACE.SPT:0xb48 (cmd table table[4], slot 0xb48)
+# reference at RACE.SPT:0xb48 (cmd table table[5], slot 0xb48)
+0x164a [Blue Text][%0][Normal Color Text]![\n]このままトップをまもりきるか!?
+
+# reference at RACE.SPT:0xb4a (cmd table table[4], slot 0xb4a)
+# reference at RACE.SPT:0xb4a (cmd table table[5], slot 0xb4a)
+0x1676 [Blue Text][%0][Normal Color Text]が[Blue Text][%0][Normal Color Text]を[\n]ついにかわしたーッ!!
+
+# reference at RACE.SPT:0xb4c (cmd table table[4], slot 0xb4c)
+# reference at RACE.SPT:0xb4c (cmd table table[5], slot 0xb4c)
+0x16a0 [Blue Text][%0][Normal Color Text]と[Blue Text][%0][Normal Color Text][\n]せっせんです!勝つのはどっちだーッ!?
+
+# reference at RACE.SPT:0xb4e (cmd table table[4], slot 0xb4e)
+# reference at RACE.SPT:0xb4e (cmd table table[5], slot 0xb4e)
+0x16d8 大こんせんです!![\n]1著になるのはどのモンスターなのかーッ!?
+
+# reference at RACE.SPT:0xb50 (cmd table table[4], slot 0xb50)
+# reference at RACE.SPT:0xb50 (cmd table table[5], slot 0xb50)
+0x1718 [Blue Text][%0][Normal Color Text]!![\n][Blue Text][%0][Normal Color Text]!!
+
+# reference at RACE.SPT:0xb52 (cmd table table[4], slot 0xb52)
+# reference at RACE.SPT:0xb52 (cmd table table[5], slot 0xb52)
+0x1730 [Blue Text][%0][Normal Color Text]ついにかわしたーッ!!![\n]今1著でゴーーール!!!
+
+# reference at RACE.SPT:0xb54 (cmd table table[4], slot 0xb54)
+# reference at RACE.SPT:0xb54 (cmd table table[5], slot 0xb54)
+0x176a びみょうなはんていです![\n]1著はどっちなんだーッ!?
+
+# reference at RACE.SPT:0xb56 (cmd table table[4], slot 0xb56)
+# reference at RACE.SPT:0xb56 (cmd table table[5], slot 0xb56)
+0x17a0 ほとんどいっしょのゴールに見えましたが[\n]1著はどのモンスターなのかーッ!?
+
+# reference at RACE.SPT:0xb58 (cmd table table[4], slot 0xb58)
+# reference at RACE.SPT:0xb58 (cmd table table[5], slot 0xb58)
+0x17ec [Blue Text][%0][Normal Color Text]強すぎるーーーッ!![\n]今1著でゴーーール!!!
+
+# reference at RACE.SPT:0xb5a (cmd table table[4], slot 0xb5a)
+# reference at RACE.SPT:0xb5a (cmd table table[5], slot 0xb5a)
+0x1822 [Blue Text][%0][Normal Color Text]!![Blue Text][%0][Normal Color Text]!![\n]今1著でゴーーール!!!
+
+# reference at RACE.SPT:0x6e6 (cmd 0303 direct, slot 0x6ea)
+0x1852 ハナのさで1著は[Blue Text][%0][Normal Color Text]です!![Press A]
+
+# reference at RACE.SPT:0x6f2 (cmd 0303 direct, slot 0x6f6)
+0x1874 1著は[Blue Text][%0][Normal Color Text]です!![Press A]
+
+# reference at RACE.SPT:0x702 (cmd 0303 direct, slot 0x706)
+0x188c でました![\n]大あなですッ!![Press A]
+
+# reference at RACE.SPT:0xb5c (cmd table table[4], slot 0xb5c)
+# reference at RACE.SPT:0xb5c (cmd table table[5], slot 0xb5c)
+0x18ac トップは[Blue Text][%0][Normal Color Text]![\n]そして[Blue Text][%0][Normal Color Text]
+
+# reference at RACE.SPT:0xb5e (cmd table table[4], slot 0xb5e)
+# reference at RACE.SPT:0xb5e (cmd table table[5], slot 0xb5e)
+0x18cc [Blue Text][%0][Normal Color Text]、[Blue Text][%0][Normal Color Text]![\n][Blue Text][%0][Normal Color Text]とつづいています!
+

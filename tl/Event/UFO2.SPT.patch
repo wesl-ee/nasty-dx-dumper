@@ -1,0 +1,9 @@
+# UFO2.SPT: 2 strings, 2 references. Translate by repeating the 0xOFFSET line with English.
+# record cursor 0x3aa0, script ends 0x2d00, 50528 bytes of arena shared by every replacement
+
+# reference at UFO2.SPT:0x1b8 (cmd 0202 direct, slot 0x1c4)
+0x2ca8 [Blue Text][%0][Normal Color Text]の[\n]全パラメータが[Green Text][0x1000][Normal Color Text]上がった![Press A]
+
+# reference at UFO2.SPT:0x1ea (cmd 0202 direct, slot 0x1f6)
+0x2cd4 [Blue Text][%0][Normal Color Text]の[\n]全パラメータが[Red Text][0x1000][Normal Color Text]下がった![Press A]
+

@@ -1,0 +1,49 @@
+# SHOP_W.SPT: 14 strings, 18 references. Translate by repeating the 0xOFFSET line with English.
+# record cursor 0x3240, script ends 0x2eae, 52672 bytes of arena shared by every replacement
+
+# reference at SHOP_W.SPT:0x466 (cmd 0203 direct, slot 0x46e)
+# reference at SHOP_W.SPT:0xfb6 (cmd 0203 direct, slot 0xfbe)
+0x1aa0 は い[\n]いいえ
+
+# reference at SHOP_W.SPT:0xea8 (cmd 0303 direct, slot 0xeac)
+0x1ac4 [0x50c8][0x6018][0x1800]G
+
+# reference at SHOP_W.SPT:0x1256 (cmd 0303 direct, slot 0x125a)
+# reference at SHOP_W.SPT:0x12cc (cmd 0303 direct, slot 0x12d0)
+0x1ace [0x50c8][0x1800]G
+
+# reference at SHOP_W.SPT:0xe20 (cmd 0202 direct, slot 0xe2c)
+0x1bcc [Blue Text][%0][Normal Color Text]は[Red Text]おたずね者[Normal Color Text]になった![\n][Blue Text][%0][Normal Color Text]をたおすと[\n][Blue Text][0x1000][Normal Color Text]Gもらえます[Press A]
+
+# reference at SHOP_W.SPT:0x106c (cmd 0303 direct, slot 0x1070)
+0x22a4 [0x0c00]カードを便うと、ねだんが[\n][Red Text]10%[Normal Color Text]ましになります[\n]おしはらいはどうなさいますか?[0x0d00]
+
+# reference at SHOP_W.SPT:0xfa8 (cmd 0303 direct, slot 0xfac)
+0x27e2 [0x0c00][Blue Text]バーゲンチケット[Normal Color Text]を[\n]便うニャリ?[0x0d00]
+
+# reference at SHOP_W.SPT:0xba (cmd 0201 direct, slot 0xc6)
+# reference at SHOP_W.SPT:0x36e (cmd 0303 direct, slot 0x372)
+0x2b3a ぶき屋ドング
+
+# reference at SHOP_W.SPT:0x4e (cmd 0202 direct, slot 0x5a)
+0x2b48 [0xd113][0x0c00]よう! いらっしゃい![\n]今日は何のようだい?[0x0d00][Press A]
+
+# reference at SHOP_W.SPT:0x1ce (cmd 0204 direct, slot 0x1de)
+# reference at SHOP_W.SPT:0x26e (cmd 0303 direct, slot 0x272)
+0x2b90 [0xd114][0x0c00]何がほしいんだ?[0x0d00]
+
+# reference at SHOP_W.SPT:0x2fc (cmd 0303 direct, slot 0x300)
+0x2bf6 [0x0c00]金が足りねーじゃねーか[0x0d00]
+
+# reference at SHOP_W.SPT:0x3e0 (cmd 0303 direct, slot 0x3e4)
+0x2c12 [0x0c00][Blue Text][%0][Normal Color Text]は[\n][Blue Text][0x1000][Normal Color Text]Gだぜ?[0x0d00]
+
+# reference at SHOP_W.SPT:0x550 (cmd 0303 direct, slot 0x554)
+0x2c84 [0x0c00][Blue Text][%0][Normal Color Text]だな![\n]じゃあ、[Blue Text][%0][Normal Color Text]を[\n][Blue Text][0x1000][Normal Color Text]Gで引き取るぜ![0x0d00][Press A]
+
+# reference at SHOP_W.SPT:0x532 (cmd 0303 direct, slot 0x536)
+0x2cec [0x0c00]今持ってる[Blue Text][%0][Normal Color Text]は[\n][Blue Text]せんり品[Normal Color Text]リストに[\n]送っておくぜ![0x0d00][Press A]
+
+# reference at SHOP_W.SPT:0x1ea (cmd 0303 direct, slot 0x1ee)
+0x2e3e ・・・[0x0c00]あやしいやろうだな[0x0d00][Press A][0xa000][0x0c00]あやしい目つきのやつに[\n]何も売る気はないんでな![\n]さぁ掃った! 掃った![0x0d00][Press A]
+

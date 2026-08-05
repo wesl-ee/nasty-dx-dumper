@@ -1,0 +1,43 @@
+# BANK.SPT: 10 strings, 11 references. Translate by repeating the 0xOFFSET line with English.
+# record cursor 0x3b20, script ends 0x2968, 50400 bytes of arena shared by every replacement
+
+# reference at BANK.SPT:0x20c (cmd 0203 direct, slot 0x214)
+0x2394 は い[\n]いいえ
+0x2394 Yes[\n]No
+
+# reference at BANK.SPT:0x1a28 (cmd 0303 direct, slot 0x1a2c)
+0x23a4 [0x50c8][0x6018][0x1800]G
+
+# reference at BANK.SPT:0x14be (cmd 0201 direct, slot 0x14ca)
+0x2742 銀行員
+0x2742 Teller
+
+# reference at BANK.SPT:0x143e (cmd 0202 direct, slot 0x144a)
+0x274a [0xd10b]いらっしゃいませ[0xa8c8][Press A]
+0x274a [0xd10b]Welcome![0xa8c8][Press A]
+
+# reference at BANK.SPT:0x14ac (cmd 0303 direct, slot 0x14b0)
+0x2762 [0xd10c]本日はどういったごようでしょうか?[Press A]
+0x2762 [0xd10c]How may I help you today?[Press A]
+
+# reference at BANK.SPT:0x174 (cmd 0204 direct, slot 0x184)
+# reference at BANK.SPT:0x294 (cmd 0303 direct, slot 0x298)
+0x2800 [0xd10d][0x0c00]いくら、おあずけに[\n]なりますか?[0x0d00]
+0x2800 [0xd10d][0x0c00]How much will[\n]you deposit?[0x0d00]
+
+# reference at BANK.SPT:0x14c (cmd 0204 direct, slot 0x15c)
+0x2828 [0x0c00]もうしわけございませんが[\n]これいじょう、おあずかりする[\n]ことはできません[0x0d00][Press A]
+0x2828 [0x0c00]Im sorry but we cannot accept any more deposits[0x0d00][Press A]
+
+# reference at BANK.SPT:0x202 (cmd 0303 direct, slot 0x206)
+0x2878 [0x0c00]あずけるお金は[\n][Blue Text][0x1000][Normal Color Text]Gで[\n]よろしいですか?[0x0d00]
+0x2878 [0x0c00]Deposit [Blue Text][0x1000][Normal Color Text]G, correct?[0x0d00]
+
+# reference at BANK.SPT:0x126 (cmd 0204 direct, slot 0x136)
+0x28aa あずけるお金が[\n]ないようですが・・・[Press A]
+0x28aa You have no money deposited...[Press A]
+
+# reference at BANK.SPT:0x2b2 (cmd 0303 direct, slot 0x2b6)
+0x292c [0x0c00]カードをつくると[\n][Blue Text]ちょきん[Normal Color Text]で買い物ができますよ![0x0d00][Press A]
+0x292c [0x0c00]With a card, you can buy items with your [Blue Text]Savings[Normal Color Text[0x0d00][Press A]
+

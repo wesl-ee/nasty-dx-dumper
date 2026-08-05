@@ -1,0 +1,36 @@
+# drama18.spt: 11 strings, 11 references. Translate by repeating the 0xOFFSET line with English.
+# record cursor 0x3aa0, script ends 0x2d40, 50528 bytes of arena shared by every replacement
+
+# reference at drama18.spt:0x520 (cmd 0202 direct, slot 0x52c)
+0x280c [0xd006]ムキーッ![Press A][0xa000]オレ様にたてつくなんて、[\n]ムカツクやろうたちだぜ![Press A][0xa000]このままじゃ、すまさないからな![Press A]
+
+# reference at drama18.spt:0x576 (cmd 0303 direct, slot 0x57a)
+0x2876 オレ様はこれから、ドカポン王國を[Red Text]魔界[Normal Color Text]にする[\n]じゅんびでいそがしくなるんだ![Press A][0xa000]アイツらのジャマは、オマエら[\n][Red Text]ワルサーズ[Normal Color Text]にまかせたぜ![Press A][0xa000]グリーン![\n]オマエがアイツらの相手をしてやれ![Press A]
+
+# reference at drama18.spt:0x5b2 (cmd 0202 direct, slot 0x5be)
+0x2938 [0xd056]ウキキのキー![Press A][0xa000]まかせてくださいでヤンス![Press A][0xa000][Red Text]ワルサーズ[Normal Color Text]さいきょうの[\n]この[Red Text]ワルサーグリーン[Normal Color Text]が、[\n]アイツらをメタクソにしてやるでヤンス![Press A]
+
+# reference at drama18.spt:0x61c (cmd 0202 direct, slot 0x628)
+0x29ce 何言ってるんだヌン[\n]一春よえーくせに、ほざくなヌン[\n]まっちゃヤロー・・・[Press A]
+
+# reference at drama18.spt:0x67c (cmd 0202 direct, slot 0x688)
+0x2a1a な、なんだと~![Press A][0xa000]なんならオイラのちから、[\n]この場で見てみるでヤンスか!?[\n]あ~ん!![Press A]
+
+# reference at drama18.spt:0x6dc (cmd 0202 direct, slot 0x6e8)
+0x2a76 [Red Text]ワルサー[Normal Color Text]様の前でケンカなんか[\n]するんじゃないピョン![\n]おバカども![Press A]
+
+# reference at drama18.spt:0x732 (cmd 0202 direct, slot 0x73e)
+0x2ac0 ウッセー![\n]オレが全員ぶっころしてやるジャン![\n]オレにたたかわせるジャン![Press A]
+
+# reference at drama18.spt:0x77a (cmd 0202 direct, slot 0x786)
+0x2b0e あ~、ハラへったダス・・・[\n]カレー食いてぇ~[Press A]
+
+# reference at drama18.spt:0x7d8 (cmd 0202 direct, slot 0x7e4)
+0x2b3e コラコラ![\n]ケンカするんじゃねぇ![Press A][0xa000]オマエらの相手は、[\n]ドカポン王國のマヌケどもだ![Press A]
+
+# reference at drama18.spt:0x81e (cmd 0303 direct, slot 0x822)
+0x2b98 いいか、よく聞きやがれ![Press A][0xa000]アイツらは、[Blue Text]ドカポンエッグ[Normal Color Text]とやらに[\n]入っている、[Blue Text]Dパーツ[Normal Color Text]ってのを集めるらしい[Press A][0xa000]その[Blue Text]Dパーツ[Normal Color Text]ってので、[Red Text]魔界化[Normal Color Text]をふせげるとか、[\n]何とか言ってやがる[Press A][0xa000]なんかあったらめんどうだから、[\n]おまえらも[Blue Text]ドカポンエッグ[Normal Color Text]を集めて[\n]ジャマしてやるんだ![Press A][0xa000]もちろんベコベコにするのも[\n]わすれるなよ![Press A][0xa000]わかってるな!?[\n]しっぽいしたらおしおきだぜ![Press A]
+
+# reference at drama18.spt:0x852 (cmd 0303 direct, slot 0x856)
+0x2d16 よし、グリーンよ![\n]行ってきやがれ!![Press A]
+
