@@ -7,7 +7,7 @@ wesl-ee@divinity ~/code/nasty-dx-dumper > md5sum 'DokaponDX [GDNJE8] [96804941][
 # though it should work on any version of the gamecube ROM...
 ```
 
-### 1. Extract the ISO
+### Extract the ISO
 
 `wit` (wiimms-iso-tools) extracts files from the base ISO.
 
@@ -15,7 +15,7 @@ wesl-ee@divinity ~/code/nasty-dx-dumper > md5sum 'DokaponDX [GDNJE8] [96804941][
 wit extract --overwrite '../DokaponDX [GDNJE8] [96804941][b].iso' ./dx-iso-base
 ```
 
-### 2. Dump (if dumping new files)
+### Dump (if dumping new files)
 
 Only the DOL and the event scripts carry text, so `./tl` holds just those.
 `dump-all` and `patch-all` mirror whatever tree shape you give them.
@@ -38,8 +38,7 @@ Each input gets a sidecar next to it: `tl/main.dol.patch`,
 `tl/Event/BANK.SPT.patch`, and so on. Re-running `dump-all` regenerates them
 from scratch and **wipes translation progress** — back the sidecars up first.
 
-
-### 4. Translate
+### Translate
 
 A sidecar is comment lines, blank-line-separated blocks, and `0xOFFSET text`
 entries. Translate by repeating the offset line with English underneath it:
@@ -52,7 +51,7 @@ entries. Translate by repeating the offset line with English underneath it:
 If using a spreadsheet see the section on
 [translating with a spreadsheet](#translating-in-a-spreadsheet).
 
-### 5. Patch
+### Patch
 
 ```sh
 ./target/debug/nasty_dx_dumper patch-all ./tl ./tl-output
@@ -61,7 +60,7 @@ If using a spreadsheet see the section on
 `patch-all` rewrites every reference to a string in both the DOL and SPT files.
 The patching routine was informed with binary analysis done in Ghidra.
 
-### 6. Rebuild the ISO
+### Rebuild the ISO
 
 `build_iso.py` reads the retail ISO, swaps in everything under `tl-output`, and
 writes a new image with the FST relaid around the files that grew.
