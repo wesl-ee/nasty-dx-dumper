@@ -1,3 +1,23 @@
+/// Codes 0x026A..0x02FF are the tail of page 2: absent from `Table.txt` and
+/// blank in `font00.tpl`. The space is claimed from there, which needs no ink
+/// -- a blank cell is what a space is -- and gets a latin width below.
+pub(crate) const LATIN_SPACE: u16 = 0x026a;
+
+/// What a claimed code's width byte reads in retail: the full 32px cell every
+/// unused code is given.
+pub(crate) const UNCLAIMED_WIDTH: u8 = 32;
+
+/// A latin word space, a shade under a third of the 32px cell. The font's own
+/// narrow glyphs sit here -- `i` is 8, `l` and `I` are 9, `!` and `,` are 10 --
+/// and the retail 0x0000 space stays a full-width Japanese one.
+pub(crate) const LATIN_SPACE_WIDTH: u8 = 10;
+
+/// Page-0..3 glyph width tables, one byte per code:
+/// `font->pages[code >> 8][code & 0xFF]`, read at 0x80017990 by `glyphAdvance`
+/// (0x80017950). Both font records at 0x801CA9C0 name this same set.
+pub(crate) const GLYPH_WIDTH_PAGES: [u32; 4] =
+    [0x801c_a5c0, 0x801c_a6c0, 0x801c_a7c0, 0x801c_a8c0];
+
 /// Glyphs a redirected name may hold. Nothing downstream of the redirect
 /// clips below 22 (docs/text-limits.md), so this is a chosen budget rather
 /// than a discovered limit.

@@ -701,6 +701,7 @@
 
 # reference at TITLE.SPT:0x18ca (cmd 0202 direct, slot 0x18d6)
 0x747a [0x0c00]やぁ! ぼくナビィ![0x0d00][Press A]
+0x747a [0x0c00]Hi! I'm Navi![0x0d00][Press A]
 
 # reference at TITLE.SPT:0x1922 (cmd 0303 direct, slot 0x1926)
 0x7496 はじめから
@@ -716,6 +717,7 @@
 
 # reference at TITLE.SPT:0x1b8a (cmd 0303 direct, slot 0x1b8e)
 0x74c4 [0x0c00]やぁ! ぼくナビィ![0x0d00]
+0x74c4 [0x0c00]Hi! I'm Navi![0x0d00]
 
 # reference at TITLE.SPT:0x18fa (cmd 0303 direct, slot 0x18fe)
 0x74de [0x0c00]どこからあそぶ?[0x0d00]

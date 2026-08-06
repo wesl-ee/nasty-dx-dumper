@@ -6,6 +6,8 @@ use std::{
     path::Path,
 };
 
+use crate::constants::LATIN_SPACE;
+
 #[derive(Default)]
 pub struct TLEntry {
     pub og_ptr: u32,
@@ -31,6 +33,7 @@ pub fn load_character_table() -> Result<HashMap<u16, String>> {
     let mut table: HashMap<u16, String> =
         character_table()?.into_iter().collect();
     table.insert(0xF800, "\n".to_string());
+    table.insert(LATIN_SPACE, " ".to_string());
     Ok(table)
 }
 
@@ -46,6 +49,10 @@ pub fn load_reverse_character_table() -> Result<HashMap<String, u16>> {
     }
 
     table.insert("\n".to_string(), 0xF800);
+    // The one place `Table.txt` is overruled rather than corrected: it maps a
+    // space to 0x0000, the full-width Japanese one the padder still writes, and
+    // that entry has to stay for `[0x0000]` to keep meaning what it means.
+    table.insert(" ".to_string(), LATIN_SPACE);
     Ok(table)
 }
 
@@ -53,8 +60,8 @@ pub fn load_reverse_character_table() -> Result<HashMap<String, u16>> {
 /// it cannot encode rather than dropping the character.
 ///
 /// A writer that quietly shortens text can corrupt reviewed copy and hide
-/// exactly the errors the fixed-width caps exist to catch. The font has no
-/// apostrophe, so this fires on real English copy.
+/// exactly the errors the fixed-width caps exist to catch. `"`, `#`, `$`, `:`,
+/// `;`, backtick and `|` have no glyph, so this fires on real English copy.
 pub struct Encoder {
     by_first: HashMap<char, Vec<(String, u16)>>,
 }

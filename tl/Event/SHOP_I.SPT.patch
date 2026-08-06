@@ -33,6 +33,7 @@
 
 # reference at SHOP_I.SPT:0x34c (cmd 0303 direct, slot 0x350)
 0x2a1a [0x0c00]それいじょうは[\n]持てないようですが[Press A][0x0d00]
+0x2a1a [0x0c00]You cant hold[\n]anymore[Press A][0x0d00]
 
 # reference at SHOP_I.SPT:0x3ec (cmd 0303 direct, slot 0x3f0)
 0x2a44 [0x0c00][Blue Text][%0][Normal Color Text]は[\n][Blue Text][0x1000][Normal Color Text]Gになりますが[\n]よろしいですか?[0x0d00]

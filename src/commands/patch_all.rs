@@ -7,7 +7,8 @@ use std::{
 };
 
 use crate::constants::{
-    NameCap, INLINE_FIELDS, TEXT_TABLES_EXPLICIT, WALKER_HOOKS,
+    NameCap, GLYPH_WIDTH_PAGES, INLINE_FIELDS, LATIN_SPACE, LATIN_SPACE_WIDTH,
+    TEXT_TABLES_EXPLICIT, UNCLAIMED_WIDTH, WALKER_HOOKS,
 };
 use crate::longname::LongNameBank;
 use crate::shape::{DolHeader, Section, DATA7, DATA8, TEXT2};
@@ -150,6 +151,44 @@ fn patch_runtime_arena_lo(
         updates.insert(hi_off, new_hi);
         updates.insert(lo_off, new_lo);
     }
+    Ok(())
+}
+
+/// Where a glyph's width byte lives, and the word it shares with its
+/// neighbours: the tables are bytes and every update is a word.
+fn glyph_width_at(header: &DolHeader, code: u16) -> Result<(u32, u32)> {
+    let ram =
+        GLYPH_WIDTH_PAGES[usize::from(code >> 8)] + u32::from(code & 0xff);
+    let off = header.file_offset(ram & !3).ok_or_else(|| {
+        anyhow!("the width of glyph 0x{code:04x} is outside the DOL")
+    })?;
+    Ok((off, 8 * (3 - (ram & 3))))
+}
+
+/// Give the claimed space a latin width.
+///
+/// `glyphAdvance` (0x80017950) reads the width byte at 0x80017990 and produces
+/// both the drawn width and the pen step `round(font[0xc] + width * scale)`.
+///
+/// We mostly use this for a narrow space
+fn patch_claimed_glyph_widths(
+    buf: &[u8],
+    header: &DolHeader,
+    updates: &mut HashMap<u32, u32>,
+) -> Result<()> {
+    let (off, shift) = glyph_width_at(header, LATIN_SPACE)?;
+    let old = word(buf, off);
+    let found = (old >> shift) as u8;
+    if found != UNCLAIMED_WIDTH {
+        return Err(anyhow!(
+            "glyph 0x{LATIN_SPACE:04x} is {found} px wide in this DOL, not the \
+             {UNCLAIMED_WIDTH} of an unused code; it is not free to claim"
+        ));
+    }
+    updates.insert(
+        off,
+        (old & !(0xff << shift)) | (u32::from(LATIN_SPACE_WIDTH) << shift),
+    );
     Ok(())
 }
 
@@ -324,19 +363,22 @@ pub fn patch_all(dir: PathBuf, out_dir: PathBuf) -> Result<()> {
     for f in utils::walk_dir(&dir) {
         let f = f?;
         let f_path = f.path();
-        // only .patch files carry translations; everything else is game data
-        if !f_path
-            .extension()
-            .unwrap_or_default()
-            .eq_ignore_ascii_case("PATCH")
-            || !f.metadata()?.is_file()
-        {
+        if !f.metadata()?.is_file() {
             continue;
         }
 
         // must stay relative: joining an absolute path onto out_dir discards
         // out_dir and writes straight back over the input tree
         let rel_path = f_path.strip_prefix(&dir).unwrap_or(&f_path);
+
+        // only .patch files carry translations; everything else is game data
+        if !f_path
+            .extension()
+            .unwrap_or_default()
+            .eq_ignore_ascii_case("PATCH")
+        {
+            continue;
+        }
 
         if f_path
             .file_name()
@@ -779,6 +821,7 @@ impl DolPatcher {
         }
 
         patch_spt_resolvers(&buf, &header, &mut word_updates)?;
+        patch_claimed_glyph_widths(&buf, &header, &mut word_updates)?;
 
         // text2 is empty on retail and holds the redirect caves. Code rather
         // than a corner of data8 because the DOL loader invalidates icache per
@@ -1107,6 +1150,7 @@ mod tests {
         let encoder = Encoder::new(&load_reverse_character_table().unwrap());
 
         assert_eq!(encoder.encode("II").unwrap(), vec![0x01f8]);
-        assert!(encoder.encode("Wallace's").is_err());
+        // `$`, `"`, `#`, `:`, `;`, backtick and `|` are still unencodable
+        assert!(encoder.encode("50% of $5").is_err());
     }
 }
