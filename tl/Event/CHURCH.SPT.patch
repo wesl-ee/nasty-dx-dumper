@@ -1,4 +1,4 @@
-# CHURCH.SPT: 10 strings, 14 references. Translate by repeating the 0xOFFSET line with English.
+# CHURCH.SPT: 11 strings, 16 references. Translate by repeating the 0xOFFSET line with English.
 # record cursor 0x3580, script ends 0x298c, 51840 bytes of arena shared by every replacement
 
 # reference at CHURCH.SPT:0x96 (cmd 0202 direct, slot 0xa2)
@@ -35,6 +35,10 @@
 # reference at CHURCH.SPT:0x1c0 (cmd 0203 direct, slot 0x1c8)
 0x28ce あげる[\n]あげない
 0x28ce Give[\n]Keep
+
+# reference at CHURCH.SPT:0x174 (cmd 0303 direct, slot 0x178)
+# reference at CHURCH.SPT:0x230 (cmd 0303 direct, slot 0x234)
+0x28e0 そうですか、ざんねんです・・・[Press A][0xa000]あなたに、さいだいきゅうの不幸が[\n]おとずれますように・・・[Press A]
 
 # reference at CHURCH.SPT:0x366 (cmd 0303 direct, slot 0x36a)
 0x2940 [0x09a1][Blue Text][%0][Normal Color Text]の[\n]名前がもとにもどった![Press A]

@@ -1,4 +1,4 @@
-# dparts.spt: 34 strings, 36 references. Translate by repeating the 0xOFFSET line with English.
+# dparts.spt: 39 strings, 42 references. Translate by repeating the 0xOFFSET line with English.
 # record cursor 0x5560, script ends 0x4dfe, 43680 bytes of arena shared by every replacement
 
 # reference at dparts.spt:0xfd8 (cmd 0202 direct, slot 0xfe4)
@@ -92,6 +92,22 @@
 
 # reference at dparts.spt:0x10d4 (cmd 0303 direct, slot 0x10d8)
 0x4840 [Blue Text][%0][Normal Color Text]は[\n][Green Text][0x1000][Normal Color Text]Gもらった![Press A]
+
+# reference at dparts.spt:0xe58 (cmd 0307-array obj-text[0xe58], slot 0xe58)
+# reference at dparts.spt:0xe5a (cmd 0307-array obj-text[0xe58], slot 0xe5a)
+0x4860 [0x0c00]そのDパーツは、[Blue Text]いやしのDパーツ[Normal Color Text]といって、[\n]たまに、HPをかいふくしてくれるらしいダバ![0x0d00][Press A][0xa000][0x0c00]次に行く島は、さばくだらけの島、[\n][Blue Text]ズナズナ島[Normal Color Text]ダバ![\n]次もがんばるダバ![0x0d00][Press A]
+
+# reference at dparts.spt:0xe5c (cmd 0307-array obj-text[0xe58], slot 0xe5c)
+0x4916 [0x0c00]そのDパーツは、[Blue Text]いどうのDパーツ[Normal Color Text]といって、[\n]たまに、ルーレットをふやしてくれる[\n]らしいダバ![0x0d00][Press A][0xa000][0x0c00]次に行く島は、ドカポン王國鍛大の[\n]ゆうえんちがある島、[Blue Text]ワクワク島[Normal Color Text]ダバ![\n]次もがんばるダバ![0x0d00][Press A]
+
+# reference at dparts.spt:0xe5e (cmd 0307-array obj-text[0xe58], slot 0xe5e)
+0x49e4 [0x0c00]そのDパーツは、[Blue Text]まもりのDパーツ[Normal Color Text]といって、[\n]フィールドまほうのダメージと命中りつを、[\n]半分にへらしてくれるらしいダバ![0x0d00][Press A][0xa000][0x0c00]次に行く島は、たくさんの島が[\n]集まってできた[Blue Text]ポチャポチャ島[Normal Color Text]ダバ![\n]次もがんばるダバ![0x0d00][Press A]
+
+# reference at dparts.spt:0xe60 (cmd 0307-array obj-text[0xe58], slot 0xe60)
+0x4ac6 [0x0c00]そのDパーツは、[Blue Text]いかりのDパーツ[Normal Color Text]といって、[\n]HPが少なくなると、パワーアップできる[\n]らしいダバ![0x0d00][Press A][0xa000][0x0c00]次に行く島は、火山がたくさんある島、[\n][Blue Text]ベーベー島[Normal Color Text]ダバ![\n]次もがんばるダバ![0x0d00][Press A]
+
+# reference at dparts.spt:0xe62 (cmd 0307-array obj-text[0xe58], slot 0xe62)
+0x4b88 [0x0c00]そのDパーツは、[Blue Text]じくうのDパーツ[Normal Color Text]といって、[\n]たまに、すきな場序にワープすることが[\n]できるらしいダバ![0x0d00][Press A][0xa000][0x0c00]これですべてのDパーツは集まったダバ![\n]だがDパーツの便い方がまだ分かってないダバ[0x0d00][Press A][0xa000][0x0c00]おまえたち、ちょっと外で待ってるダバ[\n]これからDパーツの便い方を調べるダバ[\n]なーに、すぐ調べおわるダバ![0x0d00][Press A]
 
 # reference at dparts.spt:0x3ce (cmd 0202 direct, slot 0x3da)
 0x4cc2 [0xd109][0x0c00]また次回お会いしましょう[\n]さようなら~[0x0d00][Press A]

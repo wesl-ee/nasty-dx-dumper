@@ -64,8 +64,15 @@ static TEXT_OPERAND: &[(u16, usize)] = &[
     (0x0701, 11),
     (0x0703, 3),
 ];
-/// opcode -> word index holding a directory id whose entry is itself the string
-static TEXT_DIR_ID: &[(u16, usize)] = &[(0x0307, 2)];
+/// 0x0307 (setObjectText) word 2: the base of an array of u16 string offsets,
+/// which something outside the command indexes -- a character id in the drama
+/// files, a game mode in TITLE, a memory-card result in SAVEGAME. `docs/
+/// spt-commands.md` reads it off `FUN_800D2CE8` as a directory id instead; the
+/// bytes say otherwise, because the only value in the corpus small enough to be
+/// an id is 0, which clears the field, and every other value lands on a run of
+/// offsets that decode.
+const OBJ_TEXT: u16 = 0x0307;
+const OBJ_TEXT_WORD: usize = 2;
 /// unconditional jumps: opcode -> operand word holding the u16 target
 static GOTO: &[(u16, usize)] =
     &[(0x0302, 2), (0x0801, 1), (0x0806, 1), (0x080b, 2)];
@@ -489,8 +496,8 @@ pub fn u16at(buf: &[u8], off: usize) -> Option<u16> {
 pub enum RefKind {
     /// the command operand is the offset
     Direct(u16),
-    /// the operand is a directory id, and that entry is the offset
-    Dir(u16, usize),
+    /// slot of the array a 0x0307 operand points at
+    ObjText(usize),
     /// slot of the string table dir entry `t` points at
     Table(usize),
     /// slot of an inner table reached through 0x0808's nested arrays
@@ -501,7 +508,8 @@ impl RefKind {
     /// the `cmd` column of a reference comment
     pub fn cmd(&self) -> String {
         match self {
-            RefKind::Direct(op) | RefKind::Dir(op, _) => format!("{op:04x}"),
+            RefKind::Direct(op) => format!("{op:04x}"),
+            RefKind::ObjText(_) => format!("{OBJ_TEXT:04x}-array"),
             RefKind::Table(_) => "table".to_string(),
             RefKind::Native(_) => "0808-table".to_string(),
         }
@@ -509,12 +517,13 @@ impl RefKind {
 
     /// dir 11 is the name table, whose entries the 0x12-byte copy caps
     fn is_name_table(&self) -> bool {
-        matches!(*self, RefKind::Dir(_, 11) | RefKind::Table(11))
+        matches!(*self, RefKind::Table(11))
     }
 
-    /// A directory string table, which is recovered by decoding its entries.
-    fn is_dir_table(&self) -> bool {
-        matches!(self, RefKind::Table(_))
+    /// A table whose extent is recovered by decoding its entries, so a blank
+    /// one ends the walk and hides everything after it.
+    fn is_walked_table(&self) -> bool {
+        matches!(self, RefKind::Table(_) | RefKind::ObjText(_))
     }
 }
 
@@ -522,7 +531,7 @@ impl std::fmt::Display for RefKind {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
         match self {
             RefKind::Direct(_) => write!(f, "direct"),
-            RefKind::Dir(_, t) => write!(f, "dir[{t}]"),
+            RefKind::ObjText(base) => write!(f, "obj-text[0x{base:x}]"),
             RefKind::Table(t) => write!(f, "table[{t}]"),
             RefKind::Native(outer) => write!(f, "native-table[0x{outer:x}]"),
         }
@@ -617,35 +626,19 @@ pub fn walk(
         }
         let w = |i: usize| u16at(buf, cur + i * 2).unwrap_or(0) as usize;
 
-        let direct = word(TEXT_OPERAND, op);
-        let dir_id = word(TEXT_DIR_ID, op);
-        if direct.is_some() || dir_id.is_some() {
-            let (off, kind) = if let Some(i) = direct {
-                // 0x0306 word 3 is polymorphic: FUN_800E19A8 runs it through a
-                // binary search over the value, and only the default arm passes
-                // it to FUN_800D2CCC as a file offset. 0..22 and 100..115 select
-                // a game-state source instead.
-                let raw = u16at(buf, cur + i * 2);
-                // 0x0306 makes its dispatch decision on the signed operand,
-                // then the default arm calls the now-unsigned resolver.
-                let signed = raw.map(|x| x as i16 as i32);
-                let v = match (op, raw, signed) {
-                    (0x0306, Some(_), Some(x)) if (0..116).contains(&x) => None,
-                    (_, Some(x), _) => Some(x as i32),
-                    _ => None,
-                };
-                (v, RefKind::Direct(op))
-            } else {
-                // the directory is only entries [4, u16@2); a slot at or past
-                // the command region resolves into command or string bytes
-                let t = w(dir_id.unwrap());
-                let dir_end = u16at(buf, 2).unwrap_or(0) as usize;
-                let v = if (4..dir_end).contains(&(t * 2)) {
-                    u16at(buf, t * 2).map(i32::from)
-                } else {
-                    None
-                };
-                (v, RefKind::Dir(op, t))
+        if let Some(i) = word(TEXT_OPERAND, op) {
+            // 0x0306 word 3 is polymorphic: FUN_800E19A8 runs it through a
+            // binary search over the value, and only the default arm passes
+            // it to FUN_800D2CCC as a file offset. 0..22 and 100..115 select
+            // a game-state source instead.
+            let raw = u16at(buf, cur + i * 2);
+            // 0x0306 makes its dispatch decision on the signed operand,
+            // then the default arm calls the now-unsigned resolver.
+            let signed = raw.map(|x| x as i16 as i32);
+            let off = match (op, raw, signed) {
+                (0x0306, Some(_), Some(x)) if (0..116).contains(&x) => None,
+                (_, Some(x), _) => Some(x as i32),
+                _ => None,
             };
             // a glyph array is halfword-aligned by construction, so an odd
             // offset is a misread rather than text
@@ -659,7 +652,7 @@ pub fn walk(
                             at: cur,
                             offset: off,
                             end: off + codes.len() * 2 + 2,
-                            kind,
+                            kind: RefKind::Direct(op),
                             slot: None,
                             jp: render(&codes, glyphs),
                         });
@@ -794,6 +787,73 @@ fn tables(
                 offset: off,
                 end,
                 kind: RefKind::Table(t),
+                slot: Some(slot),
+                jp: render(&codes, glyphs),
+            });
+        }
+    }
+    out
+}
+
+/// The strings an `OBJ_TEXT` command's array names.
+///
+/// The array has no declared length and no terminator, so it runs until a slot
+/// stops looking like one: past the addressable window, into bytes the walk
+/// already claimed as a command, or onto something that does not decode. The
+/// arrays that end early in the file pad with zeros, which the same test
+/// rejects. Every slot is writable, so a translation repoints entries here
+/// exactly the way it does for a directory table.
+fn obj_text_arrays(
+    buf: &[u8],
+    bases: &[usize],
+    lo: usize,
+    cmds: &[bool],
+    known: &[StringRef],
+    glyphs: &HashMap<u16, String>,
+) -> Vec<StringRef> {
+    let hi = cmds.len();
+    let mut out: Vec<StringRef> = Vec::new();
+    let mut seen = HashSet::new();
+    for &base in bases {
+        if !seen.insert(base)
+            || base % 2 != 0
+            || !(lo..hi).contains(&base)
+            || cmds[base]
+        {
+            continue;
+        }
+        for i in 0..MAX_TABLE {
+            let slot = base + i * 2;
+            if slot + 2 > hi || cmds[slot] {
+                break;
+            }
+            let off = match u16at(buf, slot) {
+                Some(o) => o as usize,
+                _ => break,
+            };
+            if off % 2 != 0 || !(lo..hi).contains(&off) || cmds[off] {
+                break;
+            }
+            let codes = match read_codes(buf, off, MAX_STR) {
+                Some(c) => c,
+                None => break,
+            };
+            let end = off + codes.len() * 2 + 2;
+            if codes.is_empty() || count_glyphs(&codes) == 0 || end > hi {
+                break;
+            }
+            let overlaps = known.iter().chain(out.iter()).any(|s| {
+                (off < s.offset && s.offset < end)
+                    || (s.offset < off && off < s.end)
+            });
+            if overlaps {
+                break;
+            }
+            out.push(StringRef {
+                at: slot,
+                offset: off,
+                end,
+                kind: RefKind::ObjText(base),
                 slot: Some(slot),
                 jp: render(&codes, glyphs),
             });
@@ -943,21 +1003,32 @@ pub fn plan(buf: &[u8], glyphs: &HashMap<u16, String>) -> Plan {
             RefKind::Direct(op) => {
                 Some(s.at + word(TEXT_OPERAND, op).unwrap_or(0) * 2)
             }
-            // 0x0307 names a directory id, so the word to rewrite is at id*2.
-            // Only slots inside the declared directory -- [4, u16@2) -- are
-            // provably a directory; above it the same address is command stream.
-            RefKind::Dir(op, _) => {
-                let slot =
-                    u16at(buf, s.at + word(TEXT_DIR_ID, op).unwrap_or(0) * 2)
-                        .unwrap_or(0) as usize
-                        * 2;
-                (4..dir_words * 2).contains(&slot).then_some(slot)
-            }
             // tables carry their own slot from the moment they are found
-            RefKind::Table(_) | RefKind::Native(_) => s.slot,
+            RefKind::ObjText(_) | RefKind::Table(_) | RefKind::Native(_) => {
+                s.slot
+            }
         };
     }
     for s in tables(buf, dir_words, &cmds, &strings, glyphs) {
+        let (a, b) = (s.offset.min(limit), s.end.min(limit));
+        claimed[a..b].fill(true);
+        strings.push(s);
+    }
+    let obj_text_bases: Vec<usize> = stats
+        .cmds
+        .keys()
+        .copied()
+        .filter(|&at| u16at(buf, at) == Some(OBJ_TEXT))
+        .filter_map(|at| u16at(buf, at + OBJ_TEXT_WORD * 2).map(usize::from))
+        .collect();
+    for s in obj_text_arrays(
+        buf,
+        &obj_text_bases,
+        dir_words * 2,
+        &cmds,
+        &strings,
+        glyphs,
+    ) {
         let (a, b) = (s.offset.min(limit), s.end.min(limit));
         claimed[a..b].fill(true);
         strings.push(s);
@@ -1032,6 +1103,31 @@ impl Refusal {
     }
 }
 
+/// Refuse a translation that changes which positional vararg each formatting
+/// code consumes. Non-consuming controls such as colour, newline and 0x3800
+/// may move freely; only the family sequence matters because the low 11 bits
+/// select field width/alignment rather than a different argument type.
+pub(crate) fn check_variadic_args(
+    orig: &[u16],
+    codes: &[u16],
+) -> Result<(), String> {
+    let variadic = |cs: &[u16]| {
+        cs.iter()
+            .map(|c| c & FAMILY)
+            .filter(|f| VARIADIC.contains(f))
+            .collect::<Vec<_>>()
+    };
+    let (was, now) = (variadic(orig), variadic(codes));
+    if was != now {
+        return Err(format!(
+            "variadic argument sequence changed: {was:04x?} -> {now:04x?}. showTextAsBox \
+             consumes these positionally, so count and order must both survive \
+             translation"
+        ));
+    }
+    Ok(())
+}
+
 /// Text limits enforced on replacements
 fn check(
     codes: &[u16],
@@ -1069,20 +1165,7 @@ fn check(
             ));
         }
     }
-    let variadic = |cs: &[u16]| {
-        cs.iter()
-            .map(|c| c & FAMILY)
-            .filter(|f| VARIADIC.contains(f))
-            .collect::<Vec<_>>()
-    };
-    let (was, now) = (variadic(orig), variadic(codes));
-    if was != now {
-        return Err(format!(
-            "variadic argument sequence changed: {was:04x?} -> {now:04x?}. showTextAsBox \
-             consumes these positionally, so count and order must both survive \
-             translation"
-        ));
-    }
+    check_variadic_args(orig, codes)?;
     if let Some(cap) = cap {
         let n = count_glyphs(codes);
         if n > cap {
@@ -1484,7 +1567,7 @@ pub fn pack(
         let orig = read_codes(buf, key.0, usize::MAX).unwrap_or_default();
         let codes = repl[&(users[0].at, key.0)].clone();
         let why = check(&codes, &orig, p.cap(users, orig.len())).err().or_else(|| {
-            (codes.is_empty() && users.iter().any(|u| u.kind.is_dir_table()))
+            (codes.is_empty() && users.iter().any(|u| u.kind.is_walked_table()))
                 .then(|| {
                     "a table entry cannot be blanked. Tables are recovered by \
                      decoding their entries, so an empty one ends the walk and hides \
@@ -1602,6 +1685,25 @@ mod tests {
     }
 
     #[test]
+    fn variadic_argument_families_keep_their_count_and_order() {
+        // The status-damage crash: the call supplies player text, ailment
+        // text, then damage. Moving the integer before the second string made
+        // the damage value (0x84 in the observed crash) become a text pointer.
+        let original = [0x4006, 0x2000, 0x4003, 0x2000, 0x3800, 0x1000];
+        let reordered = [0x4006, 0x2000, 0x3800, 0x1000, 0x4003, 0x2000];
+        let error = check_variadic_args(&original, &reordered).unwrap_err();
+        assert!(error.contains("[2000, 2000, 1000] -> [2000, 1000, 2000]"));
+
+        // Moving non-consuming controls is fine, and changing a field width
+        // keeps the same argument type because only the family is compared.
+        let safe = [0x2007, 0x3800, 0x4006, 0x2001, 0x1003];
+        assert!(check_variadic_args(&original, &safe).is_ok());
+
+        assert!(check_variadic_args(&[0x2000], &[0x2000, 0x1000]).is_err());
+        assert!(check_variadic_args(&[0x2000, 0x1000], &[0x2000]).is_err());
+    }
+
+    #[test]
     fn nested_native_string_tables_are_discovered_with_leaf_slots() {
         let mut buf = vec![0u8; 0x200];
         let put = |buf: &mut [u8], at: usize, value: u16| {
@@ -1681,5 +1783,41 @@ mod tests {
         put(&mut buf, 0x24, 0x12);
         put(&mut buf, 0x12, 0xdead);
         assert_eq!(jump_array(&buf, 0x20, buf.len()), [0x30, 0x32]);
+    }
+
+    /// An `OBJ_TEXT` array runs to the zero padding, and every entry is a
+    /// writable slot -- the shape `drama09.spt:0x63c` has.
+    #[test]
+    fn an_obj_text_array_ends_where_its_entries_stop_decoding() {
+        let mut buf = vec![0u8; 0x100];
+        let put = |buf: &mut [u8], at: usize, value: u16| {
+            buf[at..at + 2].copy_from_slice(&value.to_be_bytes());
+        };
+        put(&mut buf, 0x40, 0x60);
+        put(&mut buf, 0x42, 0x66);
+        // 0x44 stays zero: the pad the arrays that end early are written with
+        put(&mut buf, 0x60, 1);
+        put(&mut buf, 0x62, 2);
+        put(&mut buf, 0x64, TERMINATOR);
+        put(&mut buf, 0x66, 2);
+        put(&mut buf, 0x68, TERMINATOR);
+
+        let glyphs =
+            HashMap::from([(1, "A".to_string()), (2, "B".to_string())]);
+        let mut cmds = vec![false; buf.len()];
+        cmds[..0x10].fill(true);
+        let found =
+            obj_text_arrays(&buf, &[0x40, 0x40], 4, &cmds, &[], &glyphs);
+        assert_eq!(
+            found
+                .iter()
+                .map(|s| (s.slot, s.offset, s.jp.as_str()))
+                .collect::<Vec<_>>(),
+            [(Some(0x40), 0x60, "AB"), (Some(0x42), 0x66, "B")]
+        );
+        // a base the walk already claimed as a command is not an array
+        assert!(
+            obj_text_arrays(&buf, &[0x08], 4, &cmds, &[], &glyphs).is_empty()
+        );
     }
 }

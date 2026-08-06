@@ -22,6 +22,45 @@ fn word(buf: &[u8], off: u32) -> u32 {
     u32::from_be_bytes(buf[off as usize..off as usize + 4].try_into().unwrap())
 }
 
+/// Read the retail codes a DOL translation replaces. Most strings end at
+/// 0xF800; inline name records have no terminator, so their reviewed record
+/// width is the only valid stopping point.
+fn original_dol_codes(
+    buf: &[u8],
+    offset: u32,
+    inline_words: Option<usize>,
+) -> Result<Vec<u16>> {
+    const MAX_TERMINATED_WORDS: usize = 4096;
+    let mut at = offset as usize;
+    let mut out = Vec::new();
+
+    if let Some(words) = inline_words {
+        for _ in 0..words {
+            let code = spt::u16at(buf, at).ok_or_else(|| {
+                anyhow!("inline DOL string at 0x{offset:x} leaves the file")
+            })?;
+            out.push(code);
+            at += 2;
+        }
+        return Ok(out);
+    }
+
+    for _ in 0..MAX_TERMINATED_WORDS {
+        let code = spt::u16at(buf, at).ok_or_else(|| {
+            anyhow!("DOL string at 0x{offset:x} leaves the file before 0xF800")
+        })?;
+        if code == spt::TERMINATOR {
+            return Ok(out);
+        }
+        out.push(code);
+        at += 2;
+    }
+    Err(anyhow!(
+        "DOL string at 0x{offset:x} has no 0xF800 within \
+         {MAX_TERMINATED_WORDS} words"
+    ))
+}
+
 // Retail memory immediately above BSS is not free: the linker reserves a
 // 64 KiB main stack and an 8 KiB debugger stack there.  The runtime arena (and
 // therefore the first genuinely available address) starts after both.
@@ -684,6 +723,9 @@ impl DolPatcher {
                 Some(s) => s,
                 None => continue,
             };
+            let inline = header.ram_addr(entry.og_ptr).and_then(|ram| {
+                INLINE_FIELDS.iter().find(|f| f.record(ram).is_some())
+            });
             let codes = match self.encoder.encode(en) {
                 Ok(codes) => codes,
                 Err(why) => {
@@ -692,6 +734,15 @@ impl DolPatcher {
                     continue;
                 }
             };
+            let original = original_dol_codes(
+                &buf,
+                entry.og_ptr,
+                inline.map(|field| field.glyphs as usize),
+            )?;
+            if let Err(why) = spt::check_variadic_args(&original, &codes) {
+                refusals.push(format!("0x{:x}: {why}: {en:?}", entry.og_ptr));
+                continue;
+            }
             let mut en_bytes = Vec::with_capacity((codes.len() + 1) * 2);
             for &code in &codes {
                 en_bytes.extend(code.to_be_bytes());
@@ -706,9 +757,6 @@ impl DolPatcher {
             // the glyphs go to the bank; the rest stay Japanese, because
             // overwriting one in place means fitting the record's own width and
             // nothing has playtested that.
-            let inline = header.ram_addr(entry.og_ptr).and_then(|ram| {
-                INLINE_FIELDS.iter().find(|f| f.record(ram).is_some())
-            });
             if let Some(field) = inline {
                 if !field.stub {
                     continue;

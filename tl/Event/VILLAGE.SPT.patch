@@ -1,9 +1,11 @@
-# VILLAGE.SPT: 11 strings, 11 references. Translate by repeating the 0xOFFSET line with English.
+# VILLAGE.SPT: 19 strings, 25 references. Translate by repeating the 0xOFFSET line with English.
 # record cursor 0x3da0, script ends 0x2f64, 49760 bytes of arena shared by every replacement
 
+# reference at VILLAGE.SPT:0x336 (cmd 0202 direct, slot 0x342)
 # reference at VILLAGE.SPT:0x202 (cmd 0202 direct, slot 0x20e)
 0xc00  
 
+# reference at VILLAGE.SPT:0x292 (cmd 0303 direct, slot 0x296)
 # reference at VILLAGE.SPT:0x15e (cmd 0303 direct, slot 0x162)
 0xc7e [Blue Text][%0][Normal Color Text]は[\n][Green Text][%0][Normal Color Text]を手に入れた![Press A]
 
@@ -30,6 +32,34 @@
 
 # reference at VILLAGE.SPT:0x3aa (cmd 0303 direct, slot 0x3ae)
 0x2b46 [Green Text][0x1000][Normal Color Text]Gを受け取った[Press A]
+
+# reference at VILLAGE.SPT:0x242 (cmd 0303 direct, slot 0x246)
+0x2c34 [0x0c00]これは[Blue Text]海のうえ[Normal Color Text]をいどうできるようになる[\n][Blue Text]まほうのふね[Normal Color Text]ですじゃ[\n]どうぞ持っていってくだされ[0x0d00][Press A]
+
+# reference at VILLAGE.SPT:0x25c (cmd 0303 direct, slot 0x260)
+0x2c9c [0x0c00]これは[Blue Text]海のそこ[Normal Color Text]を歩けるようになる[\n][Blue Text]まほうのベンボ[Normal Color Text]ですじゃ[\n]どうぞ持っていってくだされ[0x0d00][Press A]
+
+# reference at VILLAGE.SPT:0x276 (cmd 0303 direct, slot 0x27a)
+0x2d00 [0x0c00]これは[Blue Text]空[Normal Color Text]をとべるようになる[\n][Blue Text]てんしのはね[Normal Color Text]ですじゃ[\n]どうぞ持っていってくだされ[0x0d00][Press A]
+
+# reference at VILLAGE.SPT:0x434 (cmd 0307-array obj-text[0x434], slot 0x434)
+# reference at VILLAGE.SPT:0x436 (cmd 0307-array obj-text[0x434], slot 0x436)
+# reference at VILLAGE.SPT:0x440 (cmd 0307-array obj-text[0x434], slot 0x440)
+# reference at VILLAGE.SPT:0x442 (cmd 0307-array obj-text[0x434], slot 0x442)
+# reference at VILLAGE.SPT:0x444 (cmd 0307-array obj-text[0x434], slot 0x444)
+0x2d5c [0x0c00]ごくろうさまですじゃ[\n]とてもうまそうなおすしですなー[\n]ワシはトロが大好物なんですじゃ[0x0d00][Press A]
+
+# reference at VILLAGE.SPT:0x438 (cmd 0307-array obj-text[0x434], slot 0x438)
+0x2db8 [0x0c00]ごくろうさまですじゃ[\n]とてもうまそうなおすしですなー[\n]ワシはウニが大好物なんですじゃ[0x0d00][Press A]
+
+# reference at VILLAGE.SPT:0x43a (cmd 0307-array obj-text[0x434], slot 0x43a)
+0x2e14 [0x0c00]ごくろうさまですじゃ[\n]とてもうまそうなおすしですなー[\n]ワシはエビが大好物なんですじゃ[0x0d00][Press A]
+
+# reference at VILLAGE.SPT:0x43c (cmd 0307-array obj-text[0x434], slot 0x43c)
+0x2e70 [0x0c00]ごくろうさまですじゃ[\n]とてもうまそうなおすしですなー[\n]ワシはタコが大好物なんですじゃ[0x0d00][Press A]
+
+# reference at VILLAGE.SPT:0x43e (cmd 0307-array obj-text[0x434], slot 0x43e)
+0x2ecc [0x0c00]ごくろうさまですじゃ[\n]とてもうまそうなおすしですなー[\n]ワシはガリが大好物なんですじゃ[0x0d00][Press A]
 
 # reference at VILLAGE.SPT:0x37c (cmd 0303 direct, slot 0x380)
 0x2f28 [0x0c00]これがおすしの代金ですじゃ[\n]どうぞうけとってくだされ[0x0d00][Press A]

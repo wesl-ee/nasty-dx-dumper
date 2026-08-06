@@ -11,7 +11,7 @@
 0x109a [0x0c00]次回のバトルで勝つことができれば、[\n]わが社の[Blue Text]コマーシャル[Normal Color Text]に、[\n]しゅつえんしていただきます[0x0d00][Press A]
 
 # reference at CmB.spt:0x116 (cmd 0303 direct, slot 0x11a)
-0x10fe [0x0c00]TV春組で[Blue Text]コマーシャル[Normal Color Text]が流れると、[\n][Blue Text]コマーシャル[Normal Color Text]のしゅつえん代金[\n]をおしはらいします[0x0d00][Press A]
+0x10fe [0x0c00]TV番組で[Blue Text]コマーシャル[Normal Color Text]が流れると、[\n][Blue Text]コマーシャル[Normal Color Text]のしゅつえん代金[\n]をおしはらいします[0x0d00][Press A]
 
 # reference at CmB.spt:0x120 (cmd 0303 direct, slot 0x124)
 0x1162 [0x0c00]それでは、次回のバトルでは[\n]かならず勝ってくださいね[0x0d00][Press A]

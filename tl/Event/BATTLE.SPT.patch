@@ -1,4 +1,4 @@
-# BATTLE.SPT: 10 strings, 10 references. Translate by repeating the 0xOFFSET line with English.
+# BATTLE.SPT: 17 strings, 17 references. Translate by repeating the 0xOFFSET line with English.
 # record cursor 0x4020, script ends 0x267c, 49120 bytes of arena shared by every replacement
 
 # reference at BATTLE.SPT:0x10a (cmd 0303 direct, slot 0x10e)
@@ -8,13 +8,34 @@
 0x221e [0xd0f9][0x0c00]本日も、王國中から集まったせんしたちが[\n]さいきょうの名をかけて、すばらしいたたかいを[\n]見せてくれるでしょう[0x0d00][Press A][0xa000][0x0c00]それではさっそく、本日さんかの[\n]ファイターたちに登場してもらいましょう[0x0d00][Press A]
 
 # reference at BATTLE.SPT:0x1ac (cmd 0303 direct, slot 0x1b0)
-0x22e0 [0x0c00][Blue Text]天下一品鍛強武闘会[Normal Color Text]で、[\n]たおされたり、お金をとられても、[\n]春組の中だけのことですので[0x0d00][Press A][0xa000][0x0c00]じっさいには何もなくなったりしません。[\n]安心してたたかってください![0x0d00][Press A][0xa000][0x0c00]それでは、たたかうじゅんばんを[\n]決めていただきましょう[0x0d00][Press A]
+0x22e0 [0x0c00][Blue Text]天下一品鍛強武闘会[Normal Color Text]で、[\n]たおされたり、お金をとられても、[\n]番組の中だけのことですので[0x0d00][Press A][0xa000][0x0c00]じっさいには何もなくなったりしません。[\n]安心してたたかってください![0x0d00][Press A][0xa000][0x0c00]それでは、たたかうじゅんばんを[\n]決めていただきましょう[0x0d00][Press A]
 
 # reference at BATTLE.SPT:0x336 (cmd 0303 direct, slot 0x33a)
 0x23ca [0xd0fa][0x0c00]さー、せんしたちの用意ができたようです![0x0d00][Press A]
 
 # reference at BATTLE.SPT:0x38a (cmd 0303 direct, slot 0x38e)
 0x23fc [0xd0fb][0x0c00]それでは、さいきょうめざしてー、ファイト![0x0d00]
+
+# reference at BATTLE.SPT:0x6fe (cmd 0307-array obj-text[0x6fe], slot 0x6fe)
+0x242e [0x0c00]元気だけならだれにも負けない![\n]ちっちゃなせんし![0x0d00][Press A]
+
+# reference at BATTLE.SPT:0x700 (cmd 0307-array obj-text[0x6fe], slot 0x700)
+0x2468 [0x0c00]ゆめはおよめさんになること![\n]おてんば女の子![0x0d00][Press A]
+
+# reference at BATTLE.SPT:0x702 (cmd 0307-array obj-text[0x6fe], slot 0x702)
+0x249e [0x0c00]鈇じゃないけどかなりかたい![\n]ブリキのロベット![0x0d00][Press A]
+
+# reference at BATTLE.SPT:0x704 (cmd 0307-array obj-text[0x6fe], slot 0x704)
+0x24d6 [0x0c00]ミスターシノビとよばれたい![\n]いじわるにんじゃ![0x0d00][Press A]
+
+# reference at BATTLE.SPT:0x706 (cmd 0307-array obj-text[0x6fe], slot 0x706)
+0x250e [0x0c00]今日もセクシーまほうでいちころよ![\n]わがままおじょうさま![0x0d00][Press A]
+
+# reference at BATTLE.SPT:0x708 (cmd 0307-array obj-text[0x6fe], slot 0x708)
+0x2550 [0x0c00]オマエはいったい何なんだ!?[\n]ナゾのかわいい生物![0x0d00][Press A]
+
+# reference at BATTLE.SPT:0x70a (cmd 0307-array obj-text[0x6fe], slot 0x70a)
+0x258a [0x0c00]たたかいはオレの人生![\n]すごうでのころし屋![0x0d00][Press A]
 
 # reference at BATTLE.SPT:0x5e6 (cmd 0303 direct, slot 0x5ea)
 0x25be [Blue Text][%0]ーーーーーーーーッ!![Normal Color Text][Press A]

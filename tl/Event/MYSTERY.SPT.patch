@@ -1,5 +1,5 @@
-# MYSTERY.SPT: 10 strings, 11 references. Translate by repeating the 0xOFFSET line with English.
-# record cursor 0x3de0, script ends 0x16ac, 49696 bytes of arena shared by every replacement
+# MYSTERY.SPT: 13 strings, 14 references. Translate by repeating the 0xOFFSET line with English.
+# record cursor 0x3de0, script ends 0x16ce, 49696 bytes of arena shared by every replacement
 
 # reference at MYSTERY.SPT:0x17a (cmd 0303 direct, slot 0x17e)
 # reference at MYSTERY.SPT:0x2a0 (cmd 0202 direct, slot 0x2ac)
@@ -29,6 +29,15 @@
 # reference at MYSTERY.SPT:0x2ba (cmd 0303 direct, slot 0x2be)
 0x15ce [0x0c00][0xd0c7]それでは・・・[0x0d00][Press A]
 
+# reference at MYSTERY.SPT:0x2fa (cmd 0303 direct, slot 0x2fe)
+0x15e6 [0x0c00]そうですか、それはざんねんです[0x0d00][Press A]
+
+# reference at MYSTERY.SPT:0x37a (cmd 0303 direct, slot 0x37e)
+0x160c [0xd0c8][0x0c00]おろか者![\n]ろうじんをいたわれんヤツはこうしてくれる![0x0d00][Press A]
+
 # reference at MYSTERY.SPT:0x1da (cmd 0303 direct, slot 0x1de)
 0x164c [0x0c00]かわいそうに、お金にこまっているようですな[\n]たいした物ではないが、これを持っていきなさい[0x0d00][Press A]
+
+# reference at MYSTERY.SPT:0x3ae (cmd 0303 direct, slot 0x3b2)
+0x16ac [0x0c00]ろうじんは[Blue Text][%0][Normal Color Text]を便った![0x0d00][Press A]
 

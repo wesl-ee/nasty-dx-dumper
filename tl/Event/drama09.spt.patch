@@ -1,8 +1,29 @@
-# drama09.spt: 5 strings, 5 references. Translate by repeating the 0xOFFSET line with English.
+# drama09.spt: 12 strings, 12 references. Translate by repeating the 0xOFFSET line with English.
 # record cursor 0x3520, script ends 0x14a4, 51936 bytes of arena shared by every replacement
 
 # reference at drama09.spt:0x414 (cmd 0202 direct, slot 0x420)
 0x11b2 [Blue Text]Dパーツがキラキラ光りだした![Normal Color Text][Press A]
+
+# reference at drama09.spt:0x63c (cmd 0307-array obj-text[0x63c], slot 0x63c)
+0x11d8 [0xd1be]どうしよう~[Press A][0xa000][0xd1bf]王様になれなくなっちゃうよ~[Press A]
+
+# reference at drama09.spt:0x63e (cmd 0307-array obj-text[0x63c], slot 0x63e)
+0x120c [0xd1df]もう~どうにかならないの~[Press A]
+
+# reference at drama09.spt:0x640 (cmd 0307-array obj-text[0x63c], slot 0x640)
+0x122c [0xd220]どうしようブリー![\n]どうしようブリー![Press A]
+
+# reference at drama09.spt:0x642 (cmd 0307-array obj-text[0x63c], slot 0x642)
+0x1258 [0xd23f]せっしゃの人生せっけいがくるうでござるー![Press A]
+
+# reference at drama09.spt:0x644 (cmd 0307-array obj-text[0x63c], slot 0x644)
+0x1288 [0xd1fe]世界は私のものになるはずなのに~[Press A]
+
+# reference at drama09.spt:0x646 (cmd 0307-array obj-text[0x63c], slot 0x646)
+0x12ae [0xd24b]ニャントキャ~[\n](だれかなんとかしてニャ~)[Press A]
+
+# reference at drama09.spt:0x648 (cmd 0307-array obj-text[0x63c], slot 0x648)
+0x12e0 [0xd276]こ、このままだとまずいな[Press A]
 
 # reference at drama09.spt:0x188 (cmd 0202 direct, slot 0x194)
 0x12fe [0x09a1][Blue Text]Dパーツ[Normal Color Text]が[Red Text]魔界[Normal Color Text]のエネルギーを[\n]ドカポン城の中にふうじこめた![Normal Color Text][Press A]

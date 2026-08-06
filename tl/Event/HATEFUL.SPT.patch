@@ -1,8 +1,11 @@
-# HATEFUL.SPT: 18 strings, 18 references. Translate by repeating the 0xOFFSET line with English.
+# HATEFUL.SPT: 21 strings, 22 references. Translate by repeating the 0xOFFSET line with English.
 # record cursor 0x4020, script ends 0x2bac, 49120 bytes of arena shared by every replacement
 
 # reference at HATEFUL.SPT:0x160 (cmd 0303 direct, slot 0x164)
 0xe80  
+
+# reference at HATEFUL.SPT:0x5a2 (cmd 0303 direct, slot 0x5a6)
+0xefe [Blue Text][%0][Normal Color Text]は[\n][Green Text][%0][Normal Color Text]を手に入れた![Press A]
 
 # reference at HATEFUL.SPT:0xa6 (cmd 0201 direct, slot 0xb2)
 0x2882  ヒネオ 
@@ -25,7 +28,11 @@
 # reference at HATEFUL.SPT:0x39e (cmd 0303 direct, slot 0x3a2)
 0x29f0 [0xd0d8]おぼえてろー![\n]ママに言いつけてやるからな![Press A]
 
+# reference at HATEFUL.SPT:0x580 (cmd 0303 direct, slot 0x584)
+0x2a22 [0xd0d9][0x0c00]な~んだ、やっぽり弱いんじゃねぇか[\n]かわいそうだから、これやるよ[0x0d00][Press A]
+
 # reference at HATEFUL.SPT:0x3ac (cmd 0202 direct, slot 0x3b8)
+# reference at HATEFUL.SPT:0x6c4 (cmd 0307-array obj-text[0x6c4], slot 0x6c4)
 0x2a84 プププ、[\n]バ~カ、ヘッタクソ~[Press A]
 
 # reference at HATEFUL.SPT:0x108 (cmd 0203 direct, slot 0x110)
@@ -51,6 +58,9 @@
 
 # reference at HATEFUL.SPT:0x17e (cmd 0303 direct, slot 0x182)
 0x2b16 [Blue Text]いどうするゆびカーソルの[\n]下にあるベタンを、タイミングよくおすんだ![Normal Color Text][Press A]
+
+# reference at HATEFUL.SPT:0x6c6 (cmd 0307-array obj-text[0x6c4], slot 0x6c6)
+0x2b62 いって~![\n]なにするんだ、このヤロー![Press A]
 
 # reference at HATEFUL.SPT:0x42a (cmd 0303 direct, slot 0x42e)
 0x2b8c ヒネオに[Red Text][%0][Normal Color Text]をぬすまれた![Press A]

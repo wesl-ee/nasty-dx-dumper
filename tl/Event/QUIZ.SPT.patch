@@ -40,7 +40,7 @@
 0x2bc8 [0x0c00]あれっ?! カミ、切った?[0x0978][0x0d00][Press A]
 
 # reference at QUIZ.SPT:0x12a (cmd 0303 direct, slot 0x12e)
-0x2bec [0x0c00]ところで、[\n][Red Text][%0][Normal Color Text]さんは、この春組の[\n]ルールをごぞんじですか?[0x0d00]
+0x2bec [0x0c00]ところで、[\n][Red Text][%0][Normal Color Text]さんは、この番組の[\n]ルールをごぞんじですか?[0x0d00]
 
 # reference at QUIZ.SPT:0x274 (cmd 0303 direct, slot 0x278)
 0x2c30 [0x0c00]それでは[Red Text][%0][Normal Color Text]さん![\n]じまんのおたからの中から[\n]1つをえらんでください![0x0d00][Press A][0xa000][0x0c00]えらんだおたからを、[\n][Blue Text][%0][Normal Color Text]さんに当てられると、[\n]そのおたからをとられますからね![0x0d00]
@@ -58,10 +58,10 @@
 0x2fbc [0x0c00]ざんねん![\n][Red Text][%0][Normal Color Text]さんがえらんだのは[\n][Blue Text][%0][Normal Color Text]![0x0d00][Press A]
 
 # reference at QUIZ.SPT:0x874 (cmd 0303 direct, slot 0x878)
-0x2ff2 [0x0c00][Blue Text][%0][Normal Color Text]さんがえらんだのは[\n][Blue Text][%0][Normal Color Text]でした![0x0d00][Press A][0xa000][0x0c00]運よくおたからをうばわれなかった[\n][Red Text][%0][Normal Color Text]さんには[\n]春組から[Green Text][0x1000][Normal Color Text]Gがおくられます![Press A]
+0x2ff2 [0x0c00][Blue Text][%0][Normal Color Text]さんがえらんだのは[\n][Blue Text][%0][Normal Color Text]でした![0x0d00][Press A][0xa000][0x0c00]運よくおたからをうばわれなかった[\n][Red Text][%0][Normal Color Text]さんには[\n]番組から[Green Text][0x1000][Normal Color Text]Gがおくられます![Press A]
 
 # reference at QUIZ.SPT:0x6ba (cmd 0303 direct, slot 0x6be)
-0x307a [0x0c00][Blue Text][%0][Normal Color Text]さんおめでとう![\n][Green Text][%0][Normal Color Text]はあなたの物です![0x0d00][Press A][0xa000][0x0c00]さらに春組から[\n][Green Text][0x1000][Normal Color Text]Gがおくられます![0x0d00][Press A]
+0x307a [0x0c00][Blue Text][%0][Normal Color Text]さんおめでとう![\n][Green Text][%0][Normal Color Text]はあなたの物です![0x0d00][Press A][0xa000][0x0c00]さらに番組から[\n][Green Text][0x1000][Normal Color Text]Gがおくられます![0x0d00][Press A]
 
 # reference at QUIZ.SPT:0x4ae (cmd 0303 direct, slot 0x4b2)
 0x30e2 [0xd109][0x0c00]また次回お会いしましょう[\n][0x0926]さようなら~[0x0d00]

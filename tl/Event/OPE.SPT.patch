@@ -1,4 +1,4 @@
-# OPE.SPT: 12 strings, 12 references. Translate by repeating the 0xOFFSET line with English.
+# OPE.SPT: 13 strings, 13 references. Translate by repeating the 0xOFFSET line with English.
 # record cursor 0x3e20, script ends 0x1176, 49632 bytes of arena shared by every replacement
 
 # reference at OPE.SPT:0x23a (cmd 0203 direct, slot 0x242)
@@ -21,6 +21,9 @@
 
 # reference at OPE.SPT:0xc8 (cmd 0203 direct, slot 0xd0)
 0xf8e 自分[\n]他の人[\n]ことわる
+
+# reference at OPE.SPT:0x150 (cmd 0303 direct, slot 0x154)
+0xfa6 だれを弱くしたいのかな?
 
 # reference at OPE.SPT:0x228 (cmd 0303 direct, slot 0x22c)
 0xfc0 しゅじゅつ代として[Blue Text][0x1000][Normal Color Text]G[\n]いただくが、よろしいかな?

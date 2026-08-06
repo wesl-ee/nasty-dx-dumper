@@ -1,4 +1,4 @@
-# HIT_MAN.SPT: 10 strings, 10 references. Translate by repeating the 0xOFFSET line with English.
+# HIT_MAN.SPT: 11 strings, 11 references. Translate by repeating the 0xOFFSET line with English.
 # record cursor 0x43c0, script ends 0x205a, 48192 bytes of arena shared by every replacement
 
 # reference at HIT_MAN.SPT:0x188 (cmd 0303 direct, slot 0x18c)
@@ -27,6 +27,9 @@
 
 # reference at HIT_MAN.SPT:0x380 (cmd 0303 direct, slot 0x384)
 0x1fce [0x0c00]金が足りないぞ・・・[0x0d00]
+
+# reference at HIT_MAN.SPT:0x29a (cmd 0303 direct, slot 0x29e)
+0x1fe8 [0x0c00]そうか・・・[\n]イヤなヤツはいないか・・・[\n]うらやましいかぎりだな[0x0d00][Press A]
 
 # reference at HIT_MAN.SPT:0x122 (cmd 0303 direct, slot 0x126)
 0x2034 [0x0c00]しまつしてほしいヤツがいるのか?[0x0d00]

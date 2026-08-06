@@ -1,6 +1,30 @@
-# drama14.spt: 1 strings, 1 references. Translate by repeating the 0xOFFSET line with English.
-# record cursor 0x2fe0, script ends 0x07a4, 53280 bytes of arena shared by every replacement
+# drama14.spt: 9 strings, 9 references. Translate by repeating the 0xOFFSET line with English.
+# record cursor 0x2fe0, script ends 0x1544, 53280 bytes of arena shared by every replacement
 
 # reference at drama14.spt:0xe (cmd 0202 direct, slot 0x1a)
 0x7a0  
+
+# reference at drama14.spt:0x120 (cmd 0307-array obj-text[0x112], slot 0x120)
+0x814 しぶりだな![Press A][0xa000]さいしょにやられたうらみ、[\n]まだおぼえてるぜ![Press A][0xa000]本当ならケチョンケチョンにしてやるところだが、[\n]今はやめといてやるぜ![Press A]
+
+# reference at drama14.spt:0x112 (cmd 0307-array obj-text[0x112], slot 0x112)
+0x13e2 [0xd1c1][0x0c00]みんな弱いな~[0x0d00][Press A][0xa000][0xd1c2][0x0c00]今日からベクが王様だ![0x0d00][Press A]
+
+# reference at drama14.spt:0x114 (cmd 0307-array obj-text[0x112], slot 0x114)
+0x141a [0xd1e1][0x0c00]みんな弱すぎ![0x0d00][Press A][0xa000][0xd1e2][0x0c00]もうちょっと楽しみたかったのに[0x0d00][Press A]
+
+# reference at drama14.spt:0x116 (cmd 0307-array obj-text[0x112], slot 0x116)
+0x145a [0xd222][0x0c00]ベクにさからうヤツは[\n]ようしゃしないブリー[0x0d00][Press A]
+
+# reference at drama14.spt:0x118 (cmd 0307-array obj-text[0x112], slot 0x118)
+0x148e [0xd241][0x0c00]世界はせっしゃの思うがままでござる![0x0d00][Press A]
+
+# reference at drama14.spt:0x11a (cmd 0307-array obj-text[0x112], slot 0x11a)
+0x14bc [0xd200][0x0c00]強すぎるってツミよね[0x0d00][Press A]
+
+# reference at drama14.spt:0x11c (cmd 0307-array obj-text[0x112], slot 0x11c)
+0x14da [0xd24d][0x0c00]チュマリャナリ~![0x0d00][\n](みんな、よわすぎてつまらないニョ!)[Press A]
+
+# reference at drama14.spt:0x11e (cmd 0307-array obj-text[0x112], slot 0x11e)
+0x151e [0xd278][0x0c00]フッ、この力があればムテキだ[0x0d00][Press A]
 

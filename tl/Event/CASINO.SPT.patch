@@ -1,33 +1,141 @@
-# CASINO.SPT: 21 strings, 27 references. Translate by repeating the 0xOFFSET line with English.
+# CASINO.SPT: 56 strings, 93 references. Translate by repeating the 0xOFFSET line with English.
 # record cursor 0x54e0, script ends 0x54de, 43808 bytes of arena shared by every replacement
 
+# reference at CASINO.SPT:0x1550 (cmd 0202 direct, slot 0x155c)
+# reference at CASINO.SPT:0x16b4 (cmd 0202 direct, slot 0x16c0)
+# reference at CASINO.SPT:0x1270 (cmd 0202 direct, slot 0x127c)
 # reference at CASINO.SPT:0x908 (cmd 0202 direct, slot 0x914)
 # reference at CASINO.SPT:0xa2a (cmd 0303 direct, slot 0xa2e)
 # reference at CASINO.SPT:0x6da (cmd 0303 direct, slot 0x6de)
 # reference at CASINO.SPT:0x752 (cmd 0303 direct, slot 0x756)
+# reference at CASINO.SPT:0x2ea (cmd 0303 direct, slot 0x2ee)
 # reference at CASINO.SPT:0x3fc (cmd 0303 direct, slot 0x400)
 0x2340  
 
+# reference at CASINO.SPT:0x1606 (cmd 0203 direct, slot 0x160e)
+# reference at CASINO.SPT:0x1092 (cmd 0203 direct, slot 0x109a)
 # reference at CASINO.SPT:0x9c4 (cmd 0203 direct, slot 0x9cc)
 # reference at CASINO.SPT:0xcc0 (cmd 0203 direct, slot 0xcc8)
 # reference at CASINO.SPT:0x6ec (cmd 0203 direct, slot 0x6f4)
+# reference at CASINO.SPT:0x284 (cmd 0203 direct, slot 0x28c)
 0x239c は い[\n]いいえ
 0x239c Yes[\n]No
 
 # reference at CASINO.SPT:0x1b7e (cmd table table[4], slot 0x1b7e)
 0x2710 が[Green Text][0x1000][Normal Color Text]上がった![Press A][0xa000][Blue Text][%0][Normal Color Text]のぼうぎょ力が[Green Text][0x1000][Normal Color Text]上がった![Press A][0xa000][Blue Text][%0][Normal Color Text]のまりょくが[Green Text][0x1000][Normal Color Text]上がった![Press A][0xa000][Blue Text][%0][Normal Color Text]のすばやさが[Green Text][0x1000][Normal Color Text]上がった![Press A]
 
+# reference at CASINO.SPT:0x1084 (cmd 0303 direct, slot 0x1088)
 # reference at CASINO.SPT:0xcb2 (cmd 0303 direct, slot 0xcb6)
 0x49e6 このままゲームをつづけますか?
 
+# reference at CASINO.SPT:0x1578 (cmd 0303 direct, slot 0x157c)
 # reference at CASINO.SPT:0x930 (cmd 0303 direct, slot 0x934)
 0x4a06 どのコースにいたしますか?
 
+# reference at CASINO.SPT:0x141e (cmd 0202 direct, slot 0x142a)
+# reference at CASINO.SPT:0x1b62 (cmd 0307-array obj-text[0x1b62], slot 0x1b62)
+0x4a22 プラチナコース[0x50a8]5,000,000G
+
+# reference at CASINO.SPT:0x142c (cmd 0202 direct, slot 0x1438)
+# reference at CASINO.SPT:0x1460 (cmd 0303 direct, slot 0x1464)
+# reference at CASINO.SPT:0x1b64 (cmd 0307-array obj-text[0x1b62], slot 0x1b64)
+0x4a48 ゴールドコース[0x50c8]400,000G
+
+# reference at CASINO.SPT:0x143a (cmd 0202 direct, slot 0x1446)
+# reference at CASINO.SPT:0x1466 (cmd 0303 direct, slot 0x146a)
+# reference at CASINO.SPT:0x1b66 (cmd 0307-array obj-text[0x1b62], slot 0x1b66)
+0x4a6a シルバーコース[0x50d8]30,000G
+
+# reference at CASINO.SPT:0x146c (cmd 0303 direct, slot 0x1470)
+# reference at CASINO.SPT:0x1b68 (cmd 0307-array obj-text[0x1b62], slot 0x1b68)
+0x4a8a ブロンズコース[0x50e6]3,000G
+
+# reference at CASINO.SPT:0x15f4 (cmd 0303 direct, slot 0x15f8)
 # reference at CASINO.SPT:0x9b2 (cmd 0303 direct, slot 0x9b6)
 0x4aa8 かけ金は[Blue Text][0x1000][Normal Color Text]Gになります[\n][Blue Text][%0]コース[Normal Color Text]でよろしいですか?
 
+# reference at CASINO.SPT:0x15ce (cmd 0303 direct, slot 0x15d2)
 # reference at CASINO.SPT:0x98c (cmd 0303 direct, slot 0x990)
 0x4ae4 お金が足りません[\n]他のコースをえらんでください[Press A]
+
+# reference at CASINO.SPT:0x16a0 (cmd 0303 direct, slot 0x16a4)
+0x4b16 [Blue Text][%0]コース[Normal Color Text]に決定しました
+
+# reference at CASINO.SPT:0x1964 (cmd 0303 direct, slot 0x1968)
+0x4b32 それではマネースロットスタートです[\n]ベタンをおしてください[Press A]
+
+# reference at CASINO.SPT:0x196e (cmd 0303 direct, slot 0x1972)
+0x4b70 [0xb808]ベタンをおしてスロットを[\n]止めてください
+
+# reference at CASINO.SPT:0x1a64 (cmd 0303 direct, slot 0x1a68)
+0x4b9c [Blue Text][%0][Normal Color Text]のけたは[Blue Text][0x1000][Normal Color Text]でした
+
+# reference at CASINO.SPT:0x1b12 (cmd 0303 direct, slot 0x1b16)
+0x4bb8 [0xd123]おめでとうございま~す[Red Text]♥[Normal Color Text][\n]かけ金は[Green Text][0x1000][Normal Color Text]Gになりました[Press A]
+
+# reference at CASINO.SPT:0x1b2a (cmd 0303 direct, slot 0x1b2e)
+0x4bf8 ざんねんでした[\n]かけ金は[Red Text][0x1000][Normal Color Text]Gに[\n]へってしまいました[Press A]
+
+# reference at CASINO.SPT:0x1b6a (cmd 0307-array obj-text[0x1b62], slot 0x1b6a)
+# reference at CASINO.SPT:0x1b6a (cmd 0307-array obj-text[0x1b6a], slot 0x1b6a)
+0x4c32 百万
+
+# reference at CASINO.SPT:0x1b6c (cmd 0307-array obj-text[0x1b62], slot 0x1b6c)
+# reference at CASINO.SPT:0x1b6c (cmd 0307-array obj-text[0x1b6a], slot 0x1b6c)
+0x4c38 十万
+
+# reference at CASINO.SPT:0x1b6e (cmd 0307-array obj-text[0x1b62], slot 0x1b6e)
+# reference at CASINO.SPT:0x1b6e (cmd 0307-array obj-text[0x1b6a], slot 0x1b6e)
+0x4c3e 万
+
+# reference at CASINO.SPT:0x1b70 (cmd 0307-array obj-text[0x1b62], slot 0x1b70)
+# reference at CASINO.SPT:0x1b70 (cmd 0307-array obj-text[0x1b6a], slot 0x1b70)
+0x4c42 千
+
+# reference at CASINO.SPT:0x1b72 (cmd 0307-array obj-text[0x1b62], slot 0x1b72)
+# reference at CASINO.SPT:0x1b72 (cmd 0307-array obj-text[0x1b6a], slot 0x1b72)
+0x4c46 百
+
+# reference at CASINO.SPT:0x1b74 (cmd 0307-array obj-text[0x1b62], slot 0x1b74)
+# reference at CASINO.SPT:0x1b74 (cmd 0307-array obj-text[0x1b6a], slot 0x1b74)
+0x4c4a 十
+
+# reference at CASINO.SPT:0x1b86 (cmd 0307-array obj-text[0x1b86], slot 0x1b86)
+0x4c4e プラチナ
+
+# reference at CASINO.SPT:0xd74 (cmd 0307-array obj-text[0xd74], slot 0xd74)
+# reference at CASINO.SPT:0x1b88 (cmd 0307-array obj-text[0x1b86], slot 0x1b88)
+0x4c58 ゴールド
+
+# reference at CASINO.SPT:0xd76 (cmd 0307-array obj-text[0xd74], slot 0xd76)
+# reference at CASINO.SPT:0x1b8a (cmd 0307-array obj-text[0x1b86], slot 0x1b8a)
+0x4c62 シルバー
+
+# reference at CASINO.SPT:0xd78 (cmd 0307-array obj-text[0xd74], slot 0xd78)
+# reference at CASINO.SPT:0x1b8c (cmd 0307-array obj-text[0x1b86], slot 0x1b8c)
+0x4c6c ブロンズ
+
+# reference at CASINO.SPT:0xdfc (cmd 0202 direct, slot 0xe08)
+# reference at CASINO.SPT:0x1142 (cmd 0303 direct, slot 0x1146)
+0x4c76 それではシャッフルをはじめます[\n]ベタンをおすとスタートします[Press A]
+
+# reference at CASINO.SPT:0xe58 (cmd 0303 direct, slot 0xe5c)
+0x4cb6 シャッフルしています
+
+# reference at CASINO.SPT:0xeec (cmd 0303 direct, slot 0xef0)
+0x4ccc [Red Text]5秒[Normal Color Text]いないに[\n]当たりのカードをえらんでください
+
+# reference at CASINO.SPT:0x1012 (cmd 0303 direct, slot 0x1016)
+0x4d1a ざんねんでした[\n]しょうひんをゲットできませんでした[Press A]
+
+# reference at CASINO.SPT:0x1050 (cmd 0303 direct, slot 0x1054)
+0x4d50 [0xd123]おめでとうございま~す[Red Text]♥[Normal Color Text][\n][Green Text][%0][Normal Color Text]をゲットでございます[Press A]
+
+# reference at CASINO.SPT:0x11fc (cmd 0303 direct, slot 0x1200)
+0x4d8e それではしょうひんの[\n][0x09a1][Green Text][%0][Normal Color Text]をおうけとりください[Press A]
+
+# reference at CASINO.SPT:0x12b2 (cmd 0303 direct, slot 0x12b6)
+0x4dc4 [0x5000][0x6000]次にもらえる物：[\n]今回もらえる物：
 
 # reference at CASINO.SPT:0x418 (cmd 0303 direct, slot 0x41c)
 0x4dec [0x0c00]もうしわけありませんが、[\n][Red Text]1000[Normal Color Text]Gいじょうお持ちの方いがいは、[\n]入店をおことわりしております[0x0d00][Press A]
@@ -38,11 +146,36 @@
 # reference at CASINO.SPT:0x50 (cmd 0303 direct, slot 0x54)
 0x4e78 [0xd120][0x0c00]本日はどのゲームであそばれますか?[0x0d00][Press A]
 
+# reference at CASINO.SPT:0x770 (cmd 0307-array obj-text[0x76a], slot 0x770)
+0x4ea4 カジノで遊ばない
+
+# reference at CASINO.SPT:0x76a (cmd 0307-array obj-text[0x76a], slot 0x76a)
+0x4eb6 開いている0~9までのカードの数字より[\n]次のカードの数字が[\n]大きいか小さいかを当てるゲーム
+
+# reference at CASINO.SPT:0x76c (cmd 0307-array obj-text[0x76a], slot 0x76c)
+0x4f12 当たりのカードの場序をおぼえておいて、[\n]高速でシャッフルされるカードの中から[\n]当たりをえらぶゲーム
+
+# reference at CASINO.SPT:0x76e (cmd 0307-array obj-text[0x76a], slot 0x76e)
+0x4f76 空白になっている3つの数字のけたに[\n]カードをめくって数字をいれていき、[\n]決定した数字のお金がもらえるゲーム
+
 # reference at CASINO.SPT:0x378 (cmd 0303 direct, slot 0x37c)
-0x505a [0xd121][0x0c00]それではごゆっくりお寨しみ下さ~い[Red Text]♥[Normal Color Text][0x0d00][Press A]
+0x505a [0xd121][0x0c00]それではごゆっくりお楽しみ下さ~い[Red Text]♥[Normal Color Text][0x0d00][Press A]
 
 # reference at CASINO.SPT:0x196 (cmd 0202 direct, slot 0x1a2)
+# reference at CASINO.SPT:0x772 (cmd 0307-array obj-text[0x76a], slot 0x772)
+# reference at CASINO.SPT:0x772 (cmd 0307-array obj-text[0x772], slot 0x772)
 0x508c 開いている0~9のカードの[\n]数字より、次の数字が大きい[\n]と思ったら[Blue Text]うえ[Normal Color Text]を、小さい[\n]と思ったら[Blue Text]した[Normal Color Text]をえらぶ。[\n]当たるとかけ金が[Blue Text]倍[Normal Color Text]になり、[\n]ハズれるとかけ金は[Blue Text]0[Normal Color Text]になる。[\n]勝つと次もチャレンジできる。
+
+# reference at CASINO.SPT:0x774 (cmd 0307-array obj-text[0x76a], slot 0x774)
+# reference at CASINO.SPT:0x774 (cmd 0307-array obj-text[0x772], slot 0x774)
+0x5160 5まいのカードをふせたあと、[\n]もうスピードでシャッフル。[\n]その中から当たりのカードを[\n]さがす。当たると今のけい品を[\n]もらうか、次のけい品に[\n]チャレンジするかえらべる。[\n]さんかするには[Blue Text]1,000[Normal Color Text]Gいる。
+
+# reference at CASINO.SPT:0x776 (cmd 0307-array obj-text[0x76a], slot 0x776)
+# reference at CASINO.SPT:0x776 (cmd 0307-array obj-text[0x772], slot 0x776)
+0x522e 空白になっている3つのけた[\n]にカードをめくって数字を[\n]いれていき、決定した[\n]数字のお金がもらえる。[\n]その数字が、かけ金より[\n]高ければもうかる。[\n]3つのコースがある。
+
+# reference at CASINO.SPT:0x166 (cmd 0303 direct, slot 0x16a)
+0x52d4 もうしわけありませんが、[\n][Blue Text][0x1000][Normal Color Text]Gいじょうお持ちの方いがいは、[\n]このゲームにさんかできません[Press A]
 
 # reference at CASINO.SPT:0x422 (cmd 0303 direct, slot 0x426)
 0x5334 [0xd122][0x0c00]またのおこしをお待ちしておりま~す[Red Text]♥[Normal Color Text][0x0d00][Press A]
@@ -61,6 +194,9 @@
 
 # reference at CASINO.SPT:0xd30 (cmd 0303 direct, slot 0xd34)
 0x540c もうしわけありませんが[\n]これで終わりとなります[Press A]
+
+# reference at CASINO.SPT:0x272 (cmd 0303 direct, slot 0x276)
+0x543e さんか金として[Blue Text]1,000[Normal Color Text]G[\n]いただきますがよろしいですか?
 
 # reference at CASINO.SPT:0x808 (cmd 0202 direct, slot 0x814)
 0x547e ゴールドコース[0xe020]100,000G

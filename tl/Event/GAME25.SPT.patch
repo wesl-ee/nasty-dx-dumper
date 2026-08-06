@@ -1,5 +1,20 @@
-# GAME25.SPT: 25 strings, 25 references. Translate by repeating the 0xOFFSET line with English.
-# record cursor 0x4860, script ends 0x347a, 47008 bytes of arena shared by every replacement
+# GAME25.SPT: 41 strings, 58 references. Translate by repeating the 0xOFFSET line with English.
+# record cursor 0x4860, script ends 0x354c, 47008 bytes of arena shared by every replacement
+
+# reference at GAME25.SPT:0x4fa (cmd 0202 direct, slot 0x506)
+# reference at GAME25.SPT:0x48e (cmd 0202 direct, slot 0x49a)
+0x1680  
+
+# reference at GAME25.SPT:0x5aa (cmd 0303 direct, slot 0x5ae)
+# reference at GAME25.SPT:0x4ae (cmd 0303 direct, slot 0x4b2)
+# reference at GAME25.SPT:0x442 (cmd 0303 direct, slot 0x446)
+0x1694 [Blue Text][%0][Normal Color Text]は[\n][Green Text][%0][Normal Color Text]を手に入れた![Press A]
+
+# reference at GAME25.SPT:0x520 (cmd 0303 direct, slot 0x524)
+0x16b6 [Blue Text][%0][Normal Color Text]は[\n][Green Text][0x1000][Normal Color Text]Gを手に入れた![Press A]
+
+# reference at GAME25.SPT:0x53a (cmd 0303 direct, slot 0x53e)
+0x16da [0x09a1][Blue Text][%0][Normal Color Text]の[Green Text]HP[Normal Color Text]と[\n][Green Text]ステータスいじょう[Normal Color Text]がかいふくした[Press A]
 
 # reference at GAME25.SPT:0x752 (cmd 0202 direct, slot 0x75e)
 0x2e94 [0xd0f6][0x0c00]こんにちはー[0x0d00][Press A]
@@ -26,53 +41,103 @@
 0x3086 [0x0c00]1まい目は[Blue Text][%0][Normal Color Text]です。[\n]さあ、2まい目をえらんでください[0x0d00]
 
 # reference at GAME25.SPT:0x37c (cmd 0303 direct, slot 0x380)
-0x30c4 [0x0c00]んーざんねん![\n]では、次は[Blue Text][%0][Normal Color Text]さんの春です[0x0d00][Press A]
+0x30c4 [0x0c00]んーざんねん![\n]では、次は[Blue Text][%0][Normal Color Text]さんの番です[0x0d00][Press A]
+
+# reference at GAME25.SPT:0x5ea (cmd 0303 direct, slot 0x5ee)
+0x30f8 おめでとうございます![Press A][0xa000][Blue Text][%0][Normal Color Text]さん[\n][Green Text][%0][Normal Color Text]をゲット![Press A]
+
+# reference at GAME25.SPT:0x32e (cmd 0303 direct, slot 0x332)
+0x3132 [0x0c00]引きつづき、次のパネルをえらんでください[0x0d00]
 
 # reference at GAME25.SPT:0x350 (cmd 0303 direct, slot 0x354)
 0x3160 [0x0c00]んーざんねん! [Red Text]ワルサー[Normal Color Text]パネルを当てた人が[\n]しょうひんをゲットしていたときは、[0x0d00][Press A][0xa000][0x0c00]そのしょうひんはすべて、[Blue Text]エンゼル[Normal Color Text][\n]パネルを当てた人のものになります![0x0d00][Press A]
 
 # reference at GAME25.SPT:0x366 (cmd 0303 direct, slot 0x36a)
-0x320a では、次は[Blue Text][%0][Normal Color Text]さんの春です[0x0d00][Press A]
+0x320a では、次は[Blue Text][%0][Normal Color Text]さんの番です[0x0d00][Press A]
+
+# reference at GAME25.SPT:0x30a (cmd 0303 direct, slot 0x30e)
+0x322c [0x0c00]おめでとうございます![\n][Red Text]ワルサー[Normal Color Text]パネルでぼっしゅうされた[0x0d00][Press A][0xa000][0x0c00]しょうひんがあったときは、[\n]すべてあなたのものです![0x0d00][Press A]
+
+# reference at GAME25.SPT:0x60a (cmd 0303 direct, slot 0x60e)
+0x32ac おめでとうございます![Blue Text][%0][Normal Color Text]さん[\n][Green Text][0x1000][Normal Color Text]Gをゲット![Press A]
+
+# reference at GAME25.SPT:0x56a (cmd 0303 direct, slot 0x56e)
+0x32e4 [0x0c00][Blue Text]エンゼル[Normal Color Text]パネルを当てたのに[\n]おしくも商品をゲットすることができなかった[0x0d00][Press A][0xa000][0x0c00][Blue Text][%0][Normal Color Text]さんには[\n]番組からプレゼントがあります![0x0d00][Press A]
+
+# reference at GAME25.SPT:0x3d4 (cmd 0303 direct, slot 0x3d8)
+0x336c [0xd0fe][0x0c00]しゅうーりょうー![\n]みなさんおつかれさまでした[0x0d00][Press A]
+
+# reference at GAME25.SPT:0x3f8 (cmd 0303 direct, slot 0x3fc)
+0x33a4 [0xd109][0x0c00]また次回お会いしましょう[\n]さようなら~[0x0d00][Press A]
 
 # reference at GAME25.SPT:0x790 (cmd table table[2], slot 0x790)
+# reference at GAME25.SPT:0x790 (cmd 0307-array obj-text[0x786], slot 0x790)
 0x33d4 ワルサー
 
 # reference at GAME25.SPT:0x792 (cmd table table[2], slot 0x792)
+# reference at GAME25.SPT:0x792 (cmd 0307-array obj-text[0x786], slot 0x792)
 0x33de エンゼル
 
 # reference at GAME25.SPT:0x794 (cmd table table[2], slot 0x794)
+# reference at GAME25.SPT:0x794 (cmd 0307-array obj-text[0x786], slot 0x794)
 0x33e8 お金
 
 # reference at GAME25.SPT:0x796 (cmd table table[2], slot 0x796)
+# reference at GAME25.SPT:0x796 (cmd 0307-array obj-text[0x786], slot 0x796)
 0x33ee アイテム
 
 # reference at GAME25.SPT:0x798 (cmd table table[2], slot 0x798)
+# reference at GAME25.SPT:0x798 (cmd 0307-array obj-text[0x786], slot 0x798)
 0x33f8 フィールドまほう
 
 # reference at GAME25.SPT:0x79a (cmd table table[2], slot 0x79a)
+# reference at GAME25.SPT:0x79a (cmd 0307-array obj-text[0x786], slot 0x79a)
 0x340a ぶき
 
 # reference at GAME25.SPT:0x79c (cmd table table[2], slot 0x79c)
+# reference at GAME25.SPT:0x79c (cmd 0307-array obj-text[0x786], slot 0x79c)
 0x3410 たて
 
 # reference at GAME25.SPT:0x79e (cmd table table[2], slot 0x79e)
+# reference at GAME25.SPT:0x79e (cmd 0307-array obj-text[0x786], slot 0x79e)
 0x3416 Dグッズ
 
 # reference at GAME25.SPT:0x7a0 (cmd table table[2], slot 0x7a0)
+# reference at GAME25.SPT:0x7a0 (cmd 0307-array obj-text[0x786], slot 0x7a0)
 0x3420 かいふく
 
 # reference at GAME25.SPT:0x7a2 (cmd table table[2], slot 0x7a2)
+# reference at GAME25.SPT:0x7a2 (cmd 0307-array obj-text[0x786], slot 0x7a2)
 0x342a 休力アップ
 
 # reference at GAME25.SPT:0x7a4 (cmd table table[2], slot 0x7a4)
+# reference at GAME25.SPT:0x7a4 (cmd 0307-array obj-text[0x786], slot 0x7a4)
 0x3436 こうげき力アップ
 
 # reference at GAME25.SPT:0x7a6 (cmd table table[2], slot 0x7a6)
+# reference at GAME25.SPT:0x7a6 (cmd 0307-array obj-text[0x786], slot 0x7a6)
 0x3448 ぼうぎょ力アップ
 
 # reference at GAME25.SPT:0x7a8 (cmd table table[2], slot 0x7a8)
+# reference at GAME25.SPT:0x7a8 (cmd 0307-array obj-text[0x786], slot 0x7a8)
 0x345a すばやさアップ
 
 # reference at GAME25.SPT:0x7aa (cmd table table[2], slot 0x7aa)
+# reference at GAME25.SPT:0x7aa (cmd 0307-array obj-text[0x786], slot 0x7aa)
 0x346a まりょくアップ
+
+# reference at GAME25.SPT:0x786 (cmd 0307-array obj-text[0x786], slot 0x786)
+0x347a [Blue Text][%0][Normal Color Text]の[\n]休力が[Green Text]1[Normal Color Text]アップした![Press A]
+
+# reference at GAME25.SPT:0x788 (cmd 0307-array obj-text[0x786], slot 0x788)
+0x34a0 [Blue Text][%0][Normal Color Text]の[\n]こうげき力が[Green Text]1[Normal Color Text]アップした![Press A]
+
+# reference at GAME25.SPT:0x78a (cmd 0307-array obj-text[0x786], slot 0x78a)
+0x34cc [Blue Text][%0][Normal Color Text]の[\n]ぼうぎょ力が[Green Text]1[Normal Color Text]アップした![Press A]
+
+# reference at GAME25.SPT:0x78c (cmd 0307-array obj-text[0x786], slot 0x78c)
+0x34f8 [Blue Text][%0][Normal Color Text]の[\n]すばやさが[Green Text]1[Normal Color Text]アップした![Press A]
+
+# reference at GAME25.SPT:0x78e (cmd 0307-array obj-text[0x786], slot 0x78e)
+0x3522 [Blue Text][%0][Normal Color Text]の[\n]まりょくが[Green Text]1[Normal Color Text]アップした![Press A]
 

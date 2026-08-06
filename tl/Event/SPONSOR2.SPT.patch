@@ -1,4 +1,4 @@
-# SPONSOR2.SPT: 12 strings, 12 references. Translate by repeating the 0xOFFSET line with English.
+# SPONSOR2.SPT: 13 strings, 13 references. Translate by repeating the 0xOFFSET line with English.
 # record cursor 0x14e0, script ends 0x0696, 60192 bytes of arena shared by every replacement
 
 # reference at SPONSOR2.SPT:0x1d2 (cmd 0303 direct, slot 0x1d6)
@@ -30,6 +30,9 @@
 
 # reference at SPONSOR2.SPT:0x212 (cmd 0303 direct, slot 0x216)
 0x554 [0x0c00][Blue Text]スポンサーけいやく[Normal Color Text]期間が終わるまで、[\n]どうぞよろしくおねがいします[0x0d00][Press A]
+
+# reference at SPONSOR2.SPT:0x23a (cmd 0303 direct, slot 0x23e)
+0x5a2 [0xd126][0x0c00]そうですか・・・ざんねんですが[\n]あきらめるしかないようですね[0x0d00][Press A]
 
 # reference at SPONSOR2.SPT:0x12e (cmd 0303 direct, slot 0x132)
 0x5e8 [0x0c00]すばらしいかつやくをされている[\n][Blue Text][%0][Normal Color Text]さんが、わが社の[Blue Text]たて[Normal Color Text]を[\n]便っていると聞き、やってまいりました[0x0d00][Press A]

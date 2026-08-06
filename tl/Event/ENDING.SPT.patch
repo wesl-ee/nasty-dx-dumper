@@ -1,4 +1,4 @@
-# ENDING.SPT: 39 strings, 42 references. Translate by repeating the 0xOFFSET line with English.
+# ENDING.SPT: 60 strings, 77 references. Translate by repeating the 0xOFFSET line with English.
 # record cursor 0x4dc0, script ends 0x3aaa, 45632 bytes of arena shared by every replacement
 
 # reference at ENDING.SPT:0xcc0 (cmd 0202 direct, slot 0xccc)
@@ -8,7 +8,7 @@
 0x2600 [0xd172]みんなみごとだったダバ![Press A][0xa000][0xd173]よくぞワルサーをたおしてくれたダバ![Press A][0xa000][0xd174]これでドカポン王國も平和になるダバ![Press A]
 
 # reference at ENDING.SPT:0x6a (cmd 0303 direct, slot 0x6e)
-0x2672 [0xd175]ワシも安心してお金をもうけられるダバ![Press A][0xa000][0xd176]ではやくそくどおり[Blue Text]1春お金を集めてきた者[Normal Color Text]を[\n]次の王様に決めるダバ![Press A]
+0x2672 [0xd175]ワシも安心してお金をもうけられるダバ![Press A][0xa000][0xd176]ではやくそくどおり[Blue Text]1番お金を集めてきた者[Normal Color Text]を[\n]次の王様に決めるダバ![Press A]
 
 # reference at ENDING.SPT:0xb0 (cmd 0202 direct, slot 0xbc)
 0x26ea [0xd177]と、その前にがんばった者に[\n]とくべつベーナスをあげるダバ![Press A]
@@ -29,7 +29,7 @@
 0x2842 おしおきダバ![\n]マイナス[Red Text][0x1000][Normal Color Text]Gダバ![Press A]
 
 # reference at ENDING.SPT:0x204 (cmd 0202 direct, slot 0x210)
-0x286c 一春冬くモンスターをたおした[\n]バトルマスターの[Blue Text][%0][Normal Color Text]には[Press A]
+0x286c 一番冬くモンスターをたおした[\n]バトルマスターの[Blue Text][%0][Normal Color Text]には[Press A]
 
 # reference at ENDING.SPT:0x238 (cmd 0303 direct, slot 0x23c)
 # reference at ENDING.SPT:0x2ca (cmd 0303 direct, slot 0x2ce)
@@ -38,16 +38,16 @@
 0x28a8 [Green Text][0x1000][Normal Color Text]Gあげるダバ![Press A]
 
 # reference at ENDING.SPT:0x296 (cmd 0202 direct, slot 0x2a2)
-0x28c0 いっしょにたたかった友だちを[\n]一春ベコベコにしたきらわれ者の[\n][Blue Text][%0][Normal Color Text]には[Press A]
+0x28c0 いっしょにたたかった友だちを[\n]一番ベコベコにしたきらわれ者の[\n][Blue Text][%0][Normal Color Text]には[Press A]
 
 # reference at ENDING.SPT:0x328 (cmd 0202 direct, slot 0x334)
-0x290c 一春冬くドカポンエッグをはっくつした[\n]はっくつ王の[Blue Text][%0][Normal Color Text]には[Press A]
+0x290c 一番冬くドカポンエッグをはっくつした[\n]はっくつ王の[Blue Text][%0][Normal Color Text]には[Press A]
 
 # reference at ENDING.SPT:0x3ba (cmd 0202 direct, slot 0x3c6)
-0x294c 一春冬くぬすみをはたらいた[\n]ごくあく人の[Blue Text][%0][Normal Color Text]には[Press A]
+0x294c 一番冬くぬすみをはたらいた[\n]ごくあく人の[Blue Text][%0][Normal Color Text]には[Press A]
 
 # reference at ENDING.SPT:0x448 (cmd 0202 direct, slot 0x454)
-0x2982 一春冬く死んでしまった[\n]かわいそうな[Blue Text][%0][Normal Color Text]には[Press A]
+0x2982 一番冬く死んでしまった[\n]かわいそうな[Blue Text][%0][Normal Color Text]には[Press A]
 
 # reference at ENDING.SPT:0x47c (cmd 0303 direct, slot 0x480)
 0x29b4 [Green Text][0x1000][Normal Color Text]Gあげるダバ![\n]今までよくあきらめずがんばったダバ![Press A]
@@ -61,8 +61,64 @@
 # reference at ENDING.SPT:0x94e (cmd 0202 direct, slot 0x95a)
 0x2a7e [0xd17c]おまえダバ!!
 
+# reference at ENDING.SPT:0x8fa (cmd 0307-array obj-text[0x8fa], slot 0x8fa)
+# reference at ENDING.SPT:0x8fa (cmd 0307-array obj-text[0x8ec], slot 0x8fa)
+0x2a90 [0xd1bd]やったぁー![\n]ベクがいっちば~ん![Press A]
+
+# reference at ENDING.SPT:0x8fc (cmd 0307-array obj-text[0x8fa], slot 0x8fc)
+# reference at ENDING.SPT:0x8fc (cmd 0307-array obj-text[0x8ec], slot 0x8fc)
+0x2ab8 [0xd1de]ウフ、やっぽり私が1番だったね![Press A]
+
+# reference at ENDING.SPT:0x8fe (cmd 0307-array obj-text[0x8fa], slot 0x8fe)
+# reference at ENDING.SPT:0x8fe (cmd 0307-array obj-text[0x8ec], slot 0x8fe)
+0x2ade [0xd21e]ゆうしょうブリー![Press A][0xa000][0xd21f]ロベットの王様のたんじょうブリー![Press A]
+
+# reference at ENDING.SPT:0x900 (cmd 0307-array obj-text[0x8fa], slot 0x900)
+# reference at ENDING.SPT:0x900 (cmd 0307-array obj-text[0x8ec], slot 0x900)
+0x2b1e [0xd23e]ムッフッフ、明日からモテモテ人生でござる![Press A]
+
+# reference at ENDING.SPT:0x902 (cmd 0307-array obj-text[0x8fa], slot 0x902)
+# reference at ENDING.SPT:0x902 (cmd 0307-array obj-text[0x8ec], slot 0x902)
+0x2b4e [0xd1fd]世界は私のものよ![Press A]
+
+# reference at ENDING.SPT:0x904 (cmd 0307-array obj-text[0x8fa], slot 0x904)
+# reference at ENDING.SPT:0x904 (cmd 0307-array obj-text[0x8ec], slot 0x904)
+0x2b66 [0xd256]オモシュラミュ![\n](おもしろおかしく、くらすニャ!)[Press A]
+
+# reference at ENDING.SPT:0x906 (cmd 0307-array obj-text[0x8fa], slot 0x906)
+# reference at ENDING.SPT:0x906 (cmd 0307-array obj-text[0x8ec], slot 0x906)
+0x2ba0 [0xd275]ハッハッハ、よゆうだったな![Press A]
+
+# reference at ENDING.SPT:0x908 (cmd 0307-array obj-text[0x8fa], slot 0x908)
+# reference at ENDING.SPT:0x908 (cmd 0307-array obj-text[0x8ec], slot 0x908)
+0x2bc2 [0xd1bc]う~、もっともっとがんばらなきゃ[Press A]
+
+# reference at ENDING.SPT:0x90a (cmd 0307-array obj-text[0x8fa], slot 0x90a)
+# reference at ENDING.SPT:0x90a (cmd 0307-array obj-text[0x8ec], slot 0x90a)
+0x2be8 [0xd1dd]も~う! なんでよ~![Press A]
+
+# reference at ENDING.SPT:0x90c (cmd 0307-array obj-text[0x8fa], slot 0x90c)
+# reference at ENDING.SPT:0x90c (cmd 0307-array obj-text[0x8ec], slot 0x90c)
+0x2c04 [0xd21d]ネジがぬけてなければ負けなかったブリ![Press A]
+
+# reference at ENDING.SPT:0x90e (cmd 0307-array obj-text[0x8fa], slot 0x90e)
+# reference at ENDING.SPT:0x90e (cmd 0307-array obj-text[0x8ec], slot 0x90e)
+0x2c30 [0xd23d]本気ではなかったんでござるよ![Press A]
+
+# reference at ENDING.SPT:0x910 (cmd 0307-array obj-text[0x8fa], slot 0x910)
+# reference at ENDING.SPT:0x910 (cmd 0307-array obj-text[0x8ec], slot 0x910)
+0x2c54 [0xd1fc]こんなことならやるんじゃなかったわ![Press A]
+
+# reference at ENDING.SPT:0x912 (cmd 0307-array obj-text[0x8fa], slot 0x912)
+# reference at ENDING.SPT:0x912 (cmd 0307-array obj-text[0x8ec], slot 0x912)
+0x2c7e [0xd255]マキャチャ・・・[\n](なんでまけたのかニャ~・・・)[Press A]
+
+# reference at ENDING.SPT:0x914 (cmd 0307-array obj-text[0x8fa], slot 0x914)
+# reference at ENDING.SPT:0x914 (cmd 0307-array obj-text[0x8ec], slot 0x914)
+0x2cb6 [0xd274]これはなにかのまちがいだ![Press A]
+
 # reference at ENDING.SPT:0xafc (cmd 0202 direct, slot 0xb08)
-0x2cd6 [0xd17d]みごとダバ! [Blue Text][%0][Normal Color Text]よ![Press A][0xa000][0xd17e]おまえが一春冬くのお金を集めてきたダバ![Press A][0xa000][0xd17f]安心して次の王様をまかせられるダバ![Press A]
+0x2cd6 [0xd17d]みごとダバ! [Blue Text][%0][Normal Color Text]よ![Press A][0xa000][0xd17e]おまえが一番冬くのお金を集めてきたダバ![Press A][0xa000][0xd17f]安心して次の王様をまかせられるダバ![Press A]
 
 # reference at ENDING.SPT:0xb36 (cmd 0303 direct, slot 0xb3a)
 0x2d4c [0xd180]でもワシがいんたいした後の話ダバ[Press A]
@@ -105,6 +161,27 @@
 
 # reference at ENDING.SPT:0x144a (cmd 0303 direct, slot 0x144e)
 0x33b4 [0x09b0]ってなわけポヨ[\n]世界は平和になったから、[\n]また[Blue Text]Dパーツ[Normal Color Text]をかくしにきたポヨ[0x09ff][Press A][0xa000][0x09b0]チミたちはとくに、[Blue Text]Dパーツ[Normal Color Text]を悪いことに[\n]便いそうなゴクアクづらをしているポヨ[\n]正直、きもち悪いレボルポヨ[0x09ff][Press A][0xa000][0x09b0][Blue Text]Dパーツ[Normal Color Text]は全部返してもらうポヨ[\n]ハイ、返してポヨ[0x09ff][Press A]
+
+# reference at ENDING.SPT:0x8ec (cmd 0307-array obj-text[0x8ec], slot 0x8ec)
+0x34b8 いきなりなんだよー![\n]返すわけないだろー![\n][Blue Text]Dパーツ[Normal Color Text]はベクのだぞ![Press A]
+
+# reference at ENDING.SPT:0x8ee (cmd 0307-array obj-text[0x8ec], slot 0x8ee)
+0x3502 いきなりなんなの!?[\n][Blue Text]ドカポニヨン人[Normal Color Text]だかなんだかしらないけど[\n]返すわけないでしょお![Press A]
+
+# reference at ENDING.SPT:0x8f0 (cmd 0307-array obj-text[0x8ec], slot 0x8f0)
+0x355e おかしなやつブリ![\n]返すわけないブリ![\n]とっとと掃るブリ![Press A]
+
+# reference at ENDING.SPT:0x8f2 (cmd 0307-array obj-text[0x8ec], slot 0x8f2)
+0x359c いきなりなんでござる![\n][Blue Text]Dパーツ[Normal Color Text]はせっしゃのものでござる![\n]返すわけないでござる![Press A]
+
+# reference at ENDING.SPT:0x8f4 (cmd 0307-array obj-text[0x8ec], slot 0x8f4)
+0x35f6 いきなりなんなの?[\n]返すもなにもないわよ![\n][Blue Text]Dパーツ[Normal Color Text]はワタシのものよ![Press A]
+
+# reference at ENDING.SPT:0x8f6 (cmd 0307-array obj-text[0x8ec], slot 0x8f6)
+0x3644 バキャミョナ~ッ![\n](返すわけないミョン! バカ言うニャ!)[Press A]
+
+# reference at ENDING.SPT:0x8f8 (cmd 0307-array obj-text[0x8ec], slot 0x8f8)
+0x3684 いきなりふざけたことを・・・[\n][Blue Text]Dパーツ[Normal Color Text]はオレのものだ![\n]ほしければ力ずくでうばってみろ![Press A]
 
 # reference at ENDING.SPT:0x147c (cmd 0202 direct, slot 0x1488)
 0x36e4 [0x09b0]コンニャロ~ポヨ![\n]下手にでてれば調子に[\n]のりやがってポヨ![0x09ff][Press A][0xa000][0x09b0]プンプンポヨ![\n]ドカポン王國なんて、[\n]もうどうでもいいポヨ![0x09ff][Press A][0xa000][0x09b0]こんな星ぶっこわしてやるポヨ![\n]ポクたちが本気になれば[\n]クシャミ一発でこの星はこなごなポヨ![0x09ff][Press A]

@@ -1,5 +1,5 @@
-# drama18.spt: 11 strings, 11 references. Translate by repeating the 0xOFFSET line with English.
-# record cursor 0x3aa0, script ends 0x2d40, 50528 bytes of arena shared by every replacement
+# drama18.spt: 47 strings, 47 references. Translate by repeating the 0xOFFSET line with English.
+# record cursor 0x3aa0, script ends 0x3a92, 50528 bytes of arena shared by every replacement
 
 # reference at drama18.spt:0x520 (cmd 0202 direct, slot 0x52c)
 0x280c [0xd006]ムキーッ![Press A][0xa000]オレ様にたてつくなんて、[\n]ムカツクやろうたちだぜ![Press A][0xa000]このままじゃ、すまさないからな![Press A]
@@ -11,7 +11,7 @@
 0x2938 [0xd056]ウキキのキー![Press A][0xa000]まかせてくださいでヤンス![Press A][0xa000][Red Text]ワルサーズ[Normal Color Text]さいきょうの[\n]この[Red Text]ワルサーグリーン[Normal Color Text]が、[\n]アイツらをメタクソにしてやるでヤンス![Press A]
 
 # reference at drama18.spt:0x61c (cmd 0202 direct, slot 0x628)
-0x29ce 何言ってるんだヌン[\n]一春よえーくせに、ほざくなヌン[\n]まっちゃヤロー・・・[Press A]
+0x29ce 何言ってるんだヌン[\n]一番よえーくせに、ほざくなヌン[\n]まっちゃヤロー・・・[Press A]
 
 # reference at drama18.spt:0x67c (cmd 0202 direct, slot 0x688)
 0x2a1a な、なんだと~![Press A][0xa000]なんならオイラのちから、[\n]この場で見てみるでヤンスか!?[\n]あ~ん!![Press A]
@@ -33,4 +33,112 @@
 
 # reference at drama18.spt:0x852 (cmd 0303 direct, slot 0x856)
 0x2d16 よし、グリーンよ![\n]行ってきやがれ!![Press A]
+
+# reference at drama18.spt:0xee0 (cmd 0202 direct, slot 0xeec)
+0x2d40 [0xd006]ムキーッ![Press A][0xa000]コラ! グリーン![\n]負けてきやがって![\n]アイツらがますます調子にのるだろ![Press A]
+
+# reference at drama18.spt:0xf36 (cmd 0303 direct, slot 0xf3a)
+0x2d9e 次はイエロー![\n]オマエがなんとかしやがれ![Press A][0xa000]これいじょう、調子にのらすんじゃないぞ![Press A]
+
+# reference at drama18.spt:0xf72 (cmd 0202 direct, slot 0xf7e)
+0x2df8 [0xd056]ウキキのキー![Press A][0xa000]オラにまかせるダス![Press A][0xa000]この[Red Text]ワルサーイエロー[Normal Color Text]が[\n]アイツらをギタンギタンにしてやるダス![Press A][0xa000]そのかわり、たおしたあとは[\n]ハラいっぽいカレー食わせてくれダス![Press A]
+
+# reference at drama18.spt:0xfe4 (cmd 0202 direct, slot 0xff0)
+0x2eae アンタはいつもカレーのことばっかりピョン[Press A]
+
+# reference at drama18.spt:0x1030 (cmd 0202 direct, slot 0x103c)
+0x2eda ケッ、食うだけしかのうのないヤツヌン[\n]おとなしくカレーを食ってるヌン[Press A]
+
+# reference at drama18.spt:0x1082 (cmd 0202 direct, slot 0x108e)
+0x2f22 おいおい、ブルー[\n]もしかして今、カレーをバカにしたダス?[Press A][0xa000]したダスな![Press A]
+
+# reference at drama18.spt:0x10bc (cmd 0303 direct, slot 0x10c0)
+0x2f6e こんのヤロー!![\n]カレーをバカにするヤツは[\n]オラがゆるさんダス![Press A]
+
+# reference at drama18.spt:0x10f0 (cmd 0202 direct, slot 0x10fc)
+0x2fb2 うおーッ![\n]オレの出番はまだかジャン!?[Press A]
+
+# reference at drama18.spt:0x114e (cmd 0202 direct, slot 0x115a)
+0x2fde おいコラ![\n]いいかげんにしやがれ![Press A]
+
+# reference at drama18.spt:0x1194 (cmd 0303 direct, slot 0x1198)
+0x3004 アイツらを、たおしてきたら、[\n]カレーでも何でも食わせてやる![Press A][0xa000]そのかわり負けたら、メシぬきだぞ![\n]分かったな!?[Press A]
+
+# reference at drama18.spt:0x11c8 (cmd 0303 direct, slot 0x11cc)
+0x307a よし、イエローよ![\n]行ってきやがれ!![Press A]
+
+# reference at drama18.spt:0xb8c (cmd 0202 direct, slot 0xb98)
+0x30a4 [0xd006]ムキーッ![Press A][0xa000]また負けたのか![\n]だらしないヤツばっかりだぜ![Press A]
+
+# reference at drama18.spt:0xbe2 (cmd 0303 direct, slot 0xbe6)
+0x30e6 しっかりしやがれ![\n]それでもオレ様の子分なのか![Press A][0xa000]ピンク![\n]オマエはだいじょうぶだよな!?[Press A]
+
+# reference at drama18.spt:0xc1e (cmd 0202 direct, slot 0xc2a)
+0x3146 [0xd06c]イヒヒのヒー![Press A][0xa000]この[Red Text]ワルサーピンク[Normal Color Text]に[\n]まかせといてくださいピョン![Press A][0xa000]アタイはグリーンやイエローとは[\n]ちがうピョン![Press A][0xa000]ワルサー様のきたいはうらぎらないピョン![\n]まちがいないピョン![Press A]
+
+# reference at drama18.spt:0xc90 (cmd 0202 direct, slot 0xc9c)
+0x3208 うおーッ![\n]がまんしすぎて、ばくはつしそうジャン![Press A][0xa000]たたかわせろったら[\n]たたかわせるジャン![Press A]
+
+# reference at drama18.spt:0xce2 (cmd 0202 direct, slot 0xcee)
+0x326a アタイがたたかうんだピョン![\n]アンタは、おちゃでものみながら[\n]まってればいいピョン![Press A]
+
+# reference at drama18.spt:0xd2e (cmd 0202 direct, slot 0xd3a)
+0x32c2 というか、頗がこわいんだヌン[\n]ブサイク・・・[Press A]
+
+# reference at drama18.spt:0xd8a (cmd 0202 direct, slot 0xd96)
+0x32f2 なんだって! きこえたピョン![\n]アンタからやっちまうピョン![\n]このいんけんヤロー![Press A]
+
+# reference at drama18.spt:0xde8 (cmd 0202 direct, slot 0xdf4)
+0x3348 わかったから、しずかにしやがれ![\n]ったく、どいつもこいつも・・・[Press A]
+
+# reference at drama18.spt:0xe2e (cmd 0303 direct, slot 0xe32)
+0x338c おい! オマエら![\n]これいじょうの、しっぽいはゆるさないからな![Press A][0xa000]おしおきされたくなかったら[\n]負けるんじゃないぞ![\n]いいな!?[Press A]
+
+# reference at drama18.spt:0xe62 (cmd 0303 direct, slot 0xe66)
+0x3410 よし、ピンクよ![\n]行ってきやがれ!![Press A]
+
+# reference at drama18.spt:0x2e (cmd 0202 direct, slot 0x3a)
+0x3438 [0xd006]ムキーッ![Press A][0xa000]もう半分いじょうも負けちまったのか!?[Press A][0xa000]まったく、なさけないぜ![\n]それでも、オレの部下か!?[Press A]
+
+# reference at drama18.spt:0x84 (cmd 0303 direct, slot 0x88)
+0x34aa のこりは二人だけだぜ![Press A][0xa000]オマエら、どうするつもりだ?[\n]二人でなかよく、いっしょに行くか?[Press A]
+
+# reference at drama18.spt:0xc0 (cmd 0202 direct, slot 0xcc)
+0x3508 [0xd056]ウキキのキー![Press A][0xa000]次でさいごヌン[Press A][0xa000]なんてったって、この[Red Text]ワルサーブルー[Normal Color Text]が[\n]次の相手だヌン[Press A][0xa000]ベクの計算だと100%勝てるヌン[\n]一人でじゅうぶんだヌン[\n]ヤツラをジワジワいたぶってやるヌン[Press A]
+
+# reference at drama18.spt:0x132 (cmd 0202 direct, slot 0x13e)
+0x35ca いや、次こそオレの出番ジャン![\n]もう、ガマンのげんかいジャン![Press A]
+
+# reference at drama18.spt:0x192 (cmd 0202 direct, slot 0x19e)
+0x360c うるさいヌン![\n]オマエの出番はないヌン[\n]このマッカチン![Press A]
+
+# reference at drama18.spt:0x1e4 (cmd 0202 direct, slot 0x1f0)
+0x3648 なんだと、コラ![\n]どうでもいいから、[\n]オレはバトルがしたいジャン![Press A]
+
+# reference at drama18.spt:0x242 (cmd 0202 direct, slot 0x24e)
+0x368e やめろ、やめろ![Press A][0xa000]ブルー![\n]オマエが行きやがれ![Press A][0xa000]オマエは頭がいいからな[\n]勝算があって、[\n]でかい口たたいたんだろ?[Press A]
+
+# reference at drama18.spt:0x288 (cmd 0303 direct, slot 0x28c)
+0x3708 [Red Text]魔界化[Normal Color Text]のじゅんびに[\n]まだ時間がかかりそうなんだ![Press A][0xa000]しっかりヤツらのジャマをして、[\n]時間をかせいできやがれ![Press A]
+
+# reference at drama18.spt:0x2bc (cmd 0303 direct, slot 0x2c0)
+0x377c よし、ブルーよ![\n]行ってきやがれ!![Press A]
+
+# reference at drama18.spt:0x338 (cmd 0202 direct, slot 0x344)
+0x37a4 [0xd006]ムキーッ![Press A][0xa000]どうなってんだ?[\n]のこりはレッドだけだぞ![Press A][0xa000][Red Text]ワルサーズ[Normal Color Text]にきたいした[\n]オレ様がバカだったぜ![Press A]
+
+# reference at drama18.spt:0x38e (cmd 0303 direct, slot 0x392)
+0x3818 オレ様がちょくせつ、[\n]ジャマしなくちゃダメなのか!?[Press A][0xa000]オレ様はいそがしいんだ![Press A][0xa000][Red Text]魔界化[Normal Color Text]のじゅんびは[\n]もうちょっとで終わるのによー![Press A]
+
+# reference at drama18.spt:0x3ca (cmd 0202 direct, slot 0x3d6)
+0x38a6 [0xd056]ウキキのキー![Press A][0xa000]よっしゃー!![\n]やっと、この[Red Text]ワルサーレッド[Normal Color Text]の[\n]出番ジャン![Press A][0xa000]メチャクチャにあばれてやるジャン![Press A][0xa000]強いヤツとたたかって[\n]オレはもっと強くなるジャン![Press A][0xa000]バトルいのちィィィ!![Press A]
+
+# reference at drama18.spt:0x41a (cmd 0202 direct, slot 0x426)
+0x3972 こらレッド! こうふんしすぎだ![\n]おちつきやがれ![Press A]
+
+# reference at drama18.spt:0x458 (cmd 0303 direct, slot 0x45c)
+0x39a8 でも、オマエならいけそうだぜ![\n]ヤツらをギタンギタンにしてしまえ![Press A][0xa000][Red Text]ワルサーズ[Normal Color Text]はオマエでさいごだ![\n]オマエにはきたいしてるぜ![Press A][0xa000]では、オレ様はさいごのじゅんびに[\n]とりかかるとするか![Press A]
+
+# reference at drama18.spt:0x48c (cmd 0303 direct, slot 0x490)
+0x3a6a よし、レッドよ![\n]行ってきやがれ!![Press A]
 

@@ -1,5 +1,5 @@
-# drama11.spt: 5 strings, 5 references. Translate by repeating the 0xOFFSET line with English.
-# record cursor 0x32e0, script ends 0x139e, 52512 bytes of arena shared by every replacement
+# drama11.spt: 12 strings, 12 references. Translate by repeating the 0xOFFSET line with English.
+# record cursor 0x32e0, script ends 0x14e6, 52512 bytes of arena shared by every replacement
 
 # reference at drama11.spt:0x284 (cmd 0202 direct, slot 0x290)
 0xaa0  
@@ -15,4 +15,25 @@
 
 # reference at drama11.spt:0x172 (cmd 0303 direct, slot 0x176)
 0x1382 [0xd042]ワルサードッキーング![Press A]
+
+# reference at drama11.spt:0x3f4 (cmd 0307-array obj-text[0x3f4], slot 0x3f4)
+0x139e [0xd1c0]ヘッヘ~ん、[\n]みんなにベクの力を見せてあげるよ![Press A]
+
+# reference at drama11.spt:0x3f6 (cmd 0307-array obj-text[0x3f4], slot 0x3f6)
+0x13d4 [0xd1e0]みんなには悪いけど、[\n]死んでもらうからね[Press A]
+
+# reference at drama11.spt:0x3f8 (cmd 0307-array obj-text[0x3f4], slot 0x3f8)
+0x1402 [0xd221]みんなには消えてもらうブリ[Press A]
+
+# reference at drama11.spt:0x3fa (cmd 0307-array obj-text[0x3f4], slot 0x3fa)
+0x1422 [0xd240]ジャマ者たちを消してから[\n]ゆっくり楽しむでござる[Press A]
+
+# reference at drama11.spt:0x3fc (cmd 0307-array obj-text[0x3f4], slot 0x3fc)
+0x1458 [0xd1ff]ワタシのジャマになるヤツ[\n]はみんな死ぬのよ[Press A]
+
+# reference at drama11.spt:0x3fe (cmd 0307-array obj-text[0x3f4], slot 0x3fe)
+0x1488 [0xd24c]タオシャナニャー[\n](みんな、ひねりつぶしてやるミャン!)[Press A]
+
+# reference at drama11.spt:0x400 (cmd 0307-array obj-text[0x3f4], slot 0x400)
+0x14c6 [0xd277]おまえら全員死んでもらうぞ[Press A]
 

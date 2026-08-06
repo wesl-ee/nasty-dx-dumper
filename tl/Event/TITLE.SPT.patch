@@ -1,9 +1,9 @@
-# TITLE.SPT: 175 strings, 435 references. Translate by repeating the 0xOFFSET line with English.
+# TITLE.SPT: 216 strings, 562 references. Translate by repeating the 0xOFFSET line with English.
 # record cursor 0x8a40, script ends 0x8a34, 30144 bytes of arena shared by every replacement
 
+# reference at TITLE.SPT:0x4420 (cmd 0203 direct, slot 0x4428)
 # reference at TITLE.SPT:0x2eb8 (cmd 0203 direct, slot 0x2ec0)
 # reference at TITLE.SPT:0x2f74 (cmd 0203 direct, slot 0x2f7c)
-# reference at TITLE.SPT:0x4420 (cmd 0203 direct, slot 0x4428)
 # reference at TITLE.SPT:0x3b30 (cmd 0203 direct, slot 0x3b38)
 # reference at TITLE.SPT:0x2902 (cmd 0203 direct, slot 0x290a)
 # reference at TITLE.SPT:0x242c (cmd 0203 direct, slot 0x2434)
@@ -11,21 +11,30 @@
 0x4ee0 は い[\n]いいえ
 0x4ee0 Yes[\n]No
 
-# reference at TITLE.SPT:0x306a (cmd 0303 direct, slot 0x306e)
-# reference at TITLE.SPT:0x2ff4 (cmd 0303 direct, slot 0x2ff8)
-# reference at TITLE.SPT:0x341e (cmd 0303 direct, slot 0x3422)
+# reference at TITLE.SPT:0x4262 (cmd 0303 direct, slot 0x4266)
+# reference at TITLE.SPT:0x143c (cmd 0202 direct, slot 0x1448)
 # reference at TITLE.SPT:0x3e22 (cmd 0202 direct, slot 0x3e2e)
 # reference at TITLE.SPT:0x44a0 (cmd 0303 direct, slot 0x44a4)
-# reference at TITLE.SPT:0x39de (cmd 0202 direct, slot 0x39ea)
+# reference at TITLE.SPT:0x13da (cmd 0202 direct, slot 0x13e6)
+# reference at TITLE.SPT:0x341e (cmd 0303 direct, slot 0x3422)
 # reference at TITLE.SPT:0x3518 (cmd 0202 direct, slot 0x3524)
+# reference at TITLE.SPT:0x347a (cmd 0303 direct, slot 0x347e)
+# reference at TITLE.SPT:0x466a (cmd 0303 direct, slot 0x466e)
+# reference at TITLE.SPT:0x91e (cmd 0303 direct, slot 0x922)
+# reference at TITLE.SPT:0x2ff4 (cmd 0303 direct, slot 0x2ff8)
+# reference at TITLE.SPT:0x39de (cmd 0202 direct, slot 0x39ea)
 # reference at TITLE.SPT:0x3dce (cmd 0202 direct, slot 0x3dda)
 # reference at TITLE.SPT:0x3bb6 (cmd 0202 direct, slot 0x3bc2)
+# reference at TITLE.SPT:0x306a (cmd 0303 direct, slot 0x306e)
+# reference at TITLE.SPT:0xd76 (cmd 0303 direct, slot 0xd7a)
+# reference at TITLE.SPT:0xe68 (cmd 0303 direct, slot 0xe6c)
+# reference at TITLE.SPT:0x9ec (cmd 0202 direct, slot 0x9f8)
+# reference at TITLE.SPT:0xa22 (cmd 0202 direct, slot 0xa2e)
 # reference at TITLE.SPT:0x28d8 (cmd 0303 direct, slot 0x28dc)
 # reference at TITLE.SPT:0x2968 (cmd 0303 direct, slot 0x296c)
 # reference at TITLE.SPT:0x1ca8 (cmd 0303 direct, slot 0x1cac)
 # reference at TITLE.SPT:0x178c (cmd 0202 direct, slot 0x1798)
 # reference at TITLE.SPT:0x252a (cmd 0202 direct, slot 0x2536)
-# reference at TITLE.SPT:0x347a (cmd 0303 direct, slot 0x347e)
 # reference at TITLE.SPT:0x180e (cmd 0202 direct, slot 0x181a)
 # reference at TITLE.SPT:0x3384 (cmd table table[5], slot 0x3384)
 0x4ef0  
@@ -57,13 +66,22 @@
 # reference at TITLE.SPT:0x3d0e (cmd 0303 direct, slot 0x3d12)
 0x521a [0x0c00][Blue Text][%0][Normal Color Text]さんの[\n]データをセーブするね![\n]どっちにセーブする?[0x0d00]
 
+# reference at TITLE.SPT:0x45d6 (cmd 0303 direct, slot 0x45da)
+0x525a [0xe800][0xe008][0x1002]/[0x1002][0xe008][0x1002]：[0x1002][\n]
+
 # reference at TITLE.SPT:0x47ce (cmd table table[2], slot 0x47ce)
 # reference at TITLE.SPT:0x47ce (cmd table table[3], slot 0x47ce)
 0x5270 [Normal Color Text]月[Normal Color Text]火[Normal Color Text]水[Normal Color Text]木[Normal Color Text]金[Blue Text]土[Red Text]日
 
+# reference at TITLE.SPT:0x4616 (cmd 0303 direct, slot 0x461a)
+0x528e 週([%0][Normal Color Text])[0xe008]次は[0xe800][0xe008]の番です
+
 # reference at TITLE.SPT:0x47d0 (cmd table table[2], slot 0x47d0)
 # reference at TITLE.SPT:0x47d0 (cmd table table[3], slot 0x47d0)
 0x52ac [0xe800][0xe008][%0]
+
+# reference at TITLE.SPT:0x3a76 (cmd 0303 direct, slot 0x3a7a)
+0x52b4 [0x0c00][0x0c00][%0]さんのデータは[\n]すでにセーブされてるよ![0x0d00][Press A]
 
 # reference at TITLE.SPT:0x47d2 (cmd table table[2], slot 0x47d2)
 # reference at TITLE.SPT:0x47d2 (cmd table table[3], slot 0x47d2)
@@ -127,6 +145,9 @@
 # reference at TITLE.SPT:0x3a54 (cmd 0303 direct, slot 0x3a58)
 0x53f8 [0x0c00]このファイルに[\n]セーブするけどいい?[0x0d00]
 
+# reference at TITLE.SPT:0x3a8c (cmd 0303 direct, slot 0x3a90)
+0x5422 [0x0c00]キャラクターがいっぽいだから[\n]消すキャラクターをえらんでね[0x0d00]
+
 # reference at TITLE.SPT:0x3ec2 (cmd 0303 direct, slot 0x3ec6)
 # reference at TITLE.SPT:0x3e92 (cmd 0303 direct, slot 0x3e96)
 # reference at TITLE.SPT:0x3c72 (cmd 0303 direct, slot 0x3c76)
@@ -140,6 +161,15 @@
 
 # reference at TITLE.SPT:0x3b0a (cmd 0303 direct, slot 0x3b0e)
 0x55b2 [0x0c00]セーブがおわったよ![0x0d00][Press A]
+
+# reference at TITLE.SPT:0x46f8 (cmd 0303 direct, slot 0x46fc)
+0x55ce [0x0c00][0x1000]番のファイルにセーブしたよ![0x0d00][Press A]
+
+# reference at TITLE.SPT:0x1416 (cmd 0303 direct, slot 0x141a)
+0x55f4 [0x0c00]名前を変えたよ![0x0d00][Press A]
+
+# reference at TITLE.SPT:0x46d2 (cmd 0303 direct, slot 0x46d6)
+0x560c [0x0c00][0x1000]番のファイルに[\n]セーブするけどいい?[0x0d00]
 
 # reference at TITLE.SPT:0x3ed0 (cmd 0303 direct, slot 0x3ed4)
 0x5638 [0x0c00]メモリーカードをしょきかしたよ![0x0d00][Press A]
@@ -157,6 +187,8 @@
 # reference at TITLE.SPT:0x4806 (cmd table table[7], slot 0x4806)
 # reference at TITLE.SPT:0x4806 (cmd table table[8], slot 0x4806)
 # reference at TITLE.SPT:0x4806 (cmd table table[9], slot 0x4806)
+# reference at TITLE.SPT:0x4806 (cmd 0307-array obj-text[0x47e6], slot 0x4806)
+# reference at TITLE.SPT:0x4806 (cmd 0307-array obj-text[0x4806], slot 0x4806)
 0x572c  
 
 # reference at TITLE.SPT:0x4808 (cmd table table[2], slot 0x4808)
@@ -164,6 +196,8 @@
 # reference at TITLE.SPT:0x4808 (cmd table table[7], slot 0x4808)
 # reference at TITLE.SPT:0x4808 (cmd table table[8], slot 0x4808)
 # reference at TITLE.SPT:0x4808 (cmd table table[9], slot 0x4808)
+# reference at TITLE.SPT:0x4808 (cmd 0307-array obj-text[0x47e6], slot 0x4808)
+# reference at TITLE.SPT:0x4808 (cmd 0307-array obj-text[0x4806], slot 0x4808)
 0x5730 CARD_RESULT_UNLOCKD[Press A]
 
 # reference at TITLE.SPT:0x480a (cmd table table[2], slot 0x480a)
@@ -171,6 +205,8 @@
 # reference at TITLE.SPT:0x480a (cmd table table[7], slot 0x480a)
 # reference at TITLE.SPT:0x480a (cmd table table[8], slot 0x480a)
 # reference at TITLE.SPT:0x480a (cmd table table[9], slot 0x480a)
+# reference at TITLE.SPT:0x480a (cmd 0307-array obj-text[0x47e6], slot 0x480a)
+# reference at TITLE.SPT:0x480a (cmd 0307-array obj-text[0x4806], slot 0x480a)
 0x575a CARD_RESULT_BUSY[Press A]
 
 # reference at TITLE.SPT:0x480c (cmd table table[2], slot 0x480c)
@@ -178,6 +214,8 @@
 # reference at TITLE.SPT:0x480c (cmd table table[7], slot 0x480c)
 # reference at TITLE.SPT:0x480c (cmd table table[8], slot 0x480c)
 # reference at TITLE.SPT:0x480c (cmd table table[9], slot 0x480c)
+# reference at TITLE.SPT:0x480c (cmd 0307-array obj-text[0x47e6], slot 0x480c)
+# reference at TITLE.SPT:0x480c (cmd 0307-array obj-text[0x4806], slot 0x480c)
 0x577e [0x0c00]データが見つからないよ![0x0d00][Press A]
 
 # reference at TITLE.SPT:0x480e (cmd table table[2], slot 0x480e)
@@ -190,6 +228,10 @@
 # reference at TITLE.SPT:0x4826 (cmd table table[8], slot 0x4826)
 # reference at TITLE.SPT:0x480e (cmd table table[9], slot 0x480e)
 # reference at TITLE.SPT:0x4826 (cmd table table[9], slot 0x4826)
+# reference at TITLE.SPT:0x480e (cmd 0307-array obj-text[0x47e6], slot 0x480e)
+# reference at TITLE.SPT:0x4826 (cmd 0307-array obj-text[0x47e6], slot 0x4826)
+# reference at TITLE.SPT:0x480e (cmd 0307-array obj-text[0x4806], slot 0x480e)
+# reference at TITLE.SPT:0x4826 (cmd 0307-array obj-text[0x4806], slot 0x4826)
 0x579e [0x0c00]スロット[%0]にささっているものは[\n]こわれているから[\n]便用できないよ![0x0d00][Press A]
 
 # reference at TITLE.SPT:0x4810 (cmd table table[2], slot 0x4810)
@@ -202,6 +244,10 @@
 # reference at TITLE.SPT:0x4822 (cmd table table[8], slot 0x4822)
 # reference at TITLE.SPT:0x4810 (cmd table table[9], slot 0x4810)
 # reference at TITLE.SPT:0x4822 (cmd table table[9], slot 0x4822)
+# reference at TITLE.SPT:0x4810 (cmd 0307-array obj-text[0x47e6], slot 0x4810)
+# reference at TITLE.SPT:0x4822 (cmd 0307-array obj-text[0x47e6], slot 0x4822)
+# reference at TITLE.SPT:0x4810 (cmd 0307-array obj-text[0x4806], slot 0x4810)
+# reference at TITLE.SPT:0x4822 (cmd 0307-array obj-text[0x4806], slot 0x4822)
 0x57e8 [0x0c00]スロット[%0]のメモリーカードは[\n]データがこわれているから、[\n]しょきかがひつようだよ![0x0d00][Press A]
 
 # reference at TITLE.SPT:0x4812 (cmd table table[2], slot 0x4812)
@@ -209,6 +255,8 @@
 # reference at TITLE.SPT:0x4812 (cmd table table[7], slot 0x4812)
 # reference at TITLE.SPT:0x4812 (cmd table table[8], slot 0x4812)
 # reference at TITLE.SPT:0x4812 (cmd table table[9], slot 0x4812)
+# reference at TITLE.SPT:0x4812 (cmd 0307-array obj-text[0x47e6], slot 0x4812)
+# reference at TITLE.SPT:0x4812 (cmd 0307-array obj-text[0x4806], slot 0x4812)
 0x5842 [0x0c00]スロット[%0]には[\n]何もささっていないよ![0x0d00][Press A]
 
 # reference at TITLE.SPT:0x4814 (cmd table table[2], slot 0x4814)
@@ -221,6 +269,10 @@
 # reference at TITLE.SPT:0x481a (cmd table table[8], slot 0x481a)
 # reference at TITLE.SPT:0x4814 (cmd table table[9], slot 0x4814)
 # reference at TITLE.SPT:0x481a (cmd table table[9], slot 0x481a)
+# reference at TITLE.SPT:0x4814 (cmd 0307-array obj-text[0x47e6], slot 0x4814)
+# reference at TITLE.SPT:0x481a (cmd 0307-array obj-text[0x47e6], slot 0x481a)
+# reference at TITLE.SPT:0x4814 (cmd 0307-array obj-text[0x4806], slot 0x4814)
+# reference at TITLE.SPT:0x481a (cmd 0307-array obj-text[0x4806], slot 0x481a)
 0x5870 [0x0c00]スロット[%0]のメモリーカードは[\n]空きブロックがないか[\n]ファイル数が冬すぎるよ![0x0d00][Press A][0xa000][0x0c00]このゲームをセーブするには[\n]少なくともファイル[Red Text]1[Normal Color Text]つと[\n][Red Text][0x1000][Normal Color Text]ブロックの空きがひつようだよ[0x0d00][Press A]
 
 # reference at TITLE.SPT:0x4816 (cmd table table[2], slot 0x4816)
@@ -228,6 +280,8 @@
 # reference at TITLE.SPT:0x4816 (cmd table table[7], slot 0x4816)
 # reference at TITLE.SPT:0x4816 (cmd table table[8], slot 0x4816)
 # reference at TITLE.SPT:0x4816 (cmd table table[9], slot 0x4816)
+# reference at TITLE.SPT:0x4816 (cmd 0307-array obj-text[0x47e6], slot 0x4816)
+# reference at TITLE.SPT:0x4816 (cmd 0307-array obj-text[0x4806], slot 0x4816)
 0x5928 [0x0c00]すでに同じファイル名が[\n]便われているよ![0x0d00][Press A]
 
 # reference at TITLE.SPT:0x4818 (cmd table table[2], slot 0x4818)
@@ -235,6 +289,8 @@
 # reference at TITLE.SPT:0x4818 (cmd table table[7], slot 0x4818)
 # reference at TITLE.SPT:0x4818 (cmd table table[8], slot 0x4818)
 # reference at TITLE.SPT:0x4818 (cmd table table[9], slot 0x4818)
+# reference at TITLE.SPT:0x4818 (cmd 0307-array obj-text[0x47e6], slot 0x4818)
+# reference at TITLE.SPT:0x4818 (cmd 0307-array obj-text[0x4806], slot 0x4818)
 0x5958 [0x0c00]スロット[%0]にささっているものは[\n]メモリーカードじゃないよ![0x0d00][Press A]
 
 # reference at TITLE.SPT:0x481c (cmd table table[2], slot 0x481c)
@@ -242,6 +298,8 @@
 # reference at TITLE.SPT:0x481c (cmd table table[7], slot 0x481c)
 # reference at TITLE.SPT:0x481c (cmd table table[8], slot 0x481c)
 # reference at TITLE.SPT:0x481c (cmd table table[9], slot 0x481c)
+# reference at TITLE.SPT:0x481c (cmd 0307-array obj-text[0x47e6], slot 0x481c)
+# reference at TITLE.SPT:0x481c (cmd 0307-array obj-text[0x4806], slot 0x481c)
 0x599a [0x0c00]ファイルにアクセスできないよ![0x0d00][Press A]
 
 # reference at TITLE.SPT:0x481e (cmd table table[2], slot 0x481e)
@@ -249,6 +307,8 @@
 # reference at TITLE.SPT:0x481e (cmd table table[7], slot 0x481e)
 # reference at TITLE.SPT:0x481e (cmd table table[8], slot 0x481e)
 # reference at TITLE.SPT:0x481e (cmd table table[9], slot 0x481e)
+# reference at TITLE.SPT:0x481e (cmd 0307-array obj-text[0x47e6], slot 0x481e)
+# reference at TITLE.SPT:0x481e (cmd 0307-array obj-text[0x4806], slot 0x481e)
 0x59c0 [0x0c00]ファイルサイズをこえて、[\n][0x0c00]リード/ライトしようとしたよ![0x0d00][Press A]
 
 # reference at TITLE.SPT:0x4820 (cmd table table[2], slot 0x4820)
@@ -256,6 +316,8 @@
 # reference at TITLE.SPT:0x4820 (cmd table table[7], slot 0x4820)
 # reference at TITLE.SPT:0x4820 (cmd table table[8], slot 0x4820)
 # reference at TITLE.SPT:0x4820 (cmd table table[9], slot 0x4820)
+# reference at TITLE.SPT:0x4820 (cmd 0307-array obj-text[0x47e6], slot 0x4820)
+# reference at TITLE.SPT:0x4820 (cmd 0307-array obj-text[0x4806], slot 0x4820)
 0x5a02 [0x0c00]ファイル名が長すぎるよ![0x0d00][Press A]
 
 # reference at TITLE.SPT:0x4824 (cmd table table[2], slot 0x4824)
@@ -263,6 +325,8 @@
 # reference at TITLE.SPT:0x4824 (cmd table table[7], slot 0x4824)
 # reference at TITLE.SPT:0x4824 (cmd table table[8], slot 0x4824)
 # reference at TITLE.SPT:0x4824 (cmd table table[9], slot 0x4824)
+# reference at TITLE.SPT:0x4824 (cmd 0307-array obj-text[0x47e6], slot 0x4824)
+# reference at TITLE.SPT:0x4824 (cmd 0307-array obj-text[0x4806], slot 0x4824)
 0x5a22 [0x0c00]リード/ライトしょりが[\n]キャンセルされたよ![0x0d00][Press A]
 
 # reference at TITLE.SPT:0x4828 (cmd table table[2], slot 0x4828)
@@ -270,6 +334,8 @@
 # reference at TITLE.SPT:0x4828 (cmd table table[7], slot 0x4828)
 # reference at TITLE.SPT:0x4828 (cmd table table[8], slot 0x4828)
 # reference at TITLE.SPT:0x4828 (cmd table table[9], slot 0x4828)
+# reference at TITLE.SPT:0x4828 (cmd 0307-array obj-text[0x47e6], slot 0x4828)
+# reference at TITLE.SPT:0x4828 (cmd 0307-array obj-text[0x4806], slot 0x4828)
 0x5a56 [0x0c00]スロット[%0]のメモリーカードは[\n]このゲームでは便えないよ![0x0d00][Press A]
 
 # reference at TITLE.SPT:0x482a (cmd table table[2], slot 0x482a)
@@ -277,6 +343,8 @@
 # reference at TITLE.SPT:0x482a (cmd table table[7], slot 0x482a)
 # reference at TITLE.SPT:0x482a (cmd table table[8], slot 0x482a)
 # reference at TITLE.SPT:0x482a (cmd table table[9], slot 0x482a)
+# reference at TITLE.SPT:0x482a (cmd 0307-array obj-text[0x47e6], slot 0x482a)
+# reference at TITLE.SPT:0x482a (cmd 0307-array obj-text[0x4806], slot 0x482a)
 0x5a96 [0x0c00]セーブされているデータが[\n]こわれてるよ![0x0d00][Press A]
 
 # reference at TITLE.SPT:0x482c (cmd table table[2], slot 0x482c)
@@ -284,6 +352,8 @@
 # reference at TITLE.SPT:0x482c (cmd table table[7], slot 0x482c)
 # reference at TITLE.SPT:0x482c (cmd table table[8], slot 0x482c)
 # reference at TITLE.SPT:0x482c (cmd table table[9], slot 0x482c)
+# reference at TITLE.SPT:0x482c (cmd 0307-array obj-text[0x47e6], slot 0x482c)
+# reference at TITLE.SPT:0x482c (cmd 0307-array obj-text[0x4806], slot 0x482c)
 0x5ac6 [0x0c00]セーブデータが見つからないよ![0x0d00][Press A]
 
 # reference at TITLE.SPT:0x482e (cmd table table[2], slot 0x482e)
@@ -291,6 +361,8 @@
 # reference at TITLE.SPT:0x482e (cmd table table[7], slot 0x482e)
 # reference at TITLE.SPT:0x482e (cmd table table[8], slot 0x482e)
 # reference at TITLE.SPT:0x482e (cmd table table[9], slot 0x482e)
+# reference at TITLE.SPT:0x482e (cmd 0307-array obj-text[0x47e6], slot 0x482e)
+# reference at TITLE.SPT:0x482e (cmd 0307-array obj-text[0x4806], slot 0x482e)
 0x5aec [0x0c00]エラーが発生したよ![0x0d00][Press A]
 
 # reference at TITLE.SPT:0x2ac4 (cmd 0303 direct, slot 0x2ac8)
@@ -307,6 +379,7 @@
 # reference at TITLE.SPT:0x4800 (cmd table table[7], slot 0x4800)
 # reference at TITLE.SPT:0x4800 (cmd table table[8], slot 0x4800)
 # reference at TITLE.SPT:0x4800 (cmd table table[9], slot 0x4800)
+# reference at TITLE.SPT:0x4800 (cmd 0307-array obj-text[0x47e6], slot 0x4800)
 0x5c5e クリアデータ、ゲームデータを[\n]セーブしなくてもいいの?
 
 # reference at TITLE.SPT:0x4802 (cmd table table[2], slot 0x4802)
@@ -314,6 +387,7 @@
 # reference at TITLE.SPT:0x4802 (cmd table table[7], slot 0x4802)
 # reference at TITLE.SPT:0x4802 (cmd table table[8], slot 0x4802)
 # reference at TITLE.SPT:0x4802 (cmd table table[9], slot 0x4802)
+# reference at TITLE.SPT:0x4802 (cmd 0307-array obj-text[0x47e6], slot 0x4802)
 0x5c96 メモリーカードがいっぽいだよ![\n]クリアデータ、ゲームデータを[\n]セーブしなくてもいいの?
 
 # reference at TITLE.SPT:0x4804 (cmd table table[2], slot 0x4804)
@@ -321,6 +395,7 @@
 # reference at TITLE.SPT:0x4804 (cmd table table[7], slot 0x4804)
 # reference at TITLE.SPT:0x4804 (cmd table table[8], slot 0x4804)
 # reference at TITLE.SPT:0x4804 (cmd table table[9], slot 0x4804)
+# reference at TITLE.SPT:0x4804 (cmd 0307-array obj-text[0x47e6], slot 0x4804)
 0x5cee メモリーカードがいっぽいだよ![\n]クリアデータをセーブしなくても[\n]いいの?
 
 # reference at TITLE.SPT:0x1fa8 (cmd 0303 direct, slot 0x1fac)
@@ -336,6 +411,7 @@
 # reference at TITLE.SPT:0x47fa (cmd table table[7], slot 0x47fa)
 # reference at TITLE.SPT:0x47fa (cmd table table[8], slot 0x47fa)
 # reference at TITLE.SPT:0x47fa (cmd table table[9], slot 0x47fa)
+# reference at TITLE.SPT:0x47fa (cmd 0307-array obj-text[0x47e6], slot 0x47fa)
 0x5da8 [0x6008][0x5088]あ[0x50a8]い[0x50c8]う[0x50e8]え[0x5108]お[0x5140]ら[0x5160]り[0x5180]る[0x51a0]れ[0x51c0]ろ[0xf020][0x5088]か[0x50a8]き[0x50c8]く[0x50e8]け[0x5108]こ[0x5140]わ[0x5160] [0x5180]を[0x51a0] [0x51c0]ん[0xf020][0x5088]さ[0x50a8]し[0x50c8]す[0x50e8]せ[0x5108]そ[0x5140]が[0x5160]ぎ[0x5180]ぐ[0x51a0]げ[0x51c0]ご[0xf020][0x5088]た[0x50a8]ち[0x50c8]つ[0x50e8]て[0x5108]と[0x5140]ざ[0x5160]じ[0x5180]ず[0x51a0]ぜ[0x51c0]ぞ[0xf020][0x5088]な[0x50a8]に[0x50c8]ぬ[0x50e8]ね[0x5108]の[0x5140]だ[0x5160]ぢ[0x5180]づ[0x51a0]で[0x51c0]ど[0xf020][0x5088]は[0x50a8]ひ[0x50c8]ふ[0x50e8]へ[0x5108]ほ[0x5140]ば[0x5160]び[0x5180]ぶ[0x51a0]べ[0x51c0]ぼ[0xf020][0x5088]ま[0x50a8]み[0x50c8]む[0x50e8]め[0x5108]も[0x5140]ぽ[0x5160]ぴ[0x5180]ぷ[0x51a0]ぺ[0x51c0]ぽ[0xf020][0x5088]や[0x50a8] [0x50c8]ゆ[0x50e8] [0x5108]よ[0x5142]っ[0x5162]ゃ[0x5182]ゅ[0x51a2]ょ[0x51c0]ー[0xf020][0x508a]ぁ[0x50aa]ぃ[0x50ca]ぅ[0x50ea]ぇ[0x510a]ぉ[0x5140]。[0x5160]、[0x5180]・[0x51a0] [0x51c0] 
 
 # reference at TITLE.SPT:0x47fc (cmd table table[2], slot 0x47fc)
@@ -343,6 +419,7 @@
 # reference at TITLE.SPT:0x47fc (cmd table table[7], slot 0x47fc)
 # reference at TITLE.SPT:0x47fc (cmd table table[8], slot 0x47fc)
 # reference at TITLE.SPT:0x47fc (cmd table table[9], slot 0x47fc)
+# reference at TITLE.SPT:0x47fc (cmd 0307-array obj-text[0x47e6], slot 0x47fc)
 0x5f24 [0x6008][0x5088]ア[0x50a8]イ[0x50c8]ウ[0x50e8]エ[0x5108]オ[0x5140]ラ[0x5160]リ[0x5180]ル[0x51a0]レ[0x51c0]ロ[0xf020][0x5088]カ[0x50a8]キ[0x50c8]ク[0x50e8]ケ[0x5108]コ[0x5140]ワ[0x5160] [0x5180]ヲ[0x51a0] [0x51c0]ン[0xf020][0x5088]サ[0x50a8]シ[0x50c8]ス[0x50e8]セ[0x5108]ソ[0x5140]ガ[0x5160]ギ[0x5180]グ[0x51a0]ゲ[0x51c0]ゴ[0xf020][0x5088]タ[0x50a8]チ[0x50c8]ツ[0x50e8]テ[0x5108]ト[0x5140]ゲ[0x5160]ジ[0x5180]ズ[0x51a0]ゼ[0x51c0]ゾ[0xf020][0x5088]ナ[0x50a8]ニ[0x50c8]ヌ[0x50e8]ネ[0x5108]ノ[0x5140]ダ[0x5160]ヂ[0x5180]ヅ[0x51a0]デ[0x51c0]ド[0xf020][0x508a]ハ[0x50a8]ヒ[0x50c8]フ[0x50e8]ヘ[0x5108]ホ[0x5140]バ[0x5160]ビ[0x5180]ブ[0x51a0]ボ[0x51c0]ベ[0xf020][0x5088]マ[0x50a8]ミ[0x50c8]ム[0x50e8]メ[0x5108]モ[0x5140]パ[0x5160]ピ[0x5180]プ[0x51a0]ペ[0x51c0]ポ[0xf020][0x5088]ヤ[0x50a8] [0x50c8]ユ[0x50e8] [0x5108]ヨ[0x5142]ッ[0x5162]ャ[0x5182]ュ[0x51a2]ョ[0x51c0]-[0xf020][0x5088]ァ[0x50aa]ィ[0x50ca]ゥ[0x50ea]ェ[0x510a]ォ[0x5142]ヴ[0x5160]。[0x5180]、[0x51a0]・[0x51c0] 
 
 # reference at TITLE.SPT:0x47fe (cmd table table[2], slot 0x47fe)
@@ -350,6 +427,7 @@
 # reference at TITLE.SPT:0x47fe (cmd table table[7], slot 0x47fe)
 # reference at TITLE.SPT:0x47fe (cmd table table[8], slot 0x47fe)
 # reference at TITLE.SPT:0x47fe (cmd table table[9], slot 0x47fe)
+# reference at TITLE.SPT:0x47fe (cmd 0307-array obj-text[0x47e6], slot 0x47fe)
 0x60a0 [0x6008][0x5088]A[0x50a8]B[0x50c8]C[0x50e8]D[0x5108]E[0x5140]a[0x5160]b[0x5180]c[0x51a0]d[0x51c0]e[0xf020][0x5088]F[0x50a8]G[0x50c8]H[0x50e8]I[0x5108]J[0x5140]f[0x5160]g[0x5180]h[0x51a0]i[0x51c0]j[0xf020][0x5088]K[0x50a8]L[0x50c8]M[0x50e8]N[0x5108]O[0x5140]k[0x5160]l[0x5180]m[0x51a0]n[0x51c0]o[0xf020][0x5088]P[0x50a8]Q[0x50c8]R[0x50e8]S[0x5108]T[0x5140]p[0x5160]q[0x5180]r[0x51a0]s[0x51c0]t[0xf020][0x5088]U[0x50a8]V[0x50c8]W[0x50e8]X[0x5108]Y[0x5140]u[0x5160]v[0x5180]w[0x51a0]x[0x51c0]y[0xf020][0x508a]Z[0x50aa] [0x50ca]![0x50ea]?[0x510a]%[0x5142]z[0x5162] [0x5182] [0x51a2][0x004f][0x51c0]♪[0xf020][0x5088]+[0x50a8]-[0x50c8]✖[0x50e8]/[0x5108]\[0x5140]([0x5160])[0x5180]<[0x51a0]>[0x51c0]~[0xf020][0x5088].[0x50a8]^[0x50c8]_[0x50e8]*[0x5108]&[0x5140]◯[0x5160]⬤[0x5180]△[0x51a0]ー[0x51c0]@[0xf020][0x5088]0[0x50a8]1[0x50c8]2[0x50e8]3[0x5108]4[0x5140]5[0x5160]6[0x5180]7[0x51a0]8[0x51c0]9
 
 # reference at TITLE.SPT:0x332a (cmd table table[10], slot 0x332a)
@@ -372,8 +450,67 @@
 # reference at TITLE.SPT:0x3332 (cmd table table[13], slot 0x3332)
 0x62c0 1ポイントにつき[\n][Blue Text]HP[Normal Color Text]を10ふやす[\n]ことができるよ!
 
+# reference at TITLE.SPT:0x1280 (cmd 0303 direct, slot 0x1284)
+0x632e [0x0c00]見たいデータをえらんでね[0x0d00][Press A]
+
+# reference at TITLE.SPT:0xf94 (cmd 0303 direct, slot 0xf98)
+0x634e [0x0c00]どっちを見る?[0x0d00]
+
+# reference at TITLE.SPT:0xf9a (cmd 0202 direct, slot 0xfa6)
+0x6362 クリアキャラを見る
+
+# reference at TITLE.SPT:0xfc4 (cmd 0202 direct, slot 0xfd0)
+0x6376 ものおきを見る
+
+# reference at TITLE.SPT:0x10d6 (cmd 0303 direct, slot 0x10da)
+0x6386 [0x0c00]どのデータを見るの?[0x0d00]
+
+# reference at TITLE.SPT:0x110e (cmd 0303 direct, slot 0x1112)
+0x63a0 Lv[0x1002][0xe008][0x2808]
+
+# reference at TITLE.SPT:0x3f3e (cmd 0202 direct, slot 0x3f4a)
+# reference at TITLE.SPT:0x418c (cmd 0303 direct, slot 0x4190)
+0x63fa [0x0c00]どのリストを見るの?[0x0d00]
+
+# reference at TITLE.SPT:0x41d4 (cmd 0303 direct, slot 0x41d8)
 # reference at TITLE.SPT:0x2572 (cmd 0303 direct, slot 0x2576)
 0x642a [0x1002][0xe800][0xe004][%0][0x5100][0x1002]コ[\n]
+
+# reference at TITLE.SPT:0x4182 (cmd 0303 direct, slot 0x4186)
+0x643c [0x0c00]見る物がないよ![0x0d00][Press A]
+
+# reference at TITLE.SPT:0x436e (cmd 0307-array obj-text[0x436a], slot 0x436e)
+# reference at TITLE.SPT:0x436e (cmd 0307-array obj-text[0x436e], slot 0x436e)
+0x6454 ぶきリスト
+
+# reference at TITLE.SPT:0x4370 (cmd 0307-array obj-text[0x436a], slot 0x4370)
+# reference at TITLE.SPT:0x4370 (cmd 0307-array obj-text[0x436e], slot 0x4370)
+0x6460 たてリスト
+
+# reference at TITLE.SPT:0x4372 (cmd 0307-array obj-text[0x436a], slot 0x4372)
+# reference at TITLE.SPT:0x4372 (cmd 0307-array obj-text[0x436e], slot 0x4372)
+0x646c Dグッズリスト
+
+# reference at TITLE.SPT:0x128e (cmd 0202 direct, slot 0x129a)
+0x64c4 [0x6004][0xa81c][0x5020]見る[0x6004][0xa819][0xe020]キャンセル[0x6004][0xa81a][0xe020]名前を変える
+
+# reference at TITLE.SPT:0x10f2 (cmd 0303 direct, slot 0x10f6)
+0x64f2 [0x0c00]クリアキャラクターのパラメータだよ![0x0d00]
+
+# reference at TITLE.SPT:0x436a (cmd 0307-array obj-text[0x436a], slot 0x436a)
+0x651c [%0]さんは[0x1000]%あつめました!
+
+# reference at TITLE.SPT:0x3fea (cmd 0303 direct, slot 0x3fee)
+0x6538 [0xb83a][0xe008]ぶき[0x5088][0x1002]/[0x1002]
+
+# reference at TITLE.SPT:0x4032 (cmd 0303 direct, slot 0x4036)
+0x654a [0xb83b][0xe008]たて[0x5088][0x1002]/[0x1002]
+
+# reference at TITLE.SPT:0x407a (cmd 0303 direct, slot 0x407e)
+0x655c [0xb83c][0xe008]Dグッズ[0x5088][0x1002]/[0x1002]
+
+# reference at TITLE.SPT:0x436c (cmd 0307-array obj-text[0x436a], slot 0x436c)
+0x6572 [%0]さんが手に入れたせんり品
 
 # reference at TITLE.SPT:0x333a (cmd table table[10], slot 0x333a)
 # reference at TITLE.SPT:0x333a (cmd table table[13], slot 0x333a)
@@ -396,6 +533,18 @@
 # reference at TITLE.SPT:0x47c8 (cmd table table[3], slot 0x47c8)
 0x65c6 ホリホリバトル
 
+# reference at TITLE.SPT:0xb4a (cmd 0307-array obj-text[0xb4a], slot 0xb4a)
+0x65d6 [Blue Text]あそぶ週数[Normal Color Text]を決めて、[\n]その週数內で、だれが1番お金を[\n]冬く集めたか、きそうバトルだよ!
+
+# reference at TITLE.SPT:0xb4c (cmd 0307-array obj-text[0xb4a], slot 0xb4c)
+0x6632 [Blue Text]たおす人数[Normal Color Text]を決めて、[\n]だれが1番早くたおしたか、[\n]きそうバトルだよ!
+
+# reference at TITLE.SPT:0xb4e (cmd 0307-array obj-text[0xb4a], slot 0xb4e)
+0x667c ドカポンエッグを[Blue Text]集める数[Normal Color Text]を決めて、[\n]だれが1番早く集められるか、[\n]きそうバトルだよ!
+
+# reference at TITLE.SPT:0x862 (cmd 0303 direct, slot 0x866)
+0x66d6 [0x0c00]どれであそぶの?[0x0d00]
+
 # reference at TITLE.SPT:0x36ec (cmd 0202 direct, slot 0x36f8)
 0x66ec クリアキャラクターリスト
 
@@ -404,6 +553,15 @@
 
 # reference at TITLE.SPT:0x3764 (cmd 0303 direct, slot 0x3768)
 0x6728 [0x5008][%0][0x50b8]Lv[0x50f8][0x1800]
+
+# reference at TITLE.SPT:0x2cd6 (cmd 0202 direct, slot 0x2ce2)
+0x679c 持っているDグッズ[0x510c][0x1800]コ
+
+# reference at TITLE.SPT:0x2d1e (cmd 0303 direct, slot 0x2d22)
+0x67b6 持っていくDグッズ[0x5110]コ
+
+# reference at TITLE.SPT:0x2cd0 (cmd 0303 direct, slot 0x2cd4)
+0x67ce [0x0c00]持っていく数を決めてね![\n]どれを持っていくかは[\n]オートでえらばれるよ![0x0d00]
 
 # reference at TITLE.SPT:0x23b6 (cmd 0303 direct, slot 0x23ba)
 0x681a [0x0c00]持っていくDグッズがないよ![0x0d00]
@@ -428,6 +586,12 @@
 
 # reference at TITLE.SPT:0x22da (cmd 0202 direct, slot 0x22e6)
 0x6a7e [0x0c00]ゲームに持っていく[\n]Dグッズを決めてね![0x0d00]
+
+# reference at TITLE.SPT:0x2bcc (cmd 0303 direct, slot 0x2bd0)
+0x6aac [0x1002][0xe800][0xe008][%0][0x5108][0x1002][0x0106][0xe028]コ
+
+# reference at TITLE.SPT:0x2bf6 (cmd 0202 direct, slot 0x2c02)
+0x6ac0 [0xb80a]持ち出す[\n][0xb80b]もどす
 
 # reference at TITLE.SPT:0x24d8 (cmd 0303 direct, slot 0x24dc)
 0x6ad6 [0x0c00]もう一度、キャラクターをえらんでね![0x0d00][Press A]
@@ -470,107 +634,147 @@
 # reference at TITLE.SPT:0x3342 (cmd table table[10], slot 0x3342)
 # reference at TITLE.SPT:0x3340 (cmd table table[13], slot 0x3340)
 # reference at TITLE.SPT:0x3342 (cmd table table[13], slot 0x3342)
+# reference at TITLE.SPT:0x3340 (cmd 0307-array obj-text[0x3340], slot 0x3340)
+# reference at TITLE.SPT:0x3342 (cmd 0307-array obj-text[0x3340], slot 0x3342)
 0x6b22 [0xf008]ドカポン城がある[\n]ドカポン王國の[\n]中心にある島。[\n]島の北西には[\n]大きな森がある。
 
 # reference at TITLE.SPT:0x3344 (cmd table table[10], slot 0x3344)
 # reference at TITLE.SPT:0x3344 (cmd table table[13], slot 0x3344)
+# reference at TITLE.SPT:0x3344 (cmd 0307-array obj-text[0x3340], slot 0x3344)
 0x6b76 [0xf008]さばくだらけの[\n]とてもあつい島。[\n]さばくの地下には[\n]大昔のドカポン王家[\n]のいせきがある。
 
 # reference at TITLE.SPT:0x3346 (cmd table table[10], slot 0x3346)
 # reference at TITLE.SPT:0x3346 (cmd table table[13], slot 0x3346)
-0x6bd2 [0xf008]ドカポン王國で[\n]1春大きな[\n]ゆうえんちがある島。[\n]島のまん中には[\n]川がながれている。
+# reference at TITLE.SPT:0x3346 (cmd 0307-array obj-text[0x3340], slot 0x3346)
+0x6bd2 [0xf008]ドカポン王國で[\n]1番大きな[\n]ゆうえんちがある島。[\n]島のまん中には[\n]川がながれている。
 
 # reference at TITLE.SPT:0x3348 (cmd table table[10], slot 0x3348)
 # reference at TITLE.SPT:0x3348 (cmd table table[13], slot 0x3348)
+# reference at TITLE.SPT:0x3348 (cmd 0307-array obj-text[0x3340], slot 0x3348)
 0x6c2a [0xf008]小さな島が[\n]集まってできた島。[\n]海のそこには[\n]たくさんの船が[\n]ちんぼつしている。
 
 # reference at TITLE.SPT:0x334a (cmd table table[10], slot 0x334a)
 # reference at TITLE.SPT:0x334a (cmd table table[13], slot 0x334a)
+# reference at TITLE.SPT:0x334a (cmd 0307-array obj-text[0x3340], slot 0x334a)
 0x6c7e [0xf008]火山がいっぽい[\n]ある島。高い山が[\n]あって、空をとばない[\n]と自友に地上を[\n]いどうできない。
 
 # reference at TITLE.SPT:0x334c (cmd table table[10], slot 0x334c)
 # reference at TITLE.SPT:0x334c (cmd table table[13], slot 0x334c)
+# reference at TITLE.SPT:0x334c (cmd 0307-array obj-text[0x3340], slot 0x334c)
 0x6cda [0xf008]ドカポン城がある[\n]ドカポン王國の[\n]中心にある島。[\n]ドカポン城の中に[\n]入ることができる。
 
 # reference at TITLE.SPT:0x334e (cmd table table[10], slot 0x334e)
 # reference at TITLE.SPT:0x334e (cmd table table[13], slot 0x334e)
+# reference at TITLE.SPT:0x334e (cmd 0307-array obj-text[0x3340], slot 0x334e)
 0x6d34 [0xf008]ドカポニヨン人が[\n]作った、バーチャルな[\n]字宙空間。本物の[\n]字宙じゃないので[\n]歩くことができる。
 
 # reference at TITLE.SPT:0x3350 (cmd table table[10], slot 0x3350)
 # reference at TITLE.SPT:0x3350 (cmd table table[13], slot 0x3350)
+# reference at TITLE.SPT:0x3350 (cmd 0307-array obj-text[0x3340], slot 0x3350)
 0x6d96 [0xf008]ドカポン王國が[\n]魔界になってしまった[\n]あとの、キングリン島。[\n]魔界なので、くらくて[\n]ジメジメしている。
 
 # reference at TITLE.SPT:0x47e6 (cmd table table[2], slot 0x47e6)
 # reference at TITLE.SPT:0x47e6 (cmd table table[3], slot 0x47e6)
 # reference at TITLE.SPT:0x47e6 (cmd table table[7], slot 0x47e6)
 # reference at TITLE.SPT:0x47e6 (cmd table table[8], slot 0x47e6)
+# reference at TITLE.SPT:0x47e6 (cmd 0307-array obj-text[0x47e6], slot 0x47e6)
 0x6e00 ドカポン城
 
 # reference at TITLE.SPT:0x47e8 (cmd table table[2], slot 0x47e8)
 # reference at TITLE.SPT:0x47e8 (cmd table table[3], slot 0x47e8)
 # reference at TITLE.SPT:0x47e8 (cmd table table[7], slot 0x47e8)
 # reference at TITLE.SPT:0x47e8 (cmd table table[8], slot 0x47e8)
+# reference at TITLE.SPT:0x47e8 (cmd 0307-array obj-text[0x47e6], slot 0x47e8)
 0x6e0c キングリン島
 
 # reference at TITLE.SPT:0x47ea (cmd table table[2], slot 0x47ea)
 # reference at TITLE.SPT:0x47ea (cmd table table[3], slot 0x47ea)
 # reference at TITLE.SPT:0x47ea (cmd table table[7], slot 0x47ea)
 # reference at TITLE.SPT:0x47ea (cmd table table[8], slot 0x47ea)
+# reference at TITLE.SPT:0x47ea (cmd 0307-array obj-text[0x47e6], slot 0x47ea)
 0x6e1a ズナズナ島
 
 # reference at TITLE.SPT:0x47ec (cmd table table[2], slot 0x47ec)
 # reference at TITLE.SPT:0x47ec (cmd table table[3], slot 0x47ec)
 # reference at TITLE.SPT:0x47ec (cmd table table[7], slot 0x47ec)
 # reference at TITLE.SPT:0x47ec (cmd table table[8], slot 0x47ec)
+# reference at TITLE.SPT:0x47ec (cmd 0307-array obj-text[0x47e6], slot 0x47ec)
 0x6e26 ワクワク島
 
 # reference at TITLE.SPT:0x47ee (cmd table table[2], slot 0x47ee)
 # reference at TITLE.SPT:0x47ee (cmd table table[3], slot 0x47ee)
 # reference at TITLE.SPT:0x47ee (cmd table table[7], slot 0x47ee)
 # reference at TITLE.SPT:0x47ee (cmd table table[8], slot 0x47ee)
+# reference at TITLE.SPT:0x47ee (cmd 0307-array obj-text[0x47e6], slot 0x47ee)
 0x6e32 ポチャポチャ島
 
 # reference at TITLE.SPT:0x47f0 (cmd table table[2], slot 0x47f0)
 # reference at TITLE.SPT:0x47f0 (cmd table table[3], slot 0x47f0)
 # reference at TITLE.SPT:0x47f0 (cmd table table[7], slot 0x47f0)
 # reference at TITLE.SPT:0x47f0 (cmd table table[8], slot 0x47f0)
+# reference at TITLE.SPT:0x47f0 (cmd 0307-array obj-text[0x47e6], slot 0x47f0)
 0x6e42 ベーベー島
 
 # reference at TITLE.SPT:0x47f2 (cmd table table[2], slot 0x47f2)
 # reference at TITLE.SPT:0x47f2 (cmd table table[3], slot 0x47f2)
 # reference at TITLE.SPT:0x47f2 (cmd table table[7], slot 0x47f2)
 # reference at TITLE.SPT:0x47f2 (cmd table table[8], slot 0x47f2)
+# reference at TITLE.SPT:0x47f2 (cmd 0307-array obj-text[0x47e6], slot 0x47f2)
 0x6e4e キングリン島2
 
 # reference at TITLE.SPT:0x47f4 (cmd table table[2], slot 0x47f4)
 # reference at TITLE.SPT:0x47f4 (cmd table table[3], slot 0x47f4)
 # reference at TITLE.SPT:0x47f4 (cmd table table[7], slot 0x47f4)
 # reference at TITLE.SPT:0x47f4 (cmd table table[8], slot 0x47f4)
+# reference at TITLE.SPT:0x47f4 (cmd 0307-array obj-text[0x47e6], slot 0x47f4)
 0x6e5e 字宙空間
 
 # reference at TITLE.SPT:0x47f6 (cmd table table[2], slot 0x47f6)
 # reference at TITLE.SPT:0x47f6 (cmd table table[3], slot 0x47f6)
 # reference at TITLE.SPT:0x47f6 (cmd table table[7], slot 0x47f6)
 # reference at TITLE.SPT:0x47f6 (cmd table table[8], slot 0x47f6)
+# reference at TITLE.SPT:0x47f6 (cmd 0307-array obj-text[0x47e6], slot 0x47f6)
 0x6e68 魔界キングリン島
 
 # reference at TITLE.SPT:0x47f8 (cmd table table[2], slot 0x47f8)
 # reference at TITLE.SPT:0x47f8 (cmd table table[3], slot 0x47f8)
 # reference at TITLE.SPT:0x47f8 (cmd table table[7], slot 0x47f8)
 # reference at TITLE.SPT:0x47f8 (cmd table table[8], slot 0x47f8)
+# reference at TITLE.SPT:0x47f8 (cmd 0307-array obj-text[0x47e6], slot 0x47f8)
 0x6e7a [Blue Text]クリアデータ[Normal Color Text]
+
+# reference at TITLE.SPT:0x9ae (cmd 0303 direct, slot 0x9b2)
+0x6e8c [0x0c00]あそぶマップをえらんでね![\n]でもストーリーモードでクリアした[\n]マップしかあそべないからね![0x0d00]
+
+# reference at TITLE.SPT:0xc86 (cmd 0303 direct, slot 0xc8a)
+0x6eec [0x0c00]こまかいルールをきめてね![0x0d00]
+
+# reference at TITLE.SPT:0xd3a (cmd 0303 direct, slot 0xd3e)
+0x6f0c [0x0c00]今はせっていできないよ![0x0d00]
+
+# reference at TITLE.SPT:0xbf0 (cmd 0303 direct, slot 0xbf4)
+0x6f2a [0x5008][0x6004]はじめのレボル[0x50c8][0x1800]
 
 # reference at TITLE.SPT:0x3334 (cmd table table[10], slot 0x3334)
 # reference at TITLE.SPT:0x3334 (cmd table table[13], slot 0x3334)
+# reference at TITLE.SPT:0x3334 (cmd 0307-array obj-text[0x3334], slot 0x3334)
 0x6f42 [0x5008][0x6004]あそぶ週数[0x50c8][0x1800]
 
 # reference at TITLE.SPT:0x3336 (cmd table table[10], slot 0x3336)
 # reference at TITLE.SPT:0x3336 (cmd table table[13], slot 0x3336)
+# reference at TITLE.SPT:0x3336 (cmd 0307-array obj-text[0x3334], slot 0x3336)
 0x6f56 [0x5008][0x6004]たおす人数[0x50c8][0x1800]
 
 # reference at TITLE.SPT:0x3338 (cmd table table[10], slot 0x3338)
 # reference at TITLE.SPT:0x3338 (cmd table table[13], slot 0x3338)
+# reference at TITLE.SPT:0x3338 (cmd 0307-array obj-text[0x3334], slot 0x3338)
 0x6f6a [0x5008][0x6004]集める数[0x50c8][0x1800]
+
+# reference at TITLE.SPT:0xeae (cmd 0303 direct, slot 0xeb2)
+0x6f7c [0x5008][0x6004]うばうもの[0x50e0][0x2800]
+
+# reference at TITLE.SPT:0xeec (cmd 0303 direct, slot 0xef0)
+0x6f90 [0x5008][0x6004]とられる人[0x50e0][0x2800]
 
 # reference at TITLE.SPT:0x33a4 (cmd table table[4], slot 0x33a4)
 # reference at TITLE.SPT:0x33a4 (cmd table table[5], slot 0x33a4)
@@ -583,6 +787,9 @@
 # reference at TITLE.SPT:0x33a6 (cmd table table[11], slot 0x33a6)
 # reference at TITLE.SPT:0x33a6 (cmd table table[12], slot 0x33a6)
 0x70ba ゲームをクリアしたときに、[\n][Blue Text]とられる人[Normal Color Text]で決めた人から[\n]うばうものを決められるよ!
+
+# reference at TITLE.SPT:0xe1a (cmd 0303 direct, slot 0xe1e)
+0x7180 [0x7007]スペシャルルール
 
 # reference at TITLE.SPT:0x3080 (cmd 0303 direct, slot 0x3084)
 0x71e8 さぁ、ゲームスタートだよ![Press A]
@@ -715,7 +922,9 @@
 0x74ae [0x0c00]何人であそぶの?[0x0d00]
 0x74ae How many players?
 
+# reference at TITLE.SPT:0x84c (cmd 0303 direct, slot 0x850)
 # reference at TITLE.SPT:0x1b8a (cmd 0303 direct, slot 0x1b8e)
+# reference at TITLE.SPT:0x792 (cmd 0303 direct, slot 0x796)
 0x74c4 [0x0c00]やぁ! ぼくナビィ![0x0d00]
 0x74c4 [0x0c00]Hi! I'm Navi![0x0d00]
 
@@ -791,17 +1000,17 @@
 0x87de [0x0994][0xd0a8][0x0c00]おめでとう![0x0d00][Press A][0xa000][0xd09f][0x0c00]やったね![\n][Blue Text]ぶき[Normal Color Text]を全部集めたよ![0x0d00][Press A]
 
 # reference at TITLE.SPT:0x3acc (cmd 0303 direct, slot 0x3ad0)
-0x8824 [0x0c00]ごほうびに、さいきょうのぶき、[\n][0x096a][Blue Text]ドカポンの釗DX[Normal Color Text]を[\n]プレゼントするね![0x0d00][Press A][0xa000][0x0c00]これからも[\n]ドカポンを寨しんでね![0x0d00][Press A]
+0x8824 [0x0c00]ごほうびに、さいきょうのぶき、[\n][0x096a][Blue Text]ドカポンの釗DX[Normal Color Text]を[\n]プレゼントするね![0x0d00][Press A][0xa000][0x0c00]これからも[\n]ドカポンを楽しんでね![0x0d00][Press A]
 
 # reference at TITLE.SPT:0x3adc (cmd 0303 direct, slot 0x3ae0)
 0x88a2 [0x0994][0xd0a8][0x0c00]おめでとう![0x0d00][Press A][0xa000][0xd09f][0x0c00]やったね![\n][Blue Text]たて[Normal Color Text]を全部集めたよ![0x0d00][Press A]
 
 # reference at TITLE.SPT:0x3ae6 (cmd 0303 direct, slot 0x3aea)
-0x88e8 [0x0c00]ごほうびに、さいきょうのたて、[\n][0x096a][Blue Text]ドカポンの店DX[Normal Color Text]を[\n]プレゼントするね![0x0d00][Press A][0xa000][0x0c00]これからも[\n]ドカポンを寨しんでね![0x0d00][Press A]
+0x88e8 [0x0c00]ごほうびに、さいきょうのたて、[\n][0x096a][Blue Text]ドカポンの店DX[Normal Color Text]を[\n]プレゼントするね![0x0d00][Press A][0xa000][0x0c00]これからも[\n]ドカポンを楽しんでね![0x0d00][Press A]
 
 # reference at TITLE.SPT:0x3af6 (cmd 0303 direct, slot 0x3afa)
 0x8966 [0x0994][0xd0a8][0x0c00]おめでとう![0x0d00][Press A][0xa000][0xd09f][0x0c00]やったね![\n][Blue Text]Dグッズ[Normal Color Text]を全部集めたよ![0x0d00][Press A]
 
 # reference at TITLE.SPT:0x3b00 (cmd 0303 direct, slot 0x3b04)
-0x89b0 [0x0c00]ごほうびに、1春きちょうなDグッズ、[\n][0x096a][Blue Text]ドカポンジュエル[Normal Color Text]を[\n][0x0c00]プレゼントするね![0x0d00][Press A][0xa000]これからも[\n]ドカポンを寨しんでね![0x0d00][Press A]
+0x89b0 [0x0c00]ごほうびに、1番きちょうなDグッズ、[\n][0x096a][Blue Text]ドカポンジュエル[Normal Color Text]を[\n][0x0c00]プレゼントするね![0x0d00][Press A][0xa000]これからも[\n]ドカポンを楽しんでね![0x0d00][Press A]
 

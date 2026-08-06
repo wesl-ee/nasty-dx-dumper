@@ -131,7 +131,7 @@
 # reference at main.dol:0x1c6eec (RAM 0x801c9eec) [B]
 # reference at main.dol:0x1c6ef0 (RAM 0x801c9ef0) [D]
 0x1c5f88 [Green Text]そうげんマス[Normal Color Text]
-0x1c5f88 [Green Text]Grass[Normal Color Text]
+0x1c5f88 [Green Text]Grass Space[Normal Color Text]
 
 # reference at main.dol:0x1c6efc (RAM 0x801c9efc) [B]
 # reference at main.dol:0x1c6f00 (RAM 0x801c9f00) [D]
@@ -768,7 +768,7 @@
 0x1c6e84 閣の力で、デビラーマンと[\n]むりやりたたかわされる
 
 # reference at main.dol:0x1c7564 (RAM 0x801ca564) [B]
-0x1c6eb8 コーヒーカップにのれて、[\n]グルグル回れて寨しい!
+0x1c6eb8 コーヒーカップにのれて、[\n]グルグル回れて楽しい!
 
 # reference at main.dol:0x1ca1e4 (RAM 0x801cd1e4) [A]
 0x1c7d28 ようがん
@@ -840,7 +840,6 @@
 # reference at main.dol:0x1c9f10 (RAM 0x801ccf10) [A]
 0x1c7fc8 上がっていた[\n][Blue Text][%0][Normal Color Text]の[\n][Green Text]ぼうぎょ力[Normal Color Text]が元にもどった!
 0x1c7fc8 [Blue Text][%0][Normal Color Text]'s increased[\n][Green Text]DF[Normal Color Text] returned to normal!
-
 
 # reference at main.dol:0x1c9f18 (RAM 0x801ccf18) [A]
 0x1c8000 上がっていた[\n][Blue Text][%0][Normal Color Text]の[\n][Green Text]すばやさ[Normal Color Text]が元にもどった!
@@ -1191,7 +1190,7 @@
 # reference at main.dol:0x1ca0b4 (RAM 0x801cd0b4) [A]
 # reference at main.dol:0x293a0 (RAM 0x80039660) [addi paired with the lis at RAM 0x8003965c]
 0x1c91cc [Blue Text][%0][Normal Color Text]は[\n][Red Text]デスルーレット[Normal Color Text]のこうかで、[\n]HPが[Red Text]0[Normal Color Text]になってしまった!
-0x1c91cc [Blue Text][%0][Normal Color Text]'s[\n]HP is reduced to [Red Text]0[0x1000][Normal Color Text][\n]due to [Red Text]Death Roulette[Normal Color Text]!
+0x1c91cc [Blue Text][%0][Normal Color Text]'s[\n]HP is reduced to [Red Text]0[Normal Color Text][\n]due to [Red Text]Death Roulette[Normal Color Text]!
 
 # reference at main.dol:0x1ca0a8 (RAM 0x801cd0a8) [A]
 0x1c9218 [Blue Text][%0][Normal Color Text]は[\n][Red Text]デスルーレット[Normal Color Text]から[\n]かいほうされた!
@@ -1371,7 +1370,7 @@
 0x1c9b5c [Blue Text][%0][Normal Color Text]は[\n]すでに[Red Text]どく[Normal Color Text]をうけている
 
 # reference at main.dol:0x2c2d8 (RAM 0x8003c598) [addi paired with the lis at RAM 0x8003c594]
-0x1c9b84 [Blue Text]喜びのかめん[Normal Color Text]、[\n][Blue Text]怒りのかめん[Normal Color Text]、[\n][Blue Text]哀しみのかめん[Normal Color Text]、[Press A][0xa000][Blue Text]寨しみのかめん[Normal Color Text][\n]が、キラキラ光りだした!
+0x1c9b84 [Blue Text]喜びのかめん[Normal Color Text]、[\n][Blue Text]怒りのかめん[Normal Color Text]、[\n][Blue Text]哀しみのかめん[Normal Color Text]、[Press A][0xa000][Blue Text]楽しみのかめん[Normal Color Text][\n]が、キラキラ光りだした!
 
 # reference at main.dol:0x1ef80 (RAM 0x8002f240) [addi paired with the lis at RAM 0x8002f23c]
 0x1c9bf4 [0x9a1][Blue Text]4つのかめん[Normal Color Text]が合休して、[\n][Blue Text]神のかめん[Normal Color Text]になった!
@@ -1688,19 +1687,19 @@
 
 # reference at main.dol:0x1cd6f4 (RAM 0x801d06f4) [C]
 0x1ca6c0 ルーレットを[\n][Green Text]2コ[Normal Color Text]にふやせる[\n]まほうのほうせき
-0x1ca6c0 A magic gem[\n]that increases your[\n]spinners to [Green Text]2[Normal Color Text].
+0x1ca6c0 A magic gem[\n]that increases your[\n]spinners to [Green Text]2[Normal Color Text]
 
 # reference at main.dol:0x1cd70c (RAM 0x801d070c) [C]
 0x1ca6f4 ルーレットを[\n][Green Text]3コ[Normal Color Text]にふやせる[\n]まほうのほうせき
-0x1ca6f4 A magic gem[\n]that increases your[\n]spinners to[ Green Text]3[Normal Color Text].
+0x1ca6f4 A magic gem[\n]that increases your[\n]spinners to[Green Text]3[Normal Color Text]
 
 # reference at main.dol:0x1cd724 (RAM 0x801d0724) [C]
 0x1ca728 ルーレットを[\n][Green Text]4コ[Normal Color Text]にふやせる[\n]まほうのほうせき
-0x1ca728 A magic gem[\n]that increases your[\n]spinners to [Green Text]4[Normal Color Text].
+0x1ca728 A magic gem[\n]that increases your[\n]spinners to [Green Text]4[Normal Color Text]
 
 # reference at main.dol:0x1cd73c (RAM 0x801d073c) [C]
 0x1ca75c ルーレットを[\n][Green Text]5コ[Normal Color Text]にふやせる[\n]まほうのほうせき
-0x1ca75c A magic gem[\n]that increases your[\n]spinners to [Green Text]5[Normal Color Text].
+0x1ca75c A magic gem[\n]that increases your[\n]spinners to [Green Text]5[Normal Color Text]
 
 # reference at main.dol:0x1cd754 (RAM 0x801d0754) [C]
 0x1ca790 しばらくの間、ルーレット[\n]を[Green Text]2~5コ[Normal Color Text]にふやせる[\n]まほうのほうせき
@@ -1708,7 +1707,7 @@
 
 # reference at main.dol:0x1cd76c (RAM 0x801d076c) [C]
 0x1ca7d8 [Green Text]0~6マス[Normal Color Text]いどう[\n]できるようになる[\n]まほうのクリスタル
-0x1ca7d8 A magic crystal that lets you[\n]move[Green Text]0~6 spaces[Normal Color Text].
+0x1ca7d8 A magic crystal that lets you[\n]move[Green Text]0~6 spaces[Normal Color Text]
 
 # reference at main.dol:0x1cd784 (RAM 0x801d0784) [C]
 0x1ca814 [Blue Text]たてものの中[Normal Color Text]や[Blue Text]どうくつ[Normal Color Text][\n]などからだっしゅつできる[\n]トンネルを開く道具
@@ -2360,7 +2359,7 @@
 0x1cc6f0 哀しみのかめん
 
 # reference at main.dol:0x1ce4a0 (RAM 0x801d14a0) [D]
-0x1cc700 寨しみのかめん
+0x1cc700 楽しみのかめん
 
 # reference at main.dol:0x1ce4b0 (RAM 0x801d14b0) [D]
 0x1cc710 神のかめん
@@ -2513,10 +2512,10 @@
 0x1cd3c4 哀しみにみちあふれた[\n]さびしそうな頗のかめん[\n]全部で4しゅるいあるらしい
 
 # reference at main.dol:0x1ce4a4 (RAM 0x801d14a4) [D]
-0x1cd410 寨しみにみちあふれた[\n]ゆかいな頗のかめん[\n]全部で4しゅるいあるらしい
+0x1cd410 楽しみにみちあふれた[\n]ゆかいな頗のかめん[\n]全部で4しゅるいあるらしい
 
 # reference at main.dol:0x1ce4b4 (RAM 0x801d14b4) [D]
-0x1cd458 喜怒哀寨の全てを[\n]あらわした神の頗のかめん[\n]たまにお金をふやしてくれる
+0x1cd458 喜怒哀楽の全てを[\n]あらわした神の頗のかめん[\n]たまにお金をふやしてくれる
 
 # reference at main.dol:0x1ce4c4 (RAM 0x801d14c4) [D]
 0x1cd4a0 [Blue Text]こうげき力[Normal Color Text]、[Blue Text]ぼうぎょ力[Normal Color Text]、[\n][Blue Text]まりょく[Normal Color Text]、[Blue Text]すばやさ[Normal Color Text]が[\n][Green Text]50[Normal Color Text]あがる光るほうせき
@@ -2563,7 +2562,7 @@
 0x1ceae0 [Red Text]You cannot move there[Normal Color Text]
 
 # reference at main.dol:0x1ca1b0 (RAM 0x801cd1b0) [A]
-0x1ceb04 [Blue Text][%0][Normal Color Text]の春です
+0x1ceb04 [Blue Text][%0][Normal Color Text]の番です
 0x1ceb04 [Blue Text][%0][Normal Color Text]'s turn
 
 # reference at main.dol:0x1ca1b4 (RAM 0x801cd1b4) [A]
@@ -2732,7 +2731,7 @@
 # reference at main.dol:0x1ca17c (RAM 0x801cd17c) [A]
 # reference at main.dol:0x1f08c (RAM 0x8002f34c) [addi paired with the lis at RAM 0x8002f348]
 0x1cf060 [Blue Text][%0][Normal Color Text]は[\n][Red Text][%0][Normal Color Text]で、[\n][0x3800][Red Text][0x1000][Normal Color Text]のダメージ!
-0x1cf060 [Blue Text][%0][Normal Color Text]took[\n][0x3800][Red Text][0x1000][Normal Color Text] damage from[\n][Red Text][%0][Normal Color Text]!
+0x1cf060 [Blue Text][%0][Normal Color Text] took[\n][Red Text][%0][Normal Color Text] damage![\n][0x3800][Red Text][0x1000][Normal Color Text] HP lost!
 
 # reference at main.dol:0x1e9c4 (RAM 0x8002ec84) [addi paired with the lis at RAM 0x8002ec80]
 0x1cf08c [Blue Text][%0][Normal Color Text]は[\n]よけた!
@@ -2778,11 +2777,11 @@
 
 # reference at main.dol:0x1d0be8 (RAM 0x801d3be8) [confirm]
 0x1cf1a4 [Blue Text][%0][Normal Color Text]は、[\n][Red Text][%0][Normal Color Text]を[\n]おとした!
-0x1cf1a4 [Blue Text][%0][Normal Color Text] dropped[\n][Red Text][%0][Normal Color Text] and[\n][Press A][Red Text][%0][Normal Color Text]!
+0x1cf1a4 [Blue Text][%0][Normal Color Text] dropped[\n][Red Text][%0][Normal Color Text]!
 
 # reference at main.dol:0x1d0bec (RAM 0x801d3bec) [confirm]
 0x1cf1c8 [Blue Text][%0][Normal Color Text]は、[\n][Red Text][%0][Normal Color Text]と[\n][Press A][Red Text][%0][Normal Color Text]を[\n]おとした!
-0x1cf1c8 [Blue Text][%0][Normal Color Text] dropped[\n][Red Text][%0][Normal Color Text],[\n][Red Text][%0][Normal Color Text], and[\n][Press A][Red Text][%0][Normal Color Text]!
+0x1cf1c8 [Blue Text][%0][Normal Color Text] dropped[\n][Red Text][%0][Normal Color Text],[\n]and [Red Text][%0][Normal Color Text]!
 
 # reference at main.dol:0x1d0bf0 (RAM 0x801d3bf0) [confirm]
 0x1cf1f8 [Blue Text][%0][Normal Color Text]は、[\n][Red Text][%0][Normal Color Text]と[\n][Red Text][%0][Normal Color Text]と[\n][Press A][Red Text][%0][Normal Color Text]を[\n]おとした!
@@ -2828,41 +2827,41 @@
 # reference at main.dol:0x1c7034 (RAM 0x801ca034) [D]
 # reference at main.dol:0x1c7044 (RAM 0x801ca044) [D]
 0x1cf334 モンスターとたたかったり、[\n]イボントがおきたりする
-0x1cf334 Battles or events may occur
+0x1cf334 Battles or events[\n]may occur
 
 # reference at main.dol:0x1c7064 (RAM 0x801ca064) [D]
 0x1cf368 とまると[Red Text]どく[Normal Color Text]をうける[\n]バトルやイボントはおきない
-0x1cf368 Stopping here will [Red Text]Poison[Normal Color Text] you[\n]No battles or events
+0x1cf368 Stopping here will [Red Text]Poison[Normal Color Text][\n]you
 
 # reference at main.dol:0x1c6f54 (RAM 0x801c9f54) [D]
 # reference at main.dol:0x1c6f94 (RAM 0x801c9f94) [D]
 # reference at main.dol:0x1c6ff4 (RAM 0x801c9ff4) [D]
 0x1cf3a0 [Blue Text]ベンボ[Normal Color Text]がないと歩けない[\n]バトルやイボントがおきる
-0x1cf3a0 Requires a [Blue Text]Magic Pump[Normal Color Text] to cross[\n]Battles or events[\n]may occur
+0x1cf3a0 Requires a [Blue Text]Magic Pump[Normal Color Text][\n]to cross
 
 # reference at main.dol:0x1c6f44 (RAM 0x801c9f44) [D]
 0x1cf3d8 [Blue Text]ふね[Normal Color Text]がないと進めない[\n]バトルやイボントがおきる
-0x1cf3d8 Requires a [Blue Text]Magic Boat[Normal Color Text] to cross[\n]Battles or events[\n]may occur
+0x1cf3d8 Requires a [Blue Text]Magic Boat[Normal Color Text][\n]to cross
 
 # reference at main.dol:0x1c7074 (RAM 0x801ca074) [D]
 0x1cf40c とまると[Red Text]トゲ[Normal Color Text]がとびでる[\n]バトルやイボントはおきない
-0x1cf40c Stopping here triggers [Red Text]spikes[Normal Color Text][\n]No battles or events
+0x1cf40c Stopping here triggers [Red Text]spikes[Normal Color Text]
 
 # reference at main.dol:0x1c7054 (RAM 0x801ca054) [D]
 0x1cf444 とまると[Red Text]ようがん[Normal Color Text]であつい[\n]バトルやイボントはおきない
-0x1cf444 Stopping here causes [Red Text]lava[Normal Color Text] damage[\n]No battles or events
+0x1cf444 Stopping here causes [Red Text]lava[Normal Color Text] damage
 
 # reference at main.dol:0x1c7084 (RAM 0x801ca084) [D]
 0x1cf480 アイテムが1コ手に入る[\n]バトルやイボントはおきない
-0x1cf480 Receive an item[\n]No battles or events occur
+0x1cf480 Receive an item
 
 # reference at main.dol:0x1c7094 (RAM 0x801ca094) [D]
 0x1cf4b4 まほうが1コ手に入る[\n]バトルやイボントはおきない
-0x1cf4b4 Receive a spell[\n]No battles or events occur
+0x1cf4b4 [\n]No battles or events occur
 
 # reference at main.dol:0x1c70a4 (RAM 0x801ca0a4) [D]
 0x1cf4e8 いいモノも悪いモノも入ってる[\n]バトルやイボントはおきない
-0x1cf4e8 Contains good and bad things[\n]No battles or events occur
+0x1cf4e8 Contains good and bad things. No battles or events occur
 
 # reference at main.dol:0x1c70d4 (RAM 0x801ca0d4) [D]
 0x1cf524 お金が手に入る[\n]バトルやイボントはおきない
@@ -2889,7 +2888,7 @@
 0x1cf5c8 いちかばちかのたから箱[\n]バトルやイボントはおきない
 
 # reference at main.dol:0x1c7184 (RAM 0x801ca184) [D]
-0x1cf5fc 3つのゲームが寨しめる[\n]ギャンブルはほどほどに
+0x1cf5fc 3つのゲームが楽しめる[\n]ギャンブルはほどほどに
 0x1cf5fc Enjoy 3 different games[\n]Gamble responsibly
 
 # reference at main.dol:0x1c7194 (RAM 0x801ca194) [D]
@@ -2946,7 +2945,6 @@
 
 # reference at main.dol:0x52764 (RAM 0x80062a24) [addi paired with the lis at RAM 0x80062a20]
 0x1cf834 [Blue Text][%0][Normal Color Text]は[\n]つかえる[Blue Text]ルーレット[Normal Color Text]を[\n]ふやした!
-0x1cf834 [Blue Text][%0][Normal Color Text][\n]cloned [Blue Text][%0][Normal Color Text]
 
 # reference at main.dol:0x29b28 (RAM 0x80039de8) [addi paired with the lis at RAM 0x80039de4]
 0x1cf864 [Blue Text][%0][Normal Color Text]は[\n]UFOにつれさられている!
@@ -2964,13 +2962,13 @@
 0x1cf8ac CPU Hard
 
 # reference at main.dol:0x1d2b0 (RAM 0x8002d570) [addi paired with the lis at RAM 0x8002d56c]
-0x1cf8bc [0xb808]Inspect[\n][0xb80c]Map[\n][0xb809]Back
+0x1cf8bc [0xb808]マスをみる[\n][0xb80c]マップ[\n][0xb809]もどる
 
 # reference at main.dol:0x1d2f4 (RAM 0x8002d5b4) [addi paired with the lis at RAM 0x8002d5b0]
-0x1cf8e0 [0xb808]Inspect[\n][0xb80a]Data[\n][0xb80b]Auto[\n][0xb80c]Map
+0x1cf8e0 [0xb808]マスをみる[\n][0xb80a]データ[\n][0xb80b]おまかせ[\n][0xb80c]マップ
 
 # reference at main.dol:0x1d344 (RAM 0x8002d604) [addi paired with the lis at RAM 0x8002d600]
-0x1cf910 [0xb808]Go[\n][0xb80a]Inspect[\n][0xb80b]List[\n][0xb809]Back
+0x1cf910 [0xb808]決定[\n][0xb80a]マスをみる[\n][0xb80b]リスト[\n][0xb809]もどる
 
 # reference at main.dol:0x1d3d8 (RAM 0x8002d698) [addi paired with the lis at RAM 0x8002d694]
 0x1cf93c [0xb808]マスいどう[\n][0xb80a]マスをみる[\n][0xb80b]ならびかえ[\n][0xb809]もどる
@@ -3326,7 +3324,7 @@
 # reference at main.dol:0x3e62c (RAM 0x8004e8ec) [addi paired with the lis at RAM 0x8004e8e8]
 # reference at main.dol:0x3e678 (RAM 0x8004e938) [addi paired with the lis at RAM 0x8004e934]
 0x1d0034 [Red Text][%0][Normal Color Text]がジャマで[\n]進めない!
-0x1d0034 You cant get through because [Red Text][%0][Normal Color Text] is in the way!
+0x1d0034 You can't get through because [Red Text][%0][Normal Color Text] is in the way!
 
 # reference at main.dol:0x3e69c (RAM 0x8004e95c) [addi paired with the lis at RAM 0x8004e958]
 0x1d0054 山が高すぎて、[\n]歩いて進めない!
@@ -3351,19 +3349,24 @@
 
 # reference at main.dol:0x3e900 (RAM 0x8004ebc0) [addi paired with the lis at RAM 0x8004ebbc]
 0x1d0144 今日は銀行は休みです!
+0x1d0144 The bank is closed today!
 
 # reference at main.dol:0x1db70 (RAM 0x8002de30) [addi paired with the lis at RAM 0x8002de2c]
 0x1d015c [Green Text]10%OFFセール中[Normal Color Text]
+0x1d015c [Green Text]10% Off Sale[Normal Color Text]
 
 # reference at main.dol:0x1db4c (RAM 0x8002de0c) [addi paired with the lis at RAM 0x8002de08]
 # reference at main.dol:0x1db9c (RAM 0x8002de5c) [addi paired with the lis at RAM 0x8002de58]
 0x1d0178 [Red Text]定休日[Normal Color Text]
+0x1d0178 [Red Text]Closed[Normal Color Text]
 
 # reference at main.dol:0x1db04 (RAM 0x8002ddc4) [addi paired with the lis at RAM 0x8002ddc0]
 0x1d0184 [Red Text]りんじ休業[Normal Color Text]
+0x1d0184 [Red Text]Temporarily Closed[Normal Color Text]
 
 # reference at main.dol:0x1dbc0 (RAM 0x8002de80) [addi paired with the lis at RAM 0x8002de7c]
 0x1d0194 えいぎょう中
+0x1d0194 Open
 
 # reference at main.dol:0x3bbf4 (RAM 0x8004beb4) [addi paired with the lis at RAM 0x8004beb0]
 0x1d01a4 [0x5028]レボル[0x1002][0x5098][%0][0x51c8][0x1800]DP
@@ -3511,13 +3514,13 @@
 0x1d09f0 ホリホリバトル
 
 # reference at main.dol:0x1d3234 (RAM 0x801d6234) [A]
-0x1d0a00 お金を1春冬く集めた人の勝ち!
+0x1d0a00 お金を1番冬く集めた人の勝ち!
 
 # reference at main.dol:0x1d3238 (RAM 0x801d6238) [A]
 0x1d0a20 他の人を決めた数だけ早くたおした人の勝ち!
 
 # reference at main.dol:0x1d323c (RAM 0x801d623c) [A]
-0x1d0a4c ドカポンエッグを1春早く集めた人の勝ち!
+0x1d0a4c ドカポンエッグを1番早く集めた人の勝ち!
 
 # reference at main.dol:0x1d3240 (RAM 0x801d6240) [A]
 0x1d0a78 げんざいの週数
@@ -3661,7 +3664,7 @@
 0x1d0f68 [0x7000][Green Text]ゲームの進め方[Normal Color Text][0x7006][\n][0xf030][0x5000][0xb840][Fuschia Text]マスの歩き方![Normal Color Text][\n][0x5000][Blue Text]いどう[Normal Color Text][0x106][Blue Text]ルーレット[Normal Color Text][\n][0x5000]ルーレットを回して出た数の[\n][0x5000]マスをいどうすることができる。[\n][0xf010][0x5000][0xb840][Fuschia Text]おまかせでかんたんいどう![Normal Color Text][\n][0x5000]ルーレットを回した後、[\n][0x5000][0xb80b][Blue Text]おまかせ[Normal Color Text]をえらぶと、[\n][0x5000]いどうできるマスが[\n][0x5000]一目でわかる。
 
 # reference at main.dol:0x1d2ed8 (RAM 0x801d5ed8) [E]
-0x1d1080 [0x7000][Green Text]ゼニゼニバトル[Normal Color Text][0x7006][\n][0xf030][0x5000][0xb840][Fuschia Text]とにかくお金を集めろ![Normal Color Text][\n][0x5000]せっていした週数內で[\n][0x5000][Blue Text]全ざいさん[Normal Color Text]が[\n][0x5000]1春冬かった人が勝ちのルール
+0x1d1080 [0x7000][Green Text]ゼニゼニバトル[Normal Color Text][0x7006][\n][0xf030][0x5000][0xb840][Fuschia Text]とにかくお金を集めろ![Normal Color Text][\n][0x5000]せっていした週数內で[\n][0x5000][Blue Text]全ざいさん[Normal Color Text]が[\n][0x5000]1番冬かった人が勝ちのルール
 
 # reference at main.dol:0x1d2ee4 (RAM 0x801d5ee4) [E]
 0x1d1108 [0x7000][Green Text]キルキルバトル[Normal Color Text][0x7006][\n][0xf030][0x5000][0xb840][Fuschia Text]とにかくたおしまくれ![Normal Color Text][\n][0x5000]せっていした人数分の[\n][0x5000]プレイヤーを[Blue Text]早くたおした人[Normal Color Text][\n][0x5000]が勝ちのルール。キルキル[\n][0x5000]バトルでは[Red Text]こうさん[Normal Color Text]はできない。[\n][0x5000]同じじゅんいの人がいた場合、[\n][0x5000]全ざいさんの冬い人の[\n][0x5000]じゅんいが上になるのでちゅうい。
@@ -4865,593 +4868,584 @@
 0x1dc5fc マッハダッシュ
 
 # reference at main.dol:0x23ed8c (RAM 0x80241d8c) [monster]
-# LIMIT 8 glyphs - copied with a fixed-size memcpy
+# LIMIT 16 glyphs - a fixed-size memcpy copies a redirect stub, not these glyphs
 0x1dc60c パックン草
 
 # reference at main.dol:0x23edc8 (RAM 0x80241dc8) [monster]
-# LIMIT 8 glyphs - copied with a fixed-size memcpy
+# LIMIT 16 glyphs - a fixed-size memcpy copies a redirect stub, not these glyphs
 0x1dc618 キラープラント
 
 # reference at main.dol:0x23ee04 (RAM 0x80241e04) [monster]
-# LIMIT 8 glyphs - copied with a fixed-size memcpy
+# LIMIT 16 glyphs - a fixed-size memcpy copies a redirect stub, not these glyphs
 0x1dc628 やけぐいフラワー
 
 # reference at main.dol:0x23ee40 (RAM 0x80241e40) [monster]
-# LIMIT 8 glyphs - copied with a fixed-size memcpy
+# LIMIT 16 glyphs - a fixed-size memcpy copies a redirect stub, not these glyphs
 0x1dc63c のろいの木
 
 # reference at main.dol:0x23ee7c (RAM 0x80241e7c) [monster]
-# LIMIT 8 glyphs - copied with a fixed-size memcpy
+# LIMIT 16 glyphs - a fixed-size memcpy copies a redirect stub, not these glyphs
 0x1dc648 おばけの木
 
 # reference at main.dol:0x23eeb8 (RAM 0x80241eb8) [monster]
-# LIMIT 8 glyphs - copied with a fixed-size memcpy
+# LIMIT 16 glyphs - a fixed-size memcpy copies a redirect stub, not these glyphs
 0x1dc654 デビルツリー
 
 # reference at main.dol:0x23eef4 (RAM 0x80241ef4) [monster]
-# LIMIT 8 glyphs - copied with a fixed-size memcpy
+# LIMIT 16 glyphs - a fixed-size memcpy copies a redirect stub, not these glyphs
 0x1dc664 サベテンサソリ
 
 # reference at main.dol:0x23ef30 (RAM 0x80241f30) [monster]
-# LIMIT 8 glyphs - copied with a fixed-size memcpy
+# LIMIT 16 glyphs - a fixed-size memcpy copies a redirect stub, not these glyphs
 0x1dc674 レッドホットバグ
 
 # reference at main.dol:0x23ef6c (RAM 0x80241f6c) [monster]
-# LIMIT 8 glyphs - copied with a fixed-size memcpy
+# LIMIT 16 glyphs - a fixed-size memcpy copies a redirect stub, not these glyphs
 0x1dc688 キングスコルピオ
 
 # reference at main.dol:0x23efa8 (RAM 0x80241fa8) [monster]
-# LIMIT 8 glyphs - copied with a fixed-size memcpy
+# LIMIT 16 glyphs - a fixed-size memcpy copies a redirect stub, not these glyphs
 0x1dc69c フンガイダコ
 
 # reference at main.dol:0x23efe4 (RAM 0x80241fe4) [monster]
-# LIMIT 8 glyphs - copied with a fixed-size memcpy
+# LIMIT 16 glyphs - a fixed-size memcpy copies a redirect stub, not these glyphs
 0x1dc6ac シーデビル
 
 # reference at main.dol:0x23f020 (RAM 0x80242020) [monster]
-# LIMIT 8 glyphs - copied with a fixed-size memcpy
+# LIMIT 16 glyphs - a fixed-size memcpy copies a redirect stub, not these glyphs
 0x1dc6b8 オオオクトパス
 
 # reference at main.dol:0x23f05c (RAM 0x8024205c) [monster]
-# LIMIT 8 glyphs - copied with a fixed-size memcpy
+# LIMIT 16 glyphs - a fixed-size memcpy copies a redirect stub, not these glyphs
 0x1dc6c8 ガーゴイル
 
 # reference at main.dol:0x23f098 (RAM 0x80242098) [monster]
-# LIMIT 8 glyphs - copied with a fixed-size memcpy
+# LIMIT 16 glyphs - a fixed-size memcpy copies a redirect stub, not these glyphs
 0x1dc6d4 ヘルビースト
 
 # reference at main.dol:0x23f0d4 (RAM 0x802420d4) [monster]
-# LIMIT 8 glyphs - copied with a fixed-size memcpy
+# LIMIT 16 glyphs - a fixed-size memcpy copies a redirect stub, not these glyphs
 0x1dc6e4 アークデーモン
 0x1dc6e4 Archdemon
 
 # reference at main.dol:0x23f110 (RAM 0x80242110) [monster]
-# LIMIT 8 glyphs - copied with a fixed-size memcpy
+# LIMIT 16 glyphs - a fixed-size memcpy copies a redirect stub, not these glyphs
 0x1dc6f4 わがままピクシー
 
 # reference at main.dol:0x23f14c (RAM 0x8024214c) [monster]
-# LIMIT 8 glyphs - copied with a fixed-size memcpy
+# LIMIT 16 glyphs - a fixed-size memcpy copies a redirect stub, not these glyphs
 0x1dc708 とんずらインプー
 
 # reference at main.dol:0x23f188 (RAM 0x80242188) [monster]
-# LIMIT 8 glyphs - copied with a fixed-size memcpy
+# LIMIT 16 glyphs - a fixed-size memcpy copies a redirect stub, not these glyphs
 0x1dc71c プッチデビ
 
 # reference at main.dol:0x23f1c4 (RAM 0x802421c4) [monster]
-# LIMIT 8 glyphs - copied with a fixed-size memcpy
+# LIMIT 16 glyphs - a fixed-size memcpy copies a redirect stub, not these glyphs
 0x1dc728 いたずら天便
 0x1dc728 Naughty Angel
 
 # reference at main.dol:0x23f200 (RAM 0x80242200) [monster]
-# LIMIT 8 glyphs - copied with a fixed-size memcpy
+# LIMIT 16 glyphs - a fixed-size memcpy copies a redirect stub, not these glyphs
 0x1dc738 あぶない天便
 0x1dc738 Dangerous Angel
 
 # reference at main.dol:0x23f23c (RAM 0x8024223c) [monster]
-# LIMIT 8 glyphs - copied with a fixed-size memcpy
+# LIMIT 16 glyphs - a fixed-size memcpy copies a redirect stub, not these glyphs
 0x1dc748 れいけつ天便
 
 # reference at main.dol:0x23f278 (RAM 0x80242278) [monster]
-# LIMIT 8 glyphs - copied with a fixed-size memcpy
+# LIMIT 16 glyphs - a fixed-size memcpy copies a redirect stub, not these glyphs
 0x1dc758 おばけコウモリ
 
 # reference at main.dol:0x23f2b4 (RAM 0x802422b4) [monster]
-# LIMIT 8 glyphs - copied with a fixed-size memcpy
+# LIMIT 16 glyphs - a fixed-size memcpy copies a redirect stub, not these glyphs
 0x1dc768 ブラッディ
 
 # reference at main.dol:0x23f2f0 (RAM 0x802422f0) [monster]
-# LIMIT 8 glyphs - copied with a fixed-size memcpy
+# LIMIT 16 glyphs - a fixed-size memcpy copies a redirect stub, not these glyphs
 0x1dc774 コンバット
 0x1dc774 Combat
 
 # reference at main.dol:0x23f32c (RAM 0x8024232c) [monster]
-# LIMIT 8 glyphs - copied with a fixed-size memcpy
+# LIMIT 16 glyphs - a fixed-size memcpy copies a redirect stub, not these glyphs
 0x1dc780 ビックリバード
 0x1dc780 Scary Bird
 
 # reference at main.dol:0x23f368 (RAM 0x80242368) [monster]
-# LIMIT 8 glyphs - copied with a fixed-size memcpy
+# LIMIT 16 glyphs - a fixed-size memcpy copies a redirect stub, not these glyphs
 0x1dc790 くらやみどり
 
 # reference at main.dol:0x23f3a4 (RAM 0x802423a4) [monster]
-# LIMIT 8 glyphs - copied with a fixed-size memcpy
+# LIMIT 16 glyphs - a fixed-size memcpy copies a redirect stub, not these glyphs
 0x1dc7a0 クレイジーバード
 0x1dc7a0 Crazy Bird
 
 # reference at main.dol:0x23f3e0 (RAM 0x802423e0) [monster]
-# LIMIT 8 glyphs - copied with a fixed-size memcpy
+# LIMIT 16 glyphs - a fixed-size memcpy copies a redirect stub, not these glyphs
 0x1dc7b4 マーダー兵
 
 # reference at main.dol:0x23f41c (RAM 0x8024241c) [monster]
-# LIMIT 8 glyphs - copied with a fixed-size memcpy
+# LIMIT 16 glyphs - a fixed-size memcpy copies a redirect stub, not these glyphs
 0x1dc7c0 ゴールデンナイト
 0x1dc7c0 Golden Knight
 
 # reference at main.dol:0x23f458 (RAM 0x80242458) [monster]
-# LIMIT 8 glyphs - copied with a fixed-size memcpy
+# LIMIT 16 glyphs - a fixed-size memcpy copies a redirect stub, not these glyphs
 0x1dc7d4 ダークジェネラル
 0x1dc7d4 Dark General
 
 # reference at main.dol:0x23f494 (RAM 0x80242494) [monster]
 # reference at main.dol:0x25d308 (RAM 0x80260308) [charname]
-# LIMIT 8 glyphs - copied with a fixed-size memcpy
 0x1dc7e8 ドカポニヨン人
 
 # reference at main.dol:0x23f4d0 (RAM 0x802424d0) [monster]
-# LIMIT 8 glyphs - copied with a fixed-size memcpy
+# LIMIT 16 glyphs - a fixed-size memcpy copies a redirect stub, not these glyphs
 0x1dc7f8 コチコチイエティ
 
 # reference at main.dol:0x23f50c (RAM 0x8024250c) [monster]
-# LIMIT 8 glyphs - copied with a fixed-size memcpy
+# LIMIT 16 glyphs - a fixed-size memcpy copies a redirect stub, not these glyphs
 0x1dc80c ゴロゴロイエティ
 
 # reference at main.dol:0x23f548 (RAM 0x80242548) [monster]
-# LIMIT 8 glyphs - copied with a fixed-size memcpy
+# LIMIT 16 glyphs - a fixed-size memcpy copies a redirect stub, not these glyphs
 0x1dc820 マグマグイエティ
 
 # reference at main.dol:0x23f584 (RAM 0x80242584) [monster]
-# LIMIT 8 glyphs - copied with a fixed-size memcpy
+# LIMIT 16 glyphs - a fixed-size memcpy copies a redirect stub, not these glyphs
 0x1dc834 わるのりホビット
 
 # reference at main.dol:0x23f5c0 (RAM 0x802425c0) [monster]
-# LIMIT 8 glyphs - copied with a fixed-size memcpy
+# LIMIT 16 glyphs - a fixed-size memcpy copies a redirect stub, not these glyphs
 0x1dc848 ドワーフギャング
 
 # reference at main.dol:0x23f5fc (RAM 0x802425fc) [monster]
-# LIMIT 8 glyphs - copied with a fixed-size memcpy
+# LIMIT 16 glyphs - a fixed-size memcpy copies a redirect stub, not these glyphs
 0x1dc85c プチピエロ1ごう
 
 # reference at main.dol:0x23f638 (RAM 0x80242638) [monster]
-# LIMIT 8 glyphs - copied with a fixed-size memcpy
+# LIMIT 16 glyphs - a fixed-size memcpy copies a redirect stub, not these glyphs
 0x1dc870 プチピエロ2ごう
 
 # reference at main.dol:0x23f674 (RAM 0x80242674) [monster]
-# LIMIT 8 glyphs - copied with a fixed-size memcpy
+# LIMIT 16 glyphs - a fixed-size memcpy copies a redirect stub, not these glyphs
 0x1dc884 フーセンピエロ
 
 # reference at main.dol:0x23f6b0 (RAM 0x802426b0) [monster]
-# LIMIT 8 glyphs - copied with a fixed-size memcpy
+# LIMIT 16 glyphs - a fixed-size memcpy copies a redirect stub, not these glyphs
 0x1dc894 キノコこぞう
 
 # reference at main.dol:0x23f6ec (RAM 0x802426ec) [monster]
-# LIMIT 8 glyphs - copied with a fixed-size memcpy
+# LIMIT 16 glyphs - a fixed-size memcpy copies a redirect stub, not these glyphs
 0x1dc8a4 どくマタンゴ
 
 # reference at main.dol:0x23f728 (RAM 0x80242728) [monster]
-# LIMIT 8 glyphs - copied with a fixed-size memcpy
+# LIMIT 16 glyphs - a fixed-size memcpy copies a redirect stub, not these glyphs
 0x1dc8b4 マッシュ戰士
 
 # reference at main.dol:0x23f764 (RAM 0x80242764) [monster]
-# LIMIT 8 glyphs - copied with a fixed-size memcpy
+# LIMIT 16 glyphs - a fixed-size memcpy copies a redirect stub, not these glyphs
 0x1dc8c4 森ゴブリン
 0x1dc8c4 Forest Goblin
 
 # reference at main.dol:0x23f7a0 (RAM 0x802427a0) [monster]
-# LIMIT 8 glyphs - copied with a fixed-size memcpy
+# LIMIT 16 glyphs - a fixed-size memcpy copies a redirect stub, not these glyphs
 0x1dc8d0 穴ゴブリン
 0x1dc8d0 Hole Goblin
 
 # reference at main.dol:0x23f7dc (RAM 0x802427dc) [monster]
-# LIMIT 8 glyphs - copied with a fixed-size memcpy
+# LIMIT 16 glyphs - a fixed-size memcpy copies a redirect stub, not these glyphs
 0x1dc8dc ホブゴブリン
 0x1dc8dc Hobgoblin
 
 # reference at main.dol:0x23f818 (RAM 0x80242818) [monster]
-# LIMIT 8 glyphs - copied with a fixed-size memcpy
+# LIMIT 16 glyphs - a fixed-size memcpy copies a redirect stub, not these glyphs
 0x1dc8ec ぼんくらトロール
 0x1dc8ec Bonehead Troll
 
 # reference at main.dol:0x23f854 (RAM 0x80242854) [monster]
-# LIMIT 8 glyphs - copied with a fixed-size memcpy
+# LIMIT 16 glyphs - a fixed-size memcpy copies a redirect stub, not these glyphs
 0x1dc900 かいりきオウガ
 
 # reference at main.dol:0x23f890 (RAM 0x80242890) [monster]
-# LIMIT 8 glyphs - copied with a fixed-size memcpy
+# LIMIT 16 glyphs - a fixed-size memcpy copies a redirect stub, not these glyphs
 0x1dc910 ひとつめきょじん
 
 # reference at main.dol:0x23f8cc (RAM 0x802428cc) [monster]
-# LIMIT 8 glyphs - copied with a fixed-size memcpy
+# LIMIT 16 glyphs - a fixed-size memcpy copies a redirect stub, not these glyphs
 0x1dc924 サイクロップス
 0x1dc924 Cyclops
 
 # reference at main.dol:0x23f908 (RAM 0x80242908) [monster]
-# LIMIT 8 glyphs - copied with a fixed-size memcpy
+# LIMIT 16 glyphs - a fixed-size memcpy copies a redirect stub, not these glyphs
 0x1dc934 みならいマージ
 
 # reference at main.dol:0x23f944 (RAM 0x80242944) [monster]
-# LIMIT 8 glyphs - copied with a fixed-size memcpy
+# LIMIT 16 glyphs - a fixed-size memcpy copies a redirect stub, not these glyphs
 0x1dc944 アクマージ
 
 # reference at main.dol:0x23f980 (RAM 0x80242980) [monster]
-# LIMIT 8 glyphs - copied with a fixed-size memcpy
+# LIMIT 16 glyphs - a fixed-size memcpy copies a redirect stub, not these glyphs
 0x1dc950 スペースマージ
 
 # reference at main.dol:0x23f9bc (RAM 0x802429bc) [monster]
-# LIMIT 8 glyphs - copied with a fixed-size memcpy
+# LIMIT 16 glyphs - a fixed-size memcpy copies a redirect stub, not these glyphs
 0x1dc960 さまよいグラマー
 
 # reference at main.dol:0x23f9f8 (RAM 0x802429f8) [monster]
-# LIMIT 8 glyphs - copied with a fixed-size memcpy
+# LIMIT 16 glyphs - a fixed-size memcpy copies a redirect stub, not these glyphs
 0x1dc974 イチゴグラマー
 
 # reference at main.dol:0x23fa34 (RAM 0x80242a34) [monster]
-# LIMIT 8 glyphs - copied with a fixed-size memcpy
+# LIMIT 16 glyphs - a fixed-size memcpy copies a redirect stub, not these glyphs
 0x1dc984 ミントグラマー
 
 # reference at main.dol:0x23fa70 (RAM 0x80242a70) [monster]
-# LIMIT 8 glyphs - copied with a fixed-size memcpy
+# LIMIT 16 glyphs - a fixed-size memcpy copies a redirect stub, not these glyphs
 0x1dc994 くさったゾンビ
 
 # reference at main.dol:0x23faac (RAM 0x80242aac) [monster]
-# LIMIT 8 glyphs - copied with a fixed-size memcpy
+# LIMIT 16 glyphs - a fixed-size memcpy copies a redirect stub, not these glyphs
 0x1dc9a4 ひからびたミイラ
 
 # reference at main.dol:0x23fae8 (RAM 0x80242ae8) [monster]
-# LIMIT 8 glyphs - copied with a fixed-size memcpy
+# LIMIT 16 glyphs - a fixed-size memcpy copies a redirect stub, not these glyphs
 0x1dc9b8 くるったグール
 
 # reference at main.dol:0x23fb24 (RAM 0x80242b24) [monster]
-# LIMIT 8 glyphs - copied with a fixed-size memcpy
+# LIMIT 16 glyphs - a fixed-size memcpy copies a redirect stub, not these glyphs
 0x1dc9c8 のろいのワイト
 
 # reference at main.dol:0x23fb60 (RAM 0x80242b60) [monster]
-# LIMIT 8 glyphs - copied with a fixed-size memcpy
+# LIMIT 16 glyphs - a fixed-size memcpy copies a redirect stub, not these glyphs
 0x1dc9d8 ビーフドン
 
 # reference at main.dol:0x23fb9c (RAM 0x80242b9c) [monster]
-# LIMIT 8 glyphs - copied with a fixed-size memcpy
+# LIMIT 16 glyphs - a fixed-size memcpy copies a redirect stub, not these glyphs
 0x1dc9e4 ブルファイト
 
 # reference at main.dol:0x23fbd8 (RAM 0x80242bd8) [monster]
-# LIMIT 8 glyphs - copied with a fixed-size memcpy
+# LIMIT 16 glyphs - a fixed-size memcpy copies a redirect stub, not these glyphs
 0x1dc9f4 ミノタウロス
 
 # reference at main.dol:0x23fc14 (RAM 0x80242c14) [monster]
-# LIMIT 8 glyphs - copied with a fixed-size memcpy
+# LIMIT 16 glyphs - a fixed-size memcpy copies a redirect stub, not these glyphs
 0x1dca04 モンモン
 
 # reference at main.dol:0x23fc50 (RAM 0x80242c50) [monster]
-# LIMIT 8 glyphs - copied with a fixed-size memcpy
+# LIMIT 16 glyphs - a fixed-size memcpy copies a redirect stub, not these glyphs
 0x1dca10 モンパパ
 
 # reference at main.dol:0x23fc8c (RAM 0x80242c8c) [monster]
-# LIMIT 8 glyphs - copied with a fixed-size memcpy
+# LIMIT 16 glyphs - a fixed-size memcpy copies a redirect stub, not these glyphs
 0x1dca1c モンママ
 
 # reference at main.dol:0x23fcc8 (RAM 0x80242cc8) [monster]
-# LIMIT 8 glyphs - copied with a fixed-size memcpy
+# LIMIT 16 glyphs - a fixed-size memcpy copies a redirect stub, not these glyphs
 0x1dca28 はらぺこポーク
 
 # reference at main.dol:0x23fd04 (RAM 0x80242d04) [monster]
-# LIMIT 8 glyphs - copied with a fixed-size memcpy
+# LIMIT 16 glyphs - a fixed-size memcpy copies a redirect stub, not these glyphs
 0x1dca38 ブランチポーク
 
 # reference at main.dol:0x23fd40 (RAM 0x80242d40) [monster]
-# LIMIT 8 glyphs - copied with a fixed-size memcpy
+# LIMIT 16 glyphs - a fixed-size memcpy copies a redirect stub, not these glyphs
 0x1dca48 ビストロポーク
 
 # reference at main.dol:0x23fd7c (RAM 0x80242d7c) [monster]
-# LIMIT 8 glyphs - copied with a fixed-size memcpy
+# LIMIT 16 glyphs - a fixed-size memcpy copies a redirect stub, not these glyphs
 0x1dca58 スケルトン
 
 # reference at main.dol:0x23fdb8 (RAM 0x80242db8) [monster]
-# LIMIT 8 glyphs - copied with a fixed-size memcpy
+# LIMIT 16 glyphs - a fixed-size memcpy copies a redirect stub, not these glyphs
 0x1dca64 ベーンこぶん
 
 # reference at main.dol:0x23fdf4 (RAM 0x80242df4) [monster]
-# LIMIT 8 glyphs - copied with a fixed-size memcpy
+# LIMIT 16 glyphs - a fixed-size memcpy copies a redirect stub, not these glyphs
 0x1dca74 ベーンおやぶん
 
 # reference at main.dol:0x23fe30 (RAM 0x80242e30) [monster]
-# LIMIT 8 glyphs - copied with a fixed-size memcpy
+# LIMIT 16 glyphs - a fixed-size memcpy copies a redirect stub, not these glyphs
 0x1dca84 ガイコツキング
 
 # reference at main.dol:0x23fe6c (RAM 0x80242e6c) [monster]
 # reference at main.dol:0x25d2e8 (RAM 0x802602e8) [charname]
-# LIMIT 8 glyphs - copied with a fixed-size memcpy
 0x1dca94 ワルサーグリーン
 
 # reference at main.dol:0x23fea8 (RAM 0x80242ea8) [monster]
 # reference at main.dol:0x25d2ec (RAM 0x802602ec) [charname]
-# LIMIT 8 glyphs - copied with a fixed-size memcpy
 0x1dcaa8 ワルサーイエロー
 
 # reference at main.dol:0x23fee4 (RAM 0x80242ee4) [monster]
 # reference at main.dol:0x25d2f0 (RAM 0x802602f0) [charname]
-# LIMIT 8 glyphs - copied with a fixed-size memcpy
 0x1dcabc ワルサーピンク
 
 # reference at main.dol:0x23ff20 (RAM 0x80242f20) [monster]
 # reference at main.dol:0x25d2f4 (RAM 0x802602f4) [charname]
-# LIMIT 8 glyphs - copied with a fixed-size memcpy
 0x1dcacc ワルサーブルー
 
 # reference at main.dol:0x23ff5c (RAM 0x80242f5c) [monster]
 # reference at main.dol:0x25d2f8 (RAM 0x802602f8) [charname]
-# LIMIT 8 glyphs - copied with a fixed-size memcpy
 0x1dcadc ワルサーレッド
 
 # reference at main.dol:0x23ff98 (RAM 0x80242f98) [monster]
 # reference at main.dol:0x25d2fc (RAM 0x802602fc) [charname]
-# LIMIT 8 glyphs - copied with a fixed-size memcpy
 0x1dcaec ワルサー
 
 # reference at main.dol:0x23ffd4 (RAM 0x80242fd4) [monster]
 # reference at main.dol:0x25d300 (RAM 0x80260300) [charname]
-# LIMIT 8 glyphs - copied with a fixed-size memcpy
 0x1dcaf8 グレートワルサー
 
 # reference at main.dol:0x240010 (RAM 0x80243010) [monster]
-# LIMIT 8 glyphs - copied with a fixed-size memcpy
+# LIMIT 16 glyphs - a fixed-size memcpy copies a redirect stub, not these glyphs
 0x1dcb0c ブラッドドレス
 
 # reference at main.dol:0x24004c (RAM 0x8024304c) [monster]
-# LIMIT 8 glyphs - copied with a fixed-size memcpy
+# LIMIT 16 glyphs - a fixed-size memcpy copies a redirect stub, not these glyphs
 0x1dcb1c アイスクイーン
 
 # reference at main.dol:0x240088 (RAM 0x80243088) [monster]
-# LIMIT 8 glyphs - copied with a fixed-size memcpy
+# LIMIT 16 glyphs - a fixed-size memcpy copies a redirect stub, not these glyphs
 0x1dcb2c バンピレラ
 
 # reference at main.dol:0x2400c4 (RAM 0x802430c4) [monster]
-# LIMIT 8 glyphs - copied with a fixed-size memcpy
+# LIMIT 16 glyphs - a fixed-size memcpy copies a redirect stub, not these glyphs
 0x1dcb38 ブリックゴーレム
 
 # reference at main.dol:0x240100 (RAM 0x80243100) [monster]
-# LIMIT 8 glyphs - copied with a fixed-size memcpy
+# LIMIT 16 glyphs - a fixed-size memcpy copies a redirect stub, not these glyphs
 0x1dcb4c コンクリゴーレム
 
 # reference at main.dol:0x24013c (RAM 0x8024313c) [monster]
-# LIMIT 8 glyphs - copied with a fixed-size memcpy
+# LIMIT 16 glyphs - a fixed-size memcpy copies a redirect stub, not these glyphs
 0x1dcb60 アイアンゴーレム
 
 # reference at main.dol:0x240178 (RAM 0x80243178) [monster]
-# LIMIT 8 glyphs - copied with a fixed-size memcpy
+# LIMIT 16 glyphs - a fixed-size memcpy copies a redirect stub, not these glyphs
 0x1dcb74 ラッキーネズミ
 
 # reference at main.dol:0x2401b4 (RAM 0x802431b4) [monster]
-# LIMIT 8 glyphs - copied with a fixed-size memcpy
+# LIMIT 16 glyphs - a fixed-size memcpy copies a redirect stub, not these glyphs
 0x1dcb84 ラブリーネズミ
 
 # reference at main.dol:0x2401f0 (RAM 0x802431f0) [monster]
-# LIMIT 8 glyphs - copied with a fixed-size memcpy
+# LIMIT 16 glyphs - a fixed-size memcpy copies a redirect stub, not these glyphs
 0x1dcb94 キバコン
 
 # reference at main.dol:0x24022c (RAM 0x8024322c) [monster]
-# LIMIT 8 glyphs - copied with a fixed-size memcpy
+# LIMIT 16 glyphs - a fixed-size memcpy copies a redirect stub, not these glyphs
 0x1dcba0 おかねミミックン
 
 # reference at main.dol:0x240268 (RAM 0x80243268) [monster]
-# LIMIT 8 glyphs - copied with a fixed-size memcpy
+# LIMIT 16 glyphs - a fixed-size memcpy copies a redirect stub, not these glyphs
 0x1dcbb4 たからミミックン
 
 # reference at main.dol:0x2402a4 (RAM 0x802432a4) [monster]
-# LIMIT 8 glyphs - copied with a fixed-size memcpy
+# LIMIT 16 glyphs - a fixed-size memcpy copies a redirect stub, not these glyphs
 0x1dcbc8 ヘルベックス
 
 # reference at main.dol:0x2402e0 (RAM 0x802432e0) [monster]
-# LIMIT 8 glyphs - copied with a fixed-size memcpy
+# LIMIT 16 glyphs - a fixed-size memcpy copies a redirect stub, not these glyphs
 0x1dcbd8 マメウリベー
 
 # reference at main.dol:0x24031c (RAM 0x8024331c) [monster]
-# LIMIT 8 glyphs - copied with a fixed-size memcpy
+# LIMIT 16 glyphs - a fixed-size memcpy copies a redirect stub, not these glyphs
 0x1dcbe8 とっしんウリベー
 
 # reference at main.dol:0x240358 (RAM 0x80243358) [monster]
-# LIMIT 8 glyphs - copied with a fixed-size memcpy
+# LIMIT 16 glyphs - a fixed-size memcpy copies a redirect stub, not these glyphs
 0x1dcbfc ダンガンウリベー
 
 # reference at main.dol:0x240394 (RAM 0x80243394) [monster]
-# LIMIT 8 glyphs - copied with a fixed-size memcpy
+# LIMIT 16 glyphs - a fixed-size memcpy copies a redirect stub, not these glyphs
 0x1dcc10 さびナマズ
 
 # reference at main.dol:0x2403d0 (RAM 0x802433d0) [monster]
-# LIMIT 8 glyphs - copied with a fixed-size memcpy
+# LIMIT 16 glyphs - a fixed-size memcpy copies a redirect stub, not these glyphs
 0x1dcc1c ナマズシーン
 
 # reference at main.dol:0x24040c (RAM 0x8024340c) [monster]
-# LIMIT 8 glyphs - copied with a fixed-size memcpy
+# LIMIT 16 glyphs - a fixed-size memcpy copies a redirect stub, not these glyphs
 0x1dcc2c どくサンショウ
 
 # reference at main.dol:0x240448 (RAM 0x80243448) [monster]
-# LIMIT 8 glyphs - copied with a fixed-size memcpy
+# LIMIT 16 glyphs - a fixed-size memcpy copies a redirect stub, not these glyphs
 0x1dcc3c オドオドゴースト
 
 # reference at main.dol:0x240484 (RAM 0x80243484) [monster]
-# LIMIT 8 glyphs - copied with a fixed-size memcpy
+# LIMIT 16 glyphs - a fixed-size memcpy copies a redirect stub, not these glyphs
 0x1dcc50 ケラケラゴースト
 
 # reference at main.dol:0x2404c0 (RAM 0x802434c0) [monster]
-# LIMIT 8 glyphs - copied with a fixed-size memcpy
+# LIMIT 16 glyphs - a fixed-size memcpy copies a redirect stub, not these glyphs
 0x1dcc64 ビクビクゴースト
 
 # reference at main.dol:0x2404fc (RAM 0x802434fc) [monster]
-# LIMIT 8 glyphs - copied with a fixed-size memcpy
+# LIMIT 16 glyphs - a fixed-size memcpy copies a redirect stub, not these glyphs
 0x1dcc78 クルクルゴースト
 
 # reference at main.dol:0x240538 (RAM 0x80243538) [monster]
-# LIMIT 8 glyphs - copied with a fixed-size memcpy
+# LIMIT 16 glyphs - a fixed-size memcpy copies a redirect stub, not these glyphs
 0x1dcc8c きょだいいんせき
 
 # reference at main.dol:0x240574 (RAM 0x80243574) [monster]
-# LIMIT 8 glyphs - copied with a fixed-size memcpy
+# LIMIT 16 glyphs - a fixed-size memcpy copies a redirect stub, not these glyphs
 0x1dcca0 たまゴン
 
 # reference at main.dol:0x2405b0 (RAM 0x802435b0) [monster]
-# LIMIT 8 glyphs - copied with a fixed-size memcpy
+# LIMIT 16 glyphs - a fixed-size memcpy copies a redirect stub, not these glyphs
 0x1dccac ビックエッグ
 
 # reference at main.dol:0x2405ec (RAM 0x802435ec) [monster]
-# LIMIT 8 glyphs - copied with a fixed-size memcpy
+# LIMIT 16 glyphs - a fixed-size memcpy copies a redirect stub, not these glyphs
 0x1dccbc 玉スライム
 
 # reference at main.dol:0x240628 (RAM 0x80243628) [monster]
-# LIMIT 8 glyphs - copied with a fixed-size memcpy
+# LIMIT 16 glyphs - a fixed-size memcpy copies a redirect stub, not these glyphs
 0x1dccc8 じごくのゼリー
 
 # reference at main.dol:0x240664 (RAM 0x80243664) [monster]
-# LIMIT 8 glyphs - copied with a fixed-size memcpy
+# LIMIT 16 glyphs - a fixed-size memcpy copies a redirect stub, not these glyphs
 0x1dccd8 ゼリースター
 
 # reference at main.dol:0x2406a0 (RAM 0x802436a0) [monster]
-# LIMIT 8 glyphs - copied with a fixed-size memcpy
+# LIMIT 16 glyphs - a fixed-size memcpy copies a redirect stub, not these glyphs
 0x1dcce8 メタルスター
 
 # reference at main.dol:0x2406dc (RAM 0x802436dc) [monster]
-# LIMIT 8 glyphs - copied with a fixed-size memcpy
+# LIMIT 16 glyphs - a fixed-size memcpy copies a redirect stub, not these glyphs
 0x1dccf8 オオメダマン
 
 # reference at main.dol:0x240718 (RAM 0x80243718) [monster]
-# LIMIT 8 glyphs - copied with a fixed-size memcpy
+# LIMIT 16 glyphs - a fixed-size memcpy copies a redirect stub, not these glyphs
 0x1dcd08 プリチーアイ
 
 # reference at main.dol:0x240754 (RAM 0x80243754) [monster]
-# LIMIT 8 glyphs - copied with a fixed-size memcpy
+# LIMIT 16 glyphs - a fixed-size memcpy copies a redirect stub, not these glyphs
 0x1dcd18 デビルギャゲー
 
 # reference at main.dol:0x240790 (RAM 0x80243790) [monster]
-# LIMIT 8 glyphs - copied with a fixed-size memcpy
+# LIMIT 16 glyphs - a fixed-size memcpy copies a redirect stub, not these glyphs
 0x1dcd28 アッチッチ玉
 
 # reference at main.dol:0x2407cc (RAM 0x802437cc) [monster]
-# LIMIT 8 glyphs - copied with a fixed-size memcpy
+# LIMIT 16 glyphs - a fixed-size memcpy copies a redirect stub, not these glyphs
 0x1dcd38 スナスナ玉
 
 # reference at main.dol:0x240808 (RAM 0x80243808) [monster]
-# LIMIT 8 glyphs - copied with a fixed-size memcpy
+# LIMIT 16 glyphs - a fixed-size memcpy copies a redirect stub, not these glyphs
 0x1dcd44 ピチャピチャ玉
 
 # reference at main.dol:0x240844 (RAM 0x80243844) [monster]
-# LIMIT 8 glyphs - copied with a fixed-size memcpy
+# LIMIT 16 glyphs - a fixed-size memcpy copies a redirect stub, not these glyphs
 0x1dcd54 アンコク玉
 
 # reference at main.dol:0x240880 (RAM 0x80243880) [monster]
-# LIMIT 8 glyphs - copied with a fixed-size memcpy
+# LIMIT 16 glyphs - a fixed-size memcpy copies a redirect stub, not these glyphs
 0x1dcd60 ピッカピカ玉
 
 # reference at main.dol:0x2408bc (RAM 0x802438bc) [monster]
-# LIMIT 8 glyphs - copied with a fixed-size memcpy
+# LIMIT 16 glyphs - a fixed-size memcpy copies a redirect stub, not these glyphs
 0x1dcd70 ニョロニョロヘビ
 
 # reference at main.dol:0x2408f8 (RAM 0x802438f8) [monster]
-# LIMIT 8 glyphs - copied with a fixed-size memcpy
+# LIMIT 16 glyphs - a fixed-size memcpy copies a redirect stub, not these glyphs
 0x1dcd84 ドクドクヘビ
 
 # reference at main.dol:0x240934 (RAM 0x80243934) [monster]
-# LIMIT 8 glyphs - copied with a fixed-size memcpy
+# LIMIT 16 glyphs - a fixed-size memcpy copies a redirect stub, not these glyphs
 0x1dcd94 ビリビリスネーク
 
 # reference at main.dol:0x240970 (RAM 0x80243970) [monster]
-# LIMIT 8 glyphs - copied with a fixed-size memcpy
+# LIMIT 16 glyphs - a fixed-size memcpy copies a redirect stub, not these glyphs
 0x1dcda8 ネチネチワーム
 
 # reference at main.dol:0x2409ac (RAM 0x802439ac) [monster]
-# LIMIT 8 glyphs - copied with a fixed-size memcpy
+# LIMIT 16 glyphs - a fixed-size memcpy copies a redirect stub, not these glyphs
 0x1dcdb8 おたけびウルフ
 
 # reference at main.dol:0x2409e8 (RAM 0x802439e8) [monster]
-# LIMIT 8 glyphs - copied with a fixed-size memcpy
+# LIMIT 16 glyphs - a fixed-size memcpy copies a redirect stub, not these glyphs
 0x1dcdc8 ヘルハウンド
 
 # reference at main.dol:0x240a24 (RAM 0x80243a24) [monster]
-# LIMIT 8 glyphs - copied with a fixed-size memcpy
+# LIMIT 16 glyphs - a fixed-size memcpy copies a redirect stub, not these glyphs
 0x1dcdd8 ケルボロス
 
 # reference at main.dol:0x240a60 (RAM 0x80243a60) [monster]
-# LIMIT 8 glyphs - copied with a fixed-size memcpy
+# LIMIT 16 glyphs - a fixed-size memcpy copies a redirect stub, not these glyphs
 0x1dcde4 フェンリル
 
 # reference at main.dol:0x240a9c (RAM 0x80243a9c) [monster]
-# LIMIT 8 glyphs - copied with a fixed-size memcpy
+# LIMIT 16 glyphs - a fixed-size memcpy copies a redirect stub, not these glyphs
 0x1dcdf0 いだてんケルピー
 
 # reference at main.dol:0x240ad8 (RAM 0x80243ad8) [monster]
-# LIMIT 8 glyphs - copied with a fixed-size memcpy
+# LIMIT 16 glyphs - a fixed-size memcpy copies a redirect stub, not these glyphs
 0x1dce04 あばれユニコーン
 
 # reference at main.dol:0x240b14 (RAM 0x80243b14) [monster]
-# LIMIT 8 glyphs - copied with a fixed-size memcpy
+# LIMIT 16 glyphs - a fixed-size memcpy copies a redirect stub, not these glyphs
 0x1dce18 かっとびペガサス
 
 # reference at main.dol:0x240b50 (RAM 0x80243b50) [monster]
-# LIMIT 8 glyphs - copied with a fixed-size memcpy
+# LIMIT 16 glyphs - a fixed-size memcpy copies a redirect stub, not these glyphs
 0x1dce2c ピーマンガエル
 
 # reference at main.dol:0x240b8c (RAM 0x80243b8c) [monster]
-# LIMIT 8 glyphs - copied with a fixed-size memcpy
+# LIMIT 16 glyphs - a fixed-size memcpy copies a redirect stub, not these glyphs
 0x1dce3c カベチャカエル
 
 # reference at main.dol:0x240bc8 (RAM 0x80243bc8) [monster]
-# LIMIT 8 glyphs - copied with a fixed-size memcpy
+# LIMIT 16 glyphs - a fixed-size memcpy copies a redirect stub, not these glyphs
 0x1dce4c どくガエル
 
 # reference at main.dol:0x240c04 (RAM 0x80243c04) [monster]
-# LIMIT 8 glyphs - copied with a fixed-size memcpy
+# LIMIT 16 glyphs - a fixed-size memcpy copies a redirect stub, not these glyphs
 0x1dce58 陸カメ戰車
 
 # reference at main.dol:0x240c40 (RAM 0x80243c40) [monster]
-# LIMIT 8 glyphs - copied with a fixed-size memcpy
+# LIMIT 16 glyphs - a fixed-size memcpy copies a redirect stub, not these glyphs
 0x1dce64 砂ガメ戰車
 
 # reference at main.dol:0x240c7c (RAM 0x80243c7c) [monster]
-# LIMIT 8 glyphs - copied with a fixed-size memcpy
+# LIMIT 16 glyphs - a fixed-size memcpy copies a redirect stub, not these glyphs
 0x1dce70 海ガメ戰車
 
 # reference at main.dol:0x240cb8 (RAM 0x80243cb8) [monster]
-# LIMIT 8 glyphs - copied with a fixed-size memcpy
+# LIMIT 16 glyphs - a fixed-size memcpy copies a redirect stub, not these glyphs
 0x1dce7c 赤ガメ戰車
 
 # reference at main.dol:0x240cf4 (RAM 0x80243cf4) [monster]
-# LIMIT 8 glyphs - copied with a fixed-size memcpy
+# LIMIT 16 glyphs - a fixed-size memcpy copies a redirect stub, not these glyphs
 0x1dce88 バクバクドラゴン
 
 # reference at main.dol:0x240d30 (RAM 0x80243d30) [monster]
-# LIMIT 8 glyphs - copied with a fixed-size memcpy
+# LIMIT 16 glyphs - a fixed-size memcpy copies a redirect stub, not these glyphs
 0x1dce9c ギロギロドラゴン
 
 # reference at main.dol:0x240d6c (RAM 0x80243d6c) [monster]
-# LIMIT 8 glyphs - copied with a fixed-size memcpy
+# LIMIT 16 glyphs - a fixed-size memcpy copies a redirect stub, not these glyphs
 0x1dceb0 ゴクアクドラゴン
 
 # reference at main.dol:0x240da8 (RAM 0x80243da8) [monster]
-# LIMIT 8 glyphs - copied with a fixed-size memcpy
+# LIMIT 16 glyphs - a fixed-size memcpy copies a redirect stub, not these glyphs
 0x1dcec4 レッドワイバーン
 
 # reference at main.dol:0x240de4 (RAM 0x80243de4) [monster]
-# LIMIT 8 glyphs - copied with a fixed-size memcpy
+# LIMIT 16 glyphs - a fixed-size memcpy copies a redirect stub, not these glyphs
 0x1dced8 エレキワイバーン
 
 # reference at main.dol:0x240e20 (RAM 0x80243e20) [monster]
 # reference at main.dol:0x25d304 (RAM 0x80260304) [charname]
-# LIMIT 8 glyphs - copied with a fixed-size memcpy
 0x1dceec やみのシェリフ
 
 # reference at main.dol:0x240e5c (RAM 0x80243e5c) [monster]
-# LIMIT 8 glyphs - copied with a fixed-size memcpy
+# LIMIT 16 glyphs - a fixed-size memcpy copies a redirect stub, not these glyphs
 0x1dcefc グラディエーター
 
 # reference at main.dol:0x240e98 (RAM 0x80243e98) [monster]
-# LIMIT 8 glyphs - copied with a fixed-size memcpy
+# LIMIT 16 glyphs - a fixed-size memcpy copies a redirect stub, not these glyphs
 0x1dcf10 ヴィント
 
 # reference at main.dol:0x241e8c (RAM 0x80244e8c) [F]
@@ -6033,7 +6027,7 @@
 0x24376c [Red Text][%0][Normal Color Text]が勝手に[Blue Text][%0][Normal Color Text]をえらんだ[Press A]
 
 # reference at main.dol:0x6b150 (RAM 0x8007b410) [addi paired with the lis at RAM 0x8007b40c]
-0x243790 [0xe800][Blue Text][%0][Normal Color Text]の春です[Press A]
+0x243790 [0xe800][Blue Text][%0][Normal Color Text]の番です[Press A]
 
 # reference at main.dol:0x6a0a0 (RAM 0x8007a360) [addi paired with the lis at RAM 0x8007a35c]
 # reference at main.dol:0x6a0e0 (RAM 0x8007a3a0) [addi paired with the lis at RAM 0x8007a39c]
@@ -6783,7 +6777,7 @@
 0x254f1c [0x9a1][Blue Text]カサカサどうくつ[Normal Color Text]に[\n]入れるようになった!
 
 # reference at main.dol:0x25d33c (RAM 0x8026033c) [A]
-0x254f4c [0xa07][0xb14][0xd056]ウキキのキー![Press A][0xa00]ずいぶん、おそかったダス![Press A]オラは[Red Text]ワルサーズ[Normal Color Text]のカレー春長![Press A][Red Text]ワルサーイエロー[Normal Color Text]ダス![Press A]待ちくたびれてハラがペコペコダス[\n]はやくオマエらをぶったおして、[\n]カレーをたらふく食ってやるダス![Press A][0xa09]かくごするダス!
+0x254f4c [0xa07][0xb14][0xd056]ウキキのキー![Press A][0xa00]ずいぶん、おそかったダス![Press A]オラは[Red Text]ワルサーズ[Normal Color Text]のカレー番長![Press A][Red Text]ワルサーイエロー[Normal Color Text]ダス![Press A]待ちくたびれてハラがペコペコダス[\n]はやくオマエらをぶったおして、[\n]カレーをたらふく食ってやるダス![Press A][0xa09]かくごするダス!
 
 # reference at main.dol:0x25d340 (RAM 0x80260340) [A]
 0x255038 [0xa06][0xb15][0xd057]ムキーッ![Press A]ハラがへってなければ[\n]負けなかったんダス![Press A]おぼえてるダス![Press A]次はまんぷくのときに[\n]相手してやるダス!
@@ -6828,7 +6822,7 @@
 0x255aa0 [0x9a1][Blue Text]ドッカン火山[Normal Color Text]に[\n]入れるようになった!
 
 # reference at main.dol:0x25d378 (RAM 0x80260378) [A]
-0x255acc [0xa07][0xb14][0xd056]ウキキのキー![Press A][0xa00]きやがったジャン![Press A]オレは[Red Text]ワルサーズ[Normal Color Text]のバトルマニア![Press A][Red Text]ワルサーレッド[Normal Color Text]ジャン![Press A][0xa07]ビビらずによくきたジャン![\n]にげたら、どうしようかと思ったジャン![Press A]オレは強いヤツが大好きジャン![\n]強いヤツとたたかって、[\n]オレはもっともっと強くなるジャン![Press A][0xa00]オレより強いのは[Red Text]ワルサー[Normal Color Text]様だけジャン![\n]オマエは、オレを寨しませることが[\n]できるジャン?[Press A][0xa09]それじゃ、バトルするジャン!
+0x255acc [0xa07][0xb14][0xd056]ウキキのキー![Press A][0xa00]きやがったジャン![Press A]オレは[Red Text]ワルサーズ[Normal Color Text]のバトルマニア![Press A][Red Text]ワルサーレッド[Normal Color Text]ジャン![Press A][0xa07]ビビらずによくきたジャン![\n]にげたら、どうしようかと思ったジャン![Press A]オレは強いヤツが大好きジャン![\n]強いヤツとたたかって、[\n]オレはもっともっと強くなるジャン![Press A][0xa00]オレより強いのは[Red Text]ワルサー[Normal Color Text]様だけジャン![\n]オマエは、オレを楽しませることが[\n]できるジャン?[Press A][0xa09]それじゃ、バトルするジャン!
 
 # reference at main.dol:0x25d37c (RAM 0x8026037c) [A]
 0x255c5c [0xa06][0xb15][0xd057]ムキーッ![Press A]オレより強いヤツが[\n][Red Text]ワルサー[Normal Color Text]様の他にもいるジャン![Press A]おぼえてるジャン![\n]オレは、もっと強くなって[\n]掃ってくるジャン!![Press A]次はオレが勝つジャン!
@@ -6840,7 +6834,7 @@
 0x255d90 [0xa07][0xb14][0xd056]ウキキのキー![Press A][0xa00]まずはオイラが[\n]相手をしてやるでヤンス![Press A]前と同じ強さだと思うなでヤンス![\n][Red Text]魔界トンネル[Normal Color Text]が半分あいてるおかげで[\n]メチャクチャ強くなってるでヤンス![Press A][Red Text]ワルサーズ[Normal Color Text]さいきょうのオイラのちから、[\n]いまこそ見せてやるでヤンス![Press A][0xa09]かくごするでヤンス!
 
 # reference at main.dol:0x25d388 (RAM 0x80260388) [A]
-0x255ea4 [0xa06][0xb15][0xd057]ムキーッ![Press A]どうせオイラは一春弱いでヤンス![\n]二度とこんな世界来ないでヤンス!
+0x255ea4 [0xa06][0xb15][0xd057]ムキーッ![Press A]どうせオイラは一番弱いでヤンス![\n]二度とこんな世界来ないでヤンス!
 
 # reference at main.dol:0x25d38c (RAM 0x8026038c) [A]
 0x255efc [0xa07][0xb14][0xd056]ウキキのキー![Press A][0xa00]次はオラが相手をしてやるダス![Press A]オマエらに負けたおかげで[\n][Red Text]ワルサー[Normal Color Text]様にカレーぬきに[\n]されたんダス![Press A]食べ物のうらみはおそろしいダス![Press A][0xa09]オラのカレー返すダス!
@@ -6981,7 +6975,7 @@
 0x258ebc [0xa00][0xc02][0xb00]これから[\n][0xb84c][Blue Text]とくぎ[Normal Color Text][0xb84d]について[\n]教えてあげるね![0xd02][Press A][0xa00][0xc02][0xb00][0xb80a][Blue Text]とくぎ[Normal Color Text]は[Blue Text]ぶき[Normal Color Text]についている[\n]とくべつなわざのことで、[\n]こうげきするわざとか、[0xd02][Press A][0xa00][0xc02][0xb00]自分をパワーアップさせる[\n]わざとか、ぶきによって[\n]いろいろ変わるんだ![0xd02][Press A][0xa00][0xc02][0xb00][0xb80a][Blue Text]とくぎ[Normal Color Text]のしゅるいには[\n][0xb84c][Blue Text]アタック[Normal Color Text]、[0xb84d][Blue Text]マジック[Normal Color Text]、[\n][0xb84e][Blue Text]アップ[Normal Color Text]の3つがあるんだ![0xd02][Press A][0xa00][0xc02][0xb00][0xb84c][Blue Text]アタック[Normal Color Text]は、ぶきとかで[\n]ちょくせつ相手を[\n]こうげきするわざだよ![0xd02][Press A][0xa00][0xc02][0xb00][0xb84d][Blue Text]マジック[Normal Color Text]は、まりょくを[\n]便ったまほうのわざで[\n][0xb83d][Blue Text]こうげきまほう[Normal Color Text]とにてるよ![0xd02][Press A][0xa00][0xc02][0xb00][0xb84e][Blue Text]アップ[Normal Color Text]は、自分を[\n]パワーアップさせたり、[\n]自分のプラスになるわざだよ![0xd02][Press A][0xa00][0xc02][0xb00][0xb80a][Blue Text]とくぎ[Normal Color Text]にも、[Blue Text]カウンター[Normal Color Text]は[\n][Blue Text]ひっさつ[Normal Color Text]に強いみたいな[\n][Blue Text]コマンド[Normal Color Text]の強弱があるんだよ[0xd02][Press A][0xa00][0xc02][0xb00][0xb84c][Blue Text]アタック[Normal Color Text]は、[\n][0xb808][Blue Text]ぼうぎょ[Normal Color Text]の[\n]コマンドでふせげるんだ![0xd02][Press A][0xa00][0xc02][0xb00][0xb84d][Blue Text]マジック[Normal Color Text]は、[\n][0xb80b][Blue Text]ぼうぎょまほう[Normal Color Text]の[\n]コマンドでふせげるよ![0xd02][Press A][0xa00][0xc02][0xb00]ただし、[0xb83e][Blue Text]ぼうぎょまほう[Normal Color Text]を[\n]そうびしてないと[\n]ふせげないからね![0xd02][Press A][0xa00][0xc02][0xb00][0xb84e][Blue Text]アップ[Normal Color Text]は、[\n][0xb83b][Blue Text]ぼうぎょがわ[Normal Color Text]に[\n][Blue Text]ふせぐことはできない[Normal Color Text]よ![0xd02][Press A][0xa00][0xc02][0xb00][0xb80a][Blue Text]とくぎ[Normal Color Text]はふせがれると、[\n]相手に[Blue Text]ナイスガード[Normal Color Text]されて[\n]何のこうかもないからね![0xd02][Press A][0xa00][0xc02][0xb00]それと[0xb84e][Blue Text]アップ[Normal Color Text]の場合は[\n]便っても、ミスする[\n]ことがあるからね![0xd02][Press A][0xa00][0xc02][0xb01]バトル中は[0xb80a][Blue Text]とくぎ[Normal Color Text]の[\n]名前が書いてある[\n][Blue Text]ふきだしの色[Normal Color Text]で[0xd02][Press A][0xa00][0xc02][0xb01]どのコマンドで[\n]ふせぐことができるか[\n]わかるようになってるよ![0xd02][Press A][0xa00][0xc02][0xb01][0xb83b][Blue Text]ぼうぎょがわ[Normal Color Text]の[Blue Text]ふきだしが[Normal Color Text][\n][Blue Text]黃色[Normal Color Text]のコマンドが[Blue Text]とくぎ[Normal Color Text]を[\n]ふせげるコマンドだよ![0xd02][Press A][0xa00][0xc02][0xb01]ベクのせつめいは[\n]これで終わり![0xd02][Press A][0xa00][0xc02][0xb01]あと[0xb80a][Blue Text]とくぎ[Normal Color Text]の[\n]こうげきは、相手の[Blue Text]ぼうぎょ力[Normal Color Text]や[\n][Blue Text]すばやさ[Normal Color Text]をムシした[0xd02][Press A][0xa00][0xc02][0xb01]こうげきをするから、[\n][Blue Text]ぼうぎょ力[Normal Color Text]の高い相手や[\n]すばやい相手にゆうこうだよ![0xd02][Press A][0xa03][0xc02][0xb01][0xd08b]それじゃあ、バイバーイ![0xd02][0xa02]
 
 # reference at main.dol:0x25d548 (RAM 0x80260548) [A]
-0x259548 [0xa00][0xc02][0xb00]これから[\n][0xb848][Blue Text]ドカポンエッグ[Normal Color Text][0xb84a]に[\n]ついて教えてあげるね![0xd02][Press A][0xa00][0xc02][0xb00]みんなは[Blue Text]ドカポンエッグ[Normal Color Text][\n]に入っている[Blue Text]Dパーツ[Normal Color Text]を[\n]さがしてるわけだけど、[0xd02][Press A][0xa00][0xc02][0xb00]本物が入っているのは[\n]島にたった[Blue Text]1コ[Normal Color Text]だけなんだ[0xd02][Press A][0xa00][0xc02][0xb00]だから他の[Blue Text]ドカポンエッグ[Normal Color Text]には[\n][Blue Text]Dパーツ[Normal Color Text]じゃなくて[0xd02][Press A][0xa00][0xc02][0xb00][Blue Text][Blue Text]Dパーツ[Normal Color Text]のにせものの[\n][Blue Text]Dグッズ[Normal Color Text]が入ってるんだ[0xd02][Press A][0xa00][0xc02][0xb00][Blue Text]Dグッズ[Normal Color Text]は[Blue Text]Dパーツ[Normal Color Text]の[\n]にせものだけど、[\n]べんりで役に立つこうかが[0xd02][Press A][0xa00][0xc02][0xb00]いろいろあるから[\n]たくさん集めて[\n]ライバルにさをつけよう![0xd02][Press A][0xa00][0xc02][0xb00][Blue Text]ドカポンエッグ[Normal Color Text]には[\n][0xb848]と[0xb849]と[0xb84a]の[\n]3つのしゅるいがあるよ![0xd02][Press A][0xa00][0xc02][0xb00][0xb88d]の数が冬いほど、[\n]きちょうな[Blue Text]Dグッズ[Normal Color Text]が[\n]入ってることが冬いよ![0xd02][Press A][0xa00][0xc02][0xb00]だから同じ[Blue Text]ドカポンエッグ[Normal Color Text]でも、[\n][0xb88d]の数の冬いドカポンエッグ[\n]を集めたほうがいいよ![0xd02][Press A][0xa00][0xc02][0xb00]他の人からうばう時は[\n][0xb88d]の数が冬いものを[\n]えらんじゃおう![0xd02][Press A][0xa00][0xc02][0xb00]ベクのせつめいは[\n]これで終わり![0xd02][Press A][0xa00][0xc02][0xb00]ともかくいっぽい[\n][Blue Text]ドカポンエッグ[Normal Color Text]を集めるのが[\n]1春だからね![0xd02][Press A][0xa03][0xc02][0xb00][0xd08b]それじゃあ、バイバーイ![0xd02][0xa02]
+0x259548 [0xa00][0xc02][0xb00]これから[\n][0xb848][Blue Text]ドカポンエッグ[Normal Color Text][0xb84a]に[\n]ついて教えてあげるね![0xd02][Press A][0xa00][0xc02][0xb00]みんなは[Blue Text]ドカポンエッグ[Normal Color Text][\n]に入っている[Blue Text]Dパーツ[Normal Color Text]を[\n]さがしてるわけだけど、[0xd02][Press A][0xa00][0xc02][0xb00]本物が入っているのは[\n]島にたった[Blue Text]1コ[Normal Color Text]だけなんだ[0xd02][Press A][0xa00][0xc02][0xb00]だから他の[Blue Text]ドカポンエッグ[Normal Color Text]には[\n][Blue Text]Dパーツ[Normal Color Text]じゃなくて[0xd02][Press A][0xa00][0xc02][0xb00][Blue Text][Blue Text]Dパーツ[Normal Color Text]のにせものの[\n][Blue Text]Dグッズ[Normal Color Text]が入ってるんだ[0xd02][Press A][0xa00][0xc02][0xb00][Blue Text]Dグッズ[Normal Color Text]は[Blue Text]Dパーツ[Normal Color Text]の[\n]にせものだけど、[\n]べんりで役に立つこうかが[0xd02][Press A][0xa00][0xc02][0xb00]いろいろあるから[\n]たくさん集めて[\n]ライバルにさをつけよう![0xd02][Press A][0xa00][0xc02][0xb00][Blue Text]ドカポンエッグ[Normal Color Text]には[\n][0xb848]と[0xb849]と[0xb84a]の[\n]3つのしゅるいがあるよ![0xd02][Press A][0xa00][0xc02][0xb00][0xb88d]の数が冬いほど、[\n]きちょうな[Blue Text]Dグッズ[Normal Color Text]が[\n]入ってることが冬いよ![0xd02][Press A][0xa00][0xc02][0xb00]だから同じ[Blue Text]ドカポンエッグ[Normal Color Text]でも、[\n][0xb88d]の数の冬いドカポンエッグ[\n]を集めたほうがいいよ![0xd02][Press A][0xa00][0xc02][0xb00]他の人からうばう時は[\n][0xb88d]の数が冬いものを[\n]えらんじゃおう![0xd02][Press A][0xa00][0xc02][0xb00]ベクのせつめいは[\n]これで終わり![0xd02][Press A][0xa00][0xc02][0xb00]ともかくいっぽい[\n][Blue Text]ドカポンエッグ[Normal Color Text]を集めるのが[\n]1番だからね![0xd02][Press A][0xa03][0xc02][0xb00][0xd08b]それじゃあ、バイバーイ![0xd02][0xa02]
 
 # reference at main.dol:0x25d54c (RAM 0x8026054c) [A]
 0x25990c [0xa00][0xc02][0xb00]あ~あ・・・[\n][0xb84b][Red Text]ワルサーエッグ[Normal Color Text][0xb84b]を[\n]ひろっちゃったね~[0xd02][Press A][0xa00][0xc02][0xb00][0xb84b][Red Text]ワルサーエッグ[Normal Color Text]は[\n][0xb8ff][Red Text]ワルサー[Normal Color Text]が作った[0xd02][Press A][0xa00][0xc02][0xb00][0xb84a][Blue Text]ドカポンエッグ[Normal Color Text]の[\n]にせものでワナなんだよ![0xd02][Press A][0xa00][0xc02][0xb00][0xb84b][Red Text]ワルサーエッグ[Normal Color Text]を[\n]王様がわっちゃうと[\n]大変なことになるよ![0xd02][Press A][0xa00][0xc02][0xb00]だから[Red Text]ワルサーズ[Normal Color Text]を[\n]たおす前にだれかに[\n]おしつけるんだ![0xd02][Press A][0xa00][0xc02][0xb00]バトルで他の人をたおすと[\n]おしつけることが[\n]できるからね![0xd02][Press A][0xa00][0xc02][0xb00]ベクのせつめいは[\n]これで終わり![0xd02][Press A][0xa00][0xc02][0xb00][0xb84b][Red Text]ワルサーエッグ[Normal Color Text]には[\n]くれぐれも気をつけてね![0xd02][Press A][0xa03][0xc02][0xb00][0xd08b]それじゃあ、バイバーイ![0xd02][0xa02]
@@ -6999,7 +6993,7 @@
 0x25a4cc [0xa00][0xc02][0xb00]これから[\n][0xb83c][Blue Text]まほうのベンボ[Normal Color Text][0xb83c]に[\n]ついて教えてあげるね![0xd02][Press A][0xa00][0xc02][0xb00][0xb83c][Blue Text]まほうのベンボ[Normal Color Text]は[\n][Blue Text]海のそこ[Normal Color Text]を歩けるように[\n]なる道具だよ![0xd02][Press A][0xa00][0xc02][0xb00]自分で便わなくても[\n][Blue Text]海のそこ[Normal Color Text]に行けば[\n]勝手に便ってくれるからね[0xd02][Press A][0xa00][0xc02][0xb00][0xb83c][Blue Text]まほうのベンボ[Normal Color Text]は[\n]村に行けばもらえるから[0xd02][Press A][0xa00][0xc02][0xb00]早く[Blue Text]ゲッパン村[Normal Color Text]に[\n]もらいに行こう![0xd02][Press A][0xa00][0xc02][0xb00]他の人より早く手に入れたら[\n][0xb83c][Blue Text]まほうのベンボ[Normal Color Text]を便って[\n]どんどん先に進んじゃえ![0xd02][Press A][0xa00][0xc02][0xb00]ただし[Blue Text]海のそこ[Normal Color Text]は、[\n]ルーレットの数字が[Red Text]半分[Normal Color Text]に[\n]なるから気をつけてね![0xd02][Press A][0xa00][0xc02][0xb00]ベクのせつめいは[\n]これで終わり![0xd02][Press A][0xa00][0xc02][0xb00][0xb83c][Blue Text]まほうのベンボ[Normal Color Text]は[\n]なくなったり、うばわれたり[\n]しないから安心してね![0xd02][Press A][0xa03][0xc02][0xb00][0xd08b]それじゃあ、バイバーイ![0xd02][0xa02]
 
 # reference at main.dol:0x25d560 (RAM 0x80260560) [A]
-0x25a768 [0xa00][0xc02][0xb00]これから[\n][0xb83c][Blue Text]てんしのはね[Normal Color Text][0xb83c]に[\n]ついて教えてあげるね![0xd02][Press A][0xa00][0xc02][0xb00][0xb83c][Blue Text]てんしのはね[Normal Color Text]は[\n][Blue Text]空[Normal Color Text]をいどうできる[\n]ようになる道具だよ![0xd02][Press A][0xa00][0xc02][0xb00][0xb83c][Blue Text]てんしのはね[Normal Color Text]は、[\n]自分で便わないと、[\n][Blue Text]空[Normal Color Text]をとべないんだ[0xd02][Press A][0xa00][0xc02][0xb00][Blue Text]持ち物[Normal Color Text]の[\n][Blue Text]そのた[Normal Color Text]の中からえらんで、[\n]便ってね![0xd02][Press A][0xa00][0xc02][0xb00][Blue Text]空[Normal Color Text]をとぶと、[\n]バトルもイボントも[\n]なくなるんだ[0xd02][Press A][0xa00][0xc02][0xb00]それに[\n][0xb839][Blue Text]フィールドまほう[Normal Color Text]の[\n]こうげきも受けなくなるよ![0xd02][Press A][0xa00][0xc02][0xb00]ずっと[0xb840][Blue Text]バババイン[Normal Color Text][\n]じょうたいで、ルーレットは[\n]ふえるし、いいことずくめ・・・[0xd02][Press A][0xa00][0xc02][0xb00]と思うかもしれないけど、[\n]地面におりるには[\n][Red Text]1日[Normal Color Text]便わないとダメだし、[0xd02][Press A][0xa00][0xc02][0xb00]何もできないし、[\n]何もおこらないから、[\n]とんでばっかりいると[0xd02][Press A][0xa00][0xc02][0xb00]レボルは上がらないし、[\n]お金も手に入らないから[\n]1位になれないよ![0xd02][Press A][0xa00][0xc02][0xb00]あと、[\n]1春気をつけなくちゃ[\n]いけないのは[0xd02][Press A][0xa00][0xc02][0xb00]空をとんでいると[\n]少しずつ[Red Text]HPがへっていく[Normal Color Text][\n]ってことなんだ![0xd02][Press A][0xa00][0xc02][0xb00][0xb83c][Blue Text]てんしのはね[Normal Color Text]は[\n]とってもわがままだから[\n]休力をあたえないと[0xd02][Press A][0xa00][0xc02][0xb00]ちからをかしてくれないし、[\n][Red Text]おたずね者[Normal Color Text]の人も[\n]相手にしてくれないよ![0xd02][Press A][0xa00][0xc02][0xb00]HPが少なくなると[\n]空をとべなくなって[\n]地面におりちゃうからね![0xd02][Press A][0xa00][0xc02][0xb00]それと、空をとぶには[\n][Blue Text]HPがマンタン[Normal Color Text]じゃない[\n]とダメだよ![0xd02][Press A][0xa00][0xc02][0xb00][0xb83c][Blue Text]てんしのはね[Normal Color Text]は[\n]村に行けばもらえるから[0xd02][Press A][0xa00][0xc02][0xb00]早く[Blue Text]シャコネツ村[Normal Color Text]に[\n]もらいに行こう![0xd02][Press A][0xa00][0xc02][0xb00][Blue Text]ベーベー島[Normal Color Text]には[Blue Text]空[Normal Color Text]をとばない[\n]と、こえられない山が[\n]たくさんあるから[0xd02][Press A][0xa00][0xc02][0xb00]他の人より早く手に入れたら[\n][0xb83c][Blue Text]てんしのはね[Normal Color Text]を便って[\n]どんどん先に進んじゃえ![0xd02][Press A][0xa00][0xc02][0xb00]ベクのせつめいは[\n]これで終わり![0xd02][Press A][0xa00][0xc02][0xb00][0xb83c][Blue Text]てんしのはね[Normal Color Text]は[\n]なくなったり、うばわれたり[\n]しないから安心してね![0xd02][Press A][0xa03][0xc02][0xb00][0xd08b]それじゃあ、バイバーイ![0xd02][0xa02]
+0x25a768 [0xa00][0xc02][0xb00]これから[\n][0xb83c][Blue Text]てんしのはね[Normal Color Text][0xb83c]に[\n]ついて教えてあげるね![0xd02][Press A][0xa00][0xc02][0xb00][0xb83c][Blue Text]てんしのはね[Normal Color Text]は[\n][Blue Text]空[Normal Color Text]をいどうできる[\n]ようになる道具だよ![0xd02][Press A][0xa00][0xc02][0xb00][0xb83c][Blue Text]てんしのはね[Normal Color Text]は、[\n]自分で便わないと、[\n][Blue Text]空[Normal Color Text]をとべないんだ[0xd02][Press A][0xa00][0xc02][0xb00][Blue Text]持ち物[Normal Color Text]の[\n][Blue Text]そのた[Normal Color Text]の中からえらんで、[\n]便ってね![0xd02][Press A][0xa00][0xc02][0xb00][Blue Text]空[Normal Color Text]をとぶと、[\n]バトルもイボントも[\n]なくなるんだ[0xd02][Press A][0xa00][0xc02][0xb00]それに[\n][0xb839][Blue Text]フィールドまほう[Normal Color Text]の[\n]こうげきも受けなくなるよ![0xd02][Press A][0xa00][0xc02][0xb00]ずっと[0xb840][Blue Text]バババイン[Normal Color Text][\n]じょうたいで、ルーレットは[\n]ふえるし、いいことずくめ・・・[0xd02][Press A][0xa00][0xc02][0xb00]と思うかもしれないけど、[\n]地面におりるには[\n][Red Text]1日[Normal Color Text]便わないとダメだし、[0xd02][Press A][0xa00][0xc02][0xb00]何もできないし、[\n]何もおこらないから、[\n]とんでばっかりいると[0xd02][Press A][0xa00][0xc02][0xb00]レボルは上がらないし、[\n]お金も手に入らないから[\n]1位になれないよ![0xd02][Press A][0xa00][0xc02][0xb00]あと、[\n]1番気をつけなくちゃ[\n]いけないのは[0xd02][Press A][0xa00][0xc02][0xb00]空をとんでいると[\n]少しずつ[Red Text]HPがへっていく[Normal Color Text][\n]ってことなんだ![0xd02][Press A][0xa00][0xc02][0xb00][0xb83c][Blue Text]てんしのはね[Normal Color Text]は[\n]とってもわがままだから[\n]休力をあたえないと[0xd02][Press A][0xa00][0xc02][0xb00]ちからをかしてくれないし、[\n][Red Text]おたずね者[Normal Color Text]の人も[\n]相手にしてくれないよ![0xd02][Press A][0xa00][0xc02][0xb00]HPが少なくなると[\n]空をとべなくなって[\n]地面におりちゃうからね![0xd02][Press A][0xa00][0xc02][0xb00]それと、空をとぶには[\n][Blue Text]HPがマンタン[Normal Color Text]じゃない[\n]とダメだよ![0xd02][Press A][0xa00][0xc02][0xb00][0xb83c][Blue Text]てんしのはね[Normal Color Text]は[\n]村に行けばもらえるから[0xd02][Press A][0xa00][0xc02][0xb00]早く[Blue Text]シャコネツ村[Normal Color Text]に[\n]もらいに行こう![0xd02][Press A][0xa00][0xc02][0xb00][Blue Text]ベーベー島[Normal Color Text]には[Blue Text]空[Normal Color Text]をとばない[\n]と、こえられない山が[\n]たくさんあるから[0xd02][Press A][0xa00][0xc02][0xb00]他の人より早く手に入れたら[\n][0xb83c][Blue Text]てんしのはね[Normal Color Text]を便って[\n]どんどん先に進んじゃえ![0xd02][Press A][0xa00][0xc02][0xb00]ベクのせつめいは[\n]これで終わり![0xd02][Press A][0xa00][0xc02][0xb00][0xb83c][Blue Text]てんしのはね[Normal Color Text]は[\n]なくなったり、うばわれたり[\n]しないから安心してね![0xd02][Press A][0xa03][0xc02][0xb00][0xd08b]それじゃあ、バイバーイ![0xd02][0xa02]
 
 # reference at main.dol:0x25d564 (RAM 0x80260564) [A]
 0x25ada4 [0xa00][0xc02][0xb00]たいへんだ![\n]このままじゃ[\n][Red Text]魔界トンネル[Normal Color Text]が開いて、[0xd02][Press A][0xa00][0xc02][0xb00]ドカポン王國が[\n][Red Text]魔界[Normal Color Text]になっちゃうよ![0xd02][Press A][0xa00][0xc02][0xb00][Red Text]ワルサーズ[Normal Color Text]を[\n]全員たおして[\n]早く[Blue Text]ドカポン城[Normal Color Text]にむかうんだ![0xd02][Press A][0xa00][0xc02][0xb00][0xb8ff][Red Text]ワルサー[Normal Color Text]をたおせば[\n][Red Text]魔界トンネル[Normal Color Text]は[\n]きえるからね![0xd02][Press A][0xa03][0xc02][0xb00]それじゃ[\n]みんながんばってね![\n]ラストスパートだよ![0xd02][0xa02]
@@ -7023,13 +7017,13 @@
 0x25b2c8 [0xa00][0xc02][0xb00]これから[Blue Text]ぬすむ[Normal Color Text]に[\n]ついて教えてあげるね![0xd02][Press A][0xa00][0xc02][0xb00][Blue Text]ぬすむ[Normal Color Text]をえらぶと[\n][Blue Text]金庫やぶり[Normal Color Text]の[\n]ゲームができるよ![0xd02][Press A][0xa00][0xc02][0xb00]せいこうすると、[\n]お店なら[Blue Text]品物[Normal Color Text]が、[\n]銀行なら[Blue Text]お金[Normal Color Text]がもらえるよ![0xd02][Press A][0xa00][0xc02][0xb00]ただし、[\n]しっぽいするとたいへん![\n][Red Text]おたずね者[Normal Color Text]になっちゃうよ![0xd02][Press A][0xa00][0xc02][0xb00][Red Text]おたずね者[Normal Color Text]になると[\n][Blue Text]たてもの[Normal Color Text]には入れなくなるし、[\n][Blue Text]しょうきん[Normal Color Text]をかけられて、[0xd02][Press A][0xa00][0xc02][0xb00]ものすご~く強い[\n][Red Text]やみのシェリフ[Normal Color Text]が[\n]おいかけてくるんだ![0xd02][Press A][0xa00][0xc02][0xb00][Blue Text]しょうきん[Normal Color Text]はたおした人が[\n]もらえるから、[0xd02][Press A][0xa00][0xc02][0xb00]他の人が[\n][Red Text]おたずね者[Normal Color Text]をたおせば、[\n][Blue Text]しょうきん[Normal Color Text]がもらえるよ![0xd02][Press A][0xa00][0xc02][0xb00]弱いヤツだったら[\n]ガンガンねらっていこう![0xd02][Press A][0xa00][0xc02][0xb00]ベクのせつめいは[\n]これで終わり![0xd02][Press A][0xa00][0xc02][0xb00][Blue Text]ぬすむ[Normal Color Text]ときは、[\n]よく考えてから[\n]チャレンジしようね![0xd02][Press A][0xa03][0xc02][0xb00][0xd08b]それじゃあ、バイバーイ![0xd02][0xa02]
 
 # reference at main.dol:0x25d580 (RAM 0x80260580) [A]
-0x25b5cc [0xa00][0xc02][0xb00]これから[Blue Text]ゼニゼニバトル[Normal Color Text]に[\n]ついて教えてあげるね![0xd02][Press A][0xa00][0xc02][0xb00][Blue Text]ゼニゼニバトル[Normal Color Text]のルールは、[\n]せっていした[Blue Text]あそぶ週数[Normal Color Text]が[\n]終わったときに[0xd02][Press A][0xa00][0xc02][0xb00][0xb06]ざいさん[Normal Color Text]が[\n][Blue Text]1春冬い人[Normal Color Text]が[\n]勝ちのルールだよ![0xd02][Press A][0xa00][0xc02][0xb00]もくてき地はないから[\n]自友に行動して[\n]いっぽいお金を集めよう![0xd02][Press A][0xa00][0xc02][0xb00][Blue Text]あそぶ週数[Normal Color Text]は[\n][Blue Text]システム[Normal Color Text]の中で、いつでも[\n]自友に変えられるから[0xd02][Press A][0xa00][0xc02][0xb00]ゲームを早く[\n]やめたくなったときは、[\n][0xd02][Press A][0xa00][0xc02][0xb00][Blue Text]あそぶ週数[Normal Color Text]を[\n]少なくすれば[\n]すぐクリアできるよ![0xd02][Press A][0xa00][0xc02][0xb00][Blue Text]ゼニゼニバトル[Normal Color Text]の[\n]今のじゅんいが[\n]見たいときは[0xd02][Press A][0xa00][0xc02][0xb00][Blue Text]データ[Normal Color Text]の中の[\n][Blue Text]モード[Normal Color Text]のページを見て[\n]かくにんしてね![0xd02][Press A][0xa00][0xc02][0xb00]これから先、ベクのせつめい[\n]を聞きたくない人は、[\n][Blue Text]システム[Normal Color Text]をえらんだあと、[0xd02][Press A][0xa00][0xc02][0xb00][Blue Text]ヘルプメッセージ[Normal Color Text]の[\n]ページをえらんで[\n]ONから[Blue Text]OFF[Normal Color Text]にしてね[0xd02][Press A][0xa00][0xc02][0xb00]ベクのせつめいは[\n]これで終わり![0xd02][Press A][0xa00][0xc02][0xb00]あと、クリアしたときに[\n][Blue Text]全ざいさん[Normal Color Text]の[\n]同じ人がいたら、[0xd02][Press A][0xa00][0xc02][0xb00]じゅんばんの早い人の[\n]じゅんいが上になるから[\n]気をつけてね![0xd02][Press A][0xa03][0xc02][0xb00][0xd08b]それじゃあ、バイバーイ![0xd02][0xa02]
+0x25b5cc [0xa00][0xc02][0xb00]これから[Blue Text]ゼニゼニバトル[Normal Color Text]に[\n]ついて教えてあげるね![0xd02][Press A][0xa00][0xc02][0xb00][Blue Text]ゼニゼニバトル[Normal Color Text]のルールは、[\n]せっていした[Blue Text]あそぶ週数[Normal Color Text]が[\n]終わったときに[0xd02][Press A][0xa00][0xc02][0xb00][0xb06]ざいさん[Normal Color Text]が[\n][Blue Text]1番冬い人[Normal Color Text]が[\n]勝ちのルールだよ![0xd02][Press A][0xa00][0xc02][0xb00]もくてき地はないから[\n]自友に行動して[\n]いっぽいお金を集めよう![0xd02][Press A][0xa00][0xc02][0xb00][Blue Text]あそぶ週数[Normal Color Text]は[\n][Blue Text]システム[Normal Color Text]の中で、いつでも[\n]自友に変えられるから[0xd02][Press A][0xa00][0xc02][0xb00]ゲームを早く[\n]やめたくなったときは、[\n][0xd02][Press A][0xa00][0xc02][0xb00][Blue Text]あそぶ週数[Normal Color Text]を[\n]少なくすれば[\n]すぐクリアできるよ![0xd02][Press A][0xa00][0xc02][0xb00][Blue Text]ゼニゼニバトル[Normal Color Text]の[\n]今のじゅんいが[\n]見たいときは[0xd02][Press A][0xa00][0xc02][0xb00][Blue Text]データ[Normal Color Text]の中の[\n][Blue Text]モード[Normal Color Text]のページを見て[\n]かくにんしてね![0xd02][Press A][0xa00][0xc02][0xb00]これから先、ベクのせつめい[\n]を聞きたくない人は、[\n][Blue Text]システム[Normal Color Text]をえらんだあと、[0xd02][Press A][0xa00][0xc02][0xb00][Blue Text]ヘルプメッセージ[Normal Color Text]の[\n]ページをえらんで[\n]ONから[Blue Text]OFF[Normal Color Text]にしてね[0xd02][Press A][0xa00][0xc02][0xb00]ベクのせつめいは[\n]これで終わり![0xd02][Press A][0xa00][0xc02][0xb00]あと、クリアしたときに[\n][Blue Text]全ざいさん[Normal Color Text]の[\n]同じ人がいたら、[0xd02][Press A][0xa00][0xc02][0xb00]じゅんばんの早い人の[\n]じゅんいが上になるから[\n]気をつけてね![0xd02][Press A][0xa03][0xc02][0xb00][0xd08b]それじゃあ、バイバーイ![0xd02][0xa02]
 
 # reference at main.dol:0x25d584 (RAM 0x80260584) [A]
-0x25b9a4 [0xa00][0xc02][0xb00]これから[Blue Text]キルキルバトル[Normal Color Text]に[\n]ついて教えてあげるね![0xd02][Press A][0xa00][0xc02][0xb00][Blue Text]キルキルバトル[Normal Color Text]のルールは、[\n][Blue Text]たおす人数[Normal Color Text]で[\n]せっていした回数分、[0xd02][Press A][0xa00][0xc02][0xb00][Blue Text]他のプレイヤーを[\n]1春早くたおした人[Normal Color Text]が[\n]勝ちのルールだよ![0xd02][Press A][0xa00][0xc02][0xb00]もくてき地はないから[\n]弱いヤツをおいかけて[\n]どんどんやっつけよう![0xd02][Press A][0xa00][0xc02][0xb00]バトルだけでなく[\n]フィールドまほうで[\n]たおしてもいいからね![0xd02][Press A][0xa00][0xc02][0xb00]それと[Blue Text]キルキルバトル[Normal Color Text]では[\n]プレイヤー相手だと[0xd02][Press A][0xa00][0xc02][0xb00][Blue Text]こうさんできない[Normal Color Text]から[\n]気をつけてね![0xd02][Press A][0xa00][0xc02][0xb00][Blue Text]たおす人数[Normal Color Text]は[\n][Blue Text]システム[Normal Color Text]の中で、いつでも[\n]自友に変えられるから[0xd02][Press A][0xa00][0xc02][0xb00]ゲームを早く[\n]やめたくなったときは、[\n][0xd02][Press A][0xa00][0xc02][0xb00][Blue Text]たおす人数[Normal Color Text]を[\n]少なくすれば[\n]すぐクリアできるよ![0xd02][Press A][0xa00][0xc02][0xb00]これから先、ベクのせつめい[\n]を聞きたくない人は、[\n][Blue Text]システム[Normal Color Text]をえらんだあと、[0xd02][Press A][0xa00][0xc02][0xb00][Blue Text]ヘルプメッセージ[Normal Color Text]の[\n]ページをえらんで[\n]ONから[Blue Text]OFF[Normal Color Text]にしてね[0xd02][Press A][0xa00][0xc02][0xb00]ベクのせつめいは[\n]これで終わり![0xd02][Press A][0xa00][0xc02][0xb00]あと、クリアしたときに[\n][Blue Text]たおす人数[Normal Color Text]の[\n]同じ人がいたら、[0xd02][Press A][0xa00][0xc02][0xb00]全ざいさんの冬い人の[\n]じゅんいが上になるから[\n]気をつけてね![0xd02][Press A][0xa03][0xc02][0xb00][0xd08b]それじゃあ、バイバーイ![0xd02][0xa02]
+0x25b9a4 [0xa00][0xc02][0xb00]これから[Blue Text]キルキルバトル[Normal Color Text]に[\n]ついて教えてあげるね![0xd02][Press A][0xa00][0xc02][0xb00][Blue Text]キルキルバトル[Normal Color Text]のルールは、[\n][Blue Text]たおす人数[Normal Color Text]で[\n]せっていした回数分、[0xd02][Press A][0xa00][0xc02][0xb00][Blue Text]他のプレイヤーを[\n]1番早くたおした人[Normal Color Text]が[\n]勝ちのルールだよ![0xd02][Press A][0xa00][0xc02][0xb00]もくてき地はないから[\n]弱いヤツをおいかけて[\n]どんどんやっつけよう![0xd02][Press A][0xa00][0xc02][0xb00]バトルだけでなく[\n]フィールドまほうで[\n]たおしてもいいからね![0xd02][Press A][0xa00][0xc02][0xb00]それと[Blue Text]キルキルバトル[Normal Color Text]では[\n]プレイヤー相手だと[0xd02][Press A][0xa00][0xc02][0xb00][Blue Text]こうさんできない[Normal Color Text]から[\n]気をつけてね![0xd02][Press A][0xa00][0xc02][0xb00][Blue Text]たおす人数[Normal Color Text]は[\n][Blue Text]システム[Normal Color Text]の中で、いつでも[\n]自友に変えられるから[0xd02][Press A][0xa00][0xc02][0xb00]ゲームを早く[\n]やめたくなったときは、[\n][0xd02][Press A][0xa00][0xc02][0xb00][Blue Text]たおす人数[Normal Color Text]を[\n]少なくすれば[\n]すぐクリアできるよ![0xd02][Press A][0xa00][0xc02][0xb00]これから先、ベクのせつめい[\n]を聞きたくない人は、[\n][Blue Text]システム[Normal Color Text]をえらんだあと、[0xd02][Press A][0xa00][0xc02][0xb00][Blue Text]ヘルプメッセージ[Normal Color Text]の[\n]ページをえらんで[\n]ONから[Blue Text]OFF[Normal Color Text]にしてね[0xd02][Press A][0xa00][0xc02][0xb00]ベクのせつめいは[\n]これで終わり![0xd02][Press A][0xa00][0xc02][0xb00]あと、クリアしたときに[\n][Blue Text]たおす人数[Normal Color Text]の[\n]同じ人がいたら、[0xd02][Press A][0xa00][0xc02][0xb00]全ざいさんの冬い人の[\n]じゅんいが上になるから[\n]気をつけてね![0xd02][Press A][0xa03][0xc02][0xb00][0xd08b]それじゃあ、バイバーイ![0xd02][0xa02]
 
 # reference at main.dol:0x25d588 (RAM 0x80260588) [A]
-0x25bdb4 [0xa00][0xc02][0xb00]これから[Blue Text]ホリホリバトル[Normal Color Text]に[\n]ついて教えてあげるね![0xd02][Press A][0xa00][0xc02][0xb00][Blue Text]ホリホリバトル[Normal Color Text]のルールは、[\n][Blue Text]集める数[Normal Color Text]で[\n]せっていした数の、[0xd02][Press A][0xa00][0xc02][0xb00][Blue Text]ドカポンエッグ[Normal Color Text]を[\n][Blue Text]1春早く集めた人[Normal Color Text]が[\n]勝ちのルールだよ![0xd02][Press A][0xa00][0xc02][0xb00]ストーリーモードと同じく[\n][Blue Text]はっくつポイント[Normal Color Text]が[\n]出てくるから[0xd02][Press A][0xa00][0xc02][0xb00][0xb901]赤いモンスターをたおして[\n][Blue Text]ドカポンエッグ[Normal Color Text]を[\n]集めよう![0xd02][Press A][0xa00][0xc02][0xb00][Blue Text]ホリホリバトル[Normal Color Text]では[\n][Blue Text]ドカポンエッグ[Normal Color Text]は[\n]手に入れても[0xd02][Press A][0xa00][0xc02][0xb00][Blue Text]持ち物[Normal Color Text]の中に[\n]入らないから、うばうことは[\n]できないからね![0xd02][Press A][0xa00][0xc02][0xb00][Blue Text]集める数[Normal Color Text]は[\n][Blue Text]システム[Normal Color Text]の中で、いつでも[\n]自友に変えられるから[0xd02][Press A][0xa00][0xc02][0xb00]ゲームを早く[\n]やめたくなったときは、[\n][0xd02][Press A][0xa00][0xc02][0xb00][Blue Text]集める数[Normal Color Text]を[\n]少なくすれば[\n]すぐクリアできるよ![0xd02][Press A][0xa00][0xc02][0xb00]これから先、ベクのせつめい[\n]を聞きたくない人は、[\n][Blue Text]システム[Normal Color Text]をえらんだあと、[0xd02][Press A][0xa00][0xc02][0xb00][Blue Text]ヘルプメッセージ[Normal Color Text]の[\n]ページをえらんで[\n]ONから[Blue Text]OFF[Normal Color Text]にしてね[0xd02][Press A][0xa00][0xc02][0xb00]ベクのせつめいは[\n]これで終わり![0xd02][Press A][0xa00][0xc02][0xb00]あと、クリアしたときに[\n][Blue Text]集めた数[Normal Color Text]の[\n]同じ人がいたら、[0xd02][Press A][0xa00][0xc02][0xb00]全ざいさんの冬い人の[\n]じゅんいが上になるから[\n]気をつけてね![0xd02][Press A][0xa03][0xc02][0xb00][0xd08b]それじゃあ、バイバーイ![0xd02][0xa02]
+0x25bdb4 [0xa00][0xc02][0xb00]これから[Blue Text]ホリホリバトル[Normal Color Text]に[\n]ついて教えてあげるね![0xd02][Press A][0xa00][0xc02][0xb00][Blue Text]ホリホリバトル[Normal Color Text]のルールは、[\n][Blue Text]集める数[Normal Color Text]で[\n]せっていした数の、[0xd02][Press A][0xa00][0xc02][0xb00][Blue Text]ドカポンエッグ[Normal Color Text]を[\n][Blue Text]1番早く集めた人[Normal Color Text]が[\n]勝ちのルールだよ![0xd02][Press A][0xa00][0xc02][0xb00]ストーリーモードと同じく[\n][Blue Text]はっくつポイント[Normal Color Text]が[\n]出てくるから[0xd02][Press A][0xa00][0xc02][0xb00][0xb901]赤いモンスターをたおして[\n][Blue Text]ドカポンエッグ[Normal Color Text]を[\n]集めよう![0xd02][Press A][0xa00][0xc02][0xb00][Blue Text]ホリホリバトル[Normal Color Text]では[\n][Blue Text]ドカポンエッグ[Normal Color Text]は[\n]手に入れても[0xd02][Press A][0xa00][0xc02][0xb00][Blue Text]持ち物[Normal Color Text]の中に[\n]入らないから、うばうことは[\n]できないからね![0xd02][Press A][0xa00][0xc02][0xb00][Blue Text]集める数[Normal Color Text]は[\n][Blue Text]システム[Normal Color Text]の中で、いつでも[\n]自友に変えられるから[0xd02][Press A][0xa00][0xc02][0xb00]ゲームを早く[\n]やめたくなったときは、[\n][0xd02][Press A][0xa00][0xc02][0xb00][Blue Text]集める数[Normal Color Text]を[\n]少なくすれば[\n]すぐクリアできるよ![0xd02][Press A][0xa00][0xc02][0xb00]これから先、ベクのせつめい[\n]を聞きたくない人は、[\n][Blue Text]システム[Normal Color Text]をえらんだあと、[0xd02][Press A][0xa00][0xc02][0xb00][Blue Text]ヘルプメッセージ[Normal Color Text]の[\n]ページをえらんで[\n]ONから[Blue Text]OFF[Normal Color Text]にしてね[0xd02][Press A][0xa00][0xc02][0xb00]ベクのせつめいは[\n]これで終わり![0xd02][Press A][0xa00][0xc02][0xb00]あと、クリアしたときに[\n][Blue Text]集めた数[Normal Color Text]の[\n]同じ人がいたら、[0xd02][Press A][0xa00][0xc02][0xb00]全ざいさんの冬い人の[\n]じゅんいが上になるから[\n]気をつけてね![0xd02][Press A][0xa03][0xc02][0xb00][0xd08b]それじゃあ、バイバーイ![0xd02][0xa02]
 
 # reference at main.dol:0x25d58c (RAM 0x8026058c) [A]
 0x25c1d8 [0xa00][0xc02][0xb00]これから[\n][0xb83a][Blue Text]メーカーの地形[Normal Color Text][0xb83b]に[\n]ついて教えてあげるね![0xd02][Press A][0xa00][0xc02][0xb00][Blue Text]ぶき[Normal Color Text]や[Blue Text]たて[Normal Color Text]には[\n]それを作っている[\n][Blue Text]メーカー[Normal Color Text]があるんだよ[0xd02][Press A][0xa00][0xc02][0xb00][Blue Text]メーカー[Normal Color Text]には[\n]それぞれ[\n]とくいな地形があって、[0xd02][Press A][0xa00][0xc02][0xb00]とくいな地形でたたかうと、[\n][Blue Text]ぶき[Normal Color Text]なら[Blue Text]こうげき力[Normal Color Text]、[0xd02][Press A][0xa00][0xc02][0xb00][Blue Text]たて[Normal Color Text]なら[\n][Blue Text]ぼうぎょ力[Normal Color Text]がアップするよ![0xd02][Press A][0xa00][0xc02][0xb00]とくいな地形にいるときは、[\n]アップしているパラメータが[\n]キラキラ光るよ![0xd02][Press A][0xa00][0xc02][0xb00][0xb909][Blue Text]ワイルドレッド[Normal Color Text]は[\n]さばくや山、[\n][0xb90a][Blue Text]ブルーロケット[Normal Color Text]は海、[0xd02][Press A][0xa00][0xc02][0xb00][0xb90c][Blue Text]グリーングラス[Normal Color Text]は森[\n][0xb90e][Blue Text]シルバークロス[Normal Color Text]は[\n]どうくつがとくいなんだ[0xd02][Press A][0xa00][0xc02][0xb00]それいがいにも[\n]とくいな地形はあるから[\n]自分でさがしてみてね![0xd02][Press A][0xa00][0xc02][0xb00]ベクのせつめいは[\n]これで終わり![0xd02][Press A][0xa00][0xc02][0xb00]メーカーのしゅるいは[\n][Blue Text]ぶき[Normal Color Text]や[Blue Text]たて[Normal Color Text]の、[\n]名前の前についてる[0xd02][Press A][0xa00][0xc02][0xb00]アイコンの色でも[\n]わかるからね![0xd02][Press A][0xa03][0xc02][0xb00][0xd08b]それじゃあ、バイバーイ![0xd02][0xa02]
@@ -7101,7 +7095,7 @@
 0x25c9ec へっちゃらでヤンス!
 
 # reference at main.dol:0x25d3f4 (RAM 0x802603f4) [A]
-0x25ca04 元気が一春ダス!
+0x25ca04 元気が一番ダス!
 
 # reference at main.dol:0x25d3f8 (RAM 0x802603f8) [A]
 0x25ca18 かいふくピョン!
@@ -7367,7 +7361,7 @@
 0x26aaf8 [0xa00][0xb05][0xd1a5]つまんないな~[\n]ライバルの登場はまだ?
 
 # reference at main.dol:0x26ea04 (RAM 0x80271a04) [dialogue]
-0x26ab28 [0xa00][0xb00][0xc00][0xd1a6]あっちの方が寨しそうだな[0xd00]
+0x26ab28 [0xa00][0xb00][0xc00][0xd1a6]あっちの方が楽しそうだな[0xd00]
 
 # reference at main.dol:0x26ea08 (RAM 0x80271a08) [dialogue]
 0x26ab4c [0xa00][0xb00][0xc00][0xd1a6]アイツのこと[\n]とっちめてやろうかな・・・[\n][0xd00]
@@ -7535,7 +7529,7 @@
 0x26b3fc [0xa00][0xb00][0xc00][0xd1c8]あわてない、あわてない[0xd00]
 
 # reference at main.dol:0x26eae4 (RAM 0x80271ae4) [dialogue]
-0x26b420 [0xa00][0xb00][0xc00][0xd1c8]やっぽり地道が一春だよね[0xd00]
+0x26b420 [0xa00][0xb00][0xc00][0xd1c8]やっぽり地道が一番だよね[0xd00]
 
 # reference at main.dol:0x26eae8 (RAM 0x80271ae8) [dialogue]
 0x26b444 [0xa00][0xb00][0xc00][0xd1c9]さぁ、全力だすぞー[0xd00]
@@ -7826,7 +7820,7 @@
 0x26c428 [0xa07][0xb05][0xd226]今のうちに、ベコベコに[\n]してやるでござる
 
 # reference at main.dol:0x26ec68 (RAM 0x80271c68) [dialogue]
-0x26c458 [0xa00][0xb00][0xc00][0xd227]せっしゃのやることが[\n]1春よいのでござる[0xd00]
+0x26c458 [0xa00][0xb00][0xc00][0xd227]せっしゃのやることが[\n]1番よいのでござる[0xd00]
 
 # reference at main.dol:0x26ec6c (RAM 0x80271c6c) [dialogue]
 0x26c48c [0xa00][0xb00][0xc00][0xd227]ニセのじょうほうには、[\n]まどわされないでござる[0xd00]
@@ -7907,7 +7901,7 @@
 0x26c968 [0xa00][0xb00][0xc00]ジロジロ見るなでござる[0xd00]
 
 # reference at main.dol:0x26ecd4 (RAM 0x80271cd4) [dialogue]
-0x26c988 [0xa00][0xb00][0xc00][0xd229]これからが本春でござる![0xd00]
+0x26c988 [0xa00][0xb00][0xc00][0xd229]これからが本番でござる![0xd00]
 
 # reference at main.dol:0x26ecd8 (RAM 0x80271cd8) [dialogue]
 0x26c9ac [0xa06][0xb06][0xd22a]あのチンチクリンめ![\n]ゆるさないでござる!
@@ -7997,7 +7991,7 @@
 0x26ce58 [0xa00][0xb00][0xc00][0xd1e8]すぐに追いついて[\n]あげるから[\n]見てらっしゃい[0xd00]
 
 # reference at main.dol:0x26ed4c (RAM 0x80271d4c) [dialogue]
-0x26ce90 [0xa00][0xb00][0xc00][0xd1e9]寨に勝てる方法は[\n]ないのかしら?[0xd00]
+0x26ce90 [0xa00][0xb00][0xc00][0xd1e9]楽に勝てる方法は[\n]ないのかしら?[0xd00]
 
 # reference at main.dol:0x26ed50 (RAM 0x80271d50) [dialogue]
 0x26cebc [0xa00][0xb00][0xc00][0xd1e9]よけいな手間を[\n]かけさせないでほしいわ[0xd00]
@@ -8039,7 +8033,7 @@
 0x26d0ec [0xa00][0xb00][0xc00][0xd1ed]今まで[\n]私にしてきたことを[\n]こうかいさせてあげるわ[0xd00]
 
 # reference at main.dol:0x26ed84 (RAM 0x80271d84) [dialogue]
-0x26d12c [0xa00][0xb00][0xc00][0xd1ed]私を寨しませることが[\n]できるのかしら?[0xd00]
+0x26d12c [0xa00][0xb00][0xc00][0xd1ed]私を楽しませることが[\n]できるのかしら?[0xd00]
 
 # reference at main.dol:0x26ed88 (RAM 0x80271d88) [dialogue]
 0x26d160 [0xa07][0xb05][0xd1ee]いじめて、いじめて[\n]なきさけばしてあげるわ
@@ -8078,7 +8072,7 @@
 0x26d360 [0xa08][0xb07][0xd1ec]こんなじょうたいじゃ[\n]たたかえないわ・・・
 
 # reference at main.dol:0x26edb8 (RAM 0x80271db8) [dialogue]
-0x26d394 [0xa08][0xb07][0xd1ec]やっぽりけんこうが[\n]1春なのね・・・
+0x26d394 [0xa08][0xb07][0xd1ec]やっぽりけんこうが[\n]1番なのね・・・
 
 # reference at main.dol:0x26edbc (RAM 0x80271dbc) [dialogue]
 0x26d3c0 [0xa08][0xb07][0xd1ec]この私が[\n]おたずね者なんて・・・
@@ -8114,13 +8108,13 @@
 0x26d594 [0xa07][0xb05][0xd243]ゼニョミニャリン![\n](ゼニニャ![\n]世の中ゼニがすべてニャ!)
 
 # reference at main.dol:0x26ede8 (RAM 0x80271de8) [dialogue]
-0x26d5d8 [0xa07][0xb05][0xd244]モニャハッピ~ン![\n](寨しくって[\n]しかたないニョン!)
+0x26d5d8 [0xa07][0xb05][0xd244]モニャハッピ~ン![\n](楽しくって[\n]しかたないニョン!)
 
 # reference at main.dol:0x26edec (RAM 0x80271dec) [dialogue]
 0x26d618 [0xa07][0xb05][0xd244]モニャカチュプ~![\n](勝つって[\n]気持ちいいニョン!)
 
 # reference at main.dol:0x26edf0 (RAM 0x80271df0) [dialogue]
-0x26d654 [0xa07][0xb05][0xd244]ジュリリ~ン![\n](人生寨しいことが[\n]一春ニョン!)
+0x26d654 [0xa07][0xb05][0xd244]ジュリリ~ン![\n](人生楽しいことが[\n]一番ニョン!)
 
 # reference at main.dol:0x26edf4 (RAM 0x80271df4) [dialogue]
 0x26d690 [0xa07][0xb05][0xd245]チュヨモキャ~ッ![\n](ちょっと強すぎるニャ?)
@@ -8147,7 +8141,7 @@
 0x26d84c [0xa00][0xb00][0xc00][0xd247]チャニュニャン[0xd00][\n](そのうちチャンスは[\n]くるニュン)
 
 # reference at main.dol:0x26ee14 (RAM 0x80271e14) [dialogue]
-0x26d88c [0xa00][0xb00][0xc00][0xd247]リャキュニャン[0xd00][\n](人生寨ありゃ[\n]苦ありニュン)
+0x26d88c [0xa00][0xb00][0xc00][0xd247]リャキュニャン[0xd00][\n](人生楽ありゃ[\n]苦ありニュン)
 
 # reference at main.dol:0x26ee18 (RAM 0x80271e18) [dialogue]
 0x26d8c8 [0xa00][0xb00][0xc00][0xd248]アリュミュ~[0xd00][\n](むこうへ行くと[\n]いいことありそうミュ)
@@ -8294,7 +8288,7 @@
 0x26e364 [0xa00][0xb00][0xc00][0xd25b]フッ[\n]きけんはいつものことだな[0xd00]
 
 # reference at main.dol:0x26eed8 (RAM 0x80271ed8) [dialogue]
-0x26e390 [0xa00][0xb00][0xc00][0xd25c]今のうちに[\n]せいぜい寨しんで[\n]おくがいい[0xd00]
+0x26e390 [0xa00][0xb00][0xc00][0xd25c]今のうちに[\n]せいぜい楽しんで[\n]おくがいい[0xd00]
 
 # reference at main.dol:0x26eedc (RAM 0x80271edc) [dialogue]
 0x26e3c4 [0xa00][0xb00][0xc00][0xd25c]勝者は生まれたときから[\n]決まっているのだ[0xd00]
@@ -8354,7 +8348,7 @@
 0x26e6b4 [0xa07][0xb05][0xd262]ハッハッハ![\n]にげろ、にげろ!
 
 # reference at main.dol:0x26ef28 (RAM 0x80271f28) [dialogue]
-0x26e6dc [0xa07][0xb05][0xd262]オレはころしのプロだ[\n]寨にしとめてやる
+0x26e6dc [0xa07][0xb05][0xd262]オレはころしのプロだ[\n]楽にしとめてやる
 
 # reference at main.dol:0x26ef2c (RAM 0x80271f2c) [dialogue]
 0x26e70c [0xa00][0xb00][0xc00]1回休みくらい、[\n]どうってことないな[0xd00]
@@ -8363,7 +8357,7 @@
 0x26e73c [0xa00][0xb00][0xc00]たまには、ころし屋にも[\n]休日はひつようだろう[0xd00]
 
 # reference at main.dol:0x26ef34 (RAM 0x80271f34) [dialogue]
-0x26e774 [0xa00][0xb00][0xc00]オレがいない間[\n]せいぜい寨しむがいい・・・[0xd00]
+0x26e774 [0xa00][0xb00][0xc00]オレがいない間[\n]せいぜい楽しむがいい・・・[0xd00]
 
 # reference at main.dol:0x26ef38 (RAM 0x80271f38) [dialogue]
 0x26e7a8 [0xa00][0xb00][0xc00][0xd25c]このかりはすぐに[\n]返してやるぞ・・・[0xd00]
@@ -8441,16 +8435,16 @@
 0x271104 エラーが発生しました。[\n]本休のパワーベタンをおして[\n]でんげんをオフにし、本休の[\n]とりあつかい說明書のしじに[\n]したがってください。
 
 # reference at main.dol:0x10e4b4 (RAM 0x8011e774) [addi paired with the lis at RAM 0x8011e770]
-0x2711d0 Money
+0x2711d0 げんざいのお金
 
 # reference at main.dol:0x2712e0 (RAM 0x802742e0) [A]
-0x2711e0 Won!
+0x2711e0 勝った!
 
 # reference at main.dol:0x2712e4 (RAM 0x802742e4) [A]
-0x2711ec Level up!
+0x2711ec レボルアップ!!
 
 # reference at main.dol:0x2712e8 (RAM 0x802742e8) [A]
-0x271200 Gave up...
+0x271200 こうさんした・・・
 
 # reference at main.dol:0x2712ec (RAM 0x802742ec) [A]
 0x271214 たおされた・・・
@@ -8831,7 +8825,7 @@
 # reference at main.dol:0x339d0 (RAM 0x80043c90) [addi paired with the lis at RAM 0x80043c8c]
 # reference at main.dol:0x361a0 (RAM 0x80046460) [addi paired with the lis at RAM 0x8004645c]
 # reference at main.dol:0x38a08 (RAM 0x80048cc8) [addi paired with the lis at RAM 0x80048cc4]
-0x27a12c Special Skill
+0x27a12c とくぎ
 
 # reference at main.dol:0x33c80 (RAM 0x80043f40) [addi paired with the lis at RAM 0x80043f3c]
 0x27a134 まほう
@@ -9238,403 +9232,403 @@
 0x27a918 Butler
 
 # inline cpuname record 0 at main.dol:0x244bd4 (RAM 0x80247bd4)
-# LIMIT 8 glyphs - fixed-width record with no terminator
+# LIMIT 16 glyphs - the record is overwritten with a redirect stub, not with these glyphs
 0x244bd4 うんこマン   
 
 # inline cpuname record 1 at main.dol:0x244be4 (RAM 0x80247be4)
-# LIMIT 8 glyphs - fixed-width record with no terminator
+# LIMIT 16 glyphs - the record is overwritten with a redirect stub, not with these glyphs
 0x244be4 オレのバズーカ 
 
 # inline cpuname record 2 at main.dol:0x244bf4 (RAM 0x80247bf4)
-# LIMIT 8 glyphs - fixed-width record with no terminator
+# LIMIT 16 glyphs - the record is overwritten with a redirect stub, not with these glyphs
 0x244bf4 よわむしケムシ 
 
 # inline cpuname record 3 at main.dol:0x244c04 (RAM 0x80247c04)
-# LIMIT 8 glyphs - fixed-width record with no terminator
+# LIMIT 16 glyphs - the record is overwritten with a redirect stub, not with these glyphs
 0x244c04 いや~んバカぁん
 
 # inline cpuname record 4 at main.dol:0x244c14 (RAM 0x80247c14)
-# LIMIT 8 glyphs - fixed-width record with no terminator
+# LIMIT 16 glyphs - the record is overwritten with a redirect stub, not with these glyphs
 0x244c14 そこはダメぇん 
 
 # inline cpuname record 5 at main.dol:0x244c24 (RAM 0x80247c24)
-# LIMIT 8 glyphs - fixed-width record with no terminator
+# LIMIT 16 glyphs - the record is overwritten with a redirect stub, not with these glyphs
 0x244c24 ベケッ!カスッ!
 
 # inline cpuname record 6 at main.dol:0x244c34 (RAM 0x80247c34)
-# LIMIT 8 glyphs - fixed-width record with no terminator
+# LIMIT 16 glyphs - the record is overwritten with a redirect stub, not with these glyphs
 0x244c34 [0x4f]ナルシスト[0x4f] 
 
 # inline cpuname record 7 at main.dol:0x244c44 (RAM 0x80247c44)
-# LIMIT 8 glyphs - fixed-width record with no terminator
+# LIMIT 16 glyphs - the record is overwritten with a redirect stub, not with these glyphs
 0x244c44 おれケツのアナ?
 
 # inline cpuname record 8 at main.dol:0x244c54 (RAM 0x80247c54)
-# LIMIT 8 glyphs - fixed-width record with no terminator
+# LIMIT 16 glyphs - the record is overwritten with a redirect stub, not with these glyphs
 0x244c54 ・・・はやいのね
 
 # inline cpuname record 9 at main.dol:0x244c64 (RAM 0x80247c64)
-# LIMIT 8 glyphs - fixed-width record with no terminator
+# LIMIT 16 glyphs - the record is overwritten with a redirect stub, not with these glyphs
 0x244c64 はなげビロ~ン 
 
 # inline cpuname record 10 at main.dol:0x244c74 (RAM 0x80247c74)
-# LIMIT 8 glyphs - fixed-width record with no terminator
+# LIMIT 16 glyphs - the record is overwritten with a redirect stub, not with these glyphs
 0x244c74 とっととかえれ!
 
 # inline cpuname record 11 at main.dol:0x244c84 (RAM 0x80247c84)
-# LIMIT 8 glyphs - fixed-width record with no terminator
+# LIMIT 16 glyphs - the record is overwritten with a redirect stub, not with these glyphs
 0x244c84 カネかえせ!  
 
 # inline cpuname record 12 at main.dol:0x244c94 (RAM 0x80247c94)
-# LIMIT 8 glyphs - fixed-width record with no terminator
+# LIMIT 16 glyphs - the record is overwritten with a redirect stub, not with these glyphs
 0x244c94 もっといじめて!
 
 # inline cpuname record 13 at main.dol:0x244ca4 (RAM 0x80247ca4)
-# LIMIT 8 glyphs - fixed-width record with no terminator
+# LIMIT 16 glyphs - the record is overwritten with a redirect stub, not with these glyphs
 0x244ca4 くさったミカン 
 
 # inline cpuname record 14 at main.dol:0x244cb4 (RAM 0x80247cb4)
-# LIMIT 8 glyphs - fixed-width record with no terminator
+# LIMIT 16 glyphs - the record is overwritten with a redirect stub, not with these glyphs
 0x244cb4 かんちょうして 
 
 # inline cpuname record 15 at main.dol:0x244cc4 (RAM 0x80247cc4)
-# LIMIT 8 glyphs - fixed-width record with no terminator
+# LIMIT 16 glyphs - the record is overwritten with a redirect stub, not with these glyphs
 0x244cc4 おさきマックラ 
 
 # inline cpuname record 16 at main.dol:0x244cd4 (RAM 0x80247cd4)
-# LIMIT 8 glyphs - fixed-width record with no terminator
+# LIMIT 16 glyphs - the record is overwritten with a redirect stub, not with these glyphs
 0x244cd4 エンガチョさん 
 
 # inline cpuname record 17 at main.dol:0x244ce4 (RAM 0x80247ce4)
-# LIMIT 8 glyphs - fixed-width record with no terminator
+# LIMIT 16 glyphs - the record is overwritten with a redirect stub, not with these glyphs
 0x244ce4 おまえクズ~♪ 
 
 # inline cpuname record 18 at main.dol:0x244cf4 (RAM 0x80247cf4)
-# LIMIT 8 glyphs - fixed-width record with no terminator
+# LIMIT 16 glyphs - the record is overwritten with a redirect stub, not with these glyphs
 0x244cf4 ノーパン&マスク
 
 # inline cpuname record 19 at main.dol:0x244d04 (RAM 0x80247d04)
-# LIMIT 8 glyphs - fixed-width record with no terminator
+# LIMIT 16 glyphs - the record is overwritten with a redirect stub, not with these glyphs
 0x244d04 ギャランドゥ  
 
 # inline cpuname record 20 at main.dol:0x244d14 (RAM 0x80247d14)
-# LIMIT 8 glyphs - fixed-width record with no terminator
+# LIMIT 16 glyphs - the record is overwritten with a redirect stub, not with these glyphs
 0x244d14 くせになる・・・
 
 # inline cpuname record 21 at main.dol:0x244d24 (RAM 0x80247d24)
-# LIMIT 8 glyphs - fixed-width record with no terminator
+# LIMIT 16 glyphs - the record is overwritten with a redirect stub, not with these glyphs
 0x244d24 オレはうまなみ 
 
 # inline cpuname record 22 at main.dol:0x244d34 (RAM 0x80247d34)
-# LIMIT 8 glyphs - fixed-width record with no terminator
+# LIMIT 16 glyphs - the record is overwritten with a redirect stub, not with these glyphs
 0x244d34 えいえんのビリ 
 
 # inline cpuname record 23 at main.dol:0x244d44 (RAM 0x80247d44)
-# LIMIT 8 glyphs - fixed-width record with no terminator
+# LIMIT 16 glyphs - the record is overwritten with a redirect stub, not with these glyphs
 0x244d44 アイドルきどり 
 
 # inline cpuname record 24 at main.dol:0x244d54 (RAM 0x80247d54)
-# LIMIT 8 glyphs - fixed-width record with no terminator
+# LIMIT 16 glyphs - the record is overwritten with a redirect stub, not with these glyphs
 0x244d54 ドスケボだいおう
 
 # inline cpuname record 25 at main.dol:0x244d64 (RAM 0x80247d64)
-# LIMIT 8 glyphs - fixed-width record with no terminator
+# LIMIT 16 glyphs - the record is overwritten with a redirect stub, not with these glyphs
 0x244d64 ブーちゃん   
 
 # inline cpuname record 26 at main.dol:0x244d74 (RAM 0x80247d74)
-# LIMIT 8 glyphs - fixed-width record with no terminator
+# LIMIT 16 glyphs - the record is overwritten with a redirect stub, not with these glyphs
 0x244d74 デブせんせい  
 
 # inline cpuname record 27 at main.dol:0x244d84 (RAM 0x80247d84)
-# LIMIT 8 glyphs - fixed-width record with no terminator
+# LIMIT 16 glyphs - the record is overwritten with a redirect stub, not with these glyphs
 0x244d84 ダメにんげん  
 
 # inline cpuname record 28 at main.dol:0x244d94 (RAM 0x80247d94)
-# LIMIT 8 glyphs - fixed-width record with no terminator
+# LIMIT 16 glyphs - the record is overwritten with a redirect stub, not with these glyphs
 0x244d94 おもらしかめん 
 
 # inline cpuname record 29 at main.dol:0x244da4 (RAM 0x80247da4)
-# LIMIT 8 glyphs - fixed-width record with no terminator
+# LIMIT 16 glyphs - the record is overwritten with a redirect stub, not with these glyphs
 0x244da4 まきグソちゃん 
 
 # inline cpuname record 30 at main.dol:0x244db4 (RAM 0x80247db4)
-# LIMIT 8 glyphs - fixed-width record with no terminator
+# LIMIT 16 glyphs - the record is overwritten with a redirect stub, not with these glyphs
 0x244db4 アホアホマン  
 
 # inline cpuname record 31 at main.dol:0x244dc4 (RAM 0x80247dc4)
-# LIMIT 8 glyphs - fixed-width record with no terminator
+# LIMIT 16 glyphs - the record is overwritten with a redirect stub, not with these glyphs
 0x244dc4 ゲ・きらわれもの
 
 # inline cpuname record 32 at main.dol:0x244dd4 (RAM 0x80247dd4)
-# LIMIT 8 glyphs - fixed-width record with no terminator
+# LIMIT 16 glyphs - the record is overwritten with a redirect stub, not with these glyphs
 0x244dd4 キミモンスター?
 
 # inline cpuname record 33 at main.dol:0x244de4 (RAM 0x80247de4)
-# LIMIT 8 glyphs - fixed-width record with no terminator
+# LIMIT 16 glyphs - the record is overwritten with a redirect stub, not with these glyphs
 0x244de4 おならマシーン 
 
 # inline cpuname record 34 at main.dol:0x244df4 (RAM 0x80247df4)
-# LIMIT 8 glyphs - fixed-width record with no terminator
+# LIMIT 16 glyphs - the record is overwritten with a redirect stub, not with these glyphs
 0x244df4 ちょぴりふとめ 
 
 # inline cpuname record 35 at main.dol:0x244e04 (RAM 0x80247e04)
-# LIMIT 8 glyphs - fixed-width record with no terminator
+# LIMIT 16 glyphs - the record is overwritten with a redirect stub, not with these glyphs
 0x244e04 なぐるならなぐれ
 
 # inline cpuname record 36 at main.dol:0x244e14 (RAM 0x80247e14)
-# LIMIT 8 glyphs - fixed-width record with no terminator
+# LIMIT 16 glyphs - the record is overwritten with a redirect stub, not with these glyphs
 0x244e14 キモチワルイぞ 
 
 # inline cpuname record 37 at main.dol:0x244e24 (RAM 0x80247e24)
-# LIMIT 8 glyphs - fixed-width record with no terminator
+# LIMIT 16 glyphs - the record is overwritten with a redirect stub, not with these glyphs
 0x244e24 ふるいタイプだね
 
 # inline cpuname record 38 at main.dol:0x244e34 (RAM 0x80247e34)
-# LIMIT 8 glyphs - fixed-width record with no terminator
+# LIMIT 16 glyphs - the record is overwritten with a redirect stub, not with these glyphs
 0x244e34 イヌのくそふんだ
 
 # inline cpuname record 39 at main.dol:0x244e44 (RAM 0x80247e44)
-# LIMIT 8 glyphs - fixed-width record with no terminator
+# LIMIT 16 glyphs - the record is overwritten with a redirect stub, not with these glyphs
 0x244e44 くそちょくげき 
 
 # inline cpuname record 40 at main.dol:0x244e54 (RAM 0x80247e54)
-# LIMIT 8 glyphs - fixed-width record with no terminator
+# LIMIT 16 glyphs - the record is overwritten with a redirect stub, not with these glyphs
 0x244e54 オレってワルだろ
 
 # inline cpuname record 41 at main.dol:0x244e64 (RAM 0x80247e64)
-# LIMIT 8 glyphs - fixed-width record with no terminator
+# LIMIT 16 glyphs - the record is overwritten with a redirect stub, not with these glyphs
 0x244e64 おまえアレだな 
 
 # inline cpuname record 42 at main.dol:0x244e74 (RAM 0x80247e74)
-# LIMIT 8 glyphs - fixed-width record with no terminator
+# LIMIT 16 glyphs - the record is overwritten with a redirect stub, not with these glyphs
 0x244e74 うひょ!    
 
 # inline cpuname record 43 at main.dol:0x244e84 (RAM 0x80247e84)
-# LIMIT 8 glyphs - fixed-width record with no terminator
+# LIMIT 16 glyphs - the record is overwritten with a redirect stub, not with these glyphs
 0x244e84 エロだいじん  
 
 # inline cpuname record 44 at main.dol:0x244e94 (RAM 0x80247e94)
-# LIMIT 8 glyphs - fixed-width record with no terminator
+# LIMIT 16 glyphs - the record is overwritten with a redirect stub, not with these glyphs
 0x244e94 エロビデオばれた
 
 # inline cpuname record 45 at main.dol:0x244ea4 (RAM 0x80247ea4)
-# LIMIT 8 glyphs - fixed-width record with no terminator
+# LIMIT 16 glyphs - the record is overwritten with a redirect stub, not with these glyphs
 0x244ea4 エロぼんソムリエ
 
 # inline cpuname record 46 at main.dol:0x244eb4 (RAM 0x80247eb4)
-# LIMIT 8 glyphs - fixed-width record with no terminator
+# LIMIT 16 glyphs - the record is overwritten with a redirect stub, not with these glyphs
 0x244eb4 クラス1のスケボ
 
 # inline cpuname record 47 at main.dol:0x244ec4 (RAM 0x80247ec4)
-# LIMIT 8 glyphs - fixed-width record with no terminator
+# LIMIT 16 glyphs - the record is overwritten with a redirect stub, not with these glyphs
 0x244ec4 トイレがおちつく
 
 # inline cpuname record 48 at main.dol:0x244ed4 (RAM 0x80247ed4)
-# LIMIT 8 glyphs - fixed-width record with no terminator
+# LIMIT 16 glyphs - the record is overwritten with a redirect stub, not with these glyphs
 0x244ed4 サルににてるね 
 
 # inline cpuname record 49 at main.dol:0x244ee4 (RAM 0x80247ee4)
-# LIMIT 8 glyphs - fixed-width record with no terminator
+# LIMIT 16 glyphs - the record is overwritten with a redirect stub, not with these glyphs
 0x244ee4 しゅみ・はなつみ
 
 # inline cpuname record 50 at main.dol:0x244ef4 (RAM 0x80247ef4)
-# LIMIT 8 glyphs - fixed-width record with no terminator
+# LIMIT 16 glyphs - the record is overwritten with a redirect stub, not with these glyphs
 0x244ef4 とくぎ・だだっこ
 
 # inline cpuname record 51 at main.dol:0x244f04 (RAM 0x80247f04)
-# LIMIT 8 glyphs - fixed-width record with no terminator
+# LIMIT 16 glyphs - the record is overwritten with a redirect stub, not with these glyphs
 0x244f04 くさいフェロモン
 
 # inline cpuname record 52 at main.dol:0x244f14 (RAM 0x80247f14)
-# LIMIT 8 glyphs - fixed-width record with no terminator
+# LIMIT 16 glyphs - the record is overwritten with a redirect stub, not with these glyphs
 0x244f14 こんういかっで 
 
 # inline cpuname record 53 at main.dol:0x244f24 (RAM 0x80247f24)
-# LIMIT 8 glyphs - fixed-width record with no terminator
+# LIMIT 16 glyphs - the record is overwritten with a redirect stub, not with these glyphs
 0x244f24 あだな・はかせ 
 
 # inline cpuname record 54 at main.dol:0x244f34 (RAM 0x80247f34)
-# LIMIT 8 glyphs - fixed-width record with no terminator
+# LIMIT 16 glyphs - the record is overwritten with a redirect stub, not with these glyphs
 0x244f34 しょっぺぇゲーム
 
 # inline cpuname record 55 at main.dol:0x244f44 (RAM 0x80247f44)
-# LIMIT 8 glyphs - fixed-width record with no terminator
+# LIMIT 16 glyphs - the record is overwritten with a redirect stub, not with these glyphs
 0x244f44 エロス100ばん
 
 # inline cpuname record 56 at main.dol:0x244f54 (RAM 0x80247f54)
-# LIMIT 8 glyphs - fixed-width record with no terminator
+# LIMIT 16 glyphs - the record is overwritten with a redirect stub, not with these glyphs
 0x244f54 オレ@ハンサム 
 
 # inline cpuname record 57 at main.dol:0x244f64 (RAM 0x80247f64)
-# LIMIT 8 glyphs - fixed-width record with no terminator
+# LIMIT 16 glyphs - the record is overwritten with a redirect stub, not with these glyphs
 0x244f64 まけいぬワンワン
 
 # inline cpuname record 58 at main.dol:0x244f74 (RAM 0x80247f74)
-# LIMIT 8 glyphs - fixed-width record with no terminator
+# LIMIT 16 glyphs - the record is overwritten with a redirect stub, not with these glyphs
 0x244f74 ヘンタイ.com
 
 # inline cpuname record 59 at main.dol:0x244f84 (RAM 0x80247f84)
-# LIMIT 8 glyphs - fixed-width record with no terminator
+# LIMIT 16 glyphs - the record is overwritten with a redirect stub, not with these glyphs
 0x244f84 すごくけぶかいね
 
 # inline cpuname record 60 at main.dol:0x244f94 (RAM 0x80247f94)
-# LIMIT 8 glyphs - fixed-width record with no terminator
+# LIMIT 16 glyphs - the record is overwritten with a redirect stub, not with these glyphs
 0x244f94 いつもまけるね 
 
 # inline cpuname record 61 at main.dol:0x244fa4 (RAM 0x80247fa4)
-# LIMIT 8 glyphs - fixed-width record with no terminator
+# LIMIT 16 glyphs - the record is overwritten with a redirect stub, not with these glyphs
 0x244fa4 リセットをおせ!
 
 # inline cpuname record 62 at main.dol:0x244fb4 (RAM 0x80247fb4)
-# LIMIT 8 glyphs - fixed-width record with no terminator
+# LIMIT 16 glyphs - the record is overwritten with a redirect stub, not with these glyphs
 0x244fb4 ワルサーどぶいろ
 
 # inline cpuname record 63 at main.dol:0x244fc4 (RAM 0x80247fc4)
-# LIMIT 8 glyphs - fixed-width record with no terminator
+# LIMIT 16 glyphs - the record is overwritten with a redirect stub, not with these glyphs
 0x244fc4 ぶたれてなんぼ 
 
 # inline cpuname record 64 at main.dol:0x244fd4 (RAM 0x80247fd4)
-# LIMIT 8 glyphs - fixed-width record with no terminator
+# LIMIT 16 glyphs - the record is overwritten with a redirect stub, not with these glyphs
 0x244fd4 ともだちはケムシ
 
 # inline cpuname record 65 at main.dol:0x244fe4 (RAM 0x80247fe4)
-# LIMIT 8 glyphs - fixed-width record with no terminator
+# LIMIT 16 glyphs - the record is overwritten with a redirect stub, not with these glyphs
 0x244fe4 ベンバ[0x4f]ヘッド 
 
 # inline cpuname record 66 at main.dol:0x244ff4 (RAM 0x80247ff4)
-# LIMIT 8 glyphs - fixed-width record with no terminator
+# LIMIT 16 glyphs - the record is overwritten with a redirect stub, not with these glyphs
 0x244ff4 ボンキはあまいぞ
 
 # inline cpuname record 67 at main.dol:0x245004 (RAM 0x80248004)
-# LIMIT 8 glyphs - fixed-width record with no terminator
+# LIMIT 16 glyphs - the record is overwritten with a redirect stub, not with these glyphs
 0x245004 ブッ!あ、ごめん
 
 # inline cpuname record 68 at main.dol:0x245014 (RAM 0x80248014)
-# LIMIT 8 glyphs - fixed-width record with no terminator
+# LIMIT 16 glyphs - the record is overwritten with a redirect stub, not with these glyphs
 0x245014 ラップやります 
 
 # inline cpuname record 69 at main.dol:0x245024 (RAM 0x80248024)
-# LIMIT 8 glyphs - fixed-width record with no terminator
+# LIMIT 16 glyphs - the record is overwritten with a redirect stub, not with these glyphs
 0x245024 せんせいトイレ!
 
 # inline cpuname record 70 at main.dol:0x245034 (RAM 0x80248034)
-# LIMIT 8 glyphs - fixed-width record with no terminator
+# LIMIT 16 glyphs - the record is overwritten with a redirect stub, not with these glyphs
 0x245034 0てんバンゲイ!
 
 # inline cpuname record 71 at main.dol:0x245044 (RAM 0x80248044)
-# LIMIT 8 glyphs - fixed-width record with no terminator
+# LIMIT 16 glyphs - the record is overwritten with a redirect stub, not with these glyphs
 0x245044 べんきょうしろ!
 
 # inline cpuname record 72 at main.dol:0x245054 (RAM 0x80248054)
-# LIMIT 8 glyphs - fixed-width record with no terminator
+# LIMIT 16 glyphs - the record is overwritten with a redirect stub, not with these glyphs
 0x245054 ゲーハーいうな!
 
 # inline cpuname record 73 at main.dol:0x245064 (RAM 0x80248064)
-# LIMIT 8 glyphs - fixed-width record with no terminator
+# LIMIT 16 glyphs - the record is overwritten with a redirect stub, not with these glyphs
 0x245064 ママあれかって!
 
 # inline cpuname record 74 at main.dol:0x245074 (RAM 0x80248074)
-# LIMIT 8 glyphs - fixed-width record with no terminator
+# LIMIT 16 glyphs - the record is overwritten with a redirect stub, not with these glyphs
 0x245074 おとなになれよ 
 
 # inline cpuname record 75 at main.dol:0x245084 (RAM 0x80248084)
-# LIMIT 8 glyphs - fixed-width record with no terminator
+# LIMIT 16 glyphs - the record is overwritten with a redirect stub, not with these glyphs
 0x245084 おとめチック? 
 
 # inline cpuname record 76 at main.dol:0x245094 (RAM 0x80248094)
-# LIMIT 8 glyphs - fixed-width record with no terminator
+# LIMIT 16 glyphs - the record is overwritten with a redirect stub, not with these glyphs
 0x245094 まけっぽなし  
 
 # inline cpuname record 77 at main.dol:0x2450a4 (RAM 0x802480a4)
-# LIMIT 8 glyphs - fixed-width record with no terminator
+# LIMIT 16 glyphs - the record is overwritten with a redirect stub, not with these glyphs
 0x2450a4 しんださかなのめ
 
 # inline cpuname record 78 at main.dol:0x2450b4 (RAM 0x802480b4)
-# LIMIT 8 glyphs - fixed-width record with no terminator
+# LIMIT 16 glyphs - the record is overwritten with a redirect stub, not with these glyphs
 0x2450b4 オレがルールだ 
 
 # inline cpuname record 79 at main.dol:0x2450c4 (RAM 0x802480c4)
-# LIMIT 8 glyphs - fixed-width record with no terminator
+# LIMIT 16 glyphs - the record is overwritten with a redirect stub, not with these glyphs
 0x2450c4 OH!セクシ~ 
 
 # inline cpuname record 80 at main.dol:0x2450d4 (RAM 0x802480d4)
-# LIMIT 8 glyphs - fixed-width record with no terminator
+# LIMIT 16 glyphs - the record is overwritten with a redirect stub, not with these glyphs
 0x2450d4 ベクをぶってぇ 
 
 # inline cpuname record 81 at main.dol:0x2450e4 (RAM 0x802480e4)
-# LIMIT 8 glyphs - fixed-width record with no terminator
+# LIMIT 16 glyphs - the record is overwritten with a redirect stub, not with these glyphs
 0x2450e4 おたずねもの  
 
 # inline cpuname record 82 at main.dol:0x2450f4 (RAM 0x802480f4)
-# LIMIT 8 glyphs - fixed-width record with no terminator
+# LIMIT 16 glyphs - the record is overwritten with a redirect stub, not with these glyphs
 0x2450f4 じょうおうさま~
 
 # inline cpuname record 83 at main.dol:0x245104 (RAM 0x80248104)
-# LIMIT 8 glyphs - fixed-width record with no terminator
+# LIMIT 16 glyphs - the record is overwritten with a redirect stub, not with these glyphs
 0x245104 ぶりかえすべんい
 
 # inline cpuname record 84 at main.dol:0x245114 (RAM 0x80248114)
-# LIMIT 8 glyphs - fixed-width record with no terminator
+# LIMIT 16 glyphs - the record is overwritten with a redirect stub, not with these glyphs
 0x245114 5ふんごにばくは
 
 # inline cpuname record 85 at main.dol:0x245124 (RAM 0x80248124)
-# LIMIT 8 glyphs - fixed-width record with no terminator
+# LIMIT 16 glyphs - the record is overwritten with a redirect stub, not with these glyphs
 0x245124 はなくそついてる
 
 # inline cpuname record 86 at main.dol:0x245134 (RAM 0x80248134)
-# LIMIT 8 glyphs - fixed-width record with no terminator
+# LIMIT 16 glyphs - the record is overwritten with a redirect stub, not with these glyphs
 0x245134 (^_^)シネ!
 
 # inline cpuname record 87 at main.dol:0x245144 (RAM 0x80248144)
-# LIMIT 8 glyphs - fixed-width record with no terminator
+# LIMIT 16 glyphs - the record is overwritten with a redirect stub, not with these glyphs
 0x245144 (T_T)まけた
 
 # inline cpuname record 88 at main.dol:0x245154 (RAM 0x80248154)
-# LIMIT 8 glyphs - fixed-width record with no terminator
+# LIMIT 16 glyphs - the record is overwritten with a redirect stub, not with these glyphs
 0x245154 (>_<)アワワ
 
 # inline cpuname record 89 at main.dol:0x245164 (RAM 0x80248164)
-# LIMIT 8 glyphs - fixed-width record with no terminator
+# LIMIT 16 glyphs - the record is overwritten with a redirect stub, not with these glyphs
 0x245164 (?_?)バカ?
 
 # inline cpuname record 90 at main.dol:0x245174 (RAM 0x80248174)
-# LIMIT 8 glyphs - fixed-width record with no terminator
+# LIMIT 16 glyphs - the record is overwritten with a redirect stub, not with these glyphs
 0x245174 (^3^)ドヘタ
 
 # inline cpuname record 91 at main.dol:0x245184 (RAM 0x80248184)
-# LIMIT 8 glyphs - fixed-width record with no terminator
+# LIMIT 16 glyphs - the record is overwritten with a redirect stub, not with these glyphs
 0x245184 (^o^)やめろ
 
 # inline cpuname record 92 at main.dol:0x245194 (RAM 0x80248194)
-# LIMIT 8 glyphs - fixed-width record with no terminator
+# LIMIT 16 glyphs - the record is overwritten with a redirect stub, not with these glyphs
 0x245194 1・2・3・ブリ
 
 # inline cpuname record 93 at main.dol:0x2451a4 (RAM 0x802481a4)
-# LIMIT 8 glyphs - fixed-width record with no terminator
+# LIMIT 16 glyphs - the record is overwritten with a redirect stub, not with these glyphs
 0x2451a4 にせカンフー  
 
 # inline cpuname record 94 at main.dol:0x2451b4 (RAM 0x802481b4)
-# LIMIT 8 glyphs - fixed-width record with no terminator
+# LIMIT 16 glyphs - the record is overwritten with a redirect stub, not with these glyphs
 0x2451b4 じまんの◯◯◯ 
 
 # inline cpuname record 95 at main.dol:0x2451c4 (RAM 0x802481c4)
-# LIMIT 8 glyphs - fixed-width record with no terminator
+# LIMIT 16 glyphs - the record is overwritten with a redirect stub, not with these glyphs
 0x2451c4 あ       
 
 # inline cpuname record 96 at main.dol:0x2451d4 (RAM 0x802481d4)
-# LIMIT 8 glyphs - fixed-width record with no terminator
+# LIMIT 16 glyphs - the record is overwritten with a redirect stub, not with these glyphs
 0x2451d4 ブリブリブリブリ
 
 # inline cpuname record 97 at main.dol:0x2451e4 (RAM 0x802481e4)
-# LIMIT 8 glyphs - fixed-width record with no terminator
+# LIMIT 16 glyphs - the record is overwritten with a redirect stub, not with these glyphs
 0x2451e4 キミえなりっぽい
 
 # inline cpuname record 98 at main.dol:0x2451f4 (RAM 0x802481f4)
-# LIMIT 8 glyphs - fixed-width record with no terminator
+# LIMIT 16 glyphs - the record is overwritten with a redirect stub, not with these glyphs
 0x2451f4 おわった・・・。
 
 # inline cpuname record 99 at main.dol:0x245204 (RAM 0x80248204)
-# LIMIT 8 glyphs - fixed-width record with no terminator
+# LIMIT 16 glyphs - the record is overwritten with a redirect stub, not with these glyphs
 0x245204 100%まけ  
 
 # NOT extracted, and why:

@@ -1,9 +1,16 @@
-# SHOP_I.SPT: 13 strings, 16 references. Translate by repeating the 0xOFFSET line with English.
+# SHOP_I.SPT: 28 strings, 32 references. Translate by repeating the 0xOFFSET line with English.
 # record cursor 0x3940, script ends 0x2f0c, 50880 bytes of arena shared by every replacement
 
+# reference at SHOP_I.SPT:0xb50 (cmd 0203 direct, slot 0xb58)
 # reference at SHOP_I.SPT:0x3f6 (cmd 0203 direct, slot 0x3fe)
 # reference at SHOP_I.SPT:0xf16 (cmd 0203 direct, slot 0xf1e)
 0x21a0 は い[\n]いいえ
+
+# reference at SHOP_I.SPT:0x157e (cmd 0303 direct, slot 0x1582)
+0x21b0  
+
+# reference at SHOP_I.SPT:0x1518 (cmd 0203 direct, slot 0x1520)
+0x21b4 は い[\n]いいえ
 
 # reference at SHOP_I.SPT:0xe08 (cmd 0303 direct, slot 0xe0c)
 0x21c4 [0x50c8][0x6018][0x1800]G
@@ -12,8 +19,26 @@
 # reference at SHOP_I.SPT:0x122c (cmd 0303 direct, slot 0x1230)
 0x21ce [0x50c8][0x1800]G
 
+# reference at SHOP_I.SPT:0x10ca (cmd 0303 direct, slot 0x10ce)
+0x21de [0x5008][0xf008][%0][0x50f0][0xf018][0x1800]G[0xf018]
+
+# reference at SHOP_I.SPT:0x14d4 (cmd 0202 direct, slot 0x14e0)
+0x2248 しっぽいすると[Red Text]おたずね者[Normal Color Text]になりますが[\n]それでもぬすみますか?
+
+# reference at SHOP_I.SPT:0xe5c (cmd 0202 direct, slot 0xe68)
+0x228a [0xb80a] [Blue Text][%0][Normal Color Text]を便う
+
+# reference at SHOP_I.SPT:0xc52 (cmd 0202 direct, slot 0xc5e)
+0x229c 金庫やぶり大しっぽい![\n]やばいッ! にげろッ!
+
 # reference at SHOP_I.SPT:0xd80 (cmd 0202 direct, slot 0xd8c)
 0x22cc [Blue Text][%0][Normal Color Text]は[Red Text]おたずね者[Normal Color Text]になった![\n][Blue Text][%0][Normal Color Text]をたおすと[\n][Blue Text][0x1000][Normal Color Text]Gもらえます[Press A]
+
+# reference at SHOP_I.SPT:0x16ca (cmd 0202 direct, slot 0x16d6)
+0x2426 さあ! 時間がないぞ![\n]いそいで金庫のロックをかいじょしろ![Press A]
+
+# reference at SHOP_I.SPT:0x170c (cmd 0303 direct, slot 0x1710)
+0x2466 [0xb809]か[0xb808]どちらかが、かいじょベタンだ![\n][Blue Text]5秒[Normal Color Text]いないにおすんだ![\n]さあ! どっちだッ!?
 
 # reference at SHOP_I.SPT:0xbc (cmd 0201 direct, slot 0xc8)
 0x2938 アイテム屋クルミ
@@ -33,13 +58,34 @@
 
 # reference at SHOP_I.SPT:0x34c (cmd 0303 direct, slot 0x350)
 0x2a1a [0x0c00]それいじょうは[\n]持てないようですが[Press A][0x0d00]
-0x2a1a [0x0c00]You cant hold[\n]anymore[Press A][0x0d00]
+0x2a1a [0x0c00]You can't hold[\n]anymore[Press A][0x0d00]
 
 # reference at SHOP_I.SPT:0x3ec (cmd 0303 direct, slot 0x3f0)
 0x2a44 [0x0c00][Blue Text][%0][Normal Color Text]は[\n][Blue Text][0x1000][Normal Color Text]Gになりますが[\n]よろしいですか?[0x0d00]
 
+# reference at SHOP_I.SPT:0x514 (cmd 0202 direct, slot 0x520)
+0x2aa4 [0xd11e][0x0c00]ありがとうございます[0x0d00][Press A]
+
+# reference at SHOP_I.SPT:0x10ae (cmd 0303 direct, slot 0x10b2)
+0x2b00 [0x0c00]どのカードを便いますか?[0x0d00]
+
 # reference at SHOP_I.SPT:0x1ec (cmd 0303 direct, slot 0x1f0)
 0x2b2e [0x0c00]・・・おきゃく様[0x0d00][Press A][0xa000][0x0c00]もうしわけございませんが[\n]あやしい目つきのかたに[\n]お売りすることはできません[0x0d00][Press A]
+
+# reference at SHOP_I.SPT:0x6ce (cmd 0303 direct, slot 0x6d2)
+0x2cb2 [0x0c00]売れる物がないようですが[0x0d00][Press A]
+
+# reference at SHOP_I.SPT:0x6d6 (cmd 0303 direct, slot 0x6da)
+0x2cd2 [0x0c00]どれを売っていただけますか?[0x0d00]
+
+# reference at SHOP_I.SPT:0x6de (cmd 0303 direct, slot 0x6e2)
+0x2cf4 [0x0c00][Blue Text][0x1000][Normal Color Text]Gで[\n]買い取りますが[\n]よろしいですか?[0x0d00]
+
+# reference at SHOP_I.SPT:0x6e6 (cmd 0303 direct, slot 0x6ea)
+0x2d26 [0x0c00][Red Text][%0][Normal Color Text]は[\n]買い取れません![0x0d00][Press A]
+
+# reference at SHOP_I.SPT:0x67a (cmd 0202 direct, slot 0x686)
+0x2d48 金庫やぶり大せいこう![\n]金庫の中にあった[\n][Blue Text]アイテム[Normal Color Text]をすべてゲットした![Press A]
 
 # reference at SHOP_I.SPT:0xf08 (cmd 0303 direct, slot 0xf0c)
 0x2ee2 [0x0c00][Blue Text]バーゲンチケット[Normal Color Text]を[\n]便うニャリ?[0x0d00]

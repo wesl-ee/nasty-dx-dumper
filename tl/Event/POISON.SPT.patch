@@ -1,5 +1,24 @@
-# POISON.SPT: 6 strings, 6 references. Translate by repeating the 0xOFFSET line with English.
+# POISON.SPT: 11 strings, 15 references. Translate by repeating the 0xOFFSET line with English.
 # record cursor 0x3ac0, script ends 0x2322, 50496 bytes of arena shared by every replacement
+
+# reference at POISON.SPT:0xd2 (cmd 0307-array obj-text[0xd2], slot 0xd2)
+# reference at POISON.SPT:0xd4 (cmd 0307-array obj-text[0xd2], slot 0xd4)
+# reference at POISON.SPT:0xde (cmd 0307-array obj-text[0xd2], slot 0xde)
+# reference at POISON.SPT:0xe0 (cmd 0307-array obj-text[0xd2], slot 0xe0)
+# reference at POISON.SPT:0xe2 (cmd 0307-array obj-text[0xd2], slot 0xe2)
+0x2180 ドカッチョ
+
+# reference at POISON.SPT:0xd6 (cmd 0307-array obj-text[0xd2], slot 0xd6)
+0x218c カラッコロ
+
+# reference at POISON.SPT:0xd8 (cmd 0307-array obj-text[0xd2], slot 0xd8)
+0x2198 グルリン
+
+# reference at POISON.SPT:0xda (cmd 0307-array obj-text[0xd2], slot 0xda)
+0x21a2 ゲッパン
+
+# reference at POISON.SPT:0xdc (cmd 0307-array obj-text[0xd2], slot 0xdc)
+0x21ac シャコネツ
 
 # reference at POISON.SPT:0x7a (cmd 0201 direct, slot 0x86)
 0x21b8 すし屋のマチコ

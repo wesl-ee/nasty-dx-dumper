@@ -1,4 +1,4 @@
-# SAVEBOX.SPT: 106 strings, 151 references. Translate by repeating the 0xOFFSET line with English.
+# SAVEBOX.SPT: 117 strings, 186 references. Translate by repeating the 0xOFFSET line with English.
 # record cursor 0x59c0, script ends 0x59b4, 42560 bytes of arena shared by every replacement
 
 # reference at SAVEBOX.SPT:0x13a0 (cmd 0203 direct, slot 0x13a8)
@@ -16,6 +16,12 @@
 # reference at SAVEBOX.SPT:0x11e2 (cmd 0303 direct, slot 0x11e6)
 0x1e70  
 
+# reference at SAVEBOX.SPT:0x33a (cmd 0307-array obj-text[0x338], slot 0x33a)
+0x1eea [0x0c00]これからじゅんばんに[\n][Blue Text]クリアキャラ[Normal Color Text]を[\n][Blue Text]メモリーカード[Normal Color Text]にもどすね![0x0d00][Press A][0xa000][0x0c00]セーブしないと、ものおきから[\n]持ち出した物がなくなっちゃうから[\n][Red Text]かならずセーブ[Normal Color Text]してね![0x0d00][Press A]
+
+# reference at SAVEBOX.SPT:0x338 (cmd 0307-array obj-text[0x338], slot 0x338)
+0x1fd6 [0x0c00]これからじゅんばんに[\n][Blue Text]こじんデータ[Normal Color Text]をセーブするね![0x0d00][Press A]
+
 # reference at SAVEBOX.SPT:0x7e0 (cmd 0303 direct, slot 0x7e4)
 0x2182 スロットA
 
@@ -32,6 +38,9 @@
 
 # reference at SAVEBOX.SPT:0x1750 (cmd table table[2], slot 0x1750)
 0x222c [0xe800][0xe008][%0]
+
+# reference at SAVEBOX.SPT:0x9f6 (cmd 0303 direct, slot 0x9fa)
+0x2234 [0x0c00][0x0c00][%0]さんのデータは[\n]すでにセーブされてるよ![0x0d00][Press A]
 
 # reference at SAVEBOX.SPT:0x1752 (cmd table table[2], slot 0x1752)
 0x2268 はじまりの章
@@ -75,6 +84,9 @@
 # reference at SAVEBOX.SPT:0x9d4 (cmd 0303 direct, slot 0x9d8)
 0x2378 [0x0c00]このファイルに[\n]セーブするけどいい?[0x0d00]
 
+# reference at SAVEBOX.SPT:0xa0c (cmd 0303 direct, slot 0xa10)
+0x23a2 [0x0c00]キャラクターがいっぽいだから[\n]消すキャラクターをえらんでね[0x0d00]
+
 # reference at SAVEBOX.SPT:0xe42 (cmd 0303 direct, slot 0xe46)
 # reference at SAVEBOX.SPT:0xe12 (cmd 0303 direct, slot 0xe16)
 # reference at SAVEBOX.SPT:0xbf2 (cmd 0303 direct, slot 0xbf6)
@@ -106,80 +118,101 @@
 
 # reference at SAVEBOX.SPT:0x1786 (cmd table table[2], slot 0x1786)
 # reference at SAVEBOX.SPT:0x1786 (cmd table table[9], slot 0x1786)
+# reference at SAVEBOX.SPT:0x1786 (cmd 0307-array obj-text[0x1786], slot 0x1786)
 0x26ac  
 
 # reference at SAVEBOX.SPT:0x1788 (cmd table table[2], slot 0x1788)
 # reference at SAVEBOX.SPT:0x1788 (cmd table table[9], slot 0x1788)
+# reference at SAVEBOX.SPT:0x1788 (cmd 0307-array obj-text[0x1786], slot 0x1788)
 0x26b0 CARD_RESULT_UNLOCKD[Press A]
 
 # reference at SAVEBOX.SPT:0x178a (cmd table table[2], slot 0x178a)
 # reference at SAVEBOX.SPT:0x178a (cmd table table[9], slot 0x178a)
+# reference at SAVEBOX.SPT:0x178a (cmd 0307-array obj-text[0x1786], slot 0x178a)
 0x26da CARD_RESULT_BUSY[Press A]
 
 # reference at SAVEBOX.SPT:0x178c (cmd table table[2], slot 0x178c)
 # reference at SAVEBOX.SPT:0x178c (cmd table table[9], slot 0x178c)
+# reference at SAVEBOX.SPT:0x178c (cmd 0307-array obj-text[0x1786], slot 0x178c)
 0x26fe [0x0c00]データが見つからないよ![0x0d00][Press A]
 
 # reference at SAVEBOX.SPT:0x178e (cmd table table[2], slot 0x178e)
 # reference at SAVEBOX.SPT:0x17a6 (cmd table table[2], slot 0x17a6)
 # reference at SAVEBOX.SPT:0x178e (cmd table table[9], slot 0x178e)
 # reference at SAVEBOX.SPT:0x17a6 (cmd table table[9], slot 0x17a6)
+# reference at SAVEBOX.SPT:0x178e (cmd 0307-array obj-text[0x1786], slot 0x178e)
+# reference at SAVEBOX.SPT:0x17a6 (cmd 0307-array obj-text[0x1786], slot 0x17a6)
 0x271e [0x0c00]スロット[%0]にささっているものは[\n]こわれているから[\n]便用できないよ![0x0d00][Press A]
 
 # reference at SAVEBOX.SPT:0x1790 (cmd table table[2], slot 0x1790)
 # reference at SAVEBOX.SPT:0x17a2 (cmd table table[2], slot 0x17a2)
 # reference at SAVEBOX.SPT:0x1790 (cmd table table[9], slot 0x1790)
 # reference at SAVEBOX.SPT:0x17a2 (cmd table table[9], slot 0x17a2)
+# reference at SAVEBOX.SPT:0x1790 (cmd 0307-array obj-text[0x1786], slot 0x1790)
+# reference at SAVEBOX.SPT:0x17a2 (cmd 0307-array obj-text[0x1786], slot 0x17a2)
 0x2768 [0x0c00]スロット[%0]のメモリーカードは[\n]データがこわれているから、[\n]しょきかがひつようだよ![0x0d00][Press A]
 
 # reference at SAVEBOX.SPT:0x1792 (cmd table table[2], slot 0x1792)
 # reference at SAVEBOX.SPT:0x1792 (cmd table table[9], slot 0x1792)
+# reference at SAVEBOX.SPT:0x1792 (cmd 0307-array obj-text[0x1786], slot 0x1792)
 0x27c2 [0x0c00]スロット[%0]には[\n]何もささっていないよ![0x0d00][Press A]
 
 # reference at SAVEBOX.SPT:0x1794 (cmd table table[2], slot 0x1794)
 # reference at SAVEBOX.SPT:0x179a (cmd table table[2], slot 0x179a)
 # reference at SAVEBOX.SPT:0x1794 (cmd table table[9], slot 0x1794)
 # reference at SAVEBOX.SPT:0x179a (cmd table table[9], slot 0x179a)
+# reference at SAVEBOX.SPT:0x1794 (cmd 0307-array obj-text[0x1786], slot 0x1794)
+# reference at SAVEBOX.SPT:0x179a (cmd 0307-array obj-text[0x1786], slot 0x179a)
 0x27f0 [0x0c00]スロット[%0]のメモリーカードは[\n]空きブロックがないか[\n]ファイル数が冬すぎるよ![0x0d00][Press A][0xa000][0x0c00]このゲームをセーブするには[\n]少なくともファイル[Red Text]1[Normal Color Text]つと[\n][Red Text][0x1000][Normal Color Text]ブロックの空きがひつようだよ[0x0d00][Press A]
 
 # reference at SAVEBOX.SPT:0x1796 (cmd table table[2], slot 0x1796)
 # reference at SAVEBOX.SPT:0x1796 (cmd table table[9], slot 0x1796)
+# reference at SAVEBOX.SPT:0x1796 (cmd 0307-array obj-text[0x1786], slot 0x1796)
 0x28a8 [0x0c00]すでに同じファイル名が[\n]便われているよ![0x0d00][Press A]
 
 # reference at SAVEBOX.SPT:0x1798 (cmd table table[2], slot 0x1798)
 # reference at SAVEBOX.SPT:0x1798 (cmd table table[9], slot 0x1798)
+# reference at SAVEBOX.SPT:0x1798 (cmd 0307-array obj-text[0x1786], slot 0x1798)
 0x28d8 [0x0c00]スロット[%0]にささっているものは[\n]メモリーカードじゃないよ![0x0d00][Press A]
 
 # reference at SAVEBOX.SPT:0x179c (cmd table table[2], slot 0x179c)
 # reference at SAVEBOX.SPT:0x179c (cmd table table[9], slot 0x179c)
+# reference at SAVEBOX.SPT:0x179c (cmd 0307-array obj-text[0x1786], slot 0x179c)
 0x291a [0x0c00]ファイルにアクセスできないよ![0x0d00][Press A]
 
 # reference at SAVEBOX.SPT:0x179e (cmd table table[2], slot 0x179e)
 # reference at SAVEBOX.SPT:0x179e (cmd table table[9], slot 0x179e)
+# reference at SAVEBOX.SPT:0x179e (cmd 0307-array obj-text[0x1786], slot 0x179e)
 0x2940 [0x0c00]ファイルサイズをこえて、[\n][0x0c00]リード/ライトしようとしたよ![0x0d00][Press A]
 
 # reference at SAVEBOX.SPT:0x17a0 (cmd table table[2], slot 0x17a0)
 # reference at SAVEBOX.SPT:0x17a0 (cmd table table[9], slot 0x17a0)
+# reference at SAVEBOX.SPT:0x17a0 (cmd 0307-array obj-text[0x1786], slot 0x17a0)
 0x2982 [0x0c00]ファイル名が長すぎるよ![0x0d00][Press A]
 
 # reference at SAVEBOX.SPT:0x17a4 (cmd table table[2], slot 0x17a4)
 # reference at SAVEBOX.SPT:0x17a4 (cmd table table[9], slot 0x17a4)
+# reference at SAVEBOX.SPT:0x17a4 (cmd 0307-array obj-text[0x1786], slot 0x17a4)
 0x29a2 [0x0c00]リード/ライトしょりが[\n]キャンセルされたよ![0x0d00][Press A]
 
 # reference at SAVEBOX.SPT:0x17a8 (cmd table table[2], slot 0x17a8)
 # reference at SAVEBOX.SPT:0x17a8 (cmd table table[9], slot 0x17a8)
+# reference at SAVEBOX.SPT:0x17a8 (cmd 0307-array obj-text[0x1786], slot 0x17a8)
 0x29d6 [0x0c00]スロット[%0]のメモリーカードは[\n]このゲームでは便えないよ![0x0d00][Press A]
 
 # reference at SAVEBOX.SPT:0x17aa (cmd table table[2], slot 0x17aa)
 # reference at SAVEBOX.SPT:0x17aa (cmd table table[9], slot 0x17aa)
+# reference at SAVEBOX.SPT:0x17aa (cmd 0307-array obj-text[0x1786], slot 0x17aa)
 0x2a16 [0x0c00]セーブされているデータが[\n]こわれてるよ![0x0d00][Press A]
 
 # reference at SAVEBOX.SPT:0x17ac (cmd table table[2], slot 0x17ac)
 # reference at SAVEBOX.SPT:0x17ac (cmd table table[9], slot 0x17ac)
+# reference at SAVEBOX.SPT:0x17ac (cmd 0307-array obj-text[0x1786], slot 0x17ac)
 0x2a46 [0x0c00]セーブデータが見つからないよ![0x0d00][Press A]
 
 # reference at SAVEBOX.SPT:0x17ae (cmd table table[2], slot 0x17ae)
 # reference at SAVEBOX.SPT:0x17ae (cmd table table[9], slot 0x17ae)
+# reference at SAVEBOX.SPT:0x17ae (cmd 0307-array obj-text[0x1786], slot 0x17ae)
 0x2a6c [0x0c00]エラーが発生したよ![0x0d00][Press A]
 
 # reference at SAVEBOX.SPT:0x5de (cmd 0202 direct, slot 0x5ea)
@@ -226,6 +259,21 @@
 # reference at SAVEBOX.SPT:0x1102 (cmd 0303 direct, slot 0x1106)
 0x33bc [0x0c00]見る物がないよ![0x0d00][Press A]
 
+# reference at SAVEBOX.SPT:0x12ee (cmd 0307-array obj-text[0x12ea], slot 0x12ee)
+# reference at SAVEBOX.SPT:0x12ee (cmd 0307-array obj-text[0x12ee], slot 0x12ee)
+0x33d4 ぶきリスト
+
+# reference at SAVEBOX.SPT:0x12f0 (cmd 0307-array obj-text[0x12ea], slot 0x12f0)
+# reference at SAVEBOX.SPT:0x12f0 (cmd 0307-array obj-text[0x12ee], slot 0x12f0)
+0x33e0 たてリスト
+
+# reference at SAVEBOX.SPT:0x12f2 (cmd 0307-array obj-text[0x12ea], slot 0x12f2)
+# reference at SAVEBOX.SPT:0x12f2 (cmd 0307-array obj-text[0x12ee], slot 0x12f2)
+0x33ec Dグッズリスト
+
+# reference at SAVEBOX.SPT:0x12ea (cmd 0307-array obj-text[0x12ea], slot 0x12ea)
+0x349c [%0]さんは[0x1000]%あつめました!
+
 # reference at SAVEBOX.SPT:0xf6a (cmd 0303 direct, slot 0xf6e)
 0x34b8 [0xb83a][0xe008]ぶき[0x5088][0x1002]/[0x1002]
 
@@ -234,6 +282,15 @@
 
 # reference at SAVEBOX.SPT:0xffa (cmd 0303 direct, slot 0xffe)
 0x34dc [0xb83c][0xe008]Dグッズ[0x5088][0x1002]/[0x1002]
+
+# reference at SAVEBOX.SPT:0x12ec (cmd 0307-array obj-text[0x12ea], slot 0x12ec)
+0x34f2 [%0]さんが手に入れたせんり品
+
+# reference at SAVEBOX.SPT:0x66c (cmd 0202 direct, slot 0x678)
+0x366c クリアキャラクターリスト
+
+# reference at SAVEBOX.SPT:0x6e4 (cmd 0303 direct, slot 0x6e8)
+0x36a8 [0x5008][%0][0x50b8]Lv[0x50f8][0x1800]
 
 # reference at SAVEBOX.SPT:0x1766 (cmd table table[2], slot 0x1766)
 0x3d80 ドカポン城
@@ -350,17 +407,17 @@
 0x575e [0x0994][0xd0a8][0x0c00]おめでとう![0x0d00][Press A][0xa000][0xd09f][0x0c00]やったね![\n][Blue Text]ぶき[Normal Color Text]を全部集めたよ![0x0d00][Press A]
 
 # reference at SAVEBOX.SPT:0xa4c (cmd 0303 direct, slot 0xa50)
-0x57a4 [0x0c00]ごほうびに、さいきょうのぶき、[\n][0x096a][Blue Text]ドカポンの釗DX[Normal Color Text]を[\n]プレゼントするね![0x0d00][Press A][0xa000][0x0c00]これからも[\n]ドカポンを寨しんでね![0x0d00][Press A]
+0x57a4 [0x0c00]ごほうびに、さいきょうのぶき、[\n][0x096a][Blue Text]ドカポンの釗DX[Normal Color Text]を[\n]プレゼントするね![0x0d00][Press A][0xa000][0x0c00]これからも[\n]ドカポンを楽しんでね![0x0d00][Press A]
 
 # reference at SAVEBOX.SPT:0xa5c (cmd 0303 direct, slot 0xa60)
 0x5822 [0x0994][0xd0a8][0x0c00]おめでとう![0x0d00][Press A][0xa000][0xd09f][0x0c00]やったね![\n][Blue Text]たて[Normal Color Text]を全部集めたよ![0x0d00][Press A]
 
 # reference at SAVEBOX.SPT:0xa66 (cmd 0303 direct, slot 0xa6a)
-0x5868 [0x0c00]ごほうびに、さいきょうのたて、[\n][0x096a][Blue Text]ドカポンの店DX[Normal Color Text]を[\n]プレゼントするね![0x0d00][Press A][0xa000][0x0c00]これからも[\n]ドカポンを寨しんでね![0x0d00][Press A]
+0x5868 [0x0c00]ごほうびに、さいきょうのたて、[\n][0x096a][Blue Text]ドカポンの店DX[Normal Color Text]を[\n]プレゼントするね![0x0d00][Press A][0xa000][0x0c00]これからも[\n]ドカポンを楽しんでね![0x0d00][Press A]
 
 # reference at SAVEBOX.SPT:0xa76 (cmd 0303 direct, slot 0xa7a)
 0x58e6 [0x0994][0xd0a8][0x0c00]おめでとう![0x0d00][Press A][0xa000][0xd09f][0x0c00]やったね![\n][Blue Text]Dグッズ[Normal Color Text]を全部集めたよ![0x0d00][Press A]
 
 # reference at SAVEBOX.SPT:0xa80 (cmd 0303 direct, slot 0xa84)
-0x5930 [0x0c00]ごほうびに、1春きちょうなDグッズ、[\n][0x096a][Blue Text]ドカポンジュエル[Normal Color Text]を[\n][0x0c00]プレゼントするね![0x0d00][Press A][0xa000]これからも[\n]ドカポンを寨しんでね![0x0d00][Press A]
+0x5930 [0x0c00]ごほうびに、1番きちょうなDグッズ、[\n][0x096a][Blue Text]ドカポンジュエル[Normal Color Text]を[\n][0x0c00]プレゼントするね![0x0d00][Press A][0xa000]これからも[\n]ドカポンを楽しんでね![0x0d00][Press A]
 

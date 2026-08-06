@@ -1,12 +1,61 @@
-# BANK.SPT: 10 strings, 11 references. Translate by repeating the 0xOFFSET line with English.
-# record cursor 0x3b20, script ends 0x2968, 50400 bytes of arena shared by every replacement
+# BANK.SPT: 35 strings, 41 references. Translate by repeating the 0xOFFSET line with English.
+# record cursor 0x3b20, script ends 0x2b18, 50400 bytes of arena shared by every replacement
 
+# reference at BANK.SPT:0xb18 (cmd 0202 direct, slot 0xb24)
+0x2390  
+
+# reference at BANK.SPT:0xcd2 (cmd 0203 direct, slot 0xcda)
+# reference at BANK.SPT:0x4ac (cmd 0203 direct, slot 0x4b4)
 # reference at BANK.SPT:0x20c (cmd 0203 direct, slot 0x214)
 0x2394 は い[\n]いいえ
 0x2394 Yes[\n]No
 
 # reference at BANK.SPT:0x1a28 (cmd 0303 direct, slot 0x1a2c)
 0x23a4 [0x50c8][0x6018][0x1800]G
+
+# reference at BANK.SPT:0xd98 (cmd 0303 direct, slot 0xd9c)
+0x23d0 [Blue Text][%0][Normal Color Text]さん[\n]コントローラを持ってください[Press A]
+
+# reference at BANK.SPT:0xb56 (cmd 0303 direct, slot 0xb5a)
+0x23fc [Red Text][%0][Normal Color Text]さん[\n]コントローラを持ってください[Press A]
+
+# reference at BANK.SPT:0x1a7c (cmd 0202 direct, slot 0x1a88)
+0x246a [0xb80a] [Blue Text][%0][Normal Color Text]を便う
+
+# reference at BANK.SPT:0x1872 (cmd 0202 direct, slot 0x187e)
+0x247c 金庫やぶり大しっぽい![\n]やばいッ! にげろッ!
+
+# reference at BANK.SPT:0x19a0 (cmd 0202 direct, slot 0x19ac)
+0x24ac [Blue Text][%0][Normal Color Text]は[Red Text]おたずね者[Normal Color Text]になった![\n][Blue Text][%0][Normal Color Text]をたおすと[\n][Blue Text][0x1000][Normal Color Text]Gもらえます[Press A]
+
+# reference at BANK.SPT:0x90c (cmd 0202 direct, slot 0x918)
+0x24f6 しっぽいすると[Red Text]おたずね者[Normal Color Text]になりますが[\n]だれがの[Blue Text]ちょきん[Normal Color Text]をぬすみますか?
+
+# reference at BANK.SPT:0x8c2 (cmd 0303 direct, slot 0x8c6)
+0x2546 [0xe800][0xe008][%0][0x51b8][0x1800]G[\n]
+
+# reference at BANK.SPT:0xbd2 (cmd 0303 direct, slot 0xbd6)
+0x2556 [Blue Text][%0][Normal Color Text]さん![\n]あなたの金庫がねらわれてます[Press A][0xa000][0xb808]と[0xb809]で[\n]あなたの金庫を開けるための[\n][Blue Text]あんごうコード[Normal Color Text]を入力して下さい!
+
+# reference at BANK.SPT:0xb76 (cmd 0303 direct, slot 0xb7a)
+0x25d0 [0x6020][0x7000]1[0x7006][0xe010][0xb809][0xe018][0xb808][\n][0xf040][0x7000]2[0x7006][0xe010][0xb809][0xe018][0xb808][\n][0xf040][0x7000]3[0x7006][0xe010][0xb809][0xe018][0xb808]
+
+# reference at BANK.SPT:0xda2 (cmd 0303 direct, slot 0xda6)
+0x2606 さあ! 時間がないぞ![\n]いそいで金庫のロックをかいじょしろ![Press A]
+
+# reference at BANK.SPT:0xdc2 (cmd 0303 direct, slot 0xdc6)
+# reference at BANK.SPT:0xe94 (cmd 0202 direct, slot 0xea0)
+# reference at BANK.SPT:0xf1c (cmd 0202 direct, slot 0xf28)
+0x2646 [0xb809]か[0xb808]どちらかが、かいじょベタンだ![\n][Blue Text]5秒[Normal Color Text]いないにおすんだ![\n]さあ! どっちだッ!?
+
+# reference at BANK.SPT:0x86e (cmd 0202 direct, slot 0x87a)
+0x26a0 [Blue Text]ちょきん[Normal Color Text]をしている人がいません[Press A]
+
+# reference at BANK.SPT:0x1596 (cmd 0202 direct, slot 0x15a2)
+0x26c6 金庫やぶり大せいこう![\n][Blue Text][%0][Normal Color Text]の[Blue Text]ちょきん[Normal Color Text]を[\n]まるまるいただいた![Press A]
+
+# reference at BANK.SPT:0xccc (cmd 0303 direct, slot 0xcd0)
+0x270e この[Blue Text]あんごうコード[Normal Color Text]でよろしいですか?
 
 # reference at BANK.SPT:0x14be (cmd 0201 direct, slot 0x14ca)
 0x2742 銀行員
@@ -37,7 +86,38 @@
 0x28aa あずけるお金が[\n]ないようですが・・・[Press A]
 0x28aa You have no money deposited...[Press A]
 
+# reference at BANK.SPT:0x3f6 (cmd 0204 direct, slot 0x406)
+0x28d2 引き出せるお金が[\n]ないようですが・・・[Press A]
+
+# reference at BANK.SPT:0x3d0 (cmd 0204 direct, slot 0x3e0)
+0x28fc それいじょうお金を[\n]持てないようですが・・・[Press A]
+
 # reference at BANK.SPT:0x2b2 (cmd 0303 direct, slot 0x2b6)
 0x292c [0x0c00]カードをつくると[\n][Blue Text]ちょきん[Normal Color Text]で買い物ができますよ![0x0d00][Press A]
 0x292c [0x0c00]With a card, you can buy items with your [Blue Text]Savings[Normal Color Text[0x0d00][Press A]
+
+# reference at BANK.SPT:0x41e (cmd 0204 direct, slot 0x42e)
+# reference at BANK.SPT:0x52e (cmd 0303 direct, slot 0x532)
+0x2976 [0x0c00]いくら、お引き出しに[\n]なりますか?[0x0d00]
+
+# reference at BANK.SPT:0x4a2 (cmd 0303 direct, slot 0x4a6)
+0x299e [0x0c00]引き出すお金は[\n][Blue Text][0x1000][Normal Color Text]Gで[\n]よろしいですか?[0x0d00]
+
+# reference at BANK.SPT:0x11a8 (cmd 0202 direct, slot 0x11b4)
+0x29e6 [0xd10e]ありがとうございました[Press A]
+
+# reference at BANK.SPT:0x1734 (cmd 0204 direct, slot 0x1744)
+0x2a10 [0x096a][0x0c00]それでは、こちらのカードを[\n]お持ちください[0x0d00][Press A]
+
+# reference at BANK.SPT:0x17e4 (cmd 0204 direct, slot 0x17f4)
+0x2a44 [0x0c00]もうしわけありませんが、[\n]2まいいじょうつくることは[\n]できません[0x0d00][Press A]
+
+# reference at BANK.SPT:0x165c (cmd 0204 direct, slot 0x166c)
+0x2a8c [0x0c00]さっそく、いぜんのカードは[\n]お止めいたします[0x0d00][Press A]
+
+# reference at BANK.SPT:0x1644 (cmd 0204 direct, slot 0x1654)
+0x2ac0 [0x0c00]それでは、今お持ちのカードを[\n]おあずかりします[0x0d00][Press A]
+
+# reference at BANK.SPT:0x1674 (cmd 0204 direct, slot 0x1684)
+0x2af6 [0x0c00]すでにお止めしておりますが[0x0d00][Press A]
 

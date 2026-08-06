@@ -1,9 +1,18 @@
-# Case.spt: 2 strings, 2 references. Translate by repeating the 0xOFFSET line with English.
-# record cursor 0x34e0, script ends 0x3252, 52000 bytes of arena shared by every replacement
+# Case.spt: 5 strings, 5 references. Translate by repeating the 0xOFFSET line with English.
+# record cursor 0x34e0, script ends 0x34dc, 52000 bytes of arena shared by every replacement
 
 # reference at Case.spt:0x108 (cmd 0202 direct, slot 0x114)
 0x2d8a [0xd0e7][0x0c00]みなさんこんにちは[0x0d00][Press A][0xa000][0xd0e6][0x0c00]ニュースそくほうです[0x0d00][Press A]
 
 # reference at Case.spt:0x152 (cmd 0303 direct, slot 0x156)
 0x31c4 [0x0c00]本日から[Blue Text]1[Normal Color Text]週間[\n]ドカポン王國の全店で[\n]バーゲンセールをおこなうようです[0x0d00][Press A][0xa000][0x0c00]みなさん、このチャンスに[\n]どんどん買い物をしましょう[0x0d00][Press A]
+
+# reference at Case.spt:0x16a (cmd 0303 direct, slot 0x16e)
+0x3252 [0x0c00]本日から[Red Text]1[Normal Color Text]週間[\n]ドカポン王國の全店では[\n]休業するようです[0x0d00][Press A][0xa000][0x0c00]みなさん、ムダづかいはひかえて[\n]ちょきんをするようにしましょう[0x0d00][Press A]
+
+# reference at Case.spt:0x19a (cmd 0303 direct, slot 0x19e)
+0x32dc [0x0c00]ドカポン王國のかくちで、[\n][Blue Text]モンモン[Normal Color Text]が大発生しているもようです[0x0d00][Press A][0xa000][0x0c00][Blue Text]モンモン[Normal Color Text]にさわると、[Red Text]モンモンウィルス[Normal Color Text]に[\n]かんせんしてしまいますので、[\n]ぜったいにさわらないでください[0x0d00][Press A][0xa000][0x0c00][Blue Text]モンモン[Normal Color Text]の大発生は今週いっぽい統きそうです[\n]みなさん、家からでないようにしてください[0x0d00][Press A]
+
+# reference at Case.spt:0x182 (cmd 0303 direct, slot 0x186)
+0x33f8 [0x0c00]ドカポン王國のかくちで、[\n][Blue Text]ミミックン[Normal Color Text]が大発生しているもようです[0x0d00][Press A][0xa000][0x0c00][Blue Text]ミミックン[Normal Color Text]の大発生は[\n]今週いっぽい統きそうです[0x0d00][Press A][0xa000][0x0c00][Blue Text]ミミックン[Normal Color Text]は、お金やおたからを持っているので、[\n]このチャンスにガッポリもうけましょう[0x0d00][Press A]
 

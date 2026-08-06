@@ -1,5 +1,5 @@
-# DELIVERY.SPT: 11 strings, 12 references. Translate by repeating the 0xOFFSET line with English.
-# record cursor 0x3cc0, script ends 0x2380, 49984 bytes of arena shared by every replacement
+# DELIVERY.SPT: 17 strings, 22 references. Translate by repeating the 0xOFFSET line with English.
+# record cursor 0x3cc0, script ends 0x23b8, 49984 bytes of arena shared by every replacement
 
 # reference at DELIVERY.SPT:0x192 (cmd 0303 direct, slot 0x196)
 0xb20  
@@ -32,6 +32,28 @@
 # reference at DELIVERY.SPT:0x2c8 (cmd 0303 direct, slot 0x2cc)
 0x22fe [0xd0cf][0x0c00]じゃあ、後はよろしくねー[0x0d00][Press A]
 
+# reference at DELIVERY.SPT:0x350 (cmd 0303 direct, slot 0x354)
+0x2320 [0xd0d0]サイテー![\n]チョットとどけるぐらい、いいじゃない![\n]ケチ![Press A]
+
 # reference at DELIVERY.SPT:0x200 (cmd 0303 direct, slot 0x204)
 0x2360 [Blue Text][%0][Normal Color Text]は[\n][Green Text][%0][Normal Color Text]をうけとった[Press A]
+
+# reference at DELIVERY.SPT:0x106 (cmd 0307-array obj-text[0x106], slot 0x106)
+# reference at DELIVERY.SPT:0x108 (cmd 0307-array obj-text[0x106], slot 0x108)
+# reference at DELIVERY.SPT:0x112 (cmd 0307-array obj-text[0x106], slot 0x112)
+# reference at DELIVERY.SPT:0x114 (cmd 0307-array obj-text[0x106], slot 0x114)
+# reference at DELIVERY.SPT:0x116 (cmd 0307-array obj-text[0x106], slot 0x116)
+0x2380 ドカッチョ
+
+# reference at DELIVERY.SPT:0x10a (cmd 0307-array obj-text[0x106], slot 0x10a)
+0x238c カラッコロ
+
+# reference at DELIVERY.SPT:0x10c (cmd 0307-array obj-text[0x106], slot 0x10c)
+0x2398 グルリン
+
+# reference at DELIVERY.SPT:0x10e (cmd 0307-array obj-text[0x106], slot 0x10e)
+0x23a2 ゲッパン
+
+# reference at DELIVERY.SPT:0x110 (cmd 0307-array obj-text[0x106], slot 0x110)
+0x23ac シャコネツ
 

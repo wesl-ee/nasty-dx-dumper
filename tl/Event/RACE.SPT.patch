@@ -15,7 +15,7 @@
 0xe66  
 
 # reference at RACE.SPT:0xfe (cmd 0303 direct, slot 0x102)
-0xf1e [Blue Text][%0][Normal Color Text]さんの春です[\n]かけるモンスターをえらんでください
+0xf1e [Blue Text][%0][Normal Color Text]さんの番です[\n]かけるモンスターをえらんでください
 
 # reference at RACE.SPT:0x182 (cmd 0303 direct, slot 0x186)
 # reference at RACE.SPT:0x404 (cmd 0303 direct, slot 0x408)
@@ -77,15 +77,15 @@
 
 # reference at RACE.SPT:0xb1e (cmd table table[4], slot 0xb1e)
 # reference at RACE.SPT:0xb1e (cmd table table[5], slot 0xb1e)
-0x116c 1春人気の[Blue Text][%0][Normal Color Text]はただいま[Blue Text][0x1000][Normal Color Text]位![\n]先頭しゅうだんを走っています!
+0x116c 1番人気の[Blue Text][%0][Normal Color Text]はただいま[Blue Text][0x1000][Normal Color Text]位![\n]先頭しゅうだんを走っています!
 
 # reference at RACE.SPT:0xb20 (cmd table table[4], slot 0xb20)
 # reference at RACE.SPT:0xb20 (cmd table table[5], slot 0xb20)
-0x11b2 1春人気の[Blue Text][%0][Normal Color Text]はただいま[Blue Text][0x1000][Normal Color Text]位![\n]しゅうだんのまん中あたりを走っています!
+0x11b2 1番人気の[Blue Text][%0][Normal Color Text]はただいま[Blue Text][0x1000][Normal Color Text]位![\n]しゅうだんのまん中あたりを走っています!
 
 # reference at RACE.SPT:0xb22 (cmd table table[4], slot 0xb22)
 # reference at RACE.SPT:0xb22 (cmd table table[5], slot 0xb22)
-0x1202 1春人気の[Blue Text][%0][Normal Color Text]はただいま[Blue Text][0x1000][Normal Color Text]位![\n]後方からチャンスをうかがっています!
+0x1202 1番人気の[Blue Text][%0][Normal Color Text]はただいま[Blue Text][0x1000][Normal Color Text]位![\n]後方からチャンスをうかがっています!
 
 # reference at RACE.SPT:0xb24 (cmd table table[4], slot 0xb24)
 # reference at RACE.SPT:0xb24 (cmd table table[5], slot 0xb24)
@@ -105,11 +105,11 @@
 
 # reference at RACE.SPT:0xb2c (cmd table table[4], slot 0xb2c)
 # reference at RACE.SPT:0xb2c (cmd table table[5], slot 0xb2c)
-0x132c 休調はさいあくです![\n]1春人気ながらとても不安です!
+0x132c 休調はさいあくです![\n]1番人気ながらとても不安です!
 
 # reference at RACE.SPT:0xb2e (cmd table table[4], slot 0xb2e)
 # reference at RACE.SPT:0xb2e (cmd table table[5], slot 0xb2e)
-0x1362 たいこうする2春人気の[\n][Blue Text][%0][Normal Color Text]は、げんざい[Blue Text][0x1000][Normal Color Text]位!
+0x1362 たいこうする2番人気の[\n][Blue Text][%0][Normal Color Text]は、げんざい[Blue Text][0x1000][Normal Color Text]位!
 
 # reference at RACE.SPT:0xb30 (cmd table table[4], slot 0xb30)
 # reference at RACE.SPT:0xb30 (cmd table table[5], slot 0xb30)
@@ -125,7 +125,7 @@
 
 # reference at RACE.SPT:0xb36 (cmd table table[4], slot 0xb36)
 # reference at RACE.SPT:0xb36 (cmd table table[5], slot 0xb36)
-0x1446 1春人気の[Blue Text][%0][Normal Color Text]おくれています![\n]ここからおいつくのはむずかしいか?
+0x1446 1番人気の[Blue Text][%0][Normal Color Text]おくれています![\n]ここからおいつくのはむずかしいか?
 
 # reference at RACE.SPT:0xb38 (cmd table table[4], slot 0xb38)
 # reference at RACE.SPT:0xb38 (cmd table table[5], slot 0xb38)

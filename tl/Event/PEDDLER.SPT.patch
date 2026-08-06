@@ -1,6 +1,7 @@
-# PEDDLER.SPT: 13 strings, 14 references. Translate by repeating the 0xOFFSET line with English.
-# record cursor 0x2e60, script ends 0x2d88, 53664 bytes of arena shared by every replacement
+# PEDDLER.SPT: 19 strings, 21 references. Translate by repeating the 0xOFFSET line with English.
+# record cursor 0x2e60, script ends 0x2e42, 53664 bytes of arena shared by every replacement
 
+# reference at PEDDLER.SPT:0xe70 (cmd 0203 direct, slot 0xe78)
 # reference at PEDDLER.SPT:0x996 (cmd 0203 direct, slot 0x99e)
 0x16c0 は い[\n]いいえ
 
@@ -9,6 +10,9 @@
 
 # reference at PEDDLER.SPT:0x888 (cmd 0303 direct, slot 0x88c)
 0x16e4 [0x50c8][0x6018][0x1800]G
+
+# reference at PEDDLER.SPT:0x800 (cmd 0202 direct, slot 0x80c)
+0x17ec [Blue Text][%0][Normal Color Text]は[Red Text]おたずね者[Normal Color Text]になった![\n][Blue Text][%0][Normal Color Text]をたおすと[\n][Blue Text][0x1000][Normal Color Text]Gもらえます[Press A]
 
 # reference at PEDDLER.SPT:0x988 (cmd 0303 direct, slot 0x98c)
 0x2402 [0x0c00][Blue Text]バーゲンチケット[Normal Color Text]を[\n]便うニャリ?[0x0d00]
@@ -40,4 +44,19 @@
 
 # reference at PEDDLER.SPT:0x2b4 (cmd 0303 direct, slot 0x2b8)
 0x2d62 [0x0c00]すんません! 売りきれですわ![0x0d00][Press A]
+
+# reference at PEDDLER.SPT:0x5e0 (cmd 0202 direct, slot 0x5ec)
+0x2d9c [0xd0af]まいどおおきに![0xa8c8]
+
+# reference at PEDDLER.SPT:0x4ba (cmd 0303 direct, slot 0x4be)
+0x2dbc 売れる物がありませんがな![Press A]
+
+# reference at PEDDLER.SPT:0x4c2 (cmd 0204 direct, slot 0x4d2)
+0x2dda 何を売りまっか?
+
+# reference at PEDDLER.SPT:0x4d6 (cmd 0303 direct, slot 0x4da)
+0x2dec [Blue Text][0x1000][Normal Color Text]Gで[\n]買い取りますが[\n]よろしいでっか?
+
+# reference at PEDDLER.SPT:0x4de (cmd 0303 direct, slot 0x4e2)
+0x2e1a [0x0c00][Red Text][%0][Normal Color Text]は[\n]買い取れませんがなー![0x0d00][Press A]
 
