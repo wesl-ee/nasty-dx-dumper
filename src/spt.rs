@@ -77,7 +77,9 @@ static BRANCH: &[(u16, (usize, usize))] = &[
     (0x0805, (2, 3)),
 ];
 /// jumps through an inline array of u16 targets whose element count is in
-/// neither the command nor the binary, so only element 0 is followed
+/// neither the command nor the binary -- the index is a menu cursor or a script
+/// variable -- so the array's extent is recovered from its own shape by
+/// `jump_array`
 static JUMP_ARRAY: [u16; 2] = [0x0302, 0x080b];
 const RET: u16 = 0x0807;
 /// 0x0806: opcode + target, pushed as the return address
@@ -388,6 +390,95 @@ fn word<T: Copy>(table: &[(u16, T)], op: u16) -> Option<T> {
     table.iter().find(|&&(k, _)| k == op).map(|&(_, v)| v)
 }
 
+/// Length in words of a command that is not control flow, `None` when the
+/// opcode has none. The three computed lengths the binary works out at runtime:
+///   0x0401 falls through all n pairs, 2 + 2n words
+///   0x0600 registers a task; 800ce360 reads the argc at word 3
+///   0x0B06 calls a native; 800cfb28 advances by argc + 3 words
+fn advance(buf: &[u8], cur: usize, op: u16) -> Option<usize> {
+    let w = |i: usize| u16at(buf, cur + i * 2).unwrap_or(0) as usize;
+    let n = match op {
+        0x0401 => 2 + 2 * w(1),
+        0x0600 => w(3) + 5,
+        0x0b06 => w(2) + 3,
+        _ => lookup(LENGTHS, op)? as usize,
+    };
+    (n > 0).then_some(n)
+}
+
+/// The elements of a `JUMP_ARRAY`'s inline target array, which nothing declares
+/// a length for.
+fn jump_array(buf: &[u8], base: usize, limit: usize) -> Vec<usize> {
+    let mut out = Vec::new();
+    let mut bound = limit;
+    while base + out.len() * 2 < bound {
+        let Some(t) = u16at(buf, base + out.len() * 2).map(usize::from) else {
+            break;
+        };
+        if t == 0 || t >= limit || t % 2 != 0 {
+            break;
+        }
+        if !out.is_empty() && !runs_as_code(buf, t, limit) {
+            break;
+        }
+        if (base..bound).contains(&t) {
+            bound = t;
+        }
+        out.push(t);
+    }
+    out
+}
+
+/// Could the interpreter run from here? Real code reaches a sentinel or a
+/// return; a misread runs into an opcode that does not exist. Nested arrays are
+/// left at element 0, which is enough to decide the question and keeps this
+/// from recursing through the whole script.
+fn runs_as_code(buf: &[u8], start: usize, limit: usize) -> bool {
+    let mut work = vec![start];
+    let mut seen = HashSet::new();
+    while let Some(cur) = work.pop() {
+        if cur >= limit || !seen.insert(cur) {
+            continue;
+        }
+        let Some(op) = u16at(buf, cur) else {
+            return false;
+        };
+        if op == END || op == RET {
+            continue;
+        }
+        if op == PAD_OP {
+            work.push(cur + 2);
+            continue;
+        }
+        let target = |w: usize| {
+            u16at(buf, cur + w * 2)
+                .map(usize::from)
+                .filter(|&t| t > 0 && t < limit)
+        };
+        if let Some(i) = word(GOTO, op) {
+            work.extend(target(i));
+            if op == 0x0806 {
+                work.push(cur + CALL_LEN * 2);
+            }
+            continue;
+        }
+        if let Some((wd, fall)) = word(BRANCH, op) {
+            work.extend(target(wd));
+            work.push(cur + fall * 2);
+            continue;
+        }
+        if op == 0x0401 {
+            let pairs = u16at(buf, cur + 2).unwrap_or(0) as usize;
+            work.extend((0..pairs).filter_map(|k| target(3 + 2 * k)));
+        }
+        match advance(buf, cur, op) {
+            Some(n) => work.push(cur + n * 2),
+            None => return false,
+        }
+    }
+    true
+}
+
 pub fn u16at(buf: &[u8], off: usize) -> Option<u16> {
     buf.get(off..off + 2)
         .map(|b| u16::from_be_bytes([b[0], b[1]]))
@@ -578,6 +669,14 @@ pub fn walk(
         }
 
         if let Some(i) = word(GOTO, op) {
+            if JUMP_ARRAY.contains(&op) {
+                let targets = jump_array(buf, cur + i * 2, limit);
+                st.targets += targets.len();
+                st.arrays += 1;
+                st.cmds.insert(cur, i + targets.len());
+                work.extend(targets);
+                continue;
+            }
             if let Some(t) = u16at(buf, cur + i * 2)
                 .map(usize::from)
                 .filter(|&t| t > 0 && t < limit)
@@ -588,12 +687,7 @@ pub fn walk(
             if op == 0x0806 {
                 work.push(cur + CALL_LEN * 2);
             }
-            if JUMP_ARRAY.contains(&op) {
-                st.arrays += 1;
-                st.cmds.insert(cur, 0);
-            } else {
-                st.cmds.insert(cur, i + 1);
-            }
+            st.cmds.insert(cur, i + 1);
             continue;
         }
         if let Some((wd, fall)) = word(BRANCH, op) {
@@ -627,21 +721,11 @@ pub fn walk(
             }
         }
 
-        // lengths the binary computes rather than stores as a constant:
-        //   0x0401 falls through all n pairs, 2 + 2n words
-        //   0x0600 registers a task; 800ce360 reads the argc at word 3
-        //   0x0B06 calls a native; 800cfb28 advances by argc + 3 words
-        let n = match op {
-            0x0401 => 2 + 2 * w(1),
-            0x0600 => w(3) + 5,
-            0x0b06 => w(2) + 3,
-            _ => lookup(LENGTHS, op).unwrap_or(0) as usize,
-        };
-        if n == 0 {
+        let Some(n) = advance(buf, cur, op) else {
             *st.unknown.entry(op).or_insert(0) += 1;
             st.cmds.insert(cur, 0);
             continue;
-        }
+        };
         st.cmds.insert(cur, n);
         work.push(cur + n * 2);
     }
@@ -1564,5 +1648,38 @@ mod tests {
             found.iter().map(|s| s.jp.as_str()).collect::<Vec<_>>(),
             ["A", "B", "AB"]
         );
+    }
+
+    /// The two shapes a jump table comes in: bodies laid out right after it,
+    /// and a table the next command abuts.
+    #[test]
+    fn a_jump_table_ends_at_its_first_body_or_at_the_next_command() {
+        let mut buf = vec![0u8; 0x40];
+        let put = |buf: &mut [u8], at: usize, value: u16| {
+            buf[at..at + 2].copy_from_slice(&value.to_be_bytes());
+        };
+        // three cases whose bodies begin at 0x0a, where the table stops
+        put(&mut buf, 0x04, 0x0a);
+        put(&mut buf, 0x06, 0x0c);
+        put(&mut buf, 0x08, 0x0e);
+        put(&mut buf, 0x0a, END);
+        put(&mut buf, 0x0c, END);
+        put(&mut buf, 0x0e, END);
+        assert_eq!(jump_array(&buf, 0x04, buf.len()), [0x0a, 0x0c, 0x0e]);
+
+        // two cases far away, and then a 0x0702 command whose opcode reads as
+        // the offset 0x0702 -- past the buffer, so it cannot be a target
+        put(&mut buf, 0x20, 0x30);
+        put(&mut buf, 0x22, 0x32);
+        put(&mut buf, 0x24, 0x0702);
+        put(&mut buf, 0x30, END);
+        put(&mut buf, 0x32, END);
+        assert_eq!(jump_array(&buf, 0x20, buf.len()), [0x30, 0x32]);
+
+        // the same, with the stray offset in range but landing on nothing the
+        // interpreter could run
+        put(&mut buf, 0x24, 0x12);
+        put(&mut buf, 0x12, 0xdead);
+        assert_eq!(jump_array(&buf, 0x20, buf.len()), [0x30, 0x32]);
     }
 }
