@@ -6,6 +6,7 @@
 
 # reference at HIT_MAN.SPT:0x130 (cmd 0203 direct, slot 0x138)
 0x127c は い[\n]いいえ
+0x127c Yes[\n]No
 
 # reference at HIT_MAN.SPT:0xd8 (cmd 0201 direct, slot 0xe4)
 0x1ee8 ころし屋ヴィント
@@ -24,6 +25,7 @@
 
 # reference at HIT_MAN.SPT:0x2da (cmd 0303 direct, slot 0x2de)
 0x1fc6 コース
+0x1fc6 Course
 
 # reference at HIT_MAN.SPT:0x380 (cmd 0303 direct, slot 0x384)
 0x1fce [0x0c00]金が足りないぞ・・・[0x0d00]

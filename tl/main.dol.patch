@@ -116,6 +116,7 @@
 # reference at main.dol:0xb9c8 (RAM 0x8001bc88) [addi paired with the lis at RAM 0x8001bc84]
 # reference at main.dol:0x1d43c (RAM 0x8002d6fc) [addi paired with the lis at RAM 0x8002d6f8]
 0x1b6598 0マスいどう[\n]1マスいどう[\n]2マスいどう[\n]3マスいどう[\n]4マスいどう[\n]5マスいどう[\n]6マスいどう
+0x1b6598 Move 0 spaces[\n]Move 1 space[\n]Move 2 spaces[\n]Move 3 spaces[\n]Move 4 spaces[\n]Move 5 spaces[\n]Move 6 spaces
 
 # reference at main.dol:0x49c6c (RAM 0x80059f2c) [addi paired with the lis at RAM 0x80059f28]
 0x1b65fc だれとたたかいますか?
@@ -404,9 +405,11 @@
 
 # reference at main.dol:0x1c7380 (RAM 0x801ca380) [B]
 0x1c6380 ドッカン火山入口マス
+0x1c6380 Dokkan Volcano Entrance
 
 # reference at main.dol:0x1c7390 (RAM 0x801ca390) [B]
 0x1c6398 ドッカン火山出口マス
+0x1c6398 Dokkan Volcano Exit
 
 # reference at main.dol:0x1c73a0 (RAM 0x801ca3a0) [B]
 0x1c63b0 ドッカン火山內部マス
@@ -416,42 +419,54 @@
 
 # reference at main.dol:0x1c73c0 (RAM 0x801ca3c0) [B]
 0x1c63e4 ドカポン城入口マス
+0x1c63e4 Dokapon Castle Entrance
 
 # reference at main.dol:0x1c73d0 (RAM 0x801ca3d0) [B]
 0x1c63f8 ドカポン城出口マス
+0x1c63f8 Dokapon Castle Exit
 
 # reference at main.dol:0x1c73e0 (RAM 0x801ca3e0) [B]
 0x1c640c ドカポン城1かいマス
+0x1c640c Dokapon Castle 1F
 
 # reference at main.dol:0x1c73f0 (RAM 0x801ca3f0) [B]
 0x1c6424 ドカポン城2かいマス
+0x1c6424 Dokapon Castle 2F
 
 # reference at main.dol:0x1c7400 (RAM 0x801ca400) [B]
 0x1c643c 魔界トンネル入口マス
 
 # reference at main.dol:0x1c7410 (RAM 0x801ca410) [B]
 0x1c6454 ポコポコどうくつ入口(北)マス
+0x1c6454 Poko Poko Cave Entrance (N)
 
 # reference at main.dol:0x1c7420 (RAM 0x801ca420) [B]
 0x1c6474 ポコポコどうくつ入口(南)マス
+0x1c6474 Poko Poko Cave Entrance (S)
 
 # reference at main.dol:0x1c7430 (RAM 0x801ca430) [B]
 0x1c6494 ポコポコどうくつ出口(北)マス
+0x1c6494 Poko Poko Cave Exit (N)
 
 # reference at main.dol:0x1c7440 (RAM 0x801ca440) [B]
 0x1c64b4 ポコポコどうくつ出口(南)マス
+0x1c64b4 Poko Poko Cave Exit (S)
 
 # reference at main.dol:0x1c7450 (RAM 0x801ca450) [B]
 0x1c64d4 サラサラどうくつ入口(北)マス
+0x1c64d4 Sara Sara Cave Entrance (N)
 
 # reference at main.dol:0x1c7460 (RAM 0x801ca460) [B]
 0x1c64f4 サラサラどうくつ入口(南)マス
+0x1c64f4 Sara Sara Cave Entrance (S)
 
 # reference at main.dol:0x1c7470 (RAM 0x801ca470) [B]
 0x1c6514 サラサラどうくつ出口(北)マス
+0x1c6514 Sara Sara Cave Exit (N)
 
 # reference at main.dol:0x1c7480 (RAM 0x801ca480) [B]
 0x1c6534 サラサラどうくつ出口(南)マス
+0x1c6534 Sara Sara Cave Exit (S)
 
 # reference at main.dol:0x1c7490 (RAM 0x801ca490) [B]
 0x1c6554 カサカサどうくつ入口マス
@@ -612,6 +627,7 @@
 # reference at main.dol:0x1c752c (RAM 0x801ca52c) [B]
 # reference at main.dol:0x1c753c (RAM 0x801ca53c) [B]
 0x1c68a0 どうくつ入口
+0x1c68a0 Cave Entrance
 
 # reference at main.dol:0x1c742c (RAM 0x801ca42c) [B]
 # reference at main.dol:0x1c743c (RAM 0x801ca43c) [B]
@@ -624,6 +640,7 @@
 # reference at main.dol:0x1c74fc (RAM 0x801ca4fc) [B]
 # reference at main.dol:0x1c750c (RAM 0x801ca50c) [B]
 0x1c68b0 どうくつ出口
+0x1c68b0 Cave Exit
 
 # reference at main.dol:0x1c754c (RAM 0x801ca54c) [B]
 0x1c68c0 魔界トンネル出口
@@ -657,9 +674,11 @@
 
 # reference at main.dol:0x1c7324 (RAM 0x801ca324) [D]
 0x1c69f8 ラッキーパークの入口
+0x1c69f8 Lucky Park Entrance
 
 # reference at main.dol:0x1c7334 (RAM 0x801ca334) [D]
 0x1c6a10 ラッキーパークの出口
+0x1c6a10 Lucky Park Exit
 
 # reference at main.dol:0x1c7344 (RAM 0x801ca344) [D]
 0x1c6a28 ゆうれいせんの入口
@@ -669,9 +688,11 @@
 
 # reference at main.dol:0x1c7384 (RAM 0x801ca384) [B]
 0x1c6a50 ドッカン火山の入口
+0x1c6a50 Dokkan Volcano Entrance
 
 # reference at main.dol:0x1c7394 (RAM 0x801ca394) [B]
 0x1c6a64 ドッカン火山の出口
+0x1c6a64 Dokkan Volcano Exit
 
 # reference at main.dol:0x1c73a4 (RAM 0x801ca3a4) [B]
 0x1c6a78 ドッカン火山の內部に[\n]つながる入口
@@ -681,9 +702,11 @@
 
 # reference at main.dol:0x1c73c4 (RAM 0x801ca3c4) [B]
 0x1c6ac4 ドカポン城の入口
+0x1c6ac4 Dokapon Castle Entrance
 
 # reference at main.dol:0x1c73d4 (RAM 0x801ca3d4) [B]
 0x1c6ad8 ドカポン城の出口
+0x1c6ad8 Dokapon Castle Exit
 
 # reference at main.dol:0x1c73e4 (RAM 0x801ca3e4) [B]
 0x1c6aec ドカポン城の1かいに[\n]つながるかいだん
@@ -759,7 +782,7 @@
 
 # reference at main.dol:0x1c7574 (RAM 0x801ca574) [B]
 0x1c6e1c もちぬしはタダで、他の人は[\n]お金をはらってはっくつできる
-0x1c6e1c The owner digs free. Others[\n]must pay to excavate.
+0x1c6e1c The owner digs for free. Others[\n]must pay to excavate.
 
 # reference at main.dol:0x1c7584 (RAM 0x801ca584) [B]
 0x1c6e58 どこかへの入り口らしいが、[\n]今はとおれない
@@ -2246,6 +2269,7 @@
 
 # reference at main.dol:0x1ce240 (RAM 0x801d1240) [D]
 0x1cc480 水のバッジ
+0x1cc480 Water Badge
 
 # reference at main.dol:0x1ce250 (RAM 0x801d1250) [D]
 0x1cc48c 雷のバッジ
@@ -2366,6 +2390,7 @@
 
 # reference at main.dol:0x1ce4c0 (RAM 0x801d14c0) [D]
 0x1cc71c ドカポンジュエル
+0x1cc71c Dokapon Jewel
 
 # reference at main.dol:0x1ce1a4 (RAM 0x801d11a4) [D]
 0x1cc730 [Blue Text]1,000[Normal Color Text]Gのかちがある、[\n]なかなか手に入らない[\n]こうかできちょうなメダル
@@ -2731,7 +2756,7 @@
 # reference at main.dol:0x1ca17c (RAM 0x801cd17c) [A]
 # reference at main.dol:0x1f08c (RAM 0x8002f34c) [addi paired with the lis at RAM 0x8002f348]
 0x1cf060 [Blue Text][%0][Normal Color Text]は[\n][Red Text][%0][Normal Color Text]で、[\n][0x3800][Red Text][0x1000][Normal Color Text]のダメージ!
-0x1cf060 [Blue Text][%0][Normal Color Text] took[\n][Red Text][%0][Normal Color Text] damage![\n][0x3800][Red Text][0x1000][Normal Color Text] HP lost!
+0x1cf060 [Blue Text][%0][Normal Color Text]took[\n][0x3800][Red Text][0x1000][Normal Color Text] damage from[\n][Red Text][%0][Normal Color Text]!
 
 # reference at main.dol:0x1e9c4 (RAM 0x8002ec84) [addi paired with the lis at RAM 0x8002ec80]
 0x1cf08c [Blue Text][%0][Normal Color Text]は[\n]よけた!
@@ -3152,6 +3177,7 @@
 
 # reference at main.dol:0x1d0ce4 (RAM 0x801d3ce4) [A]
 0x1cfc24 Dグッズ
+0x1cfc24 D-Goods
 
 # reference at main.dol:0x1d0d08 (RAM 0x801d3d08) [A]
 0x1cfc30 で、バトルおわり
@@ -3192,6 +3218,7 @@
 
 # reference at main.dol:0x36f9c (RAM 0x8004725c) [addi paired with the lis at RAM 0x80047258]
 0x1cfcf4 Dパーツ
+0x1cfcf4 D-Parts
 
 # reference at main.dol:0x37078 (RAM 0x80047338) [addi paired with the lis at RAM 0x80047334]
 # reference at main.dol:0x395c0 (RAM 0x80049880) [addi paired with the lis at RAM 0x8004987c]
@@ -3252,6 +3279,7 @@
 
 # reference at main.dol:0x3a6e8 (RAM 0x8004a9a8) [addi paired with the lis at RAM 0x8004a9a4]
 0x1cfe0c [0xe800][%0]のスポンサー
+0x1cfe0c [0xe800][%0]'s sponsor
 
 # reference at main.dol:0x3a27c (RAM 0x8004a53c) [addi paired with the lis at RAM 0x8004a538]
 # reference at main.dol:0x3a7c8 (RAM 0x8004aa88) [addi paired with the lis at RAM 0x8004aa84]
@@ -3271,6 +3299,7 @@
 # reference at main.dol:0x38330 (RAM 0x800485f0) [addi paired with the lis at RAM 0x800485ec]
 # reference at main.dol:0x10e450 (RAM 0x8011e710) [addi paired with the lis at RAM 0x8011e70c]
 0x1cfe6c 次のレボル
+0x1cfe6c Next Level
 
 # reference at main.dol:0x384d0 (RAM 0x80048790) [addi paired with the lis at RAM 0x8004878c]
 0x1cfe78 じょうたい
@@ -3397,9 +3426,11 @@
 
 # reference at main.dol:0x1d3318 (RAM 0x801d6318) [A]
 0x1d0224 ヘイカモン
+0x1d0224 Come Here
 
 # reference at main.dol:0x1d331c (RAM 0x801d631c) [A]
 0x1d0230 ミナバトル
+0x1d0230 Battle Everyone
 
 # reference at main.dol:0x1d332c (RAM 0x801d632c) [A]
 0x1d023c 全員を[Red Text]アイテム[Normal Color Text]、[Red Text]まほう[Normal Color Text]、[\n][Red Text]たからばこ[Normal Color Text]、[Red Text]はっくつ[Normal Color Text][\n]マスにとまれなくする
@@ -3608,12 +3639,15 @@
 
 # reference at main.dol:0x1d2f70 (RAM 0x801d5f70) [E]
 0x1d0e34 ドカポンエッグ
+0x1d0e34 Dokapon Egg
 
 # reference at main.dol:0x1d2f7c (RAM 0x801d5f7c) [E]
 0x1d0e44 スポンサー1
+0x1d0e44 Sponsor 1
 
 # reference at main.dol:0x1d2f88 (RAM 0x801d5f88) [E]
 0x1d0e54 スポンサー2
+0x1d0e54 Sponsor 2
 
 # reference at main.dol:0x1d2f94 (RAM 0x801d5f94) [E]
 0x1d0e64 まほうのふね
@@ -3996,6 +4030,7 @@
 
 # reference at main.dol:0x1d4500 (RAM 0x801d7500) [A]
 0x1d4400 [Red Text]ワルサーエッグ[Normal Color Text]
+0x1d4400 [Red Text]Wallace Egg[Normal Color Text]
 
 # reference at main.dol:0x458b8 (RAM 0x80055b78) [addi paired with the lis at RAM 0x80055b74]
 0x1d4414 この、はっくつマスの[\n]持ち主は[\n][Blue Text][%0][Normal Color Text]です[Press A][Red Text][0x1000][Normal Color Text]Gはらえば[\n]はっくつできます。[\n]はらいますか?
@@ -4201,6 +4236,7 @@
 
 # reference at main.dol:0x241178 (RAM 0x80244178) [F]
 0x1dba08 ピコピコハンマー
+0x1dba08 Toy Hammer
 
 # reference at main.dol:0x24118c (RAM 0x8024418c) [F]
 0x1dba1c マジカルステッキ
@@ -4296,9 +4332,11 @@
 
 # reference at main.dol:0x241394 (RAM 0x80244394) [F]
 0x1dbbcc クサナギ
+0x1dbbcc Kusanagi
 
 # reference at main.dol:0x2413a8 (RAM 0x802443a8) [F]
 0x1dbbd8 ミカガミ
+0x1dbbd8 Mikagami
 
 # reference at main.dol:0x2413e4 (RAM 0x802443e4) [F]
 0x1dbbe4 ショベけん
@@ -4536,30 +4574,38 @@
 
 # reference at main.dol:0x24181c (RAM 0x8024481c) [G]
 0x1dbfa0 ナイトシールド
+0x1dbfa0 Knight Shield
 
 # reference at main.dol:0x24182c (RAM 0x8024482c) [G]
 0x1dbfb0 ドラゴンマーク
+0x1dbfb0 Dragon Mark
 
 # reference at main.dol:0x24183c (RAM 0x8024483c) [G]
 0x1dbfc0 プラチナシールド
+0x1dbfc0 Platinum Shield
 
 # reference at main.dol:0x24184c (RAM 0x8024484c) [G]
 0x1dbfd4 グランドスター
+0x1dbfd4 Grand Star
 
 # reference at main.dol:0x24186c (RAM 0x8024486c) [G]
 0x1dbfe4 ショベたて
 
 # reference at main.dol:0x24187c (RAM 0x8024487c) [G]
 0x1dbff0 デモンシールド
+0x1dbff0 Demon Shield
 
 # reference at main.dol:0x24188c (RAM 0x8024488c) [G]
 0x1dc000 アンモナイター
+0x1dc000 Ammoniter
 
 # reference at main.dol:0x24189c (RAM 0x8024489c) [G]
 0x1dc010 エンゼルシールド
+0x1dc010 Angel Shield
 
 # reference at main.dol:0x2418ac (RAM 0x802448ac) [G]
 0x1dc024 ドカポンシールド
+0x1dc024 Dokapon Shield
 
 # reference at main.dol:0x2418bc (RAM 0x802448bc) [G]
 0x1dc038 血ぬりの店
@@ -4575,27 +4621,35 @@
 
 # reference at main.dol:0x241e9c (RAM 0x80244e9c) [F]
 0x1dc074 メテオラ
+0x1dc074 Meteor
 
 # reference at main.dol:0x241eb0 (RAM 0x80244eb0) [F]
 0x1dc080 メテオダラ
+0x1dc080 Meteodara
 
 # reference at main.dol:0x241ec4 (RAM 0x80244ec4) [F]
 0x1dc08c フリーズ
+0x1dc08c Freeze
 
 # reference at main.dol:0x241ed8 (RAM 0x80244ed8) [F]
 0x1dc098 フリーズラ
+0x1dc098 Freezara
 
 # reference at main.dol:0x241eec (RAM 0x80244eec) [F]
 0x1dc0a4 フリーズダラ
+0x1dc0a4 Freezdara
 
 # reference at main.dol:0x241f00 (RAM 0x80244f00) [F]
 0x1dc0b4 プラズマ
+0x1dc0b4 Plasma
 
 # reference at main.dol:0x241f14 (RAM 0x80244f14) [F]
 0x1dc0c0 プラズマラ
+0x1dc0c0 Plasmara
 
 # reference at main.dol:0x241f28 (RAM 0x80244f28) [F]
 0x1dc0cc プラズマダラ
+0x1dc0cc Plasmadara
 
 # reference at main.dol:0x241f3c (RAM 0x80244f3c) [F]
 0x1dc0dc エネゲット
@@ -4647,24 +4701,31 @@
 
 # reference at main.dol:0x242090 (RAM 0x80245090) [F]
 0x1dc1c4 マホガード50
+0x1dc1c4 Magic Guard 50
 
 # reference at main.dol:0x2420a4 (RAM 0x802450a4) [F]
 0x1dc1d4 マホガード60
+0x1dc1d4 Magic Guard 60
 
 # reference at main.dol:0x2420b8 (RAM 0x802450b8) [F]
 0x1dc1e4 マホガード70
+0x1dc1e4 Magic Guard 70
 
 # reference at main.dol:0x2420cc (RAM 0x802450cc) [F]
 0x1dc1f4 マホガード80
+0x1dc1f4 Magic Guard 80
 
 # reference at main.dol:0x2420e0 (RAM 0x802450e0) [F]
 0x1dc204 マホガード90
+0x1dc204 Magic Guard 90
 
 # reference at main.dol:0x2420f4 (RAM 0x802450f4) [F]
 0x1dc214 マホガード100
+0x1dc214 Magic Guard 100
 
 # reference at main.dol:0x242108 (RAM 0x80245108) [F]
 0x1dc228 マホカウンター
+0x1dc228 Magic Counter
 
 # reference at main.dol:0x24211c (RAM 0x8024511c) [F]
 0x1dc238 ガードプール
@@ -4689,6 +4750,7 @@
 
 # reference at main.dol:0x2421a8 (RAM 0x802451a8) [F]
 0x1dc2a4 マホミラー
+0x1dc2a4 Magic Mirror
 
 # reference at main.dol:0x2421bc (RAM 0x802451bc) [F]
 0x1dc2b0 マホカッチン
@@ -4791,6 +4853,7 @@
 
 # reference at main.dol:0x241bcc (RAM 0x80244bcc) [F]
 0x1dc47c スパイラルエッジ
+0x1dc47c Spiral Edge
 
 # reference at main.dol:0x241be0 (RAM 0x80244be0) [F]
 0x1dc490 ビックバンベンバ
@@ -4874,6 +4937,7 @@
 # reference at main.dol:0x23edc8 (RAM 0x80241dc8) [monster]
 # LIMIT 16 glyphs - a fixed-size memcpy copies a redirect stub, not these glyphs
 0x1dc618 キラープラント
+0x1dc618 Killer Plant
 
 # reference at main.dol:0x23ee04 (RAM 0x80241e04) [monster]
 # LIMIT 16 glyphs - a fixed-size memcpy copies a redirect stub, not these glyphs
@@ -4898,6 +4962,7 @@
 # reference at main.dol:0x23ef30 (RAM 0x80241f30) [monster]
 # LIMIT 16 glyphs - a fixed-size memcpy copies a redirect stub, not these glyphs
 0x1dc674 レッドホットバグ
+0x1dc674 Red Hot Bag
 
 # reference at main.dol:0x23ef6c (RAM 0x80241f6c) [monster]
 # LIMIT 16 glyphs - a fixed-size memcpy copies a redirect stub, not these glyphs
@@ -4922,6 +4987,7 @@
 # reference at main.dol:0x23f098 (RAM 0x80242098) [monster]
 # LIMIT 16 glyphs - a fixed-size memcpy copies a redirect stub, not these glyphs
 0x1dc6d4 ヘルビースト
+0x1dc6d4 Hellbeast
 
 # reference at main.dol:0x23f0d4 (RAM 0x802420d4) [monster]
 # LIMIT 16 glyphs - a fixed-size memcpy copies a redirect stub, not these glyphs
@@ -8965,24 +9031,31 @@
 
 # reference at main.dol:0x1d0c50 (RAM 0x801d3c50) [weekday]
 0x27a29c 月
+0x27a29c Monday
 
 # reference at main.dol:0x1d0c54 (RAM 0x801d3c54) [weekday]
 0x27a2a0 火
+0x27a2a0 Tuesday
 
 # reference at main.dol:0x1d0c58 (RAM 0x801d3c58) [weekday]
 0x27a2a4 水
+0x27a2a4 Wednesday
 
 # reference at main.dol:0x1d0c5c (RAM 0x801d3c5c) [weekday]
 0x27a2a8 木
+0x27a2a8 Thursday
 
 # reference at main.dol:0x1d0c60 (RAM 0x801d3c60) [weekday]
 0x27a2ac 金
+0x27a2ac Friday
 
 # reference at main.dol:0x1d0c64 (RAM 0x801d3c64) [weekday]
 0x27a2b0 [Blue Text]土[Normal Color Text]
+0x27a2b0 [Blue Text]Saturday[Normal Color Text]
 
 # reference at main.dol:0x1d0c68 (RAM 0x801d3c68) [weekday]
 0x27a2b8 [Red Text]日[Normal Color Text]
+0x27a2b8 [Red Text]Sunday[Normal Color Text]
 
 # reference at main.dol:0x1d0cf8 (RAM 0x801d3cf8) [A]
 0x27a2c0 人間
@@ -9550,6 +9623,7 @@
 # inline cpuname record 79 at main.dol:0x2450c4 (RAM 0x802480c4)
 # LIMIT 16 glyphs - the record is overwritten with a redirect stub, not with these glyphs
 0x2450c4 OH!セクシ~ 
+0x2450c4 OH!SEXY~
 
 # inline cpuname record 80 at main.dol:0x2450d4 (RAM 0x802480d4)
 # LIMIT 16 glyphs - the record is overwritten with a redirect stub, not with these glyphs
@@ -9578,6 +9652,7 @@
 # inline cpuname record 86 at main.dol:0x245134 (RAM 0x80248134)
 # LIMIT 16 glyphs - the record is overwritten with a redirect stub, not with these glyphs
 0x245134 (^_^)シネ!
+0x245134 (^_^)DIE
 
 # inline cpuname record 87 at main.dol:0x245144 (RAM 0x80248144)
 # LIMIT 16 glyphs - the record is overwritten with a redirect stub, not with these glyphs
@@ -9614,6 +9689,7 @@
 # inline cpuname record 95 at main.dol:0x2451c4 (RAM 0x802481c4)
 # LIMIT 16 glyphs - the record is overwritten with a redirect stub, not with these glyphs
 0x2451c4 あ       
+0x2451c4 A
 
 # inline cpuname record 96 at main.dol:0x2451d4 (RAM 0x802481d4)
 # LIMIT 16 glyphs - the record is overwritten with a redirect stub, not with these glyphs
@@ -9630,6 +9706,7 @@
 # inline cpuname record 99 at main.dol:0x245204 (RAM 0x80248204)
 # LIMIT 16 glyphs - the record is overwritten with a redirect stub, not with these glyphs
 0x245204 100%まけ  
+0x245204 100%LOSR
 
 # NOT extracted, and why:
 # 0x80276370 - not text: 12-word OS interrupt-mask table used by the loop at 0x80145470

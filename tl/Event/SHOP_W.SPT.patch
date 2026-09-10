@@ -5,12 +5,14 @@
 # reference at SHOP_W.SPT:0x466 (cmd 0203 direct, slot 0x46e)
 # reference at SHOP_W.SPT:0xfb6 (cmd 0203 direct, slot 0xfbe)
 0x1aa0 は い[\n]いいえ
+0x1aa0 Yes[\n]No
 
 # reference at SHOP_W.SPT:0x161e (cmd 0303 direct, slot 0x1622)
 0x1ab0  
 
 # reference at SHOP_W.SPT:0x15b8 (cmd 0203 direct, slot 0x15c0)
 0x1ab4 は い[\n]いいえ
+0x1ab4 Yes[\n]No
 
 # reference at SHOP_W.SPT:0xea8 (cmd 0303 direct, slot 0xeac)
 0x1ac4 [0x50c8][0x6018][0x1800]G

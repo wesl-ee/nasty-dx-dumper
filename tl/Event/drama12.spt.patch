@@ -3,13 +3,17 @@
 
 # reference at drama12.spt:0x8 (cmd 0202 direct, slot 0x14)
 0x1306 [0xd034]今さらあやまってもおそいからな![Press A][0xa000][0xd035]オレ様の切りふだを見せてやるぜ![Press A][0xa000][0xd036]いくぜ![Press A]
+0x1306 [0xd034]It's too late to apologize now![Press A][0xa000][0xd035]I'll show you my trump card![Press A][0xa000][0xd036]Let's go![Press A]
 
 # reference at drama12.spt:0x42 (cmd 0303 direct, slot 0x46)
 0x1360 [0xd037]ワルサーさいしゅうおうぎ![Press A][0xa000][0xd038]ワルサーチェーンジ!![Press A]
+0x1360 [0xd037]Final Wallace Technique![Press A][0xa000][0xd038]Wallace Change!![Press A]
 
 # reference at drama12.spt:0x13e (cmd 0202 direct, slot 0x14a)
 0x139c [0xd04b]クックック…[Press A][0xa000][0xd04c]ワレの名はグレートワルサー![Press A]
+0x139c [0xd04b]Heh heh heh...[Press A][0xa000][0xd04c]I am Great Wallace![Press A]
 
 # reference at drama12.spt:0x16a (cmd 0303 direct, slot 0x16e)
 0x13d0 [0xd04d]ワレはムテキ![Press A][0xa000][0xd04e]ゲコどもめがけちらしてくれるわ![Press A]
+0x13d0 [0xd04d]I'm unbeatable![Press A][0xa000][0xd04e]I'll crush you frogs![Press A]
 

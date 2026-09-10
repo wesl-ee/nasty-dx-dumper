@@ -35,20 +35,24 @@
 # reference at CASINO.SPT:0x141e (cmd 0202 direct, slot 0x142a)
 # reference at CASINO.SPT:0x1b62 (cmd 0307-array obj-text[0x1b62], slot 0x1b62)
 0x4a22 プラチナコース[0x50a8]5,000,000G
+0x4a22 Platinum Course[0x50a8]5,000,000G
 
 # reference at CASINO.SPT:0x142c (cmd 0202 direct, slot 0x1438)
 # reference at CASINO.SPT:0x1460 (cmd 0303 direct, slot 0x1464)
 # reference at CASINO.SPT:0x1b64 (cmd 0307-array obj-text[0x1b62], slot 0x1b64)
 0x4a48 ゴールドコース[0x50c8]400,000G
+0x4a48 Gold Course[0x50c8]400,000G
 
 # reference at CASINO.SPT:0x143a (cmd 0202 direct, slot 0x1446)
 # reference at CASINO.SPT:0x1466 (cmd 0303 direct, slot 0x146a)
 # reference at CASINO.SPT:0x1b66 (cmd 0307-array obj-text[0x1b62], slot 0x1b66)
 0x4a6a シルバーコース[0x50d8]30,000G
+0x4a6a Silver Course[0x50d8]30,000G
 
 # reference at CASINO.SPT:0x146c (cmd 0303 direct, slot 0x1470)
 # reference at CASINO.SPT:0x1b68 (cmd 0307-array obj-text[0x1b62], slot 0x1b68)
 0x4a8a ブロンズコース[0x50e6]3,000G
+0x4a8a Bronze Course[0x50e6]3,000G
 
 # reference at CASINO.SPT:0x15f4 (cmd 0303 direct, slot 0x15f8)
 # reference at CASINO.SPT:0x9b2 (cmd 0303 direct, slot 0x9b6)
@@ -79,41 +83,51 @@
 # reference at CASINO.SPT:0x1b6a (cmd 0307-array obj-text[0x1b62], slot 0x1b6a)
 # reference at CASINO.SPT:0x1b6a (cmd 0307-array obj-text[0x1b6a], slot 0x1b6a)
 0x4c32 百万
+0x4c32 1M
 
 # reference at CASINO.SPT:0x1b6c (cmd 0307-array obj-text[0x1b62], slot 0x1b6c)
 # reference at CASINO.SPT:0x1b6c (cmd 0307-array obj-text[0x1b6a], slot 0x1b6c)
 0x4c38 十万
+0x4c38 100K
 
 # reference at CASINO.SPT:0x1b6e (cmd 0307-array obj-text[0x1b62], slot 0x1b6e)
 # reference at CASINO.SPT:0x1b6e (cmd 0307-array obj-text[0x1b6a], slot 0x1b6e)
 0x4c3e 万
+0x4c3e 10K
 
 # reference at CASINO.SPT:0x1b70 (cmd 0307-array obj-text[0x1b62], slot 0x1b70)
 # reference at CASINO.SPT:0x1b70 (cmd 0307-array obj-text[0x1b6a], slot 0x1b70)
 0x4c42 千
+0x4c42 1K
 
 # reference at CASINO.SPT:0x1b72 (cmd 0307-array obj-text[0x1b62], slot 0x1b72)
 # reference at CASINO.SPT:0x1b72 (cmd 0307-array obj-text[0x1b6a], slot 0x1b72)
 0x4c46 百
+0x4c46 100.0
 
 # reference at CASINO.SPT:0x1b74 (cmd 0307-array obj-text[0x1b62], slot 0x1b74)
 # reference at CASINO.SPT:0x1b74 (cmd 0307-array obj-text[0x1b6a], slot 0x1b74)
 0x4c4a 十
+0x4c4a 10.0
 
 # reference at CASINO.SPT:0x1b86 (cmd 0307-array obj-text[0x1b86], slot 0x1b86)
 0x4c4e プラチナ
+0x4c4e Platinum
 
 # reference at CASINO.SPT:0xd74 (cmd 0307-array obj-text[0xd74], slot 0xd74)
 # reference at CASINO.SPT:0x1b88 (cmd 0307-array obj-text[0x1b86], slot 0x1b88)
 0x4c58 ゴールド
+0x4c58 Gold
 
 # reference at CASINO.SPT:0xd76 (cmd 0307-array obj-text[0xd74], slot 0xd76)
 # reference at CASINO.SPT:0x1b8a (cmd 0307-array obj-text[0x1b86], slot 0x1b8a)
 0x4c62 シルバー
+0x4c62 Silver
 
 # reference at CASINO.SPT:0xd78 (cmd 0307-array obj-text[0xd74], slot 0xd78)
 # reference at CASINO.SPT:0x1b8c (cmd 0307-array obj-text[0x1b86], slot 0x1b8c)
 0x4c6c ブロンズ
+0x4c6c Bronze
 
 # reference at CASINO.SPT:0xdfc (cmd 0202 direct, slot 0xe08)
 # reference at CASINO.SPT:0x1142 (cmd 0303 direct, slot 0x1146)

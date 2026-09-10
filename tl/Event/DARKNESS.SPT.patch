@@ -6,7 +6,9 @@
 
 # reference at DARKNESS.SPT:0xdc (cmd 0201 direct, slot 0xe8)
 0xfb6 ウェーバー
+0xfb6 Weber
 
 # reference at DARKNESS.SPT:0xea (cmd 0202 direct, slot 0xf6)
 0xfc2 [0xd0ba]おまえにすばらしいアイテムをくれてやろう[\n]さあ、うけとるがいい[0xa8c8][Press A]
+0xfc2 [0xd0ba]I have an excellent item to give you[\n]Here, take this.[0xa8c8][Press A]
 

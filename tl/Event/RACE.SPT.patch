@@ -8,6 +8,7 @@
 
 # reference at RACE.SPT:0x374 (cmd 0203 direct, slot 0x37c)
 0xd84 は い[\n]いいえ
+0xd84 Yes[\n]No
 
 # reference at RACE.SPT:0x52 (cmd 0202 direct, slot 0x5e)
 # reference at RACE.SPT:0x2f8 (cmd 0303 direct, slot 0x2fc)

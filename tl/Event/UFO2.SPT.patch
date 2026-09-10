@@ -3,7 +3,9 @@
 
 # reference at UFO2.SPT:0x1b8 (cmd 0202 direct, slot 0x1c4)
 0x2ca8 [Blue Text][%0][Normal Color Text]の[\n]全パラメータが[Green Text][0x1000][Normal Color Text]上がった![Press A]
+0x2ca8 [Blue Text][%0][Normal Color Text]'s stats all went[Green Text][0x1000][Normal Color Text]up![Press A]
 
 # reference at UFO2.SPT:0x1ea (cmd 0202 direct, slot 0x1f6)
 0x2cd4 [Blue Text][%0][Normal Color Text]の[\n]全パラメータが[Red Text][0x1000][Normal Color Text]下がった![Press A]
+0x2cd4 [Blue Text][%0][Normal Color Text]'s stats all went[Red Text][0x1000][Normal Color Text]down![Press A]
 

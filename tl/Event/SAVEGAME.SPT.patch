@@ -21,9 +21,11 @@
 
 # reference at SAVEGAME.SPT:0x640 (cmd 0303 direct, slot 0x644)
 0x1962 スロットA
+0x1962 Slot A
 
 # reference at SAVEGAME.SPT:0x678 (cmd 0303 direct, slot 0x67c)
 0x196e スロットB
+0x196e Slot B
 
 # reference at SAVEGAME.SPT:0x13b6 (cmd 0303 direct, slot 0x13ba)
 0x19ba [0xe800][0xe008][0x1002]/[0x1002][0xe008][0x1002]：[0x1002][\n]
@@ -367,8 +369,10 @@
 # reference at SAVEGAME.SPT:0x15d8 (cmd table table[7], slot 0x15d8)
 # reference at SAVEGAME.SPT:0x15d8 (cmd table table[8], slot 0x15d8)
 0x35da [Blue Text]クリアデータ[Normal Color Text]
+0x35da [Blue Text]Clear Data[Normal Color Text]
 
 # reference at SAVEGAME.SPT:0x15a0 (cmd table table[3], slot 0x15a0)
 # reference at SAVEGAME.SPT:0x15a2 (cmd table table[3], slot 0x15a2)
 0x3bb2 ストーリーモード
+0x3bb2 Story Mode
 

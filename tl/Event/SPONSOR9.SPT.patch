@@ -6,4 +6,5 @@
 
 # reference at SPONSOR9.SPT:0x106 (cmd 0303 direct, slot 0x10a)
 0xb88 [0x0c00]今までありがとうございました[0x0d00][Press A]
+0xb88 [0x0c00]Thank you for your help thus far.[0x0d00][Press A]
 

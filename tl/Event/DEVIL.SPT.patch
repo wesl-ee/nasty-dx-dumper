@@ -26,6 +26,7 @@
 
 # reference at DEVIL.SPT:0x218 (cmd 0303 direct, slot 0x21c)
 0x810 [0xd0b9]おくびょう者が・・・[0xa8c8][Press A]
+0x810 [0xd0b9]What a coward...[0xa8c8][Press A]
 
 # reference at DEVIL.SPT:0x116 (cmd 0303 direct, slot 0x11a)
 0x82c おまえの[Red Text]金[Normal Color Text]と[Red Text]持ち物[Normal Color Text]すべてとひきかえに、[\n]暗黑の力を[Blue Text][0x1000][Normal Color Text]日間あたえてやろう[Press A]

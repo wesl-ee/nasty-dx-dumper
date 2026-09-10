@@ -25,24 +25,31 @@
 
 # reference at TORNADO.SPT:0x1b6 (cmd 0307-array obj-text[0x1a4], slot 0x1b6)
 0x2fd6 日
+0x2fd6 Sunday
 
 # reference at TORNADO.SPT:0x1b8 (cmd 0307-array obj-text[0x1a4], slot 0x1b8)
 0x2fda 月
+0x2fda Monday
 
 # reference at TORNADO.SPT:0x1ba (cmd 0307-array obj-text[0x1a4], slot 0x1ba)
 0x2fde 火
+0x2fde Tuesday
 
 # reference at TORNADO.SPT:0x1bc (cmd 0307-array obj-text[0x1a4], slot 0x1bc)
 0x2fe2 水
+0x2fe2 Wednesday
 
 # reference at TORNADO.SPT:0x1be (cmd 0307-array obj-text[0x1a4], slot 0x1be)
 0x2fe6 木
+0x2fe6 Thursday
 
 # reference at TORNADO.SPT:0x1c0 (cmd 0307-array obj-text[0x1a4], slot 0x1c0)
 0x2fea 金
+0x2fea Friday
 
 # reference at TORNADO.SPT:0x1c2 (cmd 0307-array obj-text[0x1a4], slot 0x1c2)
 0x2fee 土
+0x2fee Saturday
 
 # reference at TORNADO.SPT:0x11a (cmd 0303 direct, slot 0x11e)
 0x30ce [0xd0e4][0x0c00]さきほどドカポンきしょうちょうより[\n][Red Text]たつまき[Normal Color Text]けいほうが出されました[0x0d00][Press A]

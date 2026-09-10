@@ -114,6 +114,7 @@
 # reference at ENDING_B.SPT:0x53e (cmd table table[2], slot 0x53e)
 # reference at ENDING_B.SPT:0x53e (cmd 0307-array obj-text[0x52e], slot 0x53e)
 0x3426 Dグッズ
+0x3426 D-Goods
 
 # reference at ENDING_B.SPT:0x594 (cmd 0202 direct, slot 0x5a0)
 0x3960 [0x0c00]一番冬くモンスターをたおした[\n]バトルマスターの[Blue Text][%0][Normal Color Text]には[0x0d00][Press A]

@@ -7,6 +7,7 @@
 
 # reference at MYSTERY.SPT:0x122 (cmd 0203 direct, slot 0x12a)
 0xc9c は い[\n]いいえ
+0xc9c Yes[\n]No
 
 # reference at MYSTERY.SPT:0x1fc (cmd 0303 direct, slot 0x200)
 0xcbe [Blue Text][%0][Normal Color Text]は[\n][Green Text][%0][Normal Color Text]を手に入れた![Press A]

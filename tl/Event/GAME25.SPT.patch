@@ -81,14 +81,17 @@
 # reference at GAME25.SPT:0x794 (cmd table table[2], slot 0x794)
 # reference at GAME25.SPT:0x794 (cmd 0307-array obj-text[0x786], slot 0x794)
 0x33e8 お金
+0x33e8 Money
 
 # reference at GAME25.SPT:0x796 (cmd table table[2], slot 0x796)
 # reference at GAME25.SPT:0x796 (cmd 0307-array obj-text[0x786], slot 0x796)
 0x33ee アイテム
+0x33ee Items
 
 # reference at GAME25.SPT:0x798 (cmd table table[2], slot 0x798)
 # reference at GAME25.SPT:0x798 (cmd 0307-array obj-text[0x786], slot 0x798)
 0x33f8 フィールドまほう
+0x33f8 Field Magic
 
 # reference at GAME25.SPT:0x79a (cmd table table[2], slot 0x79a)
 # reference at GAME25.SPT:0x79a (cmd 0307-array obj-text[0x786], slot 0x79a)
@@ -101,6 +104,7 @@
 # reference at GAME25.SPT:0x79e (cmd table table[2], slot 0x79e)
 # reference at GAME25.SPT:0x79e (cmd 0307-array obj-text[0x786], slot 0x79e)
 0x3416 Dグッズ
+0x3416 D-Goods
 
 # reference at GAME25.SPT:0x7a0 (cmd table table[2], slot 0x7a0)
 # reference at GAME25.SPT:0x7a0 (cmd 0307-array obj-text[0x786], slot 0x7a0)

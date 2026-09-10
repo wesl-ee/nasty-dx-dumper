@@ -3,6 +3,7 @@
 
 # reference at SMITH.SPT:0x362 (cmd 0203 direct, slot 0x36a)
 0xdfc は い[\n]いいえ
+0xdfc Yes[\n]No
 
 # reference at SMITH.SPT:0x568 (cmd 0303 direct, slot 0x56c)
 0xe62 [Blue Text][%0][Normal Color Text]の[\n]こうげき力が[Green Text][0x1000][Normal Color Text]アップした![Press A]

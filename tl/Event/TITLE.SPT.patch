@@ -43,6 +43,7 @@
 # reference at TITLE.SPT:0x303a (cmd 0303 direct, slot 0x303e)
 # reference at TITLE.SPT:0x1eb2 (cmd 0303 direct, slot 0x1eb6)
 0x4ef4 [0x0c00]これでいいかな?[0x0d00]
+0x4ef4 [0x0c00]Is this okay?[0x0d00]
 
 # reference at TITLE.SPT:0x2f6a (cmd 0303 direct, slot 0x2f6e)
 0x4f0a [0x0c00]さいしょからせっていしなおすと[\n]持ち出した物を、ものおきに[\n]もどさなきゃいけないけどいい?[0x0d00]
@@ -135,6 +136,7 @@
 
 # reference at TITLE.SPT:0x3d28 (cmd 0202 direct, slot 0x3d34)
 0x533e [0xb808]セーブする [0xb809]セーブしない
+0x533e [0xb808]Save[0xb809]Don't Save
 
 # reference at TITLE.SPT:0x3b2a (cmd 0303 direct, slot 0x3b2e)
 0x535c [0x0c00][Red Text]セーブしなくていいの?[Normal Color Text][0x0d00]
@@ -464,6 +466,7 @@
 
 # reference at TITLE.SPT:0x10d6 (cmd 0303 direct, slot 0x10da)
 0x6386 [0x0c00]どのデータを見るの?[0x0d00]
+0x6386 [0x0c00]Which data do you want to see?[0x0d00]
 
 # reference at TITLE.SPT:0x110e (cmd 0303 direct, slot 0x1112)
 0x63a0 Lv[0x1002][0xe008][0x2808]
@@ -471,6 +474,7 @@
 # reference at TITLE.SPT:0x3f3e (cmd 0202 direct, slot 0x3f4a)
 # reference at TITLE.SPT:0x418c (cmd 0303 direct, slot 0x4190)
 0x63fa [0x0c00]どのリストを見るの?[0x0d00]
+0x63fa [0x0c00]Which list do you want to see?[0x0d00]
 
 # reference at TITLE.SPT:0x41d4 (cmd 0303 direct, slot 0x41d8)
 # reference at TITLE.SPT:0x2572 (cmd 0303 direct, slot 0x2576)
@@ -490,6 +494,7 @@
 # reference at TITLE.SPT:0x4372 (cmd 0307-array obj-text[0x436a], slot 0x4372)
 # reference at TITLE.SPT:0x4372 (cmd 0307-array obj-text[0x436e], slot 0x4372)
 0x646c Dグッズリスト
+0x646c D-Goods List
 
 # reference at TITLE.SPT:0x128e (cmd 0202 direct, slot 0x129a)
 0x64c4 [0x6004][0xa81c][0x5020]見る[0x6004][0xa819][0xe020]キャンセル[0x6004][0xa81a][0xe020]名前を変える
@@ -790,6 +795,7 @@
 
 # reference at TITLE.SPT:0xe1a (cmd 0303 direct, slot 0xe1e)
 0x7180 [0x7007]スペシャルルール
+0x7180 [0x7007]Special Rules
 
 # reference at TITLE.SPT:0x3080 (cmd 0303 direct, slot 0x3084)
 0x71e8 さぁ、ゲームスタートだよ![Press A]
@@ -798,71 +804,85 @@
 # reference at TITLE.SPT:0x3386 (cmd table table[11], slot 0x3386)
 # cap 8 glyphs: this is a name field, and over the cap the 0x12-byte copy loses its terminator
 0x7260 タップ
+0x7260 Tap
 
 # reference at TITLE.SPT:0x3388 (cmd table table[5], slot 0x3388)
 # reference at TITLE.SPT:0x3388 (cmd table table[11], slot 0x3388)
 # cap 8 glyphs: this is a name field, and over the cap the 0x12-byte copy loses its terminator
 0x7268 ルチル
+0x7268 Luchil
 
 # reference at TITLE.SPT:0x338a (cmd table table[5], slot 0x338a)
 # reference at TITLE.SPT:0x338a (cmd table table[11], slot 0x338a)
 # cap 8 glyphs: this is a name field, and over the cap the 0x12-byte copy loses its terminator
 0x7270 ブリキン
+0x7270 Burikin
 
 # reference at TITLE.SPT:0x338c (cmd table table[5], slot 0x338c)
 # reference at TITLE.SPT:0x338c (cmd table table[11], slot 0x338c)
 # cap 8 glyphs: this is a name field, and over the cap the 0x12-byte copy loses its terminator
 0x727a ガママル
+0x727a Gamamaru
 
 # reference at TITLE.SPT:0x338e (cmd table table[5], slot 0x338e)
 # reference at TITLE.SPT:0x338e (cmd table table[11], slot 0x338e)
 # cap 8 glyphs: this is a name field, and over the cap the 0x12-byte copy loses its terminator
 0x7284 ラズリ
+0x7284 Razuly
 
 # reference at TITLE.SPT:0x3390 (cmd table table[5], slot 0x3390)
 # reference at TITLE.SPT:0x3390 (cmd table table[11], slot 0x3390)
 # cap 8 glyphs: this is a name field, and over the cap the 0x12-byte copy loses its terminator
 0x728c ウィウィ
+0x728c Wiwi
 
 # reference at TITLE.SPT:0x3392 (cmd table table[5], slot 0x3392)
 # reference at TITLE.SPT:0x3392 (cmd table table[11], slot 0x3392)
 # cap 8 glyphs: this is a name field, and over the cap the 0x12-byte copy loses its terminator
 0x7296 ヴィント
+0x7296 Vint
 
 # reference at TITLE.SPT:0x3394 (cmd table table[5], slot 0x3394)
 # reference at TITLE.SPT:0x3394 (cmd table table[11], slot 0x3394)
 # reference at TITLE.SPT:0x3394 (cmd table table[12], slot 0x3394)
 0x72a0 1ターンに[\n][Blue Text]アイテム[Normal Color Text]と[Blue Text]まほう[Normal Color Text]の[\n]りょうほうが便えるよ!
+0x72a0 Can use an [Blue Text]Item[Normal Color Text][\n]and [Blue Text]Magic[Normal Color Text] on the[\n]same turn!
 
 # reference at TITLE.SPT:0x3396 (cmd table table[5], slot 0x3396)
 # reference at TITLE.SPT:0x3396 (cmd table table[11], slot 0x3396)
 # reference at TITLE.SPT:0x3396 (cmd table table[12], slot 0x3396)
 0x72e0 たまに[Blue Text]HP[Normal Color Text]が自動で[\n][Blue Text]かいふく[Normal Color Text]するよ!
+0x72e0 Sometimes [Blue Text]heals[Normal Color Text] lost[\n][Blue Text]HP[Normal Color Text]!
 
 # reference at TITLE.SPT:0x3398 (cmd table table[5], slot 0x3398)
 # reference at TITLE.SPT:0x3398 (cmd table table[11], slot 0x3398)
 # reference at TITLE.SPT:0x3398 (cmd table table[12], slot 0x3398)
 0x730e たまに[Blue Text]ステータス[\n]いじょう[Normal Color Text]が自動で[\n][Blue Text]かいふく[Normal Color Text]するよ!
+0x730e Sometimes [Blue Text]recovers[Normal Color Text] from[\n][Blue Text]Status Ailments[Normal Color Text]!
 
 # reference at TITLE.SPT:0x339a (cmd table table[5], slot 0x339a)
 # reference at TITLE.SPT:0x339a (cmd table table[11], slot 0x339a)
 # reference at TITLE.SPT:0x339a (cmd table table[12], slot 0x339a)
 0x734c 1ターンに[Blue Text]アイテム[Normal Color Text]が[\n][Blue Text]2回[Normal Color Text]便えるよ!
+0x734c Can use [Blue Text]2 Items[Normal Color Text][\n] on the same turn!
 
 # reference at TITLE.SPT:0x339c (cmd table table[5], slot 0x339c)
 # reference at TITLE.SPT:0x339c (cmd table table[11], slot 0x339c)
 # reference at TITLE.SPT:0x339c (cmd table table[12], slot 0x339c)
 0x737a 1ターンに[Blue Text]まほう[Normal Color Text]が[\n][Blue Text]2回[Normal Color Text]便えるよ!
+0x737a Can use [Blue Text]Magic[Normal Color Text][\n] twice on the same turn!
 
 # reference at TITLE.SPT:0x339e (cmd table table[5], slot 0x339e)
 # reference at TITLE.SPT:0x339e (cmd table table[11], slot 0x339e)
 # reference at TITLE.SPT:0x339e (cmd table table[12], slot 0x339e)
 0x73a6 たまに[Blue Text]持ち物[Normal Color Text]が[\n][Blue Text]ぞうしょく[Normal Color Text]するよ!
+0x73a6 Sometimes duplicates something[\n]in your [Blue Text]Inventory[Normal Color Text]!
 
 # reference at TITLE.SPT:0x33a0 (cmd table table[5], slot 0x33a0)
 # reference at TITLE.SPT:0x33a0 (cmd table table[11], slot 0x33a0)
 # reference at TITLE.SPT:0x33a0 (cmd table table[12], slot 0x33a0)
 0x73d2 HPがへればへるほど[\n][Blue Text]パワーアップ[Normal Color Text]するよ!
+0x73d2 Your power increases as HP drops!
 
 # reference at TITLE.SPT:0x3376 (cmd table table[5], slot 0x3376)
 0x7402 [0xa84d]
@@ -889,6 +909,7 @@
 # reference at TITLE.SPT:0x33a2 (cmd table table[11], slot 0x33a2)
 # reference at TITLE.SPT:0x33a2 (cmd table table[12], slot 0x33a2)
 0x741e [0xf018]メモリーカードから[\n]キャラクターをロードする
+0x741e [0xf018]Load character from memory card
 
 # reference at TITLE.SPT:0x58 (cmd 0202 direct, slot 0x64)
 # reference at TITLE.SPT:0x116 (cmd 0202 direct, slot 0x122)

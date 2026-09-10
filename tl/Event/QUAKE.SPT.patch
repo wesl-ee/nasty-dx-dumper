@@ -32,28 +32,35 @@
 # reference at QUAKE.SPT:0x1b8 (cmd table table[2], slot 0x1b8)
 # reference at QUAKE.SPT:0x1b8 (cmd 0307-array obj-text[0x1a6], slot 0x1b8)
 0x2ff6 日
+0x2ff6 Sunday
 
 # reference at QUAKE.SPT:0x1ba (cmd table table[2], slot 0x1ba)
 # reference at QUAKE.SPT:0x1ba (cmd 0307-array obj-text[0x1a6], slot 0x1ba)
 0x2ffa 月
+0x2ffa Monday
 
 # reference at QUAKE.SPT:0x1bc (cmd table table[2], slot 0x1bc)
 # reference at QUAKE.SPT:0x1bc (cmd 0307-array obj-text[0x1a6], slot 0x1bc)
 0x2ffe 火
+0x2ffe Tuesday
 
 # reference at QUAKE.SPT:0x1be (cmd table table[2], slot 0x1be)
 # reference at QUAKE.SPT:0x1be (cmd 0307-array obj-text[0x1a6], slot 0x1be)
 0x3002 水
+0x3002 Wednesday
 
 # reference at QUAKE.SPT:0x1c0 (cmd table table[2], slot 0x1c0)
 # reference at QUAKE.SPT:0x1c0 (cmd 0307-array obj-text[0x1a6], slot 0x1c0)
 0x3006 木
+0x3006 Thursday
 
 # reference at QUAKE.SPT:0x1c2 (cmd table table[2], slot 0x1c2)
 # reference at QUAKE.SPT:0x1c2 (cmd 0307-array obj-text[0x1a6], slot 0x1c2)
 0x300a 金
+0x300a Friday
 
 # reference at QUAKE.SPT:0x1c4 (cmd table table[2], slot 0x1c4)
 # reference at QUAKE.SPT:0x1c4 (cmd 0307-array obj-text[0x1a6], slot 0x1c4)
 0x300e 土
+0x300e Saturday
 

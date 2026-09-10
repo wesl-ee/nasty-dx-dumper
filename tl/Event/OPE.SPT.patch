@@ -3,6 +3,7 @@
 
 # reference at OPE.SPT:0x23a (cmd 0203 direct, slot 0x242)
 0xcdc は い[\n]いいえ
+0xcdc Yes[\n]No
 
 # reference at OPE.SPT:0x56 (cmd 0201 direct, slot 0x62)
 0xed8 Dr.オペ

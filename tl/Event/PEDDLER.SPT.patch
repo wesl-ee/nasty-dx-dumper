@@ -4,9 +4,11 @@
 # reference at PEDDLER.SPT:0xe70 (cmd 0203 direct, slot 0xe78)
 # reference at PEDDLER.SPT:0x996 (cmd 0203 direct, slot 0x99e)
 0x16c0 は い[\n]いいえ
+0x16c0 Yes[\n]No
 
 # reference at PEDDLER.SPT:0x3f2 (cmd 0203 direct, slot 0x3fa)
 0x16d4 は い[\n]いいえ
+0x16d4 Yes[\n]No
 
 # reference at PEDDLER.SPT:0x888 (cmd 0303 direct, slot 0x88c)
 0x16e4 [0x50c8][0x6018][0x1800]G
@@ -19,6 +21,7 @@
 
 # reference at PEDDLER.SPT:0xc4 (cmd 0201 direct, slot 0xd0)
 0x2c02 ガーメッツ
+0x2c02 Gametz
 
 # reference at PEDDLER.SPT:0x66 (cmd 0202 direct, slot 0x72)
 0x2c0e [0xd0ad]まいどー![0xa8c8][Press A]

@@ -76,7 +76,7 @@
 
 # reference at BANK.SPT:0x14c (cmd 0204 direct, slot 0x15c)
 0x2828 [0x0c00]もうしわけございませんが[\n]これいじょう、おあずかりする[\n]ことはできません[0x0d00][Press A]
-0x2828 [0x0c00]Im sorry but we cannot accept any more deposits[0x0d00][Press A]
+0x2828 [0x0c00]I'm sorry but we cannot accept any more deposits[0x0d00][Press A]
 
 # reference at BANK.SPT:0x202 (cmd 0303 direct, slot 0x206)
 0x2878 [0x0c00]あずけるお金は[\n][Blue Text][0x1000][Normal Color Text]Gで[\n]よろしいですか?[0x0d00]
@@ -102,9 +102,11 @@
 
 # reference at BANK.SPT:0x4a2 (cmd 0303 direct, slot 0x4a6)
 0x299e [0x0c00]引き出すお金は[\n][Blue Text][0x1000][Normal Color Text]Gで[\n]よろしいですか?[0x0d00]
+0x299e [0x0c00]Do you want to withdraw[\n][Blue Text][0x1000][Normal Color Text]G?[0x0d00]
 
 # reference at BANK.SPT:0x11a8 (cmd 0202 direct, slot 0x11b4)
 0x29e6 [0xd10e]ありがとうございました[Press A]
+0x29e6 [0xd10e]Thank you very much.[Press A]
 
 # reference at BANK.SPT:0x1734 (cmd 0204 direct, slot 0x1744)
 0x2a10 [0x096a][0x0c00]それでは、こちらのカードを[\n]お持ちください[0x0d00][Press A]
