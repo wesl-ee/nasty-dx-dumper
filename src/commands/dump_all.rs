@@ -182,6 +182,7 @@ fn dump_main_dol(f_path: &PathBuf, out_file: &PathBuf) -> Result<()> {
         .values()
         .map(|(off, _)| *off)
         .chain(imm_refs.keys().copied())
+        .chain(scan.sda.values().map(|s| s.target_off))
         .collect::<Vec<_>>();
     sorted_text_ptrs.sort();
     sorted_text_ptrs.dedup();
@@ -189,8 +190,9 @@ fn dump_main_dol(f_path: &PathBuf, out_file: &PathBuf) -> Result<()> {
     let out_fh = std::fs::File::create(out_file)?;
     let mut out_writer = BufWriter::new(out_fh);
 
-    let refs =
-        all_indexed_ptrs.len() + imm_refs.values().map(Vec::len).sum::<usize>();
+    let refs = all_indexed_ptrs.len()
+        + imm_refs.values().map(Vec::len).sum::<usize>()
+        + scan.sda.len();
     // the inline records are emitted after the loop below, so they are not in
     // sorted_text_ptrs
     let inline: usize = INLINE_FIELDS.iter().map(|f| f.count as usize).sum();
@@ -233,6 +235,17 @@ fn dump_main_dol(f_path: &PathBuf, out_file: &PathBuf) -> Result<()> {
                 r.lo_ram,
                 r.kind.name(),
                 r.hi_ram
+            )?;
+        }
+        let mut sda: Vec<_> =
+            scan.sda.values().filter(|s| s.target_off == text_off).collect();
+        sda.sort_by_key(|s| s.off);
+        for s in sda {
+            writeln!(
+                out_writer,
+                "# reference at main.dol:0x{:x} (RAM 0x{:x}) [addi r{} off the \
+                 small-data base, branched through a cave]",
+                s.off, s.ram, s.reg
             )?;
         }
         match caps.get(&text_off) {
@@ -329,10 +342,11 @@ fn dump_main_dol(f_path: &PathBuf, out_file: &PathBuf) -> Result<()> {
 fn report_imm_scan(scan: &ppc::Scan, usable: &HashMap<u32, Vec<&ppc::ImmRef>>) {
     let reasons = rejected_by_reason(scan);
     eprintln!(
-        "instruction-stream text: {} strings from {} immediate pairs, {} \
-         addressed runs left out",
+        "instruction-stream text: {} strings from {} immediate pairs and {} \
+         small-data sites, {} addressed runs left out",
         usable.len(),
         scan.refs.len(),
+        scan.sda.len(),
         scan.rejected.len()
     );
     for (why, addrs) in reasons {

@@ -426,15 +426,40 @@ pub(crate) const TEXT_TABLES_EXPLICIT: &[TextTable] = &[
 ///
 /// The instruction scan also refuses to treat any of these addresses as a
 /// string, which stops one of them being dragged in as a `lis`/`addi` target.
-pub(crate) const EXCLUDED_NOTES: &[(u32, &[&str])] = &[(
-    0x8027_6370,
-    &[
-        "not text: 12-word OS interrupt-mask table used by the loop at \
+pub(crate) const EXCLUDED_NOTES: &[(u32, &[&str])] = &[
+    (
+        0x8027_6370,
+        &[
+            "not text: 12-word OS interrupt-mask table used by the loop at \
              0x80145470",
-        "its third word begins with 0xF800, which fooled the terminated \
+            "its third word begins with 0xF800, which fooled the terminated \
              glyph checking",
-    ],
-)];
+        ],
+    ),
+    (
+        0x802c_d338,
+        &[
+            "not text: an 8-byte record FUN_8015f43c registers and \
+             FUN_8015f4ac removes; FUN_8016f1e0 widens bytes 0-2 to 16 bits \
+             like colour channels",
+            "its words read as glyphs and run on into こづち at 0x802CD340, \
+             which has its own reference",
+        ],
+    ),
+    (
+        0x802c_d650,
+        &[
+            "not text: byte weights 28 3b 01 for the 3-way weighted roll in \
+             FUN_800602ac, called from FUN_800f1aec",
+            "they read as codes and run on into しつじ at 0x802CD658, which has \
+             its own reference",
+        ],
+    ),
+    (
+        0x802c_d654,
+        &["not text: byte weights 0a 0a for the 2-way roll beside 0x802CD650"],
+    ),
+];
 
 /// A run of fixed-width text records stored inline: no pointer word anywhere,
 /// and no terminator. There is nothing to repoint, so a translation either

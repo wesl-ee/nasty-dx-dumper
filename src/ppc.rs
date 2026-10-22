@@ -92,6 +92,18 @@ pub struct ImmRef {
     pub kind: ImmKind,
 }
 
+/// An `addi rD,r13,d` or `addi rD,r2,d` that builds the address of a glyph
+/// run. The displacement cannot reach the arena, so the patcher replaces the
+/// instruction with a branch to a cave that builds the new address in rD.
+#[derive(Clone, Debug)]
+pub struct SdaRef {
+    pub off: u32,
+    pub ram: u32,
+    pub reg: u8,
+    pub target_off: u32,
+    pub target_ram: u32,
+}
+
 /// A glyph run the code addresses in a way we will not rewrite. Dropped from
 /// the dump even if another site for it looked fine: translating it would
 /// leave the site we cannot rewrite pointing at the Japanese.
@@ -103,6 +115,8 @@ pub struct Rejection {
 pub struct Scan {
     /// pairs we are willing to rewrite, keyed by the low half's file offset.
     pub refs: HashMap<u32, ImmRef>,
+    /// small-data sites we are willing to branch around, keyed by file offset.
+    pub sda: HashMap<u32, SdaRef>,
     /// target RAM address -> why we will not touch it.
     pub rejected: HashMap<u32, Rejection>,
 }
@@ -128,6 +142,7 @@ impl Scan {
 pub fn scan(buf: &[u8], header: &DolHeader) -> Scan {
     let mut scan = Scan {
         refs: HashMap::new(),
+        sda: HashMap::new(),
         rejected: HashMap::new(),
     };
     let targets = branch_targets(buf, header);
@@ -137,6 +152,7 @@ pub fn scan(buf: &[u8], header: &DolHeader) -> Scan {
             continue; // data, not instructions
         }
         let mut regs: [Option<Pending>; 32] = std::array::from_fn(|_| None);
+        let mut sda: [Option<SdaRef>; 32] = std::array::from_fn(|_| None);
 
         for i in (0..section.size).step_by(4) {
             let off = section.file + i;
@@ -162,23 +178,61 @@ pub fn scan(buf: &[u8], header: &DolHeader) -> Scan {
 
             let e = eff(w);
 
-            // an address built off the small-data bases is not a pair we can
-            // move: the displacement is a fixed +-32K window around a register
-            // the init code sets once.
+            // A small-data address is safe to rebuild in a cave only when it
+            // goes straight into a call as an argument: Ghidra's verdicts do not
+            // cover r13/r2 constants, so nothing else proves it is not compared,
+            // stored or stepped through.
+            for (r, site) in sda.iter_mut().enumerate() {
+                let Some(s) = site.take() else { continue };
+                let why = match e.flow {
+                    _ if !e.known || e.reads & (1 << r) != 0 => Some(
+                        "the small-data address is used before it reaches a \
+                         call",
+                    ),
+                    _ if e.writes & (1 << r) != 0 => Some(
+                        "the small-data address is overwritten before it \
+                         reaches a call",
+                    ),
+                    Flow::Call if (3..=10).contains(&r) => None,
+                    Flow::Call => Some(
+                        "the small-data address is held across a call rather \
+                         than passed to it",
+                    ),
+                    Flow::Branch => Some(
+                        "control leaves before the small-data address reaches \
+                         a call",
+                    ),
+                    Flow::Straight => {
+                        *site = Some(s);
+                        continue;
+                    }
+                };
+                match why {
+                    Some(why) => {
+                        scan.rejected.insert(
+                            s.target_ram,
+                            Rejection {
+                                why: why.into(),
+                                at_ram: s.ram,
+                            },
+                        );
+                    }
+                    None => {
+                        scan.sda.insert(s.off, s);
+                    }
+                }
+            }
             if op == 14 && (a == 13 || a == 2) && regs[a].is_none() {
                 let base = if a == 13 { SDA_BASE } else { SDA2_BASE };
                 let t = base.wrapping_add((w & 0xffff) as i16 as i32 as u32);
-                if glyph_run(buf, header, t).is_some() {
-                    scan.rejected.insert(
-                        t,
-                        Rejection {
-                            why: "addressed off the r2/r13 small-data base, \
-                                  whose +-32K displacement cannot reach the \
-                                  arena"
-                                .into(),
-                            at_ram: ram,
-                        },
-                    );
+                if let Some(target_off) = glyph_run(buf, header, t) {
+                    sda[d] = Some(SdaRef {
+                        off,
+                        ram,
+                        reg: d as u8,
+                        target_off,
+                        target_ram: t,
+                    });
                 }
             }
 
@@ -253,6 +307,17 @@ pub fn scan(buf: &[u8], header: &DolHeader) -> Scan {
         for r in regs.iter_mut() {
             retire(r.take(), &targets, &mut scan);
         }
+        for s in sda.iter_mut().filter_map(Option::take) {
+            scan.rejected.insert(
+                s.target_ram,
+                Rejection {
+                    why: "the section ends before the small-data address \
+                          reaches a call"
+                        .into(),
+                    at_ram: s.ram,
+                },
+            );
+        }
     }
 
     // the encoding-level walk above only proves which two words move together.
@@ -286,6 +351,8 @@ pub fn scan(buf: &[u8], header: &DolHeader) -> Scan {
     // a target reached both safely and unsafely is not safe
     scan.refs
         .retain(|_, r| !scan.rejected.contains_key(&r.target_ram));
+    scan.sda
+        .retain(|_, s| !scan.rejected.contains_key(&s.target_ram));
     scan
 }
 

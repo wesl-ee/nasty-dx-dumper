@@ -281,16 +281,22 @@ fn patch_spt_resolvers(
 }
 
 /// Make every reference to one string resolve to `ram`: a pointer word gets
-/// the address, an immediate pair gets both its halves rebuilt.
+/// the address, an immediate pair gets both its halves rebuilt, and a
+/// small-data site is queued in `sda` for a cave once text2 is laid out.
 fn point_at(
     buf: &[u8],
-    imm: &HashMap<u32, ppc::ImmRef>,
+    scan: &ppc::Scan,
     updates: &mut HashMap<u32, u32>,
+    sda: &mut Vec<(u32, u32)>,
     refs: &[u32],
     ram: u32,
 ) {
     for &ref_off in refs {
-        match imm.get(&ref_off) {
+        if scan.sda.contains_key(&ref_off) {
+            sda.push((ref_off, ram));
+            continue;
+        }
+        match scan.refs.get(&ref_off) {
             Some(r) => {
                 let (hi, lo) = ppc::rewrite(
                     word(buf, r.hi_off),
@@ -651,14 +657,17 @@ impl DolPatcher {
         // pairs grouped by the string they build, so an entry's code references
         // come from this DOL rather than from whatever the .patch file happened
         // to record when it was last dumped
-        let imm_by_target: HashMap<u32, Vec<u32>> = scan
+        let mut imm_by_target: HashMap<u32, Vec<u32>> = scan
             .usable()
             .into_iter()
             .map(|(target, refs)| {
                 (target, refs.into_iter().map(|r| r.lo_off).collect())
             })
             .collect();
-        let imm = scan.refs;
+        for s in scan.sda.values() {
+            imm_by_target.entry(s.target_off).or_default().push(s.off);
+        }
+        let imm = &scan.refs;
         for &(ref_off, expected_target) in REVIEWED_IMMEDIATE_REFS {
             let found = imm.get(&ref_off).ok_or_else(|| {
                 anyhow!(
@@ -708,6 +717,9 @@ impl DolPatcher {
         // (references, bank index) and resolve once the base is known.
         let mut bank = LongNameBank::new();
         let mut stub_refs: Vec<(Vec<u32>, u32)> = Vec::new();
+        // (small-data site, new address), built into caves after the redirect
+        // caves once text2 has a base
+        let mut sda_sites = Vec::new();
 
         // sort by og_ptr for deterministic ordering
         let mut entries: Vec<_> = self.tl.values().collect();
@@ -798,7 +810,9 @@ impl DolPatcher {
             for &ref_off in &entry.references {
                 if ref_off >= header.data_start() {
                     all_refs.push(ref_off);
-                } else if !imm.contains_key(&ref_off) {
+                } else if !imm.contains_key(&ref_off)
+                    && !scan.sda.contains_key(&ref_off)
+                {
                     unrewritable.push(format!("0x{ref_off:x}"));
                 }
             }
@@ -849,7 +863,14 @@ impl DolPatcher {
 
             let new_ram = data8_base_ram + appended.len() as u32;
             appended.extend_from_slice(&en_bytes);
-            point_at(&buf, &imm, &mut word_updates, &all_refs, new_ram);
+            point_at(
+                &buf,
+                &scan,
+                &mut word_updates,
+                &mut sda_sites,
+                &all_refs,
+                new_ram,
+            );
         }
 
         // the bank follows every relocated string, so its base is only known
@@ -861,8 +882,9 @@ impl DolPatcher {
         for (refs, idx) in &stub_refs {
             point_at(
                 &buf,
-                &imm,
+                &scan,
                 &mut word_updates,
+                &mut sda_sites,
                 refs,
                 LongNameBank::stub_ram(bank_ram, *idx),
             );
@@ -889,13 +911,30 @@ impl DolPatcher {
             ram: align_32(data8.ram + data8.size),
             size: 0,
         };
-        let caves = install_redirect_caves(
+        let text2_ram = header.sections[TEXT2].ram;
+        let mut caves = install_redirect_caves(
             &buf,
             &header,
             &mut word_updates,
-            header.sections[TEXT2].ram,
+            text2_ram,
             bank_layout.ptrs,
         )?;
+        // `lis rD,hi / ori rD,rD,lo / b site+4`, entered by a branch written
+        // over the site. ori rather than addi, because addi reads r0 as zero
+        for &(site, ram) in &sda_sites {
+            let r = &scan.sda[&site];
+            let cave = text2_ram + caves.len() as u32;
+            let d = (r.reg as u32) << 21;
+            let (hi, lo) = ppc::rewrite(
+                0x3c00_0000 | d,
+                0x6000_0000 | d | d >> 5,
+                ppc::ImmKind::Ori,
+                ram,
+            );
+            let back = ppc::branch(cave + 8, r.ram + 4)?;
+            caves.extend([hi, lo, back].iter().flat_map(|w| w.to_be_bytes()));
+            word_updates.insert(site, ppc::branch(r.ram, cave)?);
+        }
         header.sections[TEXT2].size = caves.len().try_into()?;
 
         let text2 = header.sections[TEXT2];
