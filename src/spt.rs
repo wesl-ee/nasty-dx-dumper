@@ -73,6 +73,17 @@ static TEXT_OPERAND: &[(u16, usize)] = &[
 /// offsets that decode.
 const OBJ_TEXT: u16 = 0x0307;
 const OBJ_TEXT_WORD: usize = 2;
+/// SETV var, value
+const SETV: u16 = 0x0808;
+/// MOVV dst, src
+const MOVV: u16 = 0x0809;
+/// LOADIDX var, table, index: var = table[index], a u16 array in the file
+const LOADIDX: u16 = 0x0813;
+/// STOREFILE dest, var: writes var into the loaded file at dest. A script
+/// routine shared by every caller -- one per character in the drama files, one
+/// per salesman in SPONSOR -- ships its text operand as 0 and has the caller's
+/// offset stored into it first, so the text lives in whatever fed the variable.
+const STOREFILE: u16 = 0x0814;
 /// unconditional jumps: opcode -> operand word holding the u16 target
 static GOTO: &[(u16, usize)] =
     &[(0x0302, 2), (0x0801, 1), (0x0806, 1), (0x080b, 2)];
@@ -502,6 +513,9 @@ pub enum RefKind {
     Table(usize),
     /// slot of an inner table reached through 0x0808's nested arrays
     Native(usize),
+    /// a SETV value or LOADIDX table entry that STOREFILE writes into the text
+    /// operand of the command at `sink`
+    Stored { op: u16, sink: usize },
 }
 
 impl RefKind {
@@ -512,6 +526,7 @@ impl RefKind {
             RefKind::ObjText(_) => format!("{OBJ_TEXT:04x}-array"),
             RefKind::Table(_) => "table".to_string(),
             RefKind::Native(_) => "0808-table".to_string(),
+            RefKind::Stored { op, .. } => format!("{STOREFILE:04x}-{op:04x}"),
         }
     }
 
@@ -523,7 +538,10 @@ impl RefKind {
     /// A table whose extent is recovered by decoding its entries, so a blank
     /// one ends the walk and hides everything after it.
     fn is_walked_table(&self) -> bool {
-        matches!(self, RefKind::Table(_) | RefKind::ObjText(_))
+        matches!(
+            self,
+            RefKind::Table(_) | RefKind::ObjText(_) | RefKind::Stored { .. }
+        )
     }
 }
 
@@ -534,6 +552,7 @@ impl std::fmt::Display for RefKind {
             RefKind::ObjText(base) => write!(f, "obj-text[0x{base:x}]"),
             RefKind::Table(t) => write!(f, "table[{t}]"),
             RefKind::Native(outer) => write!(f, "native-table[0x{outer:x}]"),
+            RefKind::Stored { sink, .. } => write!(f, "stored->0x{sink:x}"),
         }
     }
 }
@@ -795,17 +814,19 @@ fn tables(
     out
 }
 
-/// The strings an `OBJ_TEXT` command's array names.
+/// The strings an array of offsets names: an `OBJ_TEXT` command's, or a
+/// LOADIDX table that feeds a stored text operand.
 ///
 /// The array has no declared length and no terminator, so it runs until a slot
 /// stops looking like one: past the addressable window, into bytes the walk
 /// already claimed as a command, or onto something that does not decode. The
 /// arrays that end early in the file pad with zeros, which the same test
 /// rejects. Every slot is writable, so a translation repoints entries here
-/// exactly the way it does for a directory table.
-fn obj_text_arrays(
+/// exactly the way it does for a directory table. Arrays laid end to end, one
+/// per caller, each stop where the next begins.
+fn arrays(
     buf: &[u8],
-    bases: &[usize],
+    bases: &[(usize, RefKind)],
     lo: usize,
     cmds: &[bool],
     known: &[StringRef],
@@ -814,7 +835,9 @@ fn obj_text_arrays(
     let hi = cmds.len();
     let mut out: Vec<StringRef> = Vec::new();
     let mut seen = HashSet::new();
-    for &base in bases {
+    let starts: HashSet<usize> = bases.iter().map(|&(b, _)| b).collect();
+    for (base, kind) in bases {
+        let base = *base;
         if !seen.insert(base)
             || base % 2 != 0
             || !(lo..hi).contains(&base)
@@ -824,7 +847,8 @@ fn obj_text_arrays(
         }
         for i in 0..MAX_TABLE {
             let slot = base + i * 2;
-            if slot + 2 > hi || cmds[slot] {
+            if slot + 2 > hi || cmds[slot] || (i > 0 && starts.contains(&slot))
+            {
                 break;
             }
             let off = match u16at(buf, slot) {
@@ -853,7 +877,7 @@ fn obj_text_arrays(
                 at: slot,
                 offset: off,
                 end,
-                kind: RefKind::ObjText(base),
+                kind: kind.clone(),
                 slot: Some(slot),
                 jp: render(&codes, glyphs),
             });
@@ -981,6 +1005,50 @@ fn native_tables(
     out
 }
 
+/// Where a variable's value can come from, ignoring control flow.
+#[derive(Clone, Copy, PartialEq, Eq, PartialOrd, Ord)]
+enum Origin {
+    /// the SETV value word at this address
+    Word(usize),
+    /// any entry of the LOADIDX table at this base
+    Table(usize),
+}
+
+/// Every origin each variable can hold: SETV immediates and LOADIDX tables,
+/// carried through MOVV until nothing new arrives.
+fn origins(
+    buf: &[u8],
+    cmds: &BTreeMap<usize, usize>,
+) -> HashMap<u16, BTreeSet<Origin>> {
+    let w = |at: usize, i: usize| u16at(buf, at + i * 2).unwrap_or(0);
+    let mut vars: HashMap<u16, BTreeSet<Origin>> = HashMap::new();
+    let mut moves = Vec::new();
+    for &at in cmds.keys() {
+        let origin = match u16at(buf, at) {
+            Some(SETV) => Origin::Word(at + 4),
+            Some(LOADIDX) => Origin::Table(w(at, 2) as usize),
+            Some(MOVV) => {
+                moves.push((w(at, 1), w(at, 2)));
+                continue;
+            }
+            _ => continue,
+        };
+        vars.entry(w(at, 1)).or_default().insert(origin);
+    }
+    let mut grew = true;
+    while grew {
+        grew = false;
+        for &(dst, src) in &moves {
+            let from = vars.get(&src).cloned().unwrap_or_default();
+            let to = vars.entry(dst).or_default();
+            let n = to.len();
+            to.extend(from);
+            grew |= to.len() > n;
+        }
+    }
+    vars
+}
+
 /// Walk once, then mark every byte of the addressable window that is a command
 /// or a string, and resolve the word that names each string.
 pub fn plan(buf: &[u8], glyphs: &HashMap<u16, String>) -> Plan {
@@ -1004,9 +1072,7 @@ pub fn plan(buf: &[u8], glyphs: &HashMap<u16, String>) -> Plan {
                 Some(s.at + word(TEXT_OPERAND, op).unwrap_or(0) * 2)
             }
             // tables carry their own slot from the moment they are found
-            RefKind::ObjText(_) | RefKind::Table(_) | RefKind::Native(_) => {
-                s.slot
-            }
+            _ => s.slot,
         };
     }
     for s in tables(buf, dir_words, &cmds, &strings, glyphs) {
@@ -1014,24 +1080,84 @@ pub fn plan(buf: &[u8], glyphs: &HashMap<u16, String>) -> Plan {
         claimed[a..b].fill(true);
         strings.push(s);
     }
-    let obj_text_bases: Vec<usize> = stats
-        .cmds
-        .keys()
-        .copied()
-        .filter(|&at| u16at(buf, at) == Some(OBJ_TEXT))
+    let ops = |op: u16| {
+        stats
+            .cmds
+            .keys()
+            .copied()
+            .filter(move |&at| u16at(buf, at) == Some(op))
+    };
+    let mut bases: Vec<(usize, RefKind)> = ops(OBJ_TEXT)
         .filter_map(|at| u16at(buf, at + OBJ_TEXT_WORD * 2).map(usize::from))
+        .map(|base| (base, RefKind::ObjText(base)))
         .collect();
-    for s in obj_text_arrays(
-        buf,
-        &obj_text_bases,
-        dir_words * 2,
-        &cmds,
-        &strings,
-        glyphs,
-    ) {
+    let mut words = Vec::new();
+    let vars = origins(buf, &stats.cmds);
+    for at in ops(STOREFILE) {
+        let (Some(dest), Some(var)) = (u16at(buf, at + 2), u16at(buf, at + 4))
+        else {
+            continue;
+        };
+        let operands = TEXT_OPERAND.iter().chain(&[(OBJ_TEXT, OBJ_TEXT_WORD)]);
+        let Some((sink, op)) = operands.copied().find_map(|(op, i)| {
+            let c = (dest as usize).checked_sub(i * 2)?;
+            (u16at(buf, c) == Some(op) && stats.cmds.contains_key(&c))
+                .then_some((c, op))
+        }) else {
+            continue;
+        };
+        let kind = RefKind::Stored { op, sink };
+        for &origin in vars.get(&var).into_iter().flatten() {
+            match (op, origin) {
+                (OBJ_TEXT, Origin::Word(slot)) => {
+                    let base = u16at(buf, slot).unwrap_or(0) as usize;
+                    bases.push((base, RefKind::ObjText(base)));
+                }
+                // a table of array bases: none in the corpus
+                (OBJ_TEXT, Origin::Table(_)) => {}
+                (_, Origin::Word(slot)) => words.push((slot, kind.clone())),
+                (_, Origin::Table(base)) => bases.push((base, kind.clone())),
+            }
+        }
+    }
+    for s in arrays(buf, &bases, dir_words * 2, &cmds, &strings, glyphs) {
         let (a, b) = (s.offset.min(limit), s.end.min(limit));
         claimed[a..b].fill(true);
         strings.push(s);
+    }
+    // a SETV word is a one-entry array that sits inside its command
+    for (slot, kind) in words {
+        let off = u16at(buf, slot).unwrap_or(0) as usize;
+        if off % 2 != 0
+            || !(dir_words * 2..limit).contains(&off)
+            || cmds[off]
+            || strings.iter().any(|s| s.slot == Some(slot))
+        {
+            continue;
+        }
+        let Some(codes) = read_codes(buf, off, MAX_STR)
+            .filter(|c| count_glyphs(c) > 0 && !c.contains(&END))
+        else {
+            continue;
+        };
+        let end = off + codes.len() * 2 + 2;
+        if end > limit
+            || strings.iter().any(|s| {
+                (off < s.offset && s.offset < end)
+                    || (s.offset < off && off < s.end)
+            })
+        {
+            continue;
+        }
+        claimed[off..end].fill(true);
+        strings.push(StringRef {
+            at: slot - 4,
+            offset: off,
+            end,
+            kind,
+            slot: Some(slot),
+            jp: render(&codes, glyphs),
+        });
     }
     let native_outers: Vec<usize> = stats
         .cmds
@@ -1806,8 +1932,9 @@ mod tests {
             HashMap::from([(1, "A".to_string()), (2, "B".to_string())]);
         let mut cmds = vec![false; buf.len()];
         cmds[..0x10].fill(true);
+        let at = |base| (base, RefKind::ObjText(base));
         let found =
-            obj_text_arrays(&buf, &[0x40, 0x40], 4, &cmds, &[], &glyphs);
+            arrays(&buf, &[at(0x40), at(0x40)], 4, &cmds, &[], &glyphs);
         assert_eq!(
             found
                 .iter()
@@ -1817,7 +1944,7 @@ mod tests {
         );
         // a base the walk already claimed as a command is not an array
         assert!(
-            obj_text_arrays(&buf, &[0x08], 4, &cmds, &[], &glyphs).is_empty()
+            arrays(&buf, &[at(0x08)], 4, &cmds, &[], &glyphs).is_empty()
         );
     }
 }
