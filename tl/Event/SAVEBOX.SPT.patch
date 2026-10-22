@@ -1,4 +1,4 @@
-# SAVEBOX.SPT: 117 strings, 186 references. Translate by repeating the 0xOFFSET line with English.
+# SAVEBOX.SPT: 117 strings, 184 references. Translate by repeating the 0xOFFSET line with English.
 # record cursor 0x59c0, script ends 0x59b4, 42560 bytes of arena shared by every replacement
 
 # reference at SAVEBOX.SPT:0x13a0 (cmd 0203 direct, slot 0x13a8)
@@ -35,9 +35,11 @@
 # reference at SAVEBOX.SPT:0xc4e (cmd 0303 direct, slot 0xc52)
 # reference at SAVEBOX.SPT:0xc8e (cmd 0303 direct, slot 0xc92)
 0x219a [0x0c00][Blue Text][%0][Normal Color Text]さんの[\n]データをセーブするね![\n]どっちにセーブする?[0x0d00]
+0x219a [0x0c00]I'm going to save[\n][Blue Text][%0][Normal Color Text]'s data![\n]Where should it be saved?[0x0d00]
 
 # reference at SAVEBOX.SPT:0x174e (cmd table table[2], slot 0x174e)
 0x21f0 [Normal Color Text]月[Normal Color Text]火[Normal Color Text]水[Normal Color Text]木[Normal Color Text]金[Blue Text]土[Red Text]日
+0x21f0 [Normal Color Text]Mo[Normal Color Text]Tu[Normal Color Text]We[Normal Color Text]Th[Normal Color Text]Fr[Blue Text]Sa[Red Text]Su
 
 # reference at SAVEBOX.SPT:0x1750 (cmd table table[2], slot 0x1750)
 0x222c [0xe800][0xe008][%0]
@@ -47,35 +49,45 @@
 
 # reference at SAVEBOX.SPT:0x1752 (cmd table table[2], slot 0x1752)
 0x2268 はじまりの章
+0x2268 Tutorial
 
 # reference at SAVEBOX.SPT:0x1754 (cmd table table[2], slot 0x1754)
 0x2276 第1章
+0x2276 Chapter 1
 
 # reference at SAVEBOX.SPT:0x1756 (cmd table table[2], slot 0x1756)
 0x227e 第2章
+0x227e Chapter 2
 
 # reference at SAVEBOX.SPT:0x1758 (cmd table table[2], slot 0x1758)
 0x2286 第3章
+0x2286 Chapter 3
 
 # reference at SAVEBOX.SPT:0x175a (cmd table table[2], slot 0x175a)
 0x228e 第4章
+0x228e Chapter 4
 
 # reference at SAVEBOX.SPT:0x175c (cmd table table[2], slot 0x175c)
 0x2296 第5章
+0x2296 Chapter 5
 
 # reference at SAVEBOX.SPT:0x175e (cmd table table[2], slot 0x175e)
 0x229e 鍛終章
+0x229e Final Chapter
 
 # reference at SAVEBOX.SPT:0x1760 (cmd table table[2], slot 0x1760)
 0x22a6 字宙の章
+0x22a6 Space Chapter
 
 # reference at SAVEBOX.SPT:0x1762 (cmd table table[2], slot 0x1762)
 0x22b0 魔界の章
+0x22b0 Darkness Chapter
 
 # reference at SAVEBOX.SPT:0x1764 (cmd table table[2], slot 0x1764)
 0x22ba  
 
 # reference at SAVEBOX.SPT:0xca8 (cmd 0202 direct, slot 0xcb4)
+# reference at SAVEBOX.SPT:0x8f4 (cmd 0814-0202 stored->0xca8, slot 0x8f8)
 0x22be [0xb808]セーブする [0xb809]セーブしない
 0x22be [0xb808]Save [0xb809]Don't Save
 
@@ -264,15 +276,12 @@
 # reference at SAVEBOX.SPT:0x1102 (cmd 0303 direct, slot 0x1106)
 0x33bc [0x0c00]見る物がないよ![0x0d00][Press A]
 
-# reference at SAVEBOX.SPT:0x12ee (cmd 0307-array obj-text[0x12ea], slot 0x12ee)
 # reference at SAVEBOX.SPT:0x12ee (cmd 0307-array obj-text[0x12ee], slot 0x12ee)
 0x33d4 ぶきリスト
 
-# reference at SAVEBOX.SPT:0x12f0 (cmd 0307-array obj-text[0x12ea], slot 0x12f0)
 # reference at SAVEBOX.SPT:0x12f0 (cmd 0307-array obj-text[0x12ee], slot 0x12f0)
 0x33e0 たてリスト
 
-# reference at SAVEBOX.SPT:0x12f2 (cmd 0307-array obj-text[0x12ea], slot 0x12f2)
 # reference at SAVEBOX.SPT:0x12f2 (cmd 0307-array obj-text[0x12ee], slot 0x12f2)
 0x33ec Dグッズリスト
 0x33ec D-Goods List

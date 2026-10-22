@@ -1,4 +1,4 @@
-# Open28.spt: 80 strings, 80 references. Translate by repeating the 0xOFFSET line with English.
+# Open28.spt: 94 strings, 94 references. Translate by repeating the 0xOFFSET line with English.
 # record cursor 0x45e0, script ends 0x45d0, 47648 bytes of arena shared by every replacement
 
 # reference at Open28.spt:0xe (cmd 0202 direct, slot 0x1a)
@@ -70,6 +70,27 @@
 # reference at Open28.spt:0x1e2 (cmd 0303 direct, slot 0x1e6)
 0x2878 [0xd15a]ほうびにすごい大金をだすダバ![Press A][0xa000][0xd15b]やってくれるダバ?[Press A]
 
+# reference at Open28.spt:0xfa2 (cmd 0307-array obj-text[0xfa2], slot 0xfa2)
+0x28b4 [0xd1b8][0x0c00]お金だけなのー?[0x0d00][Press A][0xa000][0xd1b9][0x0c00]もっとちがうものもちょうだいよ![0x0d00][Press A]
+
+# reference at Open28.spt:0xfa4 (cmd 0307-array obj-text[0xfa2], slot 0xfa4)
+0x28f8 [0xd1d9][0x0c00]うそぉ![0x0d00][Press A][0xa000][0xd1da][0x0c00]お金だけですませる気なの?[0x0d00][Press A]
+
+# reference at Open28.spt:0xfa6 (cmd 0307-array obj-text[0xfa2], slot 0xfa6)
+0x292e [0xd219][0x0c00]やだブリー![0x0d00][Press A][0xa000][0xd21a][0x0c00]それじゃやってられないブリー![0x0d00][Press A]
+
+# reference at Open28.spt:0xfa8 (cmd 0307-array obj-text[0xfa2], slot 0xfa8)
+0x296c [0xd239][0x0c00]チッ、たったそれだけでござるか?[0x0d00][Press A][0xa000][0xd23a][0x0c00]せっしゃブルーになるでござるよ[0x0d00][Press A]
+
+# reference at Open28.spt:0xfaa (cmd 0307-array obj-text[0xfa2], slot 0xfaa)
+0x29be [0xd1f9][0x0c00]じょうだんじゃないわ![0x0d00][Press A][0xa000][0xd1fa][0x0c00]私はそんなに安くないわよ![0x0d00][Press A]
+
+# reference at Open28.spt:0xfac (cmd 0307-array obj-text[0xfa2], slot 0xfac)
+0x2a02 [0xd24a][0x0c00]ムカピキューン![0x0d00][\n](そりゃないニャン! ふざけるニャー!)[Press A]
+
+# reference at Open28.spt:0xfae (cmd 0307-array obj-text[0xfa2], slot 0xfae)
+0x2a46 [0xd270][0x0c00]そのていどでオレをやとえると思ったのか?[0x0d00][Press A][0xa000][0xd271][0x0c00]ふざけていると死ぬことになるぞ?[0x0d00][Press A]
+
 # reference at Open28.spt:0x22a (cmd 0202 direct, slot 0x236)
 0x2aa2 [0xd15c]金だけじゃたりないダバ~?[Press A][0xa000][0xd15d]ぜいたくなヤツらダバ[Press A]
 
@@ -81,6 +102,27 @@
 
 # reference at Open28.spt:0x2e6 (cmd 0303 direct, slot 0x2ea)
 0x2b84 [0xd161]それならもんくないダバ?[Press A]
+
+# reference at Open28.spt:0xf94 (cmd 0307-array obj-text[0xf94], slot 0xf94)
+0x2ba2 [0xd1ba][0x0c00]ベクが王様になればドカポン王國は[\n]もっとよくなるよ![0x0d00][Press A][0xa000][0xd1bb][0x0c00]ぜったいベクがやらなきゃ![0x0d00][Press A]
+
+# reference at Open28.spt:0xf96 (cmd 0307-array obj-text[0xf94], slot 0xf96)
+0x2c04 [0xd1db][0x0c00]王様ってどんな気分なのかな~[0x0d00][Press A][0xa000][0xd1dc][0x0c00]一回くらいなってみてもいいかな[0x0d00][Press A]
+
+# reference at Open28.spt:0xf98 (cmd 0307-array obj-text[0xf94], slot 0xf98)
+0x2c52 [0xd21b][0x0c00]それならいいブリ![0x0d00][Press A][0xa000][0xd21c][0x0c00]全部ベクにまかせるブリ[0x0d00][Press A]
+
+# reference at Open28.spt:0xf9a (cmd 0307-array obj-text[0xf94], slot 0xf9a)
+0x2c8e [0xd23b][0x0c00]マジでござるか?[0x0d00][Press A][0xa000][0xd23c][0x0c00]その仕事ひきうけたでござる![0x0d00][Press A]
+
+# reference at Open28.spt:0xf9c (cmd 0307-array obj-text[0xf94], slot 0xf9c)
+0x2cce [0xd1fb][0x0c00]王様になれば世界のおたからは[\n]ぜんぶ私のものになるのね[0x0d00][Press A]
+
+# reference at Open28.spt:0xf9e (cmd 0307-array obj-text[0xf94], slot 0xf9e)
+0x2d0e [0xd250][0x0c00]モニャヤリュニャ![0x0d00][\n](もんだいないニャ! やったるニャン!)[Press A]
+
+# reference at Open28.spt:0xfa0 (cmd 0307-array obj-text[0xf94], slot 0xfa0)
+0x2d54 [0xd272][0x0c00]次の王か・・・わるくないな[0x0d00][Press A][0xa000][0xd273][0x0c00]そのじょうけんのんでやろう[0x0d00][Press A]
 
 # reference at Open28.spt:0x33c (cmd 0202 direct, slot 0x348)
 0x2d9c [0xd162]よしよし、みんなやるダバ[Press A]

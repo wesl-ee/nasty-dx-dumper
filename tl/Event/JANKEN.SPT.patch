@@ -3,6 +3,7 @@
 
 # reference at JANKEN.SPT:0xb2 (cmd 0201 direct, slot 0xbe)
 0x1a0e ジャンキー
+0x1a0e Roshambo
 
 # reference at JANKEN.SPT:0xc0 (cmd 0202 direct, slot 0xcc)
 0x1a1a [0xd0b2][0x0c00]ヤッホー![0x0d00][Press A]

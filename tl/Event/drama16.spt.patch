@@ -1,10 +1,13 @@
-# drama16.spt: 9 strings, 11 references. Translate by repeating the 0xOFFSET line with English.
-# record cursor 0x3ae0, script ends 0x241a, 50464 bytes of arena shared by every replacement
+# drama16.spt: 14 strings, 16 references. Translate by repeating the 0xOFFSET line with English.
+# record cursor 0x3ae0, script ends 0x254e, 50464 bytes of arena shared by every replacement
 
 # reference at drama16.spt:0x62 (cmd 0303 direct, slot 0x66)
 # reference at drama16.spt:0x94 (cmd 0303 direct, slot 0x98)
 # reference at drama16.spt:0xc6 (cmd 0303 direct, slot 0xca)
 0x12a4 [Blue Text][%0][Normal Color Text]は[\n][Green Text][%0][Normal Color Text]を手に入れた![Press A]
+
+# reference at drama16.spt:0x374 (cmd 0814-0303 stored->0xc0c, slot 0x378)
+0x12c6 [0x0c00][Blue Text][%0][Normal Color Text]は[\n]魔王になったからコメントしてあげない![0x0d00][Press A]
 
 # reference at drama16.spt:0x8 (cmd 0202 direct, slot 0x14)
 0x2044 [0x09b0]ありゃあ~、勝っちゃったポヨ[\n]でも、おもしろかったから[\n]チミにはこれをやるポヨ![0x09ff][Press A]
@@ -29,4 +32,16 @@
 
 # reference at drama16.spt:0x3da (cmd 0303 direct, slot 0x3de)
 0x23b6 [0xd095][0x0c00]みんな長い間遊んでくれてありがとう![0x0d00][Press A][0xa000][0xd096][0x0c00]またドカポンで会おうね![0x0d00][Press A][0xa000][0xd097][0x0c00]バイバイ![0x0d00][Press A]
+
+# reference at drama16.spt:0x380 (cmd 0814-0303 stored->0xc0c, slot 0x384)
+0x241a [0xd0a8][0x0c00][Blue Text][%0][Normal Color Text]!! おめでとう![0x0d00][Press A][0xa000][0xd08e][0x0c00]きっとキミが1番になると思ってたよ![0x0d00][Press A]
+
+# reference at drama16.spt:0x390 (cmd 0814-0303 stored->0xc0c, slot 0x394)
+0x246a [0xd093][0x0c00]2番の[Blue Text][%0][Normal Color Text]は[\n]おしかったね[0x0d00][Press A][0xa000][0xd094][0x0c00]次こそ1位だよ![0x0d00][Press A]
+
+# reference at drama16.spt:0x3b2 (cmd 0814-0303 stored->0xc0c, slot 0x3b6)
+0x24aa [0xd091][0x0c00]3番の[Blue Text][%0][Normal Color Text]は[\n]びみょ~だったね[0x0d00][Press A][0xa000][0xd092][0x0c00]次はもっと努力しようね![0x0d00][Press A]
+
+# reference at drama16.spt:0x3c2 (cmd 0814-0303 stored->0xc0c, slot 0x3c6)
+0x24f6 [0xd08f][0x0c00]ビリの[Blue Text][%0][Normal Color Text]は[\n]ぜんぜんダメダメだったね[0x0d00][Press A][0xa000][0xd090][0x0c00]かける言葉もみつからないよ![0x0d00][Press A]
 

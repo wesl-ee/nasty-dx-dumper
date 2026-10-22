@@ -1,8 +1,14 @@
-# DARKNESS.SPT: 3 strings, 3 references. Translate by repeating the 0xOFFSET line with English.
+# DARKNESS.SPT: 5 strings, 5 references. Translate by repeating the 0xOFFSET line with English.
 # record cursor 0x3c60, script ends 0x1008, 50080 bytes of arena shared by every replacement
 
 # reference at DARKNESS.SPT:0x244 (cmd 0202 direct, slot 0x250)
 0xac0  
+
+# reference at DARKNESS.SPT:0x220 (cmd 0814-0303 stored->0x272, slot 0x224)
+0xb3e [Blue Text][%0][Normal Color Text]は[\n][Green Text][%0][Normal Color Text]を手に入れた![Press A]
+
+# reference at DARKNESS.SPT:0x1b4 (cmd 0814-0303 stored->0x272, slot 0x1b8)
+0xb60 [Blue Text][%0][Normal Color Text]は[\n][Red Text][%0][Normal Color Text]を手に入れた![Press A]
 
 # reference at DARKNESS.SPT:0xdc (cmd 0201 direct, slot 0xe8)
 0xfb6 ウェーバー

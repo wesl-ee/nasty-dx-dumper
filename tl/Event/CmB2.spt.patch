@@ -1,5 +1,30 @@
-# CmB2.spt: 3 strings, 3 references. Translate by repeating the 0xOFFSET line with English.
+# CmB2.spt: 9 strings, 10 references. Translate by repeating the 0xOFFSET line with English.
 # record cursor 0x13a0, script ends 0x1254, 60512 bytes of arena shared by every replacement
+
+# reference at CmB2.spt:0xae (cmd 0814-0201 stored->0x96, slot 0xae)
+# reference at CmB2.spt:0xb0 (cmd 0814-0201 stored->0x96, slot 0xb0)
+0x146 [0xb909]えいぎょうマン
+0x146 [0xb909]Businessman
+
+# reference at CmB2.spt:0xb2 (cmd 0814-0201 stored->0x96, slot 0xb2)
+0x158 [0xb90a]えいぎょうマン
+0x158 [0xb90a]Businessman
+
+# reference at CmB2.spt:0xb4 (cmd 0814-0201 stored->0x96, slot 0xb4)
+0x16a [0xb90b]えいぎょうマン
+0x16a [0xb90b]Businessman
+
+# reference at CmB2.spt:0xb6 (cmd 0814-0201 stored->0x96, slot 0xb6)
+0x17c [0xb90c]えいぎょうマン
+0x17c [0xb90c]Businessman
+
+# reference at CmB2.spt:0xb8 (cmd 0814-0201 stored->0x96, slot 0xb8)
+0x18e [0xb90d]えいぎょうマン
+0x18e [0xb90d]Businessman
+
+# reference at CmB2.spt:0xba (cmd 0814-0201 stored->0x96, slot 0xba)
+0x1a0 [0xb90e]えいぎょうマン
+0x1a0 [0xb90e]Businessman
 
 # reference at CmB2.spt:0xcc (cmd 0202 direct, slot 0xd8)
 0x11ac [0xd127][0x0c00]何をやってるんですか![0x0d00][Press A]

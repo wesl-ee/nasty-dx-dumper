@@ -1,8 +1,34 @@
-# SPONSOR9.SPT: 2 strings, 2 references. Translate by repeating the 0xOFFSET line with English.
+# SPONSOR9.SPT: 8 strings, 9 references. Translate by repeating the 0xOFFSET line with English.
 # record cursor 0x13c0, script ends 0x0bac, 60480 bytes of arena shared by every replacement
+
+# reference at SPONSOR9.SPT:0xae (cmd 0814-0201 stored->0x96, slot 0xae)
+# reference at SPONSOR9.SPT:0xb0 (cmd 0814-0201 stored->0x96, slot 0xb0)
+0x166 [0xb909]えいぎょうマン
+0x166 [0xb909]Businessman
+
+# reference at SPONSOR9.SPT:0xb2 (cmd 0814-0201 stored->0x96, slot 0xb2)
+0x178 [0xb90a]えいぎょうマン
+0x178 [0xb90a]Businessman
+
+# reference at SPONSOR9.SPT:0xb4 (cmd 0814-0201 stored->0x96, slot 0xb4)
+0x18a [0xb90b]えいぎょうマン
+0x18a [0xb90b]Businessman
+
+# reference at SPONSOR9.SPT:0xb6 (cmd 0814-0201 stored->0x96, slot 0xb6)
+0x19c [0xb90c]えいぎょうマン
+0x19c [0xb90c]Businessman
+
+# reference at SPONSOR9.SPT:0xb8 (cmd 0814-0201 stored->0x96, slot 0xb8)
+0x1ae [0xb90d]えいぎょうマン
+0x1ae [0xb90d]Businessman
+
+# reference at SPONSOR9.SPT:0xba (cmd 0814-0201 stored->0x96, slot 0xba)
+0x1c0 [0xb90e]えいぎょうマン
+0x1c0 [0xb90e]Businessman
 
 # reference at SPONSOR9.SPT:0xcc (cmd 0202 direct, slot 0xd8)
 0xadc [0x0c00]ざんねんですが、わが社との[Blue Text]ぶき[Normal Color Text]の[\n][Red Text]スポンサーけいやく[Normal Color Text]期間が終わりました[0x0d00][Press A]
+0xadc [0x0c00]Unfortunately, our company's [Red Text]Sponsorship[Normal Color Text][/n]of your [Blue Text]Weapon[Normal Color Text] has reached the end of its term.[0x0d00][Press A]
 
 # reference at SPONSOR9.SPT:0x106 (cmd 0303 direct, slot 0x10a)
 0xb88 [0x0c00]今までありがとうございました[0x0d00][Press A]

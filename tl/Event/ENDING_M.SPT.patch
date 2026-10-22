@@ -1,30 +1,45 @@
-# ENDING_M.SPT: 35 strings, 39 references. Translate by repeating the 0xOFFSET line with English.
+# ENDING_M.SPT: 40 strings, 44 references. Translate by repeating the 0xOFFSET line with English.
 # record cursor 0x42a0, script ends 0x3c9c, 48480 bytes of arena shared by every replacement
 
 # reference at ENDING_M.SPT:0x828 (cmd 0202 direct, slot 0x834)
 # reference at ENDING_M.SPT:0x8a4 (cmd 0202 direct, slot 0x8b0)
 0x1aa0  
 
-# reference at ENDING_M.SPT:0xa06 (cmd 0307-array obj-text[0x9f8], slot 0xa06)
+# reference at ENDING_M.SPT:0x8cc (cmd 0814-0303 stored->0xc6c, slot 0x8d0)
+0x1aa4 [0x0c00][Blue Text][%0][Normal Color Text]は[\n][Fuschia Text]魔王[Normal Color Text]になったからコメントしてあげない![0x0d00][Press A]
+
+# reference at ENDING_M.SPT:0xa06 (cmd 0307-array obj-text[0xa06], slot 0xa06)
 0x20a2 [0xd1bc]う~、もっともっとがんばらなきゃ[Press A]
 
-# reference at ENDING_M.SPT:0xa08 (cmd 0307-array obj-text[0x9f8], slot 0xa08)
+# reference at ENDING_M.SPT:0xa08 (cmd 0307-array obj-text[0xa06], slot 0xa08)
 0x20c8 [0xd1dd]も~う! なんでよ~![Press A]
 
-# reference at ENDING_M.SPT:0xa0a (cmd 0307-array obj-text[0x9f8], slot 0xa0a)
+# reference at ENDING_M.SPT:0xa0a (cmd 0307-array obj-text[0xa06], slot 0xa0a)
 0x20e4 [0xd21d]ネジがぬけてなければ負けなかったブリ![Press A]
 
-# reference at ENDING_M.SPT:0xa0c (cmd 0307-array obj-text[0x9f8], slot 0xa0c)
+# reference at ENDING_M.SPT:0xa0c (cmd 0307-array obj-text[0xa06], slot 0xa0c)
 0x2110 [0xd23d]本気ではなかったんでござるよ![Press A]
 
-# reference at ENDING_M.SPT:0xa0e (cmd 0307-array obj-text[0x9f8], slot 0xa0e)
+# reference at ENDING_M.SPT:0xa0e (cmd 0307-array obj-text[0xa06], slot 0xa0e)
 0x2134 [0xd1fc]こんなことならやるんじゃなかったわ![Press A]
 
-# reference at ENDING_M.SPT:0xa10 (cmd 0307-array obj-text[0x9f8], slot 0xa10)
+# reference at ENDING_M.SPT:0xa10 (cmd 0307-array obj-text[0xa06], slot 0xa10)
 0x215e [0xd255]マキャチャ・・・[\n](なんでまけたのかニャ~・・・)[Press A]
 
-# reference at ENDING_M.SPT:0xa12 (cmd 0307-array obj-text[0x9f8], slot 0xa12)
+# reference at ENDING_M.SPT:0xa12 (cmd 0307-array obj-text[0xa06], slot 0xa12)
 0x2196 [0xd274]これはなにかのまちがいだ![Press A]
+
+# reference at ENDING_M.SPT:0x8d8 (cmd 0814-0303 stored->0xc6c, slot 0x8dc)
+0x22ae [0xd08c][0x0c00]みんなおつかれさま![0x0d00][Press A][0xa000][0xd08d][0x0c00]そして[Blue Text][%0][Normal Color Text]おめでとう![0x0d00][Press A][0xa000][0xd08e][0x0c00]きっとキミが1番になると思ってたよ![0x0d00][Press A]
+
+# reference at ENDING_M.SPT:0x8e8 (cmd 0814-0303 stored->0xc6c, slot 0x8ec)
+0x231c [0xd093][0x0c00]2番の[Blue Text][%0][Normal Color Text]は[\n]おしかったね[0x0d00][Press A][0xa000][0xd094][0x0c00]次こそ1位だよ![0x0d00][Press A]
+
+# reference at ENDING_M.SPT:0x90a (cmd 0814-0303 stored->0xc6c, slot 0x90e)
+0x235c [0xd091][0x0c00]3番の[Blue Text][%0][Normal Color Text]は[\n]びみょ~だったね[0x0d00][Press A][0xa000][0xd092][0x0c00]次はもっと努力しようね![0x0d00][Press A]
+
+# reference at ENDING_M.SPT:0x91a (cmd 0814-0303 stored->0xc6c, slot 0x91e)
+0x23a8 [0xd08f][0x0c00]ビリの[Blue Text][%0][Normal Color Text]は[\n]ぜんぜんダメダメだったね[0x0d00][Press A][0xa000][0xd090][0x0c00]かける言葉もみつからないよ![0x0d00][Press A]
 
 # reference at ENDING_M.SPT:0x46 (cmd 0202 direct, slot 0x52)
 0x34d0 [0xd0a0][0x0c00]ドカポン王國がのっとられちゃったから[\n]ぼくがじゅんい発表をするね[0x0d00][Press A]

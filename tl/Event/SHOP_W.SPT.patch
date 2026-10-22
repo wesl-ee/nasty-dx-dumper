@@ -1,4 +1,4 @@
-# SHOP_W.SPT: 29 strings, 34 references. Translate by repeating the 0xOFFSET line with English.
+# SHOP_W.SPT: 35 strings, 40 references. Translate by repeating the 0xOFFSET line with English.
 # record cursor 0x3240, script ends 0x2f98, 52672 bytes of arena shared by every replacement
 
 # reference at SHOP_W.SPT:0xbf0 (cmd 0203 direct, slot 0xbf8)
@@ -65,17 +65,35 @@
 # reference at SHOP_W.SPT:0x26e (cmd 0303 direct, slot 0x272)
 0x2b90 [0xd114][0x0c00]何がほしいんだ?[0x0d00]
 
+# reference at SHOP_W.SPT:0x200 (cmd 0814-0303 stored->0x106c, slot 0x204)
+0x2ba8 [0x0c00]カードを便うと、ねだんが[\n][Red Text]10%[Normal Color Text]ましだぜ![\n]しはらいはどうするんだ?[0x0d00]
+
 # reference at SHOP_W.SPT:0x2fc (cmd 0303 direct, slot 0x300)
 0x2bf6 [0x0c00]金が足りねーじゃねーか[0x0d00]
 
 # reference at SHOP_W.SPT:0x3e0 (cmd 0303 direct, slot 0x3e4)
 0x2c12 [0x0c00][Blue Text][%0][Normal Color Text]は[\n][Blue Text][0x1000][Normal Color Text]Gだぜ?[0x0d00]
 
+# reference at SHOP_W.SPT:0x2ea (cmd 0814-0303 stored->0xfa8, slot 0x2ee)
+0x2c30 [0x0c00][Blue Text]バーゲンチケット[Normal Color Text]を[\n]便うかい?[0x0d00]
+
 # reference at SHOP_W.SPT:0x550 (cmd 0303 direct, slot 0x554)
 0x2c84 [0x0c00][Blue Text][%0][Normal Color Text]だな![\n]じゃあ、[Blue Text][%0][Normal Color Text]を[\n][Blue Text][0x1000][Normal Color Text]Gで引き取るぜ![0x0d00][Press A]
 
+# reference at SHOP_W.SPT:0x206 (cmd 0814-0303 stored->0xfa8, slot 0x20a)
+0x2cd0 [0x0c00]どのカードを便うんだ?[0x0d00]
+
 # reference at SHOP_W.SPT:0x532 (cmd 0303 direct, slot 0x536)
 0x2cec [0x0c00]今持ってる[Blue Text][%0][Normal Color Text]は[\n][Blue Text]せんり品[Normal Color Text]リストに[\n]送っておくぜ![0x0d00][Press A]
+
+# reference at SHOP_W.SPT:0x3a0 (cmd 0814-0303 stored->0x106c, slot 0x3a4)
+0x2d2c ・・・・・・・・・・[Press A][0xa000]・・・[0x0c00]おいおい[\n]どっかおかしくないか!?[0x0d00][Press A][0xa000][0x0c00]てめぇ![Blue Text][%0][Normal Color Text][\n]じゃねーだろ!?[0x0d00]
+
+# reference at SHOP_W.SPT:0x3b8 (cmd 0814-0303 stored->0x106c, slot 0x3bc)
+0x2d9a ・・・[0x0c00]ん?[0x0d00][Press A][0xa000][0x0c00]このカード[0x0d00]・・・[Press A][0xa000][0x0c00]てめぇのカードじゃねーな![\n]だます気だったな![Press A][0x0d00]
+
+# reference at SHOP_W.SPT:0x3be (cmd 0814-0303 stored->0xfa8, slot 0x3c2)
+0x2dfa [0x0c00]コノヤロー![\n][Red Text]カードさぎ[Normal Color Text]だな![\n]けいさつにつきだしてやる![0x0d00]
 
 # reference at SHOP_W.SPT:0x1ea (cmd 0303 direct, slot 0x1ee)
 0x2e3e ・・・[0x0c00]あやしいやろうだな[0x0d00][Press A][0xa000][0x0c00]あやしい目つきのやつに[\n]何も売る気はないんでな![\n]さぁ掃った! 掃った![0x0d00][Press A]

@@ -1,5 +1,24 @@
-# CM.SPT: 6 strings, 6 references. Translate by repeating the 0xOFFSET line with English.
+# CM.SPT: 12 strings, 13 references. Translate by repeating the 0xOFFSET line with English.
 # record cursor 0x13e0, script ends 0x11ec, 60448 bytes of arena shared by every replacement
+
+# reference at CM.SPT:0xae (cmd 0814-0201 stored->0x96, slot 0xae)
+# reference at CM.SPT:0xb0 (cmd 0814-0201 stored->0x96, slot 0xb0)
+0x186 [0xb909]えいぎょうマン
+
+# reference at CM.SPT:0xb2 (cmd 0814-0201 stored->0x96, slot 0xb2)
+0x198 [0xb90a]えいぎょうマン
+
+# reference at CM.SPT:0xb4 (cmd 0814-0201 stored->0x96, slot 0xb4)
+0x1aa [0xb90b]えいぎょうマン
+
+# reference at CM.SPT:0xb6 (cmd 0814-0201 stored->0x96, slot 0xb6)
+0x1bc [0xb90c]えいぎょうマン
+
+# reference at CM.SPT:0xb8 (cmd 0814-0201 stored->0x96, slot 0xb8)
+0x1ce [0xb90d]えいぎょうマン
+
+# reference at CM.SPT:0xba (cmd 0814-0201 stored->0x96, slot 0xba)
+0x1e0 [0xb90e]えいぎょうマン
 
 # reference at CM.SPT:0xcc (cmd 0202 direct, slot 0xd8)
 0xfa0 [0x0c00]おめでとうございます![0x0d00][Press A]

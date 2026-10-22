@@ -1,4 +1,4 @@
-# SHOP_I.SPT: 28 strings, 32 references. Translate by repeating the 0xOFFSET line with English.
+# SHOP_I.SPT: 32 strings, 38 references. Translate by repeating the 0xOFFSET line with English.
 # record cursor 0x3940, script ends 0x2f0c, 50880 bytes of arena shared by every replacement
 
 # reference at SHOP_I.SPT:0xb50 (cmd 0203 direct, slot 0xb58)
@@ -53,6 +53,7 @@
 0x2984 [0xd11c][0x0c00]どちらをおもとめですか?[0x0d00]
 
 # reference at SHOP_I.SPT:0xfcc (cmd 0303 direct, slot 0xfd0)
+# reference at SHOP_I.SPT:0x202 (cmd 0814-0303 stored->0xfcc, slot 0x206)
 0x29a4 [0x0c00]カードを便うと、ねだんが[\n][Red Text]10%[Normal Color Text]ましになります[\n]おしはらいはどうなさいますか?[0x0d00]
 
 # reference at SHOP_I.SPT:0x3ca (cmd 0303 direct, slot 0x3ce)
@@ -65,14 +66,27 @@
 # reference at SHOP_I.SPT:0x3ec (cmd 0303 direct, slot 0x3f0)
 0x2a44 [0x0c00][Blue Text][%0][Normal Color Text]は[\n][Blue Text][0x1000][Normal Color Text]Gになりますが[\n]よろしいですか?[0x0d00]
 
+# reference at SHOP_I.SPT:0x3b8 (cmd 0814-0303 stored->0xf08, slot 0x3bc)
+0x2a7a [0x0c00][Blue Text]バーゲンチケット[Normal Color Text]を[\n]便いますか?[0x0d00]
+
 # reference at SHOP_I.SPT:0x514 (cmd 0202 direct, slot 0x520)
 0x2aa4 [0xd11e][0x0c00]ありがとうございます[0x0d00][Press A]
 
 # reference at SHOP_I.SPT:0x10ae (cmd 0303 direct, slot 0x10b2)
+# reference at SHOP_I.SPT:0x208 (cmd 0814-0303 stored->0xf08, slot 0x20c)
 0x2b00 [0x0c00]どのカードを便いますか?[0x0d00]
 
 # reference at SHOP_I.SPT:0x1ec (cmd 0303 direct, slot 0x1f0)
 0x2b2e [0x0c00]・・・おきゃく様[0x0d00][Press A][0xa000][0x0c00]もうしわけございませんが[\n]あやしい目つきのかたに[\n]お売りすることはできません[0x0d00][Press A]
+
+# reference at SHOP_I.SPT:0x38c (cmd 0814-0303 stored->0xfcc, slot 0x390)
+0x2b9a ・・・・・・・・・・[Press A][0xa000]・・・[0x0c00]へんです[\n]どこかまちがってます![0x0d00][Press A][0xa000][0x0c00]あなた![\n][Blue Text][%0][Normal Color Text]さん[\n]ではないですね!?[Press A][0x0d00]
+
+# reference at SHOP_I.SPT:0x3a4 (cmd 0814-0303 stored->0xfcc, slot 0x3a8)
+0x2c10 ・・・[0x0c00]あら?[0x0d00][Press A][0xa000][0x0c00]そのカード[0x0d00]・・・[Press A][0xa000][0x0c00]あなたのものでは[\n]ないじゃないですか!?[Press A][0x0d00]
+
+# reference at SHOP_I.SPT:0x3aa (cmd 0814-0303 stored->0xf08, slot 0x3ae)
+0x2c6c [0x0c00]だれかーッ!![\n]けいさつをよんでください![\n][Red Text]カードさぎ[Normal Color Text]です![0x0d00]
 
 # reference at SHOP_I.SPT:0x6ce (cmd 0303 direct, slot 0x6d2)
 0x2cb2 [0x0c00]売れる物がないようですが[0x0d00][Press A]

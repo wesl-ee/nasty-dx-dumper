@@ -1,4 +1,4 @@
-# NEWWPN.SPT: 14 strings, 14 references. Translate by repeating the 0xOFFSET line with English.
+# NEWWPN.SPT: 20 strings, 21 references. Translate by repeating the 0xOFFSET line with English.
 # record cursor 0x1560, script ends 0x106e, 60064 bytes of arena shared by every replacement
 
 # reference at NEWWPN.SPT:0x1ea (cmd 0202 direct, slot 0x1f6)
@@ -6,6 +6,25 @@
 
 # reference at NEWWPN.SPT:0x146 (cmd 0303 direct, slot 0x14a)
 0x2e4 [Blue Text][%0][Normal Color Text]は[\n][Green Text][%0][Normal Color Text]を手に入れた![Press A]
+
+# reference at NEWWPN.SPT:0xb6 (cmd 0814-0201 stored->0x9e, slot 0xb6)
+# reference at NEWWPN.SPT:0xb8 (cmd 0814-0201 stored->0x9e, slot 0xb8)
+0x306 [0xb909]えいぎょうマン
+
+# reference at NEWWPN.SPT:0xba (cmd 0814-0201 stored->0x9e, slot 0xba)
+0x318 [0xb90a]えいぎょうマン
+
+# reference at NEWWPN.SPT:0xbc (cmd 0814-0201 stored->0x9e, slot 0xbc)
+0x32a [0xb90b]えいぎょうマン
+
+# reference at NEWWPN.SPT:0xbe (cmd 0814-0201 stored->0x9e, slot 0xbe)
+0x33c [0xb90c]えいぎょうマン
+
+# reference at NEWWPN.SPT:0xc0 (cmd 0814-0201 stored->0x9e, slot 0xc0)
+0x34e [0xb90d]えいぎょうマン
+
+# reference at NEWWPN.SPT:0xc2 (cmd 0814-0201 stored->0x9e, slot 0xc2)
+0x360 [0xb90e]えいぎょうマン
 
 # reference at NEWWPN.SPT:0x262 (cmd 0303 direct, slot 0x266)
 0x53c [0xd125][0x0c00]イヤー、よかった[0x0d00][Press A]

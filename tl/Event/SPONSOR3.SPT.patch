@@ -1,8 +1,33 @@
-# SPONSOR3.SPT: 13 strings, 13 references. Translate by repeating the 0xOFFSET line with English.
+# SPONSOR3.SPT: 19 strings, 20 references. Translate by repeating the 0xOFFSET line with English.
 # record cursor 0x14e0, script ends 0x0760, 60192 bytes of arena shared by every replacement
 
 # reference at SPONSOR3.SPT:0x1d2 (cmd 0303 direct, slot 0x1d6)
 0x260  
+
+# reference at SPONSOR3.SPT:0xae (cmd 0814-0201 stored->0x96, slot 0xae)
+# reference at SPONSOR3.SPT:0xb0 (cmd 0814-0201 stored->0x96, slot 0xb0)
+0x286 [0xb909]えいぎょうマン
+0x286 [0xb909]Businessman
+
+# reference at SPONSOR3.SPT:0xb2 (cmd 0814-0201 stored->0x96, slot 0xb2)
+0x298 [0xb90a]えいぎょうマン
+0x298 [0xb90a]Businessman
+
+# reference at SPONSOR3.SPT:0xb4 (cmd 0814-0201 stored->0x96, slot 0xb4)
+0x2aa [0xb90b]えいぎょうマン
+0x2aa [0xb90b]Businessman
+
+# reference at SPONSOR3.SPT:0xb6 (cmd 0814-0201 stored->0x96, slot 0xb6)
+0x2bc [0xb90c]えいぎょうマン
+0x2bc [0xb90c]Businessman
+
+# reference at SPONSOR3.SPT:0xb8 (cmd 0814-0201 stored->0x96, slot 0xb8)
+0x2ce [0xb90d]えいぎょうマン
+0x2ce [0xb90d]Businessman
+
+# reference at SPONSOR3.SPT:0xba (cmd 0814-0201 stored->0x96, slot 0xba)
+0x2e0 [0xb90e]えいぎょうマン
+0x2e0 [0xb90e]Businessman
 
 # reference at SPONSOR3.SPT:0xca (cmd 0202 direct, slot 0xd6)
 0x2f2 [0xd124][0x0c00]はじめまして[0x0d00][Press A]

@@ -1,9 +1,10 @@
-# SAVEGAME.SPT: 68 strings, 235 references. Translate by repeating the 0xOFFSET line with English.
+# SAVEGAME.SPT: 70 strings, 237 references. Translate by repeating the 0xOFFSET line with English.
 # record cursor 0x51a0, script ends 0x3bc4, 44640 bytes of arena shared by every replacement
 
 # reference at SAVEGAME.SPT:0x910 (cmd 0203 direct, slot 0x918)
 # reference at SAVEGAME.SPT:0x1200 (cmd 0203 direct, slot 0x1208)
 0x1640 は い[\n]いいえ
+0x1640 Yes[\n]No
 
 # reference at SAVEGAME.SPT:0x8e (cmd 0202 direct, slot 0x9a)
 # reference at SAVEGAME.SPT:0x144a (cmd 0303 direct, slot 0x144e)
@@ -19,6 +20,9 @@
 # reference at SAVEGAME.SPT:0xf0 (cmd 0303 direct, slot 0xf4)
 0x18da [0x0c00][Blue Text]クリアデータ[Normal Color Text]をセーブしないと[\n][Blue Text]こじんデータ[Normal Color Text]のセーブが[\n]やりなおせなくなるよ![0x0d00][Press A]
 
+# reference at SAVEGAME.SPT:0xd6 (cmd 0814-0303 stored->0x25a, slot 0xda)
+0x1936 [0x0c00]どっちのメモリーカードに[\n]セーブする?[0x0d00]
+
 # reference at SAVEGAME.SPT:0x640 (cmd 0303 direct, slot 0x644)
 0x1962 スロットA
 0x1962 Slot A
@@ -33,9 +37,11 @@
 # reference at SAVEGAME.SPT:0x15ae (cmd table table[2], slot 0x15ae)
 # reference at SAVEGAME.SPT:0x15ae (cmd table table[3], slot 0x15ae)
 0x19d0 [Normal Color Text]月[Normal Color Text]火[Normal Color Text]水[Normal Color Text]木[Normal Color Text]金[Blue Text]土[Red Text]日
+0x19d0 [Normal Color Text]Mo[Normal Color Text]Tu[Normal Color Text]We[Normal Color Text]Th[Normal Color Text]Fr[Blue Text]Sa[Red Text]Su
 
 # reference at SAVEGAME.SPT:0x13f6 (cmd 0303 direct, slot 0x13fa)
 0x19ee 週([%0][Normal Color Text])[0xe008]次は[0xe800][0xe008]の番です
+0x19ee Week([%0][Normal Color Text])[0xe008]Next is [0xe800][0xe008]'s turn
 
 # reference at SAVEGAME.SPT:0x15b0 (cmd table table[2], slot 0x15b0)
 # reference at SAVEGAME.SPT:0x15b0 (cmd table table[3], slot 0x15b0)
@@ -45,46 +51,55 @@
 # reference at SAVEGAME.SPT:0x15b2 (cmd table table[3], slot 0x15b2)
 # reference at SAVEGAME.SPT:0x15b2 (cmd table table[8], slot 0x15b2)
 0x1a48 はじまりの章
+0x1a48 Tutorial
 
 # reference at SAVEGAME.SPT:0x15b4 (cmd table table[2], slot 0x15b4)
 # reference at SAVEGAME.SPT:0x15b4 (cmd table table[3], slot 0x15b4)
 # reference at SAVEGAME.SPT:0x15b4 (cmd table table[8], slot 0x15b4)
 0x1a56 第1章
+0x1a56 Chapter 1
 
 # reference at SAVEGAME.SPT:0x15b6 (cmd table table[2], slot 0x15b6)
 # reference at SAVEGAME.SPT:0x15b6 (cmd table table[3], slot 0x15b6)
 # reference at SAVEGAME.SPT:0x15b6 (cmd table table[8], slot 0x15b6)
 0x1a5e 第2章
+0x1a5e Chapter 2
 
 # reference at SAVEGAME.SPT:0x15b8 (cmd table table[2], slot 0x15b8)
 # reference at SAVEGAME.SPT:0x15b8 (cmd table table[3], slot 0x15b8)
 # reference at SAVEGAME.SPT:0x15b8 (cmd table table[8], slot 0x15b8)
 0x1a66 第3章
+0x1a66 Chapter 3
 
 # reference at SAVEGAME.SPT:0x15ba (cmd table table[2], slot 0x15ba)
 # reference at SAVEGAME.SPT:0x15ba (cmd table table[3], slot 0x15ba)
 # reference at SAVEGAME.SPT:0x15ba (cmd table table[8], slot 0x15ba)
 0x1a6e 第4章
+0x1a6e Chapter 4
 
 # reference at SAVEGAME.SPT:0x15bc (cmd table table[2], slot 0x15bc)
 # reference at SAVEGAME.SPT:0x15bc (cmd table table[3], slot 0x15bc)
 # reference at SAVEGAME.SPT:0x15bc (cmd table table[8], slot 0x15bc)
 0x1a76 第5章
+0x1a76 Chapter 5
 
 # reference at SAVEGAME.SPT:0x15be (cmd table table[2], slot 0x15be)
 # reference at SAVEGAME.SPT:0x15be (cmd table table[3], slot 0x15be)
 # reference at SAVEGAME.SPT:0x15be (cmd table table[8], slot 0x15be)
 0x1a7e 鍛終章
+0x1a7e Final Chapter
 
 # reference at SAVEGAME.SPT:0x15c0 (cmd table table[2], slot 0x15c0)
 # reference at SAVEGAME.SPT:0x15c0 (cmd table table[3], slot 0x15c0)
 # reference at SAVEGAME.SPT:0x15c0 (cmd table table[8], slot 0x15c0)
 0x1a86 字宙の章
+0x1a86 Space Chapter
 
 # reference at SAVEGAME.SPT:0x15c2 (cmd table table[2], slot 0x15c2)
 # reference at SAVEGAME.SPT:0x15c2 (cmd table table[3], slot 0x15c2)
 # reference at SAVEGAME.SPT:0x15c2 (cmd table table[8], slot 0x15c2)
 0x1a90 魔界の章
+0x1a90 Darkness Chapter
 
 # reference at SAVEGAME.SPT:0x15c4 (cmd table table[2], slot 0x15c4)
 # reference at SAVEGAME.SPT:0x15c4 (cmd table table[3], slot 0x15c4)
@@ -93,6 +108,9 @@
 
 # reference at SAVEGAME.SPT:0x90a (cmd 0303 direct, slot 0x90e)
 0x1abc [0x0c00][Red Text]セーブしなくていいの?[Normal Color Text][0x0d00]
+
+# reference at SAVEGAME.SPT:0x176 (cmd 0814-0303 stored->0x25a, slot 0x17a)
+0x1bc2 [0x0c00]どのファイルにセーブする?[0x0d00]
 
 # reference at SAVEGAME.SPT:0xca2 (cmd 0303 direct, slot 0xca6)
 # reference at SAVEGAME.SPT:0xc72 (cmd 0303 direct, slot 0xc76)

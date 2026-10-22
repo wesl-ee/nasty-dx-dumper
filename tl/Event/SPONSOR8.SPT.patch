@@ -1,5 +1,30 @@
-# SPONSOR8.SPT: 2 strings, 2 references. Translate by repeating the 0xOFFSET line with English.
+# SPONSOR8.SPT: 8 strings, 9 references. Translate by repeating the 0xOFFSET line with English.
 # record cursor 0x13c0, script ends 0x0adc, 60480 bytes of arena shared by every replacement
+
+# reference at SPONSOR8.SPT:0xae (cmd 0814-0201 stored->0x96, slot 0xae)
+# reference at SPONSOR8.SPT:0xb0 (cmd 0814-0201 stored->0x96, slot 0xb0)
+0x166 [0xb909]えいぎょうマン
+0x166 [0xb909]Businessman
+
+# reference at SPONSOR8.SPT:0xb2 (cmd 0814-0201 stored->0x96, slot 0xb2)
+0x178 [0xb90a]えいぎょうマン
+0x178 [0xb90a]Businessman
+
+# reference at SPONSOR8.SPT:0xb4 (cmd 0814-0201 stored->0x96, slot 0xb4)
+0x18a [0xb90b]えいぎょうマン
+0x18a [0xb90b]Businessman
+
+# reference at SPONSOR8.SPT:0xb6 (cmd 0814-0201 stored->0x96, slot 0xb6)
+0x19c [0xb90c]えいぎょうマン
+0x19c [0xb90c]Businessman
+
+# reference at SPONSOR8.SPT:0xb8 (cmd 0814-0201 stored->0x96, slot 0xb8)
+0x1ae [0xb90d]えいぎょうマン
+0x1ae [0xb90d]Businessman
+
+# reference at SPONSOR8.SPT:0xba (cmd 0814-0201 stored->0x96, slot 0xba)
+0x1c0 [0xb90e]えいぎょうマン
+0x1c0 [0xb90e]Businessman
 
 # reference at SPONSOR8.SPT:0xd4 (cmd 0202 direct, slot 0xe0)
 0xa18 [0x0c00]おや? その[Red Text][%0][Normal Color Text]は[\n]かいぞうしてありますね[0x0d00][Press A]
