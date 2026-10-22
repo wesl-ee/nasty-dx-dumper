@@ -9,8 +9,8 @@ use std::{
 use anyhow::Result;
 
 use crate::constants::{
-    NameCap, EXCLUDED_NOTES, INLINE_FIELDS, LONG_NAME_GLYPHS,
-    TEXT_TABLES_EXPLICIT, WALKING_TABLES,
+    NameCap, INLINE_FIELDS, LONG_NAME_GLYPHS, TEXT_TABLES_EXPLICIT,
+    WALKING_TABLES,
 };
 use crate::shape::DolHeader;
 use crate::utils::load_character_table;
@@ -311,12 +311,6 @@ fn dump_main_dol(f_path: &PathBuf, out_file: &PathBuf) -> Result<()> {
     // wall of addresses. `load_patch` only reads "# reference at" and "0x"
     // lines, so these are inert.
     writeln!(out_writer, "# NOT extracted, and why:")?;
-    for (addr, note) in EXCLUDED_NOTES {
-        writeln!(out_writer, "# 0x{addr:08X} - {}", note[0])?;
-        for line in &note[1..] {
-            writeln!(out_writer, "#   {line}")?;
-        }
-    }
     for (why, addrs) in rejected_by_reason(&scan) {
         writeln!(
             out_writer,

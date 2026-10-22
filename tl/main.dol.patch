@@ -1,4 +1,4 @@
-# main.dol: 2697 strings, 3365 references. Translate by repeating the 0xOFFSET line with English.
+# main.dol: 2705 strings, 3379 references. Translate by repeating the 0xOFFSET line with English.
 # every string is relocated into a section appended to the DOL, so a translation may grow freely except where a LIMIT line says otherwise.
 # text left in Japanese is listed at the bottom of this file.
 
@@ -6170,6 +6170,36 @@
 
 # reference at main.dol:0xad078 (RAM 0x800bd338) [addi paired with the lis at RAM 0x800bd334]
 0x243500 [Blue Text][%0][Normal Color Text]が[Blue Text][%0][Normal Color Text]の[\n]HPを[Green Text][0x1000][Normal Color Text]かいふくした![Press A]
+
+# reference at main.dol:0xacfa0 (RAM 0x800bd260) [addi paired with the lis at RAM 0x800bd25c]
+0x243530 [Blue Text][%0][Normal Color Text]は[Blue Text][%0][Normal Color Text]のこうかで[\n][Green Text]全ステータスいじょう[Normal Color Text]がかいふくした![Press A]
+
+# reference at main.dol:0xacd34 (RAM 0x800bcff4) [addi paired with the lis at RAM 0x800bcff0]
+0x243578 [Blue Text][%0][Normal Color Text]は[Blue Text][%0][Normal Color Text]のこうかで[\n][Red Text]こうさん[Normal Color Text]できない![Press A]
+
+# reference at main.dol:0xacbe0 (RAM 0x800bcea0) [addi paired with the lis at RAM 0x800bce9c]
+# reference at main.dol:0xacc0c (RAM 0x800bcecc) [addi paired with the lis at RAM 0x800bcec8]
+# reference at main.dol:0xacdd4 (RAM 0x800bd094) [addi paired with the lis at RAM 0x800bd090]
+# reference at main.dol:0xacf38 (RAM 0x800bd1f8) [addi paired with the lis at RAM 0x800bd1f4]
+0x2435ac [Blue Text][%0][Normal Color Text]は[Blue Text][%0][Normal Color Text]のこうかで[\n][Green Text]こうげき力[Normal Color Text]がアップした![Press A]
+
+# reference at main.dol:0xacdc4 (RAM 0x800bd084) [addi paired with the lis at RAM 0x800bd080]
+0x2435e8 [Blue Text][%0][Normal Color Text]は[Blue Text][%0][Normal Color Text]のこうかで[\n][Red Text]こうげき力[Normal Color Text]がダウンした![Press A]
+
+# reference at main.dol:0xace34 (RAM 0x800bd0f4) [addi paired with the lis at RAM 0x800bd0f0]
+0x243624 [Blue Text][%0][Normal Color Text]は[Blue Text][%0][Normal Color Text]のこうかで[\n][Red Text]こうげき力[Normal Color Text]がダウン、[Green Text]まりょく[Normal Color Text]がアップした![Press A]
+
+# reference at main.dol:0xacc38 (RAM 0x800bcef8) [addi paired with the lis at RAM 0x800bcef4]
+# reference at main.dol:0xacc64 (RAM 0x800bcf24) [addi paired with the lis at RAM 0x800bcf20]
+# reference at main.dol:0xacc90 (RAM 0x800bcf50) [addi paired with the lis at RAM 0x800bcf4c]
+0x243674 [Blue Text][%0][Normal Color Text]は[Blue Text][%0][Normal Color Text]のこうかで[\n][Green Text]ぼうぎょ力[Normal Color Text]がアップした![Press A]
+
+# reference at main.dol:0xacce8 (RAM 0x800bcfa8) [addi paired with the lis at RAM 0x800bcfa4]
+0x2436b0 [Blue Text][%0][Normal Color Text]は[Blue Text][%0][Normal Color Text]のこうかで[\n][Green Text]まりょく[Normal Color Text]がアップした![Press A]
+
+# reference at main.dol:0xaccbc (RAM 0x800bcf7c) [addi paired with the lis at RAM 0x800bcf78]
+# reference at main.dol:0xacf08 (RAM 0x800bd1c8) [addi paired with the lis at RAM 0x800bd1c4]
+0x2436e8 [Blue Text][%0][Normal Color Text]は[Blue Text][%0][Normal Color Text]のこうかで[\n][Green Text]すばやさ[Normal Color Text]がアップした![Press A]
 
 # reference at main.dol:0x6b06c (RAM 0x8007b32c) [addi paired with the lis at RAM 0x8007b328]
 0x243720 [Blue Text][%0][Normal Color Text]発動中!

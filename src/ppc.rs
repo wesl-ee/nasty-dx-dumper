@@ -18,18 +18,14 @@ use crate::shape::DolHeader;
 const SDA_BASE: u32 = 0x802d4e00;
 const SDA2_BASE: u32 = 0x802d6920;
 
-/// A run this long is not a string; the longest the game ships is 163 glyphs.
-const MAX_GLYPHS: u32 = 4096;
-
-const TERMINATOR: u16 = 0xf800;
-
 /// The reverse-engineered verdict for every address the code materialises as a
 /// constant, keyed by RAM address.
 const TEXT_REFS: &str = include_str!("../data/text-refs.json");
 
-/// Addresses `text-refs.json` says can be moved, and the reason for those it
-/// says cannot.
-fn relocatable_constants() -> (HashSet<u32>, HashMap<u32, String>) {
+/// Addresses `text-refs.json` says reach the renderer, those it says can be
+/// moved, and the reason for those it says cannot.
+fn text_refs() -> (HashSet<u32>, HashSet<u32>, HashMap<u32, String>) {
+    let mut text = HashSet::new();
     let mut ok = HashSet::new();
     let mut blocked = HashMap::new();
     for line in TEXT_REFS.lines() {
@@ -43,6 +39,9 @@ fn relocatable_constants() -> (HashSet<u32>, HashMap<u32, String>) {
         let Ok(addr) = u32::from_str_radix(addr, 16) else {
             continue;
         };
+        if body.contains("\"reaches_renderer\": true") {
+            text.insert(addr);
+        }
         if body.contains("\"relocatable\": true") {
             ok.insert(addr);
         } else {
@@ -60,7 +59,7 @@ fn relocatable_constants() -> (HashSet<u32>, HashMap<u32, String>) {
         ok.len(),
         blocked.len()
     );
-    (ok, blocked)
+    (text, ok, blocked)
 }
 
 #[derive(Clone, Copy, PartialEq, Eq, Debug)]
@@ -146,6 +145,7 @@ pub fn scan(buf: &[u8], header: &DolHeader) -> Scan {
         rejected: HashMap::new(),
     };
     let targets = branch_targets(buf, header);
+    let (text, ok, blocked) = text_refs();
 
     for section in header.live() {
         if section.file >= header.data_start() {
@@ -225,7 +225,7 @@ pub fn scan(buf: &[u8], header: &DolHeader) -> Scan {
             if op == 14 && (a == 13 || a == 2) && regs[a].is_none() {
                 let base = if a == 13 { SDA_BASE } else { SDA2_BASE };
                 let t = base.wrapping_add((w & 0xffff) as i16 as i32 as u32);
-                if let Some(target_off) = glyph_run(buf, header, t) {
+                if let Some(target_off) = text_at(header, &text, t) {
                     sda[d] = Some(SdaRef {
                         off,
                         ram,
@@ -242,7 +242,7 @@ pub fn scan(buf: &[u8], header: &DolHeader) -> Scan {
                         ImmKind::Addi => p.value.wrapping_add(disp as u32),
                         ImmKind::Ori => p.value | (disp as u32),
                     };
-                    match glyph_run(buf, header, t) {
+                    match text_at(header, &text, t) {
                         Some(target_off) => p.consumers.push(Consumer {
                             lo_off: off,
                             lo_ram: ram,
@@ -322,7 +322,6 @@ pub fn scan(buf: &[u8], header: &DolHeader) -> Scan {
 
     // the encoding-level walk above only proves which two words move together.
     // whether the address may move at all is Ghidra's answer, not ours.
-    let (ok, blocked) = relocatable_constants();
     let mut verdicts: Vec<(u32, Rejection)> = Vec::new();
     let mut refs: Vec<&ImmRef> = scan.refs.values().collect();
     refs.sort_by_key(|r| r.lo_off);
@@ -492,15 +491,9 @@ fn text_code(g: u16) -> bool {
     }
 }
 
-/// File offset of a 0xF800-terminated run at `addr`, if that is really what
-/// lives there.
-fn glyph_run(buf: &[u8], header: &DolHeader, addr: u32) -> Option<u32> {
-    if addr & 1 != 0 {
-        return None;
-    }
-    if crate::constants::EXCLUDED_NOTES
-        .iter()
-        .any(|(a, _)| *a == addr)
+/// File offset of the string at `addr`, if Ghidra saw it reach the renderer.
+fn text_at(header: &DolHeader, text: &HashSet<u32>, addr: u32) -> Option<u32> {
+    if !text.contains(&addr)
         || crate::constants::INLINE_FIELDS
             .iter()
             .any(|f| f.contains(addr))
@@ -510,25 +503,7 @@ fn glyph_run(buf: &[u8], header: &DolHeader, addr: u32) -> Option<u32> {
     let section = header.live().find(|s| {
         s.file >= header.data_start() && addr >= s.ram && addr - s.ram < s.size
     })?;
-    let off = section.file + (addr - section.ram);
-
-    let mut at = off;
-    let end = section.file + section.size;
-    for n in 0..MAX_GLYPHS {
-        if at + 2 > end {
-            return None;
-        }
-        let g = u16::from_be_bytes([buf[at as usize], buf[at as usize + 1]]);
-        if g == TERMINATOR {
-            // a bare terminator is a hole between strings, not a string
-            return (n > 0).then_some(off);
-        }
-        if !text_code(g) {
-            return None;
-        }
-        at += 2;
-    }
-    None
+    Some(section.file + (addr - section.ram))
 }
 
 fn word(buf: &[u8], off: u32) -> Option<u32> {
@@ -765,7 +740,7 @@ mod tests {
     /// rejected out of hand.
     #[test]
     fn the_excavation_point_lines_are_relocatable() {
-        let (ok, blocked) = relocatable_constants();
+        let (_, ok, blocked) = text_refs();
         for addr in [0x8025_791c, 0x8025_7948] {
             assert!(
                 ok.contains(&addr),
@@ -779,7 +754,7 @@ mod tests {
     /// accepted this one; Ghidra sees the indexing.
     #[test]
     fn a_table_base_is_not_relocatable() {
-        let (ok, blocked) = relocatable_constants();
+        let (_, ok, blocked) = text_refs();
         assert!(!ok.contains(&0x8025_7808));
         assert!(blocked[&0x8025_7808].contains("PTRADD"));
     }
