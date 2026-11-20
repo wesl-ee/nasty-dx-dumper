@@ -41,7 +41,7 @@
 
 # reference at SAVEGAME.SPT:0x13f6 (cmd 0303 direct, slot 0x13fa)
 0x19ee 週([%0][Normal Color Text])[0xe008]次は[0xe800][0xe008]の番です
-0x19ee Week([%0][Normal Color Text])[0xe008]Next is [0xe800][0xe008]'s turn
+0x19ee Week([%0][Normal Color Text])[0xe008] [0xe800][0xe008]'s turn
 
 # reference at SAVEGAME.SPT:0x15b0 (cmd table table[2], slot 0x15b0)
 # reference at SAVEGAME.SPT:0x15b0 (cmd table table[3], slot 0x15b0)

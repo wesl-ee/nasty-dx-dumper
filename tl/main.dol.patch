@@ -1693,31 +1693,31 @@
 
 # reference at main.dol:0x1cd64c (RAM 0x801d064c) [C]
 0x1ca58c [Green Text]0マス[Normal Color Text]いどうできる[\n]まほうのクリスタル
-0x1ca58c A magic crystal[\n]that lets you[\n]move[Green Text]0 spaces[Normal Color Text].
+0x1ca58c A magic crystal[\n]that lets you[\n]move [Green Text]0 spaces[Normal Color Text].
 
 # reference at main.dol:0x1cd664 (RAM 0x801d0664) [C]
 0x1ca5b8 [Green Text]1マス[Normal Color Text]いどうできる[\n]まほうのクリスタル
-0x1ca5b8 A magic crystal[\n]that lets you[\n]move[Green Text]1 space[Normal Color Text].
+0x1ca5b8 A magic crystal[\n]that lets you[\n]move [Green Text]1 space[Normal Color Text].
 
 # reference at main.dol:0x1cd67c (RAM 0x801d067c) [C]
 0x1ca5e4 [Green Text]2マス[Normal Color Text]いどうできる[\n]まほうのクリスタル
-0x1ca5e4 A magic crystal[\n]that lets you[\n]move[Green Text]2 spaces[Normal Color Text].
+0x1ca5e4 A magic crystal[\n]that lets you[\n]move [Green Text]2 spaces[Normal Color Text].
 
 # reference at main.dol:0x1cd694 (RAM 0x801d0694) [C]
 0x1ca610 [Green Text]3マス[Normal Color Text]いどうできる[\n]まほうのクリスタル
-0x1ca610 A magic crystal[\n]that lets you[\n]move[Green Text]3 spaces[Normal Color Text].
+0x1ca610 A magic crystal[\n]that lets you[\n]move [Green Text]3 spaces[Normal Color Text].
 
 # reference at main.dol:0x1cd6ac (RAM 0x801d06ac) [C]
 0x1ca63c [Green Text]4マス[Normal Color Text]いどうできる[\n]まほうのクリスタル
-0x1ca63c A magic crystal[\n]that lets you[\n]move[Green Text]4 spaces[Normal Color Text].
+0x1ca63c A magic crystal[\n]that lets you[\n]move [Green Text]4 spaces[Normal Color Text].
 
 # reference at main.dol:0x1cd6c4 (RAM 0x801d06c4) [C]
 0x1ca668 [Green Text]5マス[Normal Color Text]いどうできる[\n]まほうのクリスタル
-0x1ca668 A magic crystal[\n]that lets you[\n]move[Green Text]5 spaces[Normal Color Text].
+0x1ca668 A magic crystal[\n]that lets you[\n]move [Green Text]5 spaces[Normal Color Text].
 
 # reference at main.dol:0x1cd6dc (RAM 0x801d06dc) [C]
 0x1ca694 [Green Text]6マス[Normal Color Text]いどうできる[\n]まほうのクリスタル
-0x1ca694 A magic crystal[\n]that lets you[\n]move[Green Text]6 spaces[Normal Color Text].
+0x1ca694 A magic crystal[\n]that lets you[\n]move [Green Text]6 spaces[Normal Color Text].
 
 # reference at main.dol:0x1cd6f4 (RAM 0x801d06f4) [C]
 0x1ca6c0 ルーレットを[\n][Green Text]2コ[Normal Color Text]にふやせる[\n]まほうのほうせき
@@ -1867,13 +1867,14 @@
 
 # reference at main.dol:0x1cdab4 (RAM 0x801d0ab4) [C]
 0x1cb04c なんでも食べてしまう[\n]ふしぎな生物。食べる物が[\n]なくなるとさっていく
+0x1cb04c Eats everything. A curious[\n]creature. Will disappear when[\n]there's nothing left to eat.
 
 # reference at main.dol:0x1cdacc (RAM 0x801d0acc) [C]
 0x1cb094 さくじょ
 
 # reference at main.dol:0x1cdae4 (RAM 0x801d0ae4) [C]
 0x1cb0a0 マトックでもこわせない[\n]ムテキのトーレナ王を[\n]おくことができる
-0x1cb0a0 Place an Ultimate Roadblock Rock even a[\n]Mattock cannot break
+0x1cb0a0 Place a Roadblock Rock even a[\n]Mattock cannot break
 
 # reference at main.dol:0x1cdafc (RAM 0x801d0afc) [C]
 0x1cb0e0 死んだときに、いたずら天便[\n]ダテンシ君が何度か[\n]生き返らせてくれる
@@ -4733,7 +4734,7 @@
 
 # reference at main.dol:0x241f8c (RAM 0x80244f8c) [F]
 0x1dc114 ドゼニゲット
-0x1dc114 Super Pickpocket
+0x1dc114 Mug
 
 # reference at main.dol:0x241fa0 (RAM 0x80244fa0) [F]
 0x1dc124 マホケスA

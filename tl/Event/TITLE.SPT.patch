@@ -79,7 +79,7 @@
 
 # reference at TITLE.SPT:0x4616 (cmd 0303 direct, slot 0x461a)
 0x528e 週([%0][Normal Color Text])[0xe008]次は[0xe800][0xe008]の番です
-0x528e 週([%0][Normal Color Text])[0xe008]Next is[0xe800][0xe008]'s turn
+0x528e Week([%0][Normal Color Text])[0xe008] [0xe800][0xe008]'s turn
 
 # reference at TITLE.SPT:0x47d0 (cmd table table[2], slot 0x47d0)
 # reference at TITLE.SPT:0x47d0 (cmd table table[3], slot 0x47d0)
