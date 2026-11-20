@@ -10,6 +10,7 @@ use crate::constants::{
     NameCap, GLYPH_WIDTH_PAGES, INLINE_FIELDS, LATIN_SPACE, LATIN_SPACE_WIDTH,
     TEXT_TABLES_EXPLICIT, UNCLAIMED_WIDTH, WALKER_HOOKS,
 };
+use crate::constants::{LATIN, LATIN_WIDTHS};
 use crate::longname::LongNameBank;
 use crate::shape::{DolHeader, Section, DATA7, DATA8, TEXT2};
 use crate::utils::{
@@ -204,7 +205,7 @@ fn glyph_width_at(header: &DolHeader, code: u16) -> Result<(u32, u32)> {
     Ok((off, 8 * (3 - (ram & 3))))
 }
 
-/// Give the claimed space a latin width.
+/// Give the claimed space a latin width, and the redrawn latin theirs.
 ///
 /// `glyphAdvance` (0x80017950) reads the width byte at 0x80017990 and produces
 /// both the drawn width and the pen step `round(font[0xc] + width * scale)`.
@@ -228,6 +229,11 @@ fn patch_claimed_glyph_widths(
         off,
         (old & !(0xff << shift)) | (u32::from(LATIN_SPACE_WIDTH) << shift),
     );
+    for (code, w) in (LATIN..).zip(LATIN_WIDTHS) {
+        let (off, shift) = glyph_width_at(header, code)?;
+        let old = updates.get(&off).copied().unwrap_or_else(|| word(buf, off));
+        updates.insert(off, (old & !(0xff << shift)) | (u32::from(w) << shift));
+    }
     Ok(())
 }
 

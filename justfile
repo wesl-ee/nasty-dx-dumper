@@ -15,6 +15,7 @@ dump:
 patch:
     cargo build
     ./target/debug/nasty_dx_dumper patch-all ./tl ./tl-output
+    python font_import.py ./dx-iso-base ./tl-output
 
 build-iso: patch
     python build_iso.py '{{iso}}' ./tl-output '{{eng}}'

@@ -8,9 +8,18 @@ pub(crate) const LATIN_SPACE: u16 = 0x026a;
 pub(crate) const UNCLAIMED_WIDTH: u8 = 32;
 
 /// A latin word space, a shade under a third of the 32px cell. The font's own
-/// narrow glyphs sit here -- `i` is 8, `l` and `I` are 9, `!` and `,` are 10 --
+/// narrow glyphs sit here -- `i`, `l` and `I` are 7, `!` and `,` are 10 --
 /// and the retail 0x0000 space stays a full-width Japanese one.
 pub(crate) const LATIN_SPACE_WIDTH: u8 = 10;
+
+/// `A`..`Z` then `a`..`z`, redrawn in `data/font00.png`. Each is the column
+/// after its rightmost ink, the rule every retail width follows.
+pub(crate) const LATIN: u16 = 0x000b;
+pub(crate) const LATIN_WIDTHS: [u8; 52] = [
+    20, 20, 19, 18, 16, 16, 20, 18, 7, 16, 19, 15, 22, 18, 19, 18, 19, 19, 19,
+    19, 18, 19, 26, 20, 19, 19, 17, 16, 17, 15, 17, 14, 17, 15, 7, 11, 16, 7,
+    19, 15, 16, 16, 16, 13, 17, 14, 15, 16, 20, 16, 16, 14,
+];
 
 /// Page-0..3 glyph width tables, one byte per code:
 /// `font->pages[code >> 8][code & 0xFF]`, read at 0x80017990 by `glyphAdvance`
